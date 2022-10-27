@@ -1,10 +1,12 @@
 h1{
     font-family: "Roboto Slab";
     color : green;
+    text-align: center;
 }
 
 h3{
     font-family: "Roboto Slab";
+    text-align: center;
 }
 
 body{
