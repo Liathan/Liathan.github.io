@@ -9,6 +9,10 @@ h3{
     text-align: center;
 }
 
+h2{
+    font-family: "Roboto Slab";
+}
+
 body{
     font-family: 'Fira Sans', sans-serif;
 }
