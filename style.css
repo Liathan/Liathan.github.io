@@ -1,14 +1,14 @@
-h1{
-    font-family: "Roboto Slab";
+h1 {
+    font-family: "Roboto Slab", sans-serif;
     color : green;
     text-align: center;
 }
 
-h3{
-    font-family: "Roboto Slab";
+h3 {
+    font-family: "Roboto Slab", sans-serif;
     text-align: center;
 }
 
-body{
-    font-family: 'Fira Sans', sans-serif;
+body {
+    font-family: "Fira Sans", sans-serif;
 }
