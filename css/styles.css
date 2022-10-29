@@ -1,0 +1,61 @@
+/** BODY **/
+body {
+    font-family: "Fira Sans", sans-serif;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin: 0px;
+}
+
+/** HEADER **/
+header {
+    background-color: #b4d2ba;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 0px -25px;
+}
+
+header h1 {
+    font-family: "Roboto Slab", sans-serif;
+    color : #1c7c54;
+    text-align: center;
+}
+
+header h3 {
+    font-family: "Roboto Slab", sans-serif;
+    text-align: center;
+}
+
+/** CONTENTS OF PAGE **/
+h2 {
+    font-family: "Roboto Slab", sans-serif;
+}
+
+h2 span {
+    color: rgba(15, 15, 15, 0.75);
+    font-style: italic;
+}
+
+/** PARAGRAPH **/
+p {
+    text-align: justify;
+}
+
+/** FOOTER **/
+footer {
+    color: #4c2e05;
+    background-color: #b57f50;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 0px -25px;
+    position: relative;
+    bottom: 0;
+}
+
+/** MISC **/
+.text-center {
+    text-align: center;
+}
+
+.font-italic {
+    font-style: italic;
+}
