@@ -83,7 +83,7 @@ p a:hover {
 }
   
   /* selected link */
-p :active {
+p a:active {
     color: #b57f50;
     background-color: white;
 }
