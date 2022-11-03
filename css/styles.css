@@ -113,23 +113,7 @@ div.img-description p {
     font-style: italic;
 }
 
-<<<<<<< HEAD
-=======
-/* #img-tree-benefits {
-    width: 80%;
-    background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    margin-bottom: 25px;
-}
-#img-tree-benefits img {
-    float: right;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-    padding: 10px 10px 0px 10px;
-} */
->>>>>>> main
+
 
 @media (max-width: 1024px) {
     #img-tree-benefits {
