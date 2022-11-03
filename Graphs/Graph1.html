@@ -13,5 +13,31 @@
 
         <script src="https://d3js.org/d3.v7.min.js"></script>
 
-    </head>
     
+        <style type="text/css">
+            div.bar {display: inline-block;
+                 width: 20px;
+                height: 75px;
+                background-color: teal;
+                margin-right: 10px;}
+            </style>
+
+    </head>
+        	<body> 
+     <script> 
+     var dataset = [];  						 //Initialize empty array
+        for (var i = 0; i < 25; i++) {			 //Loop 25 times
+        var newNumber = Math.random() * 30;  //New random number (0-30)
+        dataset.push(newNumber);
+        }
+            d3.select("body").selectAll("div")
+	.data(dataset)
+	.enter()
+	.append("div")
+	.attr("class", "bar")
+	.style("height", 
+		function(d) {	return d + "px";}
+	);
+            </script>
+         </body> 
+    </html> 
