@@ -60,6 +60,11 @@ h2 span {
     font-style: italic;
 }
 
+/** SECTION **/
+.section {
+    margin-bottom: 50px;
+}
+
 /** PARAGRAPH **/
 p {
     text-align: justify;
@@ -94,7 +99,7 @@ div.img-description {
 }
 
 /** IMAGES **/
-#img-tree-benefits {
+.img-box {
     float: right;
     width: 50%;
     background-color: white;
@@ -103,7 +108,7 @@ div.img-description {
     max-width: 700px;
   }
   
-#img-tree-benefits img {
+img {
     width: 100%;
 }
 
@@ -129,8 +134,8 @@ div.img-description p {
 } */
 
 @media (max-width: 1024px) {
-    #img-tree-benefits {
-        float: none;
+    .img-box {
+        float: none !important;
         width: 95%;
         display: block;
         margin-left: auto;
@@ -150,6 +155,18 @@ div.img-description p {
 .padding-header {
     padding-left: 20px;
     padding-right: 20px;
+}
+
+.clear-fix {
+    clear: both;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
 }
 
 /** FOOTER **/
