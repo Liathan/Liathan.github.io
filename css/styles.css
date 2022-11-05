@@ -34,6 +34,9 @@ header h3 {
 /** CONTENTS OF PAGE **/
 #main-content {
         padding: 20px 20px 0px 20px;
+        max-width: 1600px;
+        margin-left: auto;
+        margin-right: auto;
 }
 @media (min-width: 480px) and (max-width: 767px) {
     #main-content {
@@ -62,7 +65,11 @@ h2 span {
 
 /** SECTION **/
 .section {
-    margin-bottom: 50px;
+    margin-bottom: 80px;
+}
+
+.subsection {
+    margin: 10px 20px;
 }
 
 /** PARAGRAPH **/
@@ -143,6 +150,30 @@ div.img-description p {
     }
 }
 
+/** CHART **/
+.chart {
+    max-width: 1024px;
+    margin: 50px auto;
+}
+
+.tooltip {
+    position: absolute;
+    text-align: center;
+    contain: content;
+    width: auto;
+    height: auto;
+    padding: 2px;
+    border: 0;
+    border-radius: 8px;
+    pointer-events: none;
+}
+
+/* @media (max-width: 1024px) {
+    #my_dataviz svg g g.y-ticks g.tick text {
+        display: none !important;
+    }
+} */
+
 /** MISC **/
 .text-center {
     text-align: center;
@@ -167,6 +198,13 @@ div.img-description p {
 
 .float-right {
     float: right;
+}
+
+hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid #b57f50;
 }
 
 /** FOOTER **/
