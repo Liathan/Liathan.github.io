@@ -17,20 +17,35 @@ const svg_2 = d3.select(id_ref_2)
 
     d3.csv("../data/assign1-plot2.csv").then(function(data) {
 
-        var subgroups = data.columns.slice(1)
-        var groups = d3.map(data, function(d){return(d.Circoscrizione)})
+        const subgroups = data.columns.slice(1)
+
+        const groups = data.map(d => (d.Circoscrizione))
+        
+        const tooltip_2 = d3.select(id_ref_2)
+        .append("div")
+        .attr("class", "tooltip")
+        .style("font-size", "14px")
+        .style("background-color", "white")
+        .style("border", "solid")
+        .style("border-width", "1px")
+        .style("border-radius", "5px")
+        .style("padding", "10px")
+        .style("opacity", 0);
+
         console.log(subgroups)
-        var x = d3.scaleBand()
-        .domain(groups)
+        
+        const x = d3.scaleLinear()
+        .domain([0, 3500])
         .range([0, width_2])
-        .padding([0.2])
         
-        
-        
+        var y = d3.scaleBand()
+        .domain(groups)
+        .range([ 0, height_2 ])
+        .padding([0.2]);
 
         svg_2.append("g")
-            .attr("transform", "translate(0," + height_2 + ")")
-            .call(d3.axisBottom(x).tickSizeOuter(0))
+            .attr("transform", "translate(0," +height_2 +")" )
+            .call(d3.axisBottom(x))
             .selectAll("text")
             .attr("transform", "translate(-10,0)rotate(-45)")
             .style("text-anchor", "end")
@@ -38,40 +53,37 @@ const svg_2 = d3.select(id_ref_2)
 
   
             // Add Y axis
-            var y = d3.scaleLinear()
-            .domain([0, 3500])
-            .range([ height_2, 0 ]);
-            svg_2.append("g")
+        svg_2.append("g")
             .call(d3.axisLeft(y))
             .selectAll("text")
             .style("text-anchor", "end")
             .style("font-size", "12px");
         
             // color palette = one color per subgroup
-            var color = d3.scaleOrdinal()
+        const color = d3.scaleOrdinal()
             .domain(subgroups)
             .range(['red', 'green', 'pink', 'yellow', 'black','blue'])
         
             //stack the data? --> stack per subgroup
-            var stackedData = d3.stack()
+        const stackedData = d3.stack()
             .keys(subgroups)
             (data)
         
             // Show the bars
-            svg_2.append("g")
+        svg_2.append("g")
             .selectAll("g")
             // Enter in the stack data = loop key per key = group per group
             .data(stackedData)
-            .enter().append("g")
-                .attr("fill", function(d) { return color(d.key); })
+            .join("g")
+                .attr("fill", d => color(d.key))
                 .selectAll("rect")
-                // enter a second time = loop subgroup per subgroup to add all rectangles
-                .data(function(d) { return d; })
-                .enter().append("rect")
-                .attr("x", function(d) { return x(d.data.Circoscrizione); })
-                .attr("y", function(d) { return y(d[1]); })
-                .attr("height", function(d) { return y(d[0]) - y(d[1]); })
-                .attr("width",x.bandwidth())
+                .data(d => d)
+                .join("rect")
+                    .attr("x", d => x(d[0]))
+                    .attr("y", d => y(d.data.Circoscrizione))
+                    .attr("height", y.bandwidth())
+                    .attr("width", d => x(d[1]) - x(d[0]))
+                    .attr("opacity", 0.5)
 
         svg_2.selectAll("rect")
         .on("mouseover", function (event, d) {
@@ -79,10 +91,10 @@ const svg_2 = d3.select(id_ref_2)
                 .transition("selected")
                     .duration(300)
                     .style("opacity", 1.0)
-            tooltip.transition("appear-box")
+            tooltip_2.transition("appear-box")
                 .duration(300)
                 .style("opacity", .9);
-            tooltip.html("<span class='tooltiptext'>" + "<b>Abundance: " + d.Count + 
+            tooltip_2.html("<span class='tooltiptext'>" + "<b>Abundance: " + d.Count + 
                             "</b><br>" + "Average canopy size: "+ d.AverageCanopySize + "</span>")
                 .style("left", (event.pageX) + "px")
                 .style("top", (event.pageY - 28) + "px");
@@ -92,7 +104,7 @@ const svg_2 = d3.select(id_ref_2)
                 .transition("unselected")
                     .duration(300)
                     .style("opacity", 0.5)
-            tooltip.transition("disappear-box")
+            tooltip_2.transition("disappear-box")
                 .duration(300)
                 .style("opacity", 0);
             });
