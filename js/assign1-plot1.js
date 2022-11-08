@@ -5,7 +5,7 @@
 
 
 // refer to the id div
-const id_ref_1 = "#barchart-aboundance"
+const id_ref_1 = "#barchart-abundance"
 
 // set the dimensions and margins of the graph
 const margin_1 = {top: 50, right: 20, bottom: 50, left: 190},
@@ -24,7 +24,7 @@ const svg_1 = d3.select(id_ref_1)
     .attr("transform", `translate(${margin_1.left}, ${margin_1.top})`);
 
 // Parse the Data
-d3.csv("../data/counting_species.csv").then(function(data, num=20) {
+d3.csv("../data/assign1-plot1.csv").then(function(data, num=15) {
 
     var topNum = data.slice(0,num).reverse()
 
@@ -46,7 +46,7 @@ d3.csv("../data/counting_species.csv").then(function(data, num=20) {
 
     // Y axis
     var y = d3.scaleBand()
-        .range([ 0, height ])
+        .range([0, height])
         .domain(topNum.map(function(d) { return d.Species; }))
         .padding(.1);
     svg_1.append("g")
@@ -87,7 +87,7 @@ d3.csv("../data/counting_species.csv").then(function(data, num=20) {
         .style("font-size", "18px")
         .attr("text-anchor", "middle")  
         .style("text-decoration", "underline")  
-        .text("Aboundance of tree species - Top 20");
+        .text("Aboundance of tree species - Top " + num);
 
     // Y axis label
     svg_1.append("text")      // text label for the y axis
@@ -125,7 +125,8 @@ d3.csv("../data/counting_species.csv").then(function(data, num=20) {
             tooltip.transition("appear-box")
                 .duration(300)
                 .style("opacity", .9);
-            tooltip.html("<span class='tooltiptext'>" + "Aboundance: " + d.Count + "</span>")
+            tooltip.html("<span class='tooltiptext'>" + "<b>Abundance: " + d.Count + 
+                         "</b><br>" + "Average canopy size: "+ d.AverageCanopySize + "</span>")
                 .style("left", (event.pageX) + "px")
                 .style("top", (event.pageY - 28) + "px");
             })
