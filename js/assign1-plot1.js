@@ -114,7 +114,7 @@ d3.csv("../data/assign1-plot1.csv").then(function(data, num=15) {
         .duration(800)
         .attr("x", function(d) { return x(0); })
         .attr("width", function(d) { return x(d.Count); })
-        .delay(function(d,i){console.log(i) ; return(i*100)})
+        //.delay(function(d,i){console.log(i) ; return(i*100)})
 
     svg_1.selectAll("rect")
         .on("mouseover", function (event, d) {
