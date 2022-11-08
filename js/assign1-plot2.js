@@ -14,13 +14,11 @@ const svg_2 = d3.select(id_ref_2)
     .append("g")
     .attr("transform", `translate(${margin_2.left}, ${margin_2.top})`);
 
-
     d3.csv("../data/assign1-plot2.csv").then(function(data) {
-
+        
         const subgroups = data.columns.slice(1)
 
         const groups = data.map(d => (d.Circoscrizione))
-        
         const tooltip_2 = d3.select(id_ref_2)
         .append("div")
         .attr("class", "tooltip")
@@ -68,7 +66,6 @@ const svg_2 = d3.select(id_ref_2)
         const stackedData = d3.stack()
             .keys(subgroups)
             (data)
-        
             // Show the bars
         svg_2.append("g")
             .selectAll("g")
@@ -87,6 +84,7 @@ const svg_2 = d3.select(id_ref_2)
 
         svg_2.selectAll("rect")
         .on("mouseover", function (event, d) {
+            const species = d3.select(this.parentNode).datum().key
             d3.select(event.currentTarget)
                 .transition("selected")
                     .duration(300)
@@ -94,8 +92,8 @@ const svg_2 = d3.select(id_ref_2)
             tooltip_2.transition("appear-box")
                 .duration(300)
                 .style("opacity", .9);
-            tooltip_2.html("<span class='tooltiptext'>" + "<b>Abundance: " + d.Count + 
-                            "</b><br>" + "Average canopy size: "+ d.AverageCanopySize + "</span>")
+            tooltip_2.html("<span class='tooltiptext'>" + "<b>Species: " +species + 
+                            "</b><br>" + "Abundance: "+ (d[1] - d[0]) + "</span>")
                 .style("left", (event.pageX) + "px")
                 .style("top", (event.pageY - 28) + "px");
             })
