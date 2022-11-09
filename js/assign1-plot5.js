@@ -82,7 +82,6 @@ d3.csv('../data/assign1-plot5.csv').then(function(data, i){
         tot = 0;
         for(j = 0; j < data2['MEANO'].length; ++j)
         {
-            console.log(data2['MEANO'][j] == d, data2['MEANO'][j],  d)
             if (data2['MEANO'][j] == d)
             {
                 tot += 1
@@ -93,7 +92,7 @@ d3.csv('../data/assign1-plot5.csv').then(function(data, i){
 
     svg_5.selectAll("rect")
         .on("mouseover", function (event, d){
-
+            console.log(event)
             d3.select(event.currentTarget)
                     .transition("selected")
                         .duration(300)
@@ -101,7 +100,7 @@ d3.csv('../data/assign1-plot5.csv').then(function(data, i){
 
             tooltip.transition("appear-box")
                 .duration(300)
-                .style("opacity", .9)
+                .style("opacity", 1)
                 .delay(1);
 
             tooltip.html("<span class='tooltiptext'>" + "<b>Species: " + d + 
