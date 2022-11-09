@@ -101,6 +101,14 @@ h2 span {
     display: none;
 }
 
+.stickyNav {
+    position: sticky;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+  }
+
 /* When the screen is less than 1024 pixels wide, hide all links, except for the first one ("Home"). 
    Show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 1024px) {
@@ -270,6 +278,7 @@ div.img-description p {
 .padding-header {
     padding-left: 20px;
     padding-right: 20px;
+    z-index: 5000;
 }
 
 .clear-fix {
