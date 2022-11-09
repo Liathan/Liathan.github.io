@@ -8,8 +8,11 @@
         <!-- To manage the text respect to the device of the user (mobile, tablet, pc, and so on) -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Ecobenefit of Trento's trees</title>
+        <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="css/styles.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Fira+Sans">
+        <script src="js/init.js"></script>
         <script src="https://d3js.org/d3.v7.min.js"></script>
     </head>
     
@@ -19,8 +22,22 @@
             <h1>Ecobenefit of Trento's trees</h1>
             <h3>Ornitorinco Group - Data Visualization: <br> Caprile, Marchi, Marinelli, Medone, Piazza</h3>
         </header>
+
+        <div id="myTopnav" class="topnav">
+            <div class="content">
+                <a href="index.html">Home</a>
+                <a href="#" class="active">Assignment 1</a>
+                <a href="#">Assignment 2</a>
+                <a href="#">Assignment 3</a>
+                <a href="#">Assignment 4</a>
+                <a href="#">Assignment 5</a>
+                <a href="javascript:void(0);" class="icon" onclick="toggle_icon_menu_topnav()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
         
-        <div id="main-content">
+        <div id="main-content" class="content">
             <div id="assignment-1" class="section">
                 <!-- This is the text for assignment-1 -->
                 <h2>Assignment-1: <span>Comparing categories</span></h2>
@@ -66,8 +83,12 @@
                         To do this, we will use a set of data provided in open-source mode on GitHub (<a href="https://github.com/Jeko83/">TrentoTreeMap Project</a>), which we will analyze to extrapolate all the information necessary to best represent the current situation of the trees in the Trento area.
                         We will also aim to estimate in economic terms the benefits brought by the trees in the area, or how much man would have to spend to achieve similar goals, also depriving himself of the beauty of different tree species.
                     </p>
+
                     <div id="stacked-barchart" class="chart"></div>
+
                 </div>
+
+                <hr>
 
                 <div class="subsection">
 
