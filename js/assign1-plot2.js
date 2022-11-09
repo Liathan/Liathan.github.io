@@ -24,13 +24,13 @@ const svg_2 = d3.select(id_ref_2)
         .append("g")
             .attr("transform", `translate(${margin_2.left}, ${margin_2.top})`);
 
-cose=[];
+cose = 0;
 // Parse the data
 d3.csv("../data/assign1-plot2.csv").then(function(data) {
        
     // Extract subgroups
     const subgroups = data.columns.slice(1);
-    cose = subgroups;
+    cose2 = subgroups;
     // Extract circoscrizioni
     const groups = data.map(d => (d.Circoscrizione));
 
@@ -73,7 +73,7 @@ d3.csv("../data/assign1-plot2.csv").then(function(data) {
     const color = d3.scaleOrdinal()
         .domain(subgroups)
         .range(["#ff595e", "#ffca3a", '#8ac926', '#1982c4', '#6a4c93', '#606470']);
-        
+    cose = color  
     // Stack the data? --> Stack per subgroup (top-5 + "Others" species)
     const stackedData = d3.stack()
         .keys(subgroups)

@@ -164,6 +164,11 @@ h2 span {
     margin: 20px;
 }
 
+.waffle
+{
+    padding-left: 200px;
+}
+
 /** PARAGRAPH **/
 p {
     text-align: justify;
