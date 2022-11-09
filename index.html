@@ -1,63 +1,80 @@
-    <!DOCTYPE HTML>
-    <html lang="en-us">
+<!DOCTYPE HTML>
+<html lang="en-us">
 
-        <head>
-            <meta charset="utf-8">
-            <!-- To manage incompatibility with older version of Internet Explorer / Edge -->
-            <meta http-equiv="X-UA-Compatible" content="IE=edge">
-            <!-- To manage the text respect to the device of the user (mobile, tablet, pc, and so on) -->
-            <meta name="viewport" content="width=device-width, initial-scale=1">
-            <title>Ecobenefit of Trento's trees</title>
-            <link rel="stylesheet" href="css/styles.css">
-            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Fira+Sans">
-            <script src="https://d3js.org/d3.v7.min.js"></script>
-        </head>
-        
-        <body>
-        
-            <header class="padding-header">
-                <h1>Ecobenefit of Trento's trees</h1>
-                <h3>Ornitorinco Group - Data Visualization: <br> Caprile, Marchi, Marinelli, Medone, Piazza</h3>
-            </header>
-            
-            <div id="main-content">
-                <div id="introduction" class="section">
-                    <!-- This is the introduction -->
-                    <h2>Introduction: <span>The importance of trees</span></h2>
-                    <div class="img-box float-right">
-                        <img src="images/tree-benefits.png" alt="Benefits from a tree">
-                        <div class="img-description">
-                            <p>Ecobenefits from a tree</p>
-                        </div>
-                    </div>
-                    <p>
-                        The trees represent one of the first places of natural shelter that are sought outdoors in hot weather, or even a meeting point for young and old.
-                        Their growth and protection are of fundamental importance for the well-being of man and the territory.
-                        There are numerous local authorities that are particularly active in emphasizing the importance of planting more and more trees, especially in cities.
-                        They bring numerous benefits that are easily received by each of us: benefits both on the environmental front, such as the reduction of temperatures, of particulate matter (PM 2.5), and the drainage of the land, and on the ornamental front, of beautification of the city.
-                        There is also a kind of flip side, where branches, or sometimes whole trees, fall to the ground, roots breaking sidewalks, or leaves on sidewalks in the fall that could cause people to slip.
-                        But these negative aspects can all be limited by proper care and monitoring of the trees themselves.
-                    </p>
-                    <p>
-                        The main objective of this project will be to understand which species are the most widespread, those that bring greater benefits and how they are arranged in the territory of the municipality of Trento.
-                        To do this, we will use a set of data provided in open-source mode on GitHub (<a href="https://github.com/Jeko83/">TrentoTreeMap Project</a>), which we will analyze to extrapolate all the information necessary to best represent the current situation of the trees in the Trento area.
-                        We will also aim to estimate in economic terms the benefits brought by the trees in the area, or how much man would have to spend to achieve similar goals, also depriving himself of the beauty of different tree species.
-                    </p>
-                </div> 
+    <head>
+        <meta charset="utf-8">
+        <!-- To manage incompatibility with older version of Internet Explorer / Edge -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- To manage the text respect to the device of the user (mobile, tablet, pc, and so on) -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Ecobenefit of Trento's trees</title>
+        <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Fira+Sans">
+        <script src="js/init.js"></script>
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+    </head>
+    
+    <body>
+    
+        <header class="padding-header">
+            <h1>Ecobenefit of Trento's trees</h1>
+            <h3>Ornitorinco Group - Data Visualization: <br> Caprile, Marchi, Marinelli, Medone, Piazza</h3>
+        </header>
 
-                
-                <div class="clear-fix"></div>
-
-                <div id="first-assign" class="section">
-                    <h2>First assignment: <span>Barplots</span> (we must decide a correct title)</h2>
-                    <a href="assignment1.html">click here!</a>
-                </div>
-
+        <div id="myTopnav" class="topnav stickyNav">
+            <div class="content">
+                <a href="#" class="active">Home</a>
+                <a href="assignment1.html">Assignment 1</a>
+                <a href="#">Assignment 2</a>
+                <a href="#">Assignment 3</a>
+                <a href="#">Assignment 4</a>
+                <a href="#">Assignment 5</a>
+                <a href="javascript:void(0);" class="icon" onclick="toggle_icon_menu_topnav()">
+                    <i class="fa fa-bars"></i>
+                </a>
             </div>
-            
-            <footer>
-                <div class="text-center font-italic">&copy; Copyright Ornitorinco 2022</div>
-            </footer>
+        </div>
+        
+        <div id="main-content" class="content">
+            <div id="introduction" class="section">
+                <!-- This is the introduction -->
+                <h2>Introduction: <span>The importance of trees</span></h2>
+                <div class="img-box float-right">
+                    <img src="images/tree-benefits.png" alt="Benefits from a tree">
+                    <div class="img-description">
+                        <p>Ecobenefits from a tree</p>
+                    </div>
+                </div>
+                <p>
+                    The trees represent one of the first places of natural shelter that are sought outdoors in hot weather, or even a meeting point for young and old.
+                    Their growth and protection are of fundamental importance for the well-being of man and the territory.
+                    There are numerous local authorities that are particularly active in emphasizing the importance of planting more and more trees, especially in cities.
+                    They bring numerous benefits that are easily received by each of us: benefits both on the environmental front, such as the reduction of temperatures, of particulate matter (PM 2.5), and the drainage of the land, and on the ornamental front, of beautification of the city.
+                    There is also a kind of flip side, where branches, or sometimes whole trees, fall to the ground, roots breaking sidewalks, or leaves on sidewalks in the fall that could cause people to slip.
+                    But these negative aspects can all be limited by proper care and monitoring of the trees themselves.
+                </p>
+                <p>
+                    The main objective of this project will be to understand which species are the most widespread, those that bring greater benefits and how they are arranged in the territory of the municipality of Trento.
+                    To do this, we will use a set of data provided in open-source mode on GitHub (<a href="https://github.com/Jeko83/">TrentoTreeMap Project</a>), which we will analyze to extrapolate all the information necessary to best represent the current situation of the trees in the Trento area.
+                    We will also aim to estimate in economic terms the benefits brought by the trees in the area, or how much man would have to spend to achieve similar goals, also depriving himself of the beauty of different tree species.
+                </p>
+            </div> 
 
-        </body>
-    </html>
+            
+            <div class="clear-fix"></div>
+
+            <div id="first-assign" class="section">
+                <h2>First assignment: <span>Barplots</span> (we must decide a correct title)</h2>
+                <a href="assignment1.html">click here!</a>
+            </div>
+
+        </div>
+        
+        <footer>
+            <div class="text-center font-italic">&copy; Copyright Ornitorinco 2022</div>
+        </footer>
+
+    </body>
+</html>
