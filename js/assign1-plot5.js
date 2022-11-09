@@ -21,39 +21,47 @@ const g = svg_5.append("g")
     .attr("transform","translate(" + margin_5.left + "," + margin_5.top + ")");
 
 //rainbow colors
-const colors = d3.scaleSequential(d3.interpolateCubehelixDefault);
+// const colors = d3.scaleSequential(d3.interpolateCubehelixDefault);
 
 d3.csv('../data/assign1-plot5.csv').then(function(data, i){
-     
-    //sort data alphabetically
-    //data.sort(function(a,b){ return d3.ascending(a[categoryHeading], b[categoryHeading])});
+    
     const subgroups = data.columns.slice(0);
     //get all of the unique values in the column for the scale
     var keys = d3.map(data, function(d){ return d[categoryHeading];}).keys();
-    //console.log(subgroups);
-    //set domain on category
-    colors.domain([0, subgroups.length]);
-
+    console.log("Subgroups:", subgroups)
     //convert to a categorical scale
-    var categoryScale = d3.scaleOrdinal(subgroups.map(function(d, i){ return colors(i);}));
-    categoryScale.domain(subgroups);//set the scale domain
-    
-    
+    const color = d3.scaleOrdinal()
+    .domain(subgroups)
+    .range(["#ff595e", "#ffca3a", '#8ac926', '#1982c4', '#6a4c93', '#606470']);
+    pippo = data
+    data2 = []
+    for(j = 0; j < 12; ++j)
+    {
+        circo = data[j]['Circoscrizione']
+        tmp = []
+        for(k = 1; k < 7; ++k)
+        {
+            // console.log(k, data[j][subgroups[k]])
+            tmp.push(Array(parseInt(data[j][subgroups[k]])).fill(subgroups[k]))
+        }
+        data2[circo] = tmp.flat()
+    }
+    console.log("Data", data)
+    console.log("Data2", data2)
+    // console.log(data2['POVO'])
    
     //make the main chart
     g.selectAll(".square")
-        .data(data)
+        .data(data2['POVO'])
         .join("rect")
-        .attr("class", "square")
-        .attr("x", function(d,i){ return boxSize * (i % howManyAcross); })
-        .attr("y", function(d,i){ return Math.floor(i/howManyAcross) * boxSize; })
-        .attr("width", boxSize - 3)
-        .attr("height", boxSize - 3)
-
-        .attr("fill", function(d){return categoryScale(d[categoryHeading]);})
-
-        .exit();
-        console.log(data[0]["Others"])
+            .attr("class", "square")
+            .attr("x", function(d,i){ return boxSize * (i % howManyAcross); })
+            .attr("y", function(d,i){ return Math.floor(i/howManyAcross) * boxSize; })
+            .attr("width", boxSize - 3)
+            .attr("height", boxSize - 3)
+            .attr("fill", function(d){console.log("D", d); return color(d);})
+        
+    // console.log(color)
     
     //legend
     // var legend = svg.selectAll(".legend")
