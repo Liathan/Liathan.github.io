@@ -101,8 +101,8 @@ h2 span {
     display: none;
 }
 
-.fixed-top {
-    position: fixed;
+.stickyNav {
+    position: sticky;
     top: 0;
     right: 0;
     left: 0;
@@ -278,6 +278,7 @@ div.img-description p {
 .padding-header {
     padding-left: 20px;
     padding-right: 20px;
+    z-index: 5000;
 }
 
 .clear-fix {
