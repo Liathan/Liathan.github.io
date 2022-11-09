@@ -4,7 +4,7 @@
 
 
 // Refer to the id dive
-const id_ref_4 = "#small-multi-stacked-barchart"
+const id_ref_3 = "#small-multi-stacked-barchart"
 
 // // Set the dimensions and margins of the graph
 // const margin_2 = {top: 50, right: 20, bottom: 60, left: 240},
