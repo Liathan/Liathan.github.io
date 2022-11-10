@@ -92,6 +92,30 @@
 
                 <div class="subsection">
 
+                    <h3>Small Multiple Stacked Barchart</h3>
+
+                    <p>
+                        The trees represent one of the first places of natural shelter that are sought outdoors in hot weather, or even a meeting point for young and old.
+                        Their growth and protection are of fundamental importance for the well-being of man and the territory.
+                        There are numerous local authorities that are particularly active in emphasizing the importance of planting more and more trees, especially in cities.
+                        They bring numerous benefits that are easily received by each of us: benefits both on the environmental front, such as the reduction of temperatures, of particulate matter (PM 2.5), and the drainage of the land, and on the ornamental front, of beautification of the city.
+                        There is also a kind of flip side, where branches, or sometimes whole trees, fall to the ground, roots breaking sidewalks, or leaves on sidewalks in the fall that could cause people to slip.
+                        But these negative aspects can all be limited by proper care and monitoring of the trees themselves.
+                    </p>
+                    <p>
+                        The main objective of this project will be to understand which species are the most widespread, those that bring greater benefits and how they are arranged in the territory of the municipality of Trento.
+                        To do this, we will use a set of data provided in open-source mode on GitHub (<a href="https://github.com/Jeko83/">TrentoTreeMap Project</a>), which we will analyze to extrapolate all the information necessary to best represent the current situation of the trees in the Trento area.
+                        We will also aim to estimate in economic terms the benefits brought by the trees in the area, or how much man would have to spend to achieve similar goals, also depriving himself of the beauty of different tree species.
+                    </p>
+
+                    <div id="small-multiple-stacked-barchart" class="chart"></div>
+
+                </div>
+
+                <hr>
+
+                <div class="subsection">
+
                     <h3>Stacked Barchart Percentage</h3>
 
                     <p>
@@ -131,12 +155,14 @@
                         To do this, we will use a set of data provided in open-source mode on GitHub (<a href="https://github.com/Jeko83/">TrentoTreeMap Project</a>), which we will analyze to extrapolate all the information necessary to best represent the current situation of the trees in the Trento area.
                         We will also aim to estimate in economic terms the benefits brought by the trees in the area, or how much man would have to spend to achieve similar goals, also depriving himself of the beauty of different tree species.
                     </p>
-                    <form>
-                        <select id="selection" name="Circoscrizione" onchange="draw()">
-                            
-                        </select>
-                    </form>
-                    <div id="waffle-chart" class="chart waffle"></div>
+                    
+                    <p>
+                        Select the circoscrizione you want to visualize in the wafflechart: 
+                        <select id="selection-waffle" name="Circoscrizione" onchange="draw()"></select>
+                    </p>
+                    
+                    <div id="waffle-chart" class="chart"></div>
+                
                 </div>
 
             </div> 
@@ -150,6 +176,7 @@
         <!-- Put here the js for the chart -->
         <script src="js/assign1-plot1.js"></script>
         <script src="js/assign1-plot2.js"></script>
+        <script src="js/assign1-plot3.js"></script>
         <script src="js/assign1-plot4.js"></script>
         <script src="js/assign1-plot5.js"></script>
 

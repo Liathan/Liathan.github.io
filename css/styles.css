@@ -164,11 +164,6 @@ h2 span {
     margin: 20px;
 }
 
-.waffle
-{
-    padding-left: 200px;
-}
-
 /** PARAGRAPH **/
 p {
     text-align: justify;
@@ -251,6 +246,17 @@ div.img-description p {
     border: 0;
     border-radius: 8px;
     pointer-events: none;
+}
+
+#selection-waffle {
+    font-family: "Fira Sans", sans-serif;
+    background-color: white;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin: 0px;
+    margin-left: 10px;
+    font-size: 16px;
+    line-height: 1.5;
 }
 
 /* @media (max-width: 1024px) {

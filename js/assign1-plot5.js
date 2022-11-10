@@ -1,30 +1,53 @@
+// -------------------------------------------------------------------------
+// Assignment 1: WaffleChart (fifth plot)
+// We want to show the percentage of each top-5 tree species + "Others" 
+// in each circoscrizione of Trento's territory using wafflecharts
+//--------------------------------------------------------------------------
+
+
+// Refer to the div id
 const id_ref_5 = "#waffle-chart"
 
-selectItem = document.getElementById("selection")
-
-const margin_5 = {top:10,right:500,bottom:30,left:0},
-    width_5  = 500 - margin_5.left,
-    height_5 = 540 - margin_5.top - margin_5.bottom,
-    boxSize = 50, //size of each box
-    boxGap = 50, //space between each box
-    howManyAcross = Math.floor(width_5 / boxSize);
+// Set the dimensions and margins of the graph
+const margin_5 = {top: 50, right: 40, bottom: 60, left: 40},
+    width_5 = 800 - margin_5.left - margin_5.right,
+    height_5 = 460 - margin_5.top - margin_5.bottom,
+    boxSize = 40, //Size of each box
+    boxGap = 50, // Space between each box
+    howManyAcross = 10; // 10 boxes per line 
+    // howManyAcross = Math.floor(width_5 / boxSize);
   
+// Append the svg_5 object to the page
 const svg_5 = d3.select(id_ref_5)
     .append("svg")
-    .attr("width", width_5 + margin_5.left + margin_5.right)
-    .attr("height", height_5 + margin_5.top + margin_5.bottom)
-    .attr("viewBox", "0 0 " + (width_5 + margin_5.left + margin_5.right) + " " + (height_5 + margin_5.top + margin_5.bottom));
+        .attr("preserveAspectRatio", "xMidYMid meet")
+        //.attr("width", width_5 + margin_5.left + margin_5.right)
+        //.attr("height", height_5 + margin_5.top + margin_5.bottom)
+        .attr("viewBox", '0 0 ' + (width_5 + margin_5.left + margin_5.right) + 
+            ' ' + (height_5 + margin_5.top + margin_5.bottom))
+        .append("g")
+           .attr("transform", `translate(${margin_5.left}, ${margin_5.top})`);
 
+// Subgroups
+var subgroups = [];
 
-var categoryHeading = 'SARDAGNA'
+// Data used to plot the wafflechart as percentage
+var plotData = [];
 
-const g = svg_5.append("g")
-    .attr("transform","translate(" + margin_5.left + "," + margin_5.top + ")");
+// Data used in the tooltip
+var tooltipData = [];
 
-//rainbow colors
-// const colors = d3.scaleSequential(d3.interpolateCubehelixDefault);
-pluto = 0;
-const tooltip = d3.select(id_ref_2)
+// Color variable for the top-5 tree species + "Others" class
+var color = [];
+
+// SelectBox to choose the "Circoscrizione" to show
+selectItem = document.getElementById("selection-waffle")
+
+// The selected "Circoscrizione"
+var circoscrizioneHeading = '';
+
+// Create a tooltip
+const tooltip = d3.select(id_ref_5)
     .append("div")
     .attr("class", "tooltip")
     .style("font-size", "14px")
@@ -35,132 +58,220 @@ const tooltip = d3.select(id_ref_2)
     .style("padding", "10px")
     .style("opacity", 0);
 
-data2 = []
-var color = 0;
-d3.csv('../data/assign1-plot5.csv').then(function(data, i){
+// Parse the data
+d3.csv('../data/assign1-plot5.csv').then(function(data, i) {
     
-    const subgroups = data.columns.slice(1);
+    // Extract subgroups (tree species)
+    subgroups = data.columns.slice(1);
     
+    // Update color respect to the subgroups (tree species)
     color = d3.scaleOrdinal()
         .domain(subgroups)
         .range(["#ff595e", "#ffca3a", '#8ac926', '#1982c4', '#6a4c93', '#606470']);
-    
-    pluto = color
-    pippo = data
-    
-    for(j = 0; j < 12; ++j)
+
+    // Load possible options for "Circoscrizione" in the selectBox
+    // Also load data to plot the different wafflecharts
+    for(j = 0; j < 12; ++j) 
     {
-        circo = data[j]['Circoscrizione']
-        opt = new Option(circo, circo)
-        selectItem.appendChild(opt)
-        tmp = []
+        circo = data[j]['Circoscrizione'];
+        opt = new Option(circo, circo);
+        selectItem.appendChild(opt);
+        tmp_plot = [];
+        tmp_tooltip = [];
         for(k = 0; k < 6; ++k)
         {
-            //console.log(k, data[j][subgroups[k]])
-            tmp.push(Array(Math.round(data[j][subgroups[k]])).fill(subgroups[k]))
+            if (data[j][subgroups[k]] != 0)
+                tmp_plot.push(Array(Math.max(Math.round(data[j][subgroups[k]]), 1)).fill(subgroups[k]));
+                tmp_tooltip.push(Array(data[j][subgroups[k]]))
         }
-        data2[circo] = tmp.flat()
+        plotData[circo] = tmp_plot.flat()
+        tooltipData[circo] = tmp_tooltip.flat()
+
+        if (plotData[circo].length > 100)
+            plotData[circo].pop()
+
+        if (plotData[circo].length < 100)
+            plotData[circo].push("Others")
     }
 
-    categoryHeading = selectItem.value
-
-    //console.log("Data", data)
-    //console.log("Data2", data2)
-    // console.log(data2['POVO'])
+    // Take the selected item from the selectBox
+    circoscrizioneHeading = selectItem.value
    
-    //make the main chart
-    g.selectAll(".square")
-        .data(data2[categoryHeading])
+    // Make the main chart
+    svg_5.join("g")
+        .selectAll("rect")
+        .data(plotData[circoscrizioneHeading])
         .join("rect")
-            .attr("class", "square")
-            .attr("x", function(d,i){ return boxSize * (i % howManyAcross); })
-            .attr("y", function(d,i){ return Math.floor(i/howManyAcross) * boxSize; })
+            .attr("class", d => "square partOfWaffle class"+subgroups.indexOf(d))
+            .attr("x", function(d,i) { return boxSize * (i % howManyAcross); })
+            .attr("y", function(d,i) { return Math.floor(i/howManyAcross) * boxSize; })
             .attr("width", boxSize - 3)
             .attr("height", boxSize - 3)
-            .attr("fill", function(d){return color(d);})
-            //.attr("opacity", 0.5)
-        
-    // console.log(color)
-    
-    function count(d)
-    {
-        tot = 0;
-        for(j = 0; j < data2[categoryHeading].length; ++j)
-        {
-            if (data2[categoryHeading][j] == d)
-            {
-                tot += 1
-            }
-        }
-        return tot
-    }
+            .attr("fill", function(d){ return color(d); })
+            .attr("opacity", 0.5);
 
-    svg_5.selectAll("rect")
-        .on("mouseover", function (event, d){
-            console.log(event)
-            d3.select(event.currentTarget)
-                    .transition("selected")
-                        .duration(300)
-                        //.style("opacity", 1.0);
+    // Title
+    svg_5.append("text")
+        .attr("x", ((width_5 - (margin_5.left - margin_5.right)) / 2))             
+        .attr("y", 0 - (margin_5.top / 2))
+        .attr("class", "waffle-title")
+        .style("class", "h2")
+        .style("font-size", "18px")
+        .attr("text-anchor", "middle")  
+        .style("text-decoration", "underline")  
+        .text(`Top-5 tree species + \"Others\" in Circoscrizione: ${circoscrizioneHeading}`);
 
-            tooltip.transition("appear-box")
-                .duration(300)
-                .style("opacity", 1)
-                .delay(1);
-
-            tooltip.html("<span class='tooltiptext'>" + "<b>Species: " + d + 
-                            "</b><br>" + "percentage: "+ count(d) + "%</span>")
-                .style("left", (event.pageX) + "px")
-                .style("top", (event.pageY - 28) + "px");
-        })
-        .on("mouseout", function (event, d) {
-
-            d3.select(event.currentTarget)
-                .transition("unselected")
-                    .duration(300)
-                    //.style("opacity", 0.5);  
-
-            tooltip.transition("disappear-box")
-                .duration(300)
-                .style("opacity", 0);
-        });
-
-    //legend
-    var legend = svg_5.selectAll(".legend")
-        .data(subgroups);
-    
+    // Legend
+    var legend = svg_5.join("g")
+            .selectAll(".legend")
+                .data(subgroups);
     
     legend.join("rect")
-        .attr("x", margin_5.left + width_5 + boxGap )
-        .attr("y", function(d,i){ return (i * boxSize) + margin_5.top; })
+        .attr("x", (boxSize * (howManyAcross+1)) + boxGap )
+        .attr("y", function(d,i){ return (i * boxSize) + 1/5*(boxSize*howManyAcross); })
         .attr("width", boxSize - 3)
         .attr("height", boxSize - 3)
-        .attr("fill", function(d){ console.log("AAAAAAAaa"); return color(d); })
+        .attr("class", d => "class"+subgroups.indexOf(d))
+        .attr("fill", function(d){ return color(d); })
+        .attr("opacity", 0.5);
     
     legend.join("text")
-        .attr("x", margin_5.left + width_5 + boxSize + (boxGap+10))
-        .attr("y", function(d,i){ return (i * boxSize) + margin_5.top; })
+        .attr("x", (boxSize * (howManyAcross+1)) + boxGap + boxSize + 10)
+        .attr("y", function(d,i){ return (i * boxSize) + 1/5*(boxSize*howManyAcross); })
         .append("tspan")
-        .attr("dx", 0)
-        .attr("dy", boxSize/2)
-        .style("alignment-baseline", "middle")
-        .style("font-size", 10)
-        .text(function(d){ console.log("BBBBBB");return d;})
+            .attr("dx", 0)
+            .attr("dy", boxSize/2)
+            .style("alignment-baseline", "middle")
+            .style("font-size", "14px")
+            .text(function(d){ return d; })
+            .attr("class", d => "class"+subgroups.indexOf(d))
+            .attr("opacity", 0.5);
+
+    // function count(d)
+    // {
+    //     tot = 0;
+    //     for(j = 0; j < plotData[circoscrizioneHeading].length; ++j)
+    //     {
+    //         if (plotData[circoscrizioneHeading][j] == d)
+    //         {
+    //             tot += 1
+    //         }
+    //     }
+    //     return tot
+    // }
+
+    // Animation and filling of tooltip
+    svg_5.join("g")
+        .selectAll("rect")
+
+            // MouseOver
+            .on("mouseover", function (event, d) {
+
+                // Select all the rect with this specific class (tree species)
+                idx_d = subgroups.indexOf(d);
+                svg_5.selectAll(`.class${idx_d}`)
+                        .transition("selected")
+                            .duration(300)
+                            .style("opacity", 1.0);
+
+                tooltip.transition("appear-box")
+                    .duration(300)
+                    .style("opacity", .9)
+                    .delay(1);
+
+                // tooltip.html("<span class='tooltiptext'>" + "<b>Species: " + d + 
+                //     "</b><br>" + "Percentage: "+ count(d) + "%</span>")
+                tooltip.html("<span class='tooltiptext'>" + "<b>Species: " + d + 
+                    "</b><br>" + "Percentage: "+ tooltipData[circoscrizioneHeading][subgroups.indexOf(d)] + "%</span>")
+                    .style("left", (event.pageX) + "px")
+                    .style("top", (event.pageY - 28) + "px");
+            })
+        
+            // MouseOut
+            .on("mouseout", function (event, d) {
+
+                // Select all the rect with this specific class (tree species)
+                idx_d = subgroups.indexOf(d);
+                svg_5.selectAll(`.class${idx_d}`)
+                    .transition("unselected")
+                        .duration(300)
+                        .style("opacity", 0.5);  
+
+                tooltip.transition("disappear-box")
+                    .duration(300)
+                    .style("opacity", 0);
+            });
+
 });
 
+// Function to update the wafflechart when the user changes the "Circoscrizione" from the selectBox
 function draw()
-{
-    categoryHeading = selectItem.value
+{   
 
-    
-    g.selectAll(".square")
-        .data(data2[categoryHeading])
+    // New selected "Circoscrizione"
+    circoscrizioneHeading = selectItem.value
+
+    // Delete the previous data
+    svg_5.join("g")
+        .selectAll(".partOfWaffle")
+        .remove()
+
+    // Make the new main chart
+    svg_5.join("g")
+        .selectAll(".square")
+        .data(plotData[circoscrizioneHeading])
         .join("rect")
-            .attr("class", "square")
+            .attr("class", d => "square partOfWaffle class"+subgroups.indexOf(d))
             .attr("x", function(d,i){ return boxSize * (i % howManyAcross); })
             .attr("y", function(d,i){ return Math.floor(i/howManyAcross) * boxSize; })
             .attr("width", boxSize - 3)
             .attr("height", boxSize - 3)
-            .attr("fill", function(d){return color(d);})
-          
+            .attr("fill", function(d){return color(d)})
+            .attr("opacity", 0.5);
+
+    // Update the title to the current "Circoscrizione"
+    svg_5.select(".waffle-title")
+        .text(`Top-5 tree species + \"Others\" in Circoscrizione: ${circoscrizioneHeading}`)
+
+    // Update the animation and filling of tooltip
+    svg_5.join("g")
+        .selectAll("rect")
+
+            // MouseOver
+            .on("mouseover", function (event, d) {
+
+                // Select all the rect with this specific class (tree species)
+                idx_d = subgroups.indexOf(d);
+                svg_5.selectAll(`.class${idx_d}`)
+                        .transition("selected")
+                            .duration(300)
+                            .style("opacity", 1.0);
+
+                tooltip.transition("appear-box")
+                    .duration(300)
+                    .style("opacity", .9)
+                    .delay(1);
+
+                // tooltip.html("<span class='tooltiptext'>" + "<b>Species: " + d + 
+                //     "</b><br>" + "Percentage: "+ count(d) + "%</span>")
+                tooltip.html("<span class='tooltiptext'>" + "<b>Species: " + d + 
+                    "</b><br>" + "Percentage: "+ tooltipData[circoscrizioneHeading][subgroups.indexOf(d)] + "%</span>")
+                    .style("left", (event.pageX) + "px")
+                    .style("top", (event.pageY - 28) + "px");
+            })
+        
+            // MouseOut
+            .on("mouseout", function (event, d) {
+
+                // Select all the rect with this specific class (tree species)
+                idx_d = subgroups.indexOf(d);
+                svg_5.selectAll(`.class${idx_d}`)
+                    .transition("unselected")
+                        .duration(300)
+                        .style("opacity", 0.5);  
+
+                tooltip.transition("disappear-box")
+                    .duration(300)
+                    .style("opacity", 0);
+            });            
 }
