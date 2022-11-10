@@ -1,0 +1,3157 @@
+Name,Height (m),Canopy Cover (m2),DBH (cm)
+Tilia cordata,4.5,7.1,8.0
+Tilia cordata,5.0,7.1,11.0
+Tilia cordata,5.0,7.1,11.0
+Tilia cordata,4.0,3.1,7.0
+Tilia cordata,6.0,28.3,18.0
+Tilia cordata,7.0,28.3,17.0
+Tilia cordata,7.0,28.3,17.0
+Tilia cordata,7.0,19.6,14.0
+Tilia cordata,4.5,7.1,8.0
+Tilia cordata,4.5,4.9,10.0
+Tilia cordata,4.5,0.8,8.0
+Tilia cordata,4.5,3.1,8.0
+Tilia cordata,5.0,7.1,11.0
+Tilia cordata,5.0,7.1,11.0
+Tilia cordata,5.0,7.1,11.0
+Tilia cordata,4.5,7.1,8.0
+Tilia cordata,2.0,0.8,8.0
+Tilia cordata,4.5,3.1,7.0
+Tilia cordata,4.5,3.1,7.0
+Tilia cordata,5.0,7.1,11.0
+Tilia cordata,5.0,7.1,11.0
+Tilia cordata,4.5,4.9,9.0
+Tilia cordata,4.5,4.9,10.0
+Tilia cordata,4.5,4.9,10.0
+Tilia cordata,5.0,4.9,10.0
+Tilia cordata,4.5,4.9,10.0
+Tilia cordata,5.0,4.9,11.0
+Tilia cordata,5.0,4.9,11.0
+Tilia cordata,5.0,4.9,11.0
+Tilia cordata,5.0,7.1,11.0
+Tilia cordata,5.0,7.1,11.0
+Tilia cordata,5.0,7.1,11.0
+Tilia cordata,5.0,4.9,11.0
+Tilia cordata,5.0,4.9,11.0
+Tilia cordata,6.0,12.6,13.0
+Tilia cordata,6.0,12.6,13.0
+Tilia cordata,6.0,19.6,19.0
+Carpinus betulus,4.5,3.1,11.0
+Carpinus betulus,4.0,1.8,11.0
+Carpinus betulus,5.0,12.6,11.0
+Carpinus betulus,4.5,7.1,10.0
+Tilia cordata,5.0,12.6,10.0
+Tilia cordata,5.0,12.6,10.0
+Tilia cordata,4.0,12.6,10.0
+Tilia cordata,5.0,12.6,10.0
+Tilia cordata,5.0,12.6,10.0
+Tilia cordata,5.0,12.6,10.0
+Carpinus betulus,4.0,7.1,11.0
+Carpinus betulus,4.0,7.1,11.0
+Carpinus betulus,4.5,12.6,12.0
+Celtis australis,6.0,28.3,16.0
+Celtis australis,6.0,28.3,16.0
+Celtis australis,6.0,28.3,166.0
+Celtis australis,5.5,19.6,14.0
+Celtis australis,6.5,28.3,16.0
+Celtis australis,4.5,19.6,19.0
+Celtis australis,5.0,19.6,17.0
+Celtis australis,4.5,19.6,17.0
+Celtis australis,4.5,19.6,15.0
+Celtis australis,4.0,12.6,15.0
+Celtis australis,4.0,12.6,14.0
+Celtis australis,4.0,12.6,14.0
+Celtis australis,4.0,12.6,14.0
+Celtis australis,4.0,12.6,14.0
+Celtis australis,4.0,12.6,13.0
+Tilia cordata,8.0,28.3,15.0
+Tilia cordata,8.0,28.3,15.0
+Tilia cordata,10.0,50.3,24.0
+Celtis australis,9.0,153.9,38.0
+Celtis australis,8.0,113.1,32.0
+Celtis australis,8.0,113.1,32.0
+Platanus x hispanica,15.0,63.6,40.0
+Tilia cordata,7.0,28.3,18.0
+Tilia cordata,7.0,28.3,18.0
+Tilia cordata,7.0,28.3,18.0
+Tilia cordata,7.0,28.3,18.0
+Tilia cordata,7.0,28.3,18.0
+Tilia cordata,6.0,19.6,15.0
+Tilia cordata,6.0,19.6,15.0
+Tilia cordata,6.0,12.6,15.0
+Tilia cordata,6.0,19.6,15.0
+Tilia cordata,7.0,28.3,19.0
+Tilia cordata,7.0,28.3,19.0
+Tilia cordata,7.0,28.3,19.0
+Tilia cordata,7.0,19.6,14.0
+Tilia cordata,6.0,12.6,15.0
+Tilia cordata,6.0,12.6,10.0
+Tilia cordata,8.0,28.3,18.0
+Tilia cordata,8.0,12.6,15.0
+Tilia cordata,8.0,12.6,15.0
+Tilia cordata,8.0,12.6,15.0
+Tilia cordata,8.0,12.6,18.0
+Tilia cordata,8.0,12.6,18.0
+Tilia cordata,5.0,7.1,9.0
+Tilia cordata,7.0,12.6,17.0
+Tilia cordata,5.0,7.1,13.0
+Tilia cordata,7.0,12.6,13.0
+Carpinus betulus,12.0,7.1,20.0
+Carpinus betulus,12.0,7.1,20.0
+Carpinus betulus,12.0,7.1,20.0
+Carpinus betulus,8.0,7.1,20.0
+Carpinus betulus,8.0,7.1,20.0
+Carpinus betulus,8.0,7.1,20.0
+Carpinus betulus,6.0,7.1,10.0
+Carpinus betulus,6.0,7.1,10.0
+Carpinus betulus,6.0,7.1,10.0
+Carpinus betulus,6.0,7.1,10.0
+Carpinus betulus,6.0,7.1,10.0
+Carpinus betulus,6.0,3.1,4.0
+Carpinus betulus,6.0,3.1,4.0
+Carpinus betulus,6.0,3.1,4.0
+Carpinus betulus,6.0,3.1,4.0
+Carpinus betulus,6.0,3.1,4.0
+Carpinus betulus,6.0,3.1,4.0
+Carpinus betulus,6.0,3.1,4.0
+Carpinus betulus,8.0,7.1,10.0
+Carpinus betulus,6.0,7.1,20.0
+Carpinus betulus,4.0,7.1,10.0
+Carpinus betulus,15.0,12.6,25.0
+Carpinus betulus,15.0,12.6,35.0
+Carpinus betulus,15.0,7.1,10.0
+Carpinus betulus,8.0,7.1,10.0
+Carpinus betulus,15.0,12.6,20.0
+Carpinus betulus,8.0,7.1,10.0
+Carpinus betulus,8.0,12.6,15.0
+Carpinus betulus,4.0,1.8,7.0
+Carpinus betulus,4.0,1.8,7.0
+Carpinus betulus,4.0,1.8,7.0
+Carpinus betulus,4.0,1.8,7.0
+Carpinus betulus,4.0,1.8,7.0
+Carpinus betulus,4.0,1.8,7.0
+Carpinus betulus,4.0,1.8,7.0
+Carpinus betulus,4.0,1.8,7.0
+Carpinus betulus,4.0,1.8,7.0
+Carpinus betulus,4.0,1.8,7.0
+Carpinus betulus,4.0,1.8,7.0
+Celtis australis,10.0,7.1,15.0
+Celtis australis,10.0,7.1,15.0
+Celtis australis,12.0,7.1,20.0
+Celtis australis,18.0,19.6,80.0
+Celtis australis,8.0,7.1,20.0
+Celtis australis,8.0,7.1,20.0
+Celtis australis,8.0,7.1,20.0
+Celtis australis,6.0,7.1,15.0
+Celtis australis,8.0,50.3,24.0
+Carpinus betulus,4.5,4.9,9.0
+Carpinus betulus,4.5,4.9,9.0
+Carpinus betulus,5.0,3.1,10.0
+Carpinus betulus,5.0,7.1,10.0
+Carpinus betulus,5.0,3.1,10.0
+Tilia cordata,4.0,1.8,6.0
+Tilia cordata,4.0,0.8,6.0
+Tilia cordata,6.0,12.6,13.0
+Platanus x hispanica,11.0,78.5,29.0
+Carpinus betulus,4.0,4.9,9.0
+Carpinus betulus,4.5,7.1,12.0
+Carpinus betulus,4.5,3.1,9.0
+Tilia cordata,4.0,7.1,12.0
+Tilia cordata,1.0,0.2,8.0
+Tilia cordata,6.0,28.3,16.0
+Tilia cordata,5.0,1.8,9.0
+Tilia cordata,6.0,28.3,18.0
+Tilia cordata,4.5,0.8,8.0
+Tilia cordata,4.0,0.8,8.0
+Tilia cordata,4.5,0.8,8.0
+Tilia cordata,4.0,12.6,13.0
+Tilia cordata,5.0,12.6,15.0
+Tilia cordata,5.0,12.6,13.0
+Tilia cordata,4.0,0.8,7.0
+Tilia cordata,4.5,12.6,12.0
+Tilia cordata,4.0,1.8,8.0
+Tilia cordata,5.0,12.6,18.0
+Tilia cordata,4.0,1.8,7.0
+Tilia cordata,6.0,12.6,19.0
+Tilia cordata,4.0,0.8,7.0
+Tilia cordata,4.0,0.8,7.0
+Tilia cordata,4.0,7.1,9.0
+Tilia cordata,5.0,7.1,11.0
+Tilia cordata,4.5,12.6,14.0
+Tilia cordata,4.0,0.8,6.0
+Tilia cordata,4.0,0.8,7.0
+Tilia cordata,4.0,0.8,7.0
+Tilia cordata,4.0,7.1,13.0
+Tilia cordata,4.5,12.6,15.0
+Tilia cordata,4.0,0.8,6.0
+Tilia cordata,4.0,0.8,6.0
+Tilia cordata,4.0,0.8,6.0
+Tilia cordata,3.0,0.8,5.0
+Tilia cordata,4.0,0.8,5.0
+Tilia cordata,5.0,12.6,17.0
+Tilia cordata,4.0,1.8,8.0
+Tilia cordata,5.0,19.6,16.0
+Platanus x hispanica,7.0,3.1,10.0
+Platanus x hispanica,6.0,3.1,10.0
+Platanus x hispanica,7.0,3.1,12.0
+Platanus x hispanica,8.0,3.1,13.0
+Platanus x hispanica,6.0,7.1,11.0
+Platanus x hispanica,6.0,7.1,11.0
+Carpinus betulus,6.0,7.1,7.0
+Carpinus betulus,6.0,3.1,7.0
+Carpinus betulus,6.0,7.1,7.0
+Celtis australis,7.0,28.3,19.0
+Tilia cordata,6.0,12.6,15.0
+Tilia cordata,6.0,12.6,13.0
+Tilia cordata,6.0,12.6,15.0
+Tilia cordata,6.0,12.6,14.0
+Tilia cordata,6.0,12.6,16.0
+Tilia cordata,5.0,4.9,13.0
+Tilia cordata,6.0,15.9,16.0
+Tilia cordata,5.0,7.1,10.0
+Tilia cordata,4.0,1.8,7.0
+Tilia cordata,5.5,19.6,14.0
+Tilia cordata,4.5,12.6,13.0
+Tilia cordata,3.5,1.8,7.0
+Tilia cordata,4.0,3.1,8.0
+Tilia cordata,3.0,0.8,7.0
+Tilia cordata,4.0,3.1,9.0
+Tilia cordata,3.5,1.8,7.0
+Tilia cordata,3.5,1.8,7.0
+Tilia cordata,3.5,1.8,7.0
+Tilia cordata,4.0,12.6,11.0
+Tilia cordata,4.5,19.6,12.0
+Tilia cordata,4.0,0.8,6.0
+Tilia cordata,6.0,12.6,14.0
+Tilia cordata,5.0,12.6,13.0
+Tilia cordata,4.0,1.8,9.0
+Tilia cordata,4.0,7.1,10.0
+Tilia cordata,4.0,7.1,10.0
+Tilia cordata,4.5,12.6,12.0
+Tilia cordata,4.0,4.9,10.0
+Tilia cordata,3.0,0.8,9.0
+Celtis australis,6.0,19.6,14.0
+Celtis australis,6.0,19.6,14.0
+Celtis australis,6.0,19.6,14.0
+Celtis australis,5.0,7.1,14.0
+Celtis australis,5.0,7.1,14.0
+Celtis australis,5.0,7.1,14.0
+Celtis australis,5.0,7.1,14.0
+Celtis australis,5.0,7.1,14.0
+Celtis australis,6.0,19.6,14.0
+Celtis australis,6.0,19.6,14.0
+Celtis australis,5.0,7.1,14.0
+Celtis australis,5.0,4.9,11.0
+Celtis australis,5.0,4.9,11.0
+Celtis australis,5.0,4.9,11.0
+Celtis australis,5.0,7.1,14.0
+Celtis australis,6.0,19.6,14.0
+Celtis australis,6.0,19.6,14.0
+Celtis australis,6.0,19.6,13.0
+Celtis australis,6.0,19.6,14.0
+Celtis australis,6.0,12.6,12.0
+Celtis australis,6.0,12.6,12.0
+Celtis australis,6.0,12.6,16.0
+Celtis australis,6.0,12.6,12.0
+Celtis australis,6.0,12.6,12.0
+Celtis australis,6.0,12.6,12.0
+Celtis australis,5.0,4.9,9.0
+Celtis australis,5.0,4.9,11.0
+Celtis australis,5.0,7.1,14.0
+Celtis australis,5.0,4.9,11.0
+Celtis australis,5.0,7.1,11.0
+Celtis australis,5.0,7.1,11.0
+Celtis australis,5.0,7.1,11.0
+Celtis australis,5.0,4.9,9.0
+Celtis australis,5.0,7.1,11.0
+Celtis australis,5.0,7.1,11.0
+Celtis australis,5.0,7.1,14.0
+Celtis australis,6.0,19.6,14.0
+Celtis australis,5.0,7.1,14.0
+Celtis australis,6.0,19.6,14.0
+Celtis australis,6.0,19.6,14.0
+Celtis australis,5.0,7.1,14.0
+Celtis australis,5.0,7.1,14.0
+Celtis australis,5.0,7.1,14.0
+Celtis australis,6.0,19.6,14.0
+Celtis australis,6.0,19.6,14.0
+Celtis australis,6.0,19.6,14.0
+Celtis australis,6.0,19.6,14.0
+Celtis australis,6.0,19.6,14.0
+Tilia cordata,4.0,4.9,10.0
+Tilia cordata,4.0,4.9,10.0
+Tilia cordata,4.0,4.9,10.0
+Tilia cordata,4.0,4.9,10.0
+Tilia cordata,4.0,4.9,10.0
+Tilia cordata,4.0,4.9,10.0
+Tilia cordata,4.0,4.9,10.0
+Tilia cordata,4.0,4.9,10.0
+Tilia cordata,4.0,4.9,10.0
+Tilia cordata,4.0,4.9,10.0
+Tilia cordata,4.0,4.9,10.0
+Tilia cordata,4.0,4.9,10.0
+Tilia cordata,4.0,4.9,10.0
+Tilia cordata,4.0,4.9,10.0
+Tilia cordata,4.0,4.9,10.0
+Tilia cordata,4.0,4.9,10.0
+Tilia cordata,4.0,4.9,10.0
+Tilia cordata,4.0,4.9,10.0
+Tilia cordata,4.0,4.9,10.0
+Tilia cordata,4.0,4.9,10.0
+Tilia cordata,4.0,4.9,10.0
+Tilia cordata,4.0,4.9,10.0
+Tilia cordata,4.0,4.9,10.0
+Tilia cordata,4.0,4.9,10.0
+Tilia cordata,4.0,4.9,10.0
+Tilia cordata,4.0,4.9,10.0
+Tilia cordata,4.0,4.9,10.0
+Tilia cordata,4.0,4.9,10.0
+Tilia cordata,4.0,4.9,10.0
+Tilia cordata,4.0,4.9,10.0
+Tilia cordata,4.0,4.9,10.0
+Tilia cordata,4.0,4.9,10.0
+Tilia cordata,4.0,4.9,10.0
+Tilia cordata,4.0,4.9,10.0
+Tilia cordata,4.0,4.9,10.0
+Tilia cordata,4.0,4.9,10.0
+Tilia cordata,4.0,4.9,10.0
+Tilia cordata,4.0,4.9,10.0
+Tilia cordata,4.0,4.9,10.0
+Tilia cordata,4.0,4.9,10.0
+Tilia cordata,4.0,4.9,10.0
+Tilia cordata,4.0,4.9,10.0
+Tilia cordata,4.0,4.9,10.0
+Tilia cordata,4.0,4.9,10.0
+Tilia cordata,4.0,4.9,10.0
+Tilia cordata,4.0,4.9,10.0
+Tilia cordata,4.0,4.9,10.0
+Tilia cordata,4.0,4.9,10.0
+Tilia cordata,4.0,4.9,10.0
+Tilia cordata,4.0,4.9,10.0
+Tilia cordata,4.0,4.9,10.0
+Tilia cordata,4.0,4.9,10.0
+Tilia cordata,4.0,4.9,10.0
+Tilia cordata,4.0,4.9,10.0
+Tilia cordata,4.0,4.9,10.0
+Tilia cordata,4.0,4.9,10.0
+Tilia cordata,4.0,4.9,10.0
+Tilia cordata,4.0,4.9,10.0
+Celtis australis,6.0,28.3,18.0
+Carpinus betulus,4.5,4.9,10.0
+Carpinus betulus,5.0,3.1,9.0
+Carpinus betulus,4.5,4.9,10.0
+Carpinus betulus,4.5,4.9,10.0
+Carpinus betulus,4.5,4.9,9.0
+Carpinus betulus,5.0,3.1,10.0
+Carpinus betulus,5.0,3.1,10.0
+Carpinus betulus,4.5,4.9,9.0
+Carpinus betulus,5.0,3.1,10.0
+Carpinus betulus,2.5,3.1,9.0
+Carpinus betulus,4.5,3.1,9.0
+Carpinus betulus,5.0,7.1,10.0
+Carpinus betulus,5.0,7.1,10.0
+Carpinus betulus,4.5,4.9,10.0
+Carpinus betulus,4.5,4.9,9.0
+Carpinus betulus,4.5,3.1,9.0
+Carpinus betulus,4.5,4.9,10.0
+Carpinus betulus,4.5,3.1,9.0
+Carpinus betulus,4.5,7.1,9.0
+Carpinus betulus,4.5,4.9,9.0
+Carpinus betulus,4.5,7.1,9.0
+Carpinus betulus,4.5,4.9,10.0
+Carpinus betulus,4.5,3.1,9.0
+Carpinus betulus,5.0,3.1,10.0
+Carpinus betulus,4.5,3.1,9.0
+Carpinus betulus,4.5,4.9,9.0
+Carpinus betulus,4.5,4.9,9.0
+Carpinus betulus,4.5,4.9,9.0
+Carpinus betulus,5.0,3.1,10.0
+Celtis australis,6.0,12.6,18.0
+Celtis australis,6.0,12.6,18.0
+Celtis australis,6.0,12.6,18.0
+Celtis australis,6.0,12.6,18.0
+Celtis australis,6.0,12.6,18.0
+Celtis australis,6.0,12.6,18.0
+Celtis australis,6.0,12.6,17.0
+Celtis australis,6.0,12.6,18.0
+Celtis australis,6.0,12.6,18.0
+Celtis australis,6.0,12.6,18.0
+Celtis australis,6.0,12.6,20.0
+Celtis australis,6.0,12.6,20.0
+Celtis australis,6.0,12.6,20.0
+Celtis australis,6.0,12.6,20.0
+Celtis australis,6.0,12.6,20.0
+Celtis australis,6.0,12.6,18.0
+Celtis australis,6.0,12.6,20.0
+Celtis australis,6.0,12.6,20.0
+Celtis australis,6.0,12.6,22.0
+Celtis australis,5.0,12.6,11.0
+Celtis australis,5.0,7.1,9.0
+Celtis australis,5.0,12.6,11.0
+Celtis australis,5.0,12.6,11.0
+Celtis australis,4.5,7.1,9.0
+Celtis australis,5.0,9.6,10.0
+Celtis australis,5.0,7.1,9.0
+Celtis australis,4.5,7.1,12.0
+Celtis australis,4.5,7.1,12.0
+Celtis australis,4.5,7.1,12.0
+Celtis australis,4.5,7.1,12.0
+Celtis australis,4.5,7.1,12.0
+Celtis australis,5.0,19.6,13.0
+Celtis australis,4.5,7.1,12.0
+Celtis australis,4.5,7.1,12.0
+Celtis australis,4.5,7.1,12.0
+Celtis australis,4.5,7.1,12.0
+Celtis australis,4.5,7.1,12.0
+Celtis australis,4.5,7.1,12.0
+Celtis australis,4.5,7.1,12.0
+Celtis australis,4.5,7.1,12.0
+Celtis australis,4.5,7.1,10.0
+Celtis australis,5.0,7.1,11.0
+Celtis australis,5.0,7.1,11.0
+Celtis australis,5.0,12.6,11.0
+Celtis australis,6.0,12.6,12.0
+Celtis australis,4.0,7.1,12.0
+Celtis australis,8.0,28.3,25.0
+Celtis australis,8.0,28.3,25.0
+Celtis australis,8.0,28.3,19.0
+Celtis australis,8.0,28.3,21.0
+Celtis australis,8.0,28.3,21.0
+Celtis australis,8.0,28.3,21.0
+Celtis australis,8.0,28.3,21.0
+Celtis australis,8.0,28.3,20.0
+Celtis australis,8.0,28.3,21.0
+Celtis australis,8.0,28.3,22.0
+Celtis australis,8.0,28.3,18.0
+Celtis australis,8.0,28.3,22.0
+Celtis australis,8.0,28.3,19.0
+Celtis australis,8.0,28.3,19.0
+Celtis australis,8.0,28.3,19.0
+Celtis australis,8.0,28.3,22.0
+Celtis australis,8.0,28.3,19.0
+Celtis australis,8.0,28.3,23.0
+Celtis australis,8.0,28.3,25.0
+Celtis australis,6.0,19.6,12.0
+Celtis australis,6.0,19.6,12.0
+Celtis australis,8.0,28.3,18.0
+Celtis australis,8.0,28.3,19.0
+Celtis australis,7.0,19.6,16.0
+Celtis australis,8.0,50.3,19.0
+Celtis australis,7.0,28.3,18.0
+Celtis australis,4.0,1.8,6.0
+Celtis australis,4.0,1.8,7.0
+Celtis australis,5.0,12.6,12.0
+Celtis australis,5.0,12.6,13.0
+Celtis australis,4.0,1.8,7.0
+Tilia cordata,5.0,12.6,18.0
+Tilia cordata,4.0,4.9,11.0
+Tilia cordata,4.0,12.6,15.0
+Tilia cordata,4.0,4.9,10.0
+Tilia cordata,6.0,15.9,18.0
+Tilia cordata,4.5,0.8,7.0
+Tilia cordata,4.5,0.8,7.0
+Tilia cordata,5.0,12.6,15.0
+Tilia cordata,6.0,12.6,17.0
+Tilia cordata,4.0,0.8,8.0
+Tilia cordata,4.0,1.8,7.0
+Tilia cordata,5.0,12.6,17.0
+Tilia cordata,3.5,3.1,6.0
+Tilia cordata,4.0,15.9,21.0
+Celtis australis,4.0,1.8,7.0
+Celtis australis,5.0,4.9,10.0
+Celtis australis,4.0,1.8,7.0
+Celtis australis,5.0,4.9,12.0
+Celtis australis,5.0,4.9,11.0
+Celtis australis,6.0,28.3,19.0
+Celtis australis,6.0,28.3,18.0
+Celtis australis,8.0,28.3,22.0
+Tilia cordata,4.0,7.1,12.0
+Tilia cordata,5.0,12.6,16.0
+Tilia cordata,5.0,12.6,15.0
+Tilia cordata,5.0,7.1,13.0
+Carpinus betulus,4.5,7.1,12.0
+Carpinus betulus,4.5,7.1,12.0
+Carpinus betulus,5.0,4.9,10.0
+Carpinus betulus,5.0,7.1,11.0
+Carpinus betulus,4.5,4.9,8.0
+Carpinus betulus,4.5,4.9,9.0
+Carpinus betulus,5.0,3.1,10.0
+Platanus x hispanica,5.0,7.1,12.0
+Platanus x hispanica,7.0,28.3,22.0
+Platanus x hispanica,7.0,28.3,21.0
+Platanus x hispanica,7.0,28.3,18.0
+Platanus x hispanica,7.0,28.3,19.0
+Platanus x hispanica,5.0,7.1,13.0
+Platanus x hispanica,8.0,28.3,16.0
+Platanus x hispanica,13.0,78.5,33.0
+Platanus x hispanica,12.0,78.5,33.0
+Platanus x hispanica,11.0,50.3,22.0
+Platanus x hispanica,6.0,1.8,7.0
+Platanus x hispanica,12.0,78.5,32.0
+Platanus x hispanica,11.0,63.6,21.0
+Platanus x hispanica,12.0,78.5,28.0
+Platanus x hispanica,11.0,63.6,22.0
+Platanus x hispanica,12.0,95.0,29.0
+Platanus x hispanica,8.0,23.8,15.0
+Celtis australis,4.0,0.8,7.0
+Celtis australis,6.0,12.6,13.0
+Celtis australis,6.0,12.6,14.0
+Platanus x hispanica,10.0,63.6,19.0
+Platanus x hispanica,12.0,78.5,28.0
+Platanus x hispanica,12.0,78.5,31.0
+Platanus x hispanica,8.0,38.5,18.0
+Platanus x hispanica,8.0,50.3,18.0
+Platanus x hispanica,11.0,50.3,22.0
+Platanus x hispanica,11.0,63.6,24.0
+Platanus x hispanica,11.0,63.6,24.0
+Platanus x hispanica,10.0,50.3,21.0
+Platanus x hispanica,12.0,95.0,24.0
+Platanus x hispanica,11.0,78.5,29.0
+Platanus x hispanica,7.0,38.5,18.0
+Tilia cordata,10.0,50.3,25.0
+Tilia cordata,10.0,50.3,19.0
+Tilia cordata,7.0,12.6,16.0
+Tilia cordata,7.0,12.6,16.0
+Tilia cordata,7.0,28.3,17.0
+Tilia cordata,6.0,12.6,14.0
+Tilia cordata,6.0,12.6,13.0
+Tilia cordata,6.0,28.3,13.0
+Tilia cordata,7.0,28.3,15.0
+Tilia cordata,7.0,38.5,14.0
+Tilia cordata,8.0,38.5,18.0
+Tilia cordata,4.0,0.8,6.0
+Tilia cordata,6.0,12.6,13.0
+Tilia cordata,5.0,1.8,6.0
+Tilia cordata,6.0,4.9,10.0
+Tilia cordata,2.5,0.8,7.0
+Tilia cordata,4.5,12.6,12.0
+Tilia cordata,4.0,3.1,10.0
+Tilia cordata,4.0,3.1,10.0
+Tilia cordata,6.5,12.6,19.0
+Tilia cordata,4.0,1.8,8.0
+Tilia cordata,5.5,19.6,16.0
+Tilia cordata,5.5,28.3,16.0
+Tilia cordata,4.0,0.8,7.0
+Tilia cordata,4.0,0.8,7.0
+Tilia cordata,6.0,28.3,18.0
+Tilia cordata,5.5,19.6,16.0
+Tilia cordata,4.0,0.8,7.0
+Tilia cordata,4.0,1.8,7.0
+Tilia cordata,4.0,1.8,7.0
+Tilia cordata,5.0,19.6,17.0
+Tilia cordata,5.0,19.6,17.0
+Tilia cordata,4.0,7.1,12.0
+Tilia cordata,4.0,12.6,18.0
+Platanus x hispanica,5.0,4.9,10.0
+Platanus x hispanica,5.0,4.9,10.0
+Platanus x hispanica,6.0,3.1,14.0
+Platanus x hispanica,6.0,3.1,14.0
+Platanus x hispanica,5.0,1.8,13.0
+Platanus x hispanica,6.0,3.1,13.0
+Platanus x hispanica,6.0,3.1,13.0
+Platanus x hispanica,7.0,7.1,13.0
+Platanus x hispanica,7.0,7.1,13.0
+Platanus x hispanica,7.0,7.1,13.0
+Platanus x hispanica,4.0,4.9,10.0
+Platanus x hispanica,6.0,4.9,10.0
+Platanus x hispanica,5.0,7.1,15.0
+Platanus x hispanica,5.0,7.1,13.0
+Platanus x hispanica,6.0,7.1,15.0
+Platanus x hispanica,6.0,7.1,15.0
+Platanus x hispanica,6.0,7.1,15.0
+Platanus x hispanica,6.0,4.9,10.0
+Platanus x hispanica,6.0,4.9,10.0
+Platanus x hispanica,6.0,4.9,10.0
+Platanus x hispanica,7.0,7.1,11.0
+Platanus x hispanica,7.0,7.1,12.0
+Platanus x hispanica,7.0,7.1,12.0
+Platanus x hispanica,6.0,4.9,11.0
+Platanus x hispanica,7.0,7.1,11.0
+Platanus x hispanica,7.0,7.1,11.0
+Platanus x hispanica,6.0,7.1,10.0
+Platanus x hispanica,6.0,7.1,10.0
+Platanus x hispanica,6.0,7.1,10.0
+Celtis australis,5.0,12.6,15.0
+Celtis australis,5.0,12.6,15.0
+Celtis australis,5.0,12.6,14.0
+Celtis australis,5.0,12.6,14.0
+Celtis australis,4.0,7.1,12.0
+Celtis australis,4.0,12.6,13.0
+Celtis australis,4.0,12.6,13.0
+Celtis australis,4.0,12.6,15.0
+Celtis australis,5.0,12.6,15.0
+Celtis australis,5.0,12.6,15.0
+Celtis australis,5.0,12.6,14.0
+Celtis australis,4.0,12.6,14.0
+Celtis australis,4.0,12.6,12.0
+Celtis australis,5.0,12.6,14.0
+Celtis australis,5.0,12.6,14.0
+Celtis australis,5.0,12.6,14.0
+Celtis australis,4.0,12.6,12.0
+Celtis australis,5.0,12.6,14.0
+Celtis australis,5.0,7.1,12.0
+Celtis australis,5.0,12.6,14.0
+Celtis australis,5.0,12.6,14.0
+Celtis australis,4.5,12.6,12.0
+Celtis australis,5.0,12.6,13.0
+Celtis australis,4.0,19.6,14.0
+Celtis australis,5.0,12.6,13.0
+Celtis australis,5.0,12.6,13.0
+Celtis australis,4.5,7.1,11.0
+Celtis australis,5.0,12.6,13.0
+Celtis australis,4.5,7.1,11.0
+Celtis australis,5.0,12.6,14.0
+Celtis australis,5.0,12.6,13.0
+Celtis australis,5.0,12.6,13.0
+Celtis australis,5.0,12.6,13.0
+Celtis australis,4.0,3.1,4.0
+Platanus x hispanica,18.0,176.7,80.0
+Platanus x hispanica,18.0,201.1,70.0
+Platanus x hispanica,24.0,227.0,75.0
+Aesculus hippocastanum,15.0,176.7,50.0
+Aesculus hippocastanum,15.0,113.1,60.0
+Aesculus hippocastanum,14.0,95.0,60.0
+Aesculus hippocastanum,16.0,28.3,52.5
+Celtis australis,6.0,12.6,17.0
+Celtis australis,6.0,12.6,22.0
+Celtis australis,7.0,19.6,23.0
+Celtis australis,10.0,38.5,35.0
+Celtis australis,9.0,50.3,28.0
+Celtis australis,8.0,38.5,28.0
+Celtis australis,12.0,113.1,29.0
+Celtis australis,9.0,50.3,33.0
+Celtis australis,9.0,38.5,28.0
+Celtis australis,8.0,28.3,20.0
+Tilia cordata,10.0,28.3,25.0
+Tilia cordata,10.0,28.3,25.0
+Celtis australis,10.0,28.3,25.0
+Celtis australis,10.0,28.3,25.0
+Celtis australis,10.0,50.3,29.0
+Celtis australis,8.0,28.3,27.0
+Celtis australis,8.0,28.3,25.0
+Celtis australis,7.0,28.3,18.0
+Celtis australis,8.0,50.3,22.0
+Celtis australis,8.0,50.3,22.0
+Celtis australis,8.0,28.3,16.0
+Celtis australis,6.0,28.3,20.0
+Celtis australis,15.0,113.1,50.0
+Celtis australis,12.5,95.0,46.0
+Celtis australis,13.0,113.1,46.0
+Celtis australis,12.0,113.1,45.0
+Celtis australis,13.0,113.1,46.0
+Celtis australis,5.0,12.6,18.0
+Carpinus betulus,6.2,10.1,17.0
+Celtis australis,5.0,19.6,16.0
+Celtis australis,5.0,12.6,14.0
+Celtis australis,5.0,12.6,15.0
+Celtis australis,3.5,12.6,12.0
+Celtis australis,4.0,12.6,13.0
+Celtis australis,14.0,12.6,80.0
+Celtis australis,14.0,28.3,60.0
+Celtis australis,15.0,50.3,70.0
+Celtis australis,15.0,63.6,65.0
+Celtis australis,18.0,95.0,85.0
+Celtis australis,16.0,78.5,45.0
+Celtis australis,15.0,176.7,45.0
+Celtis australis,18.0,63.6,60.0
+Carpinus betulus,8.0,12.6,20.0
+Carpinus betulus,15.0,12.6,35.0
+Carpinus betulus,8.0,12.6,20.0
+Celtis australis,25.0,12.6,35.0
+Aesculus hippocastanum,6.0,12.6,18.0
+Aesculus hippocastanum,6.0,12.6,20.0
+Aesculus hippocastanum,14.0,78.5,65.0
+Aesculus hippocastanum,12.0,28.3,15.0
+Aesculus hippocastanum,5.0,3.1,15.0
+Carpinus betulus,3.0,3.1,3.0
+Aesculus hippocastanum,12.0,78.5,50.0
+Carpinus betulus,20.0,12.6,60.0
+Carpinus betulus,18.0,12.6,40.0
+Carpinus betulus,25.0,12.6,70.0
+Carpinus betulus,8.0,3.1,10.0
+Carpinus betulus,8.0,3.1,10.0
+Carpinus betulus,8.0,3.1,10.0
+Carpinus betulus,8.0,3.1,10.0
+Carpinus betulus,8.0,3.1,10.0
+Carpinus betulus,7.0,1.8,6.0
+Celtis australis,20.0,12.6,60.0
+Celtis australis,20.0,12.6,25.0
+Aesculus hippocastanum,20.0,19.6,30.0
+Aesculus hippocastanum,8.0,12.6,30.0
+Aesculus hippocastanum,6.0,12.6,25.0
+Aesculus hippocastanum,12.0,78.5,62.0
+Aesculus hippocastanum,12.0,50.3,60.0
+Aesculus hippocastanum,7.0,12.6,18.0
+Aesculus hippocastanum,8.0,28.3,28.0
+Aesculus hippocastanum,10.0,28.3,38.0
+Aesculus hippocastanum,8.0,28.3,40.0
+Aesculus hippocastanum,9.0,28.3,45.0
+Aesculus hippocastanum,12.0,50.3,70.0
+Aesculus hippocastanum,12.0,50.3,60.0
+Aesculus hippocastanum,9.0,50.3,50.0
+Aesculus hippocastanum,14.0,50.3,80.0
+Aesculus hippocastanum,6.0,28.3,30.0
+Aesculus hippocastanum,12.0,19.6,40.0
+Aesculus hippocastanum,8.0,38.5,50.0
+Aesculus hippocastanum,7.0,12.6,35.0
+Aesculus hippocastanum,8.0,12.6,40.0
+Aesculus hippocastanum,8.0,3.1,25.0
+Aesculus hippocastanum,8.0,50.3,60.0
+Aesculus hippocastanum,6.0,12.6,28.0
+Aesculus hippocastanum,5.0,7.1,25.0
+Tilia cordata,6.0,7.1,13.0
+Tilia cordata,5.0,7.1,10.0
+Tilia cordata,4.0,4.9,7.0
+Tilia cordata,4.0,3.1,8.0
+Tilia cordata,3.5,4.9,10.0
+Tilia cordata,6.0,7.1,11.0
+Tilia cordata,5.0,3.1,8.0
+Tilia cordata,3.0,0.8,7.0
+Tilia cordata,6.0,12.6,12.0
+Tilia cordata,7.0,28.3,19.0
+Tilia cordata,8.0,50.3,26.0
+Tilia cordata,7.0,38.5,21.0
+Tilia cordata,8.0,38.5,22.0
+Platanus x hispanica,10.0,95.0,32.0
+Carpinus betulus,6.0,12.6,13.0
+Carpinus betulus,6.0,12.6,13.0
+Carpinus betulus,6.0,19.6,13.0
+Carpinus betulus,3.5,0.8,8.0
+Carpinus betulus,6.0,19.6,14.0
+Carpinus betulus,6.0,12.6,11.0
+Celtis australis,13.0,132.7,52.0
+Celtis australis,6.0,12.6,19.0
+Celtis australis,6.0,12.6,20.0
+Celtis australis,5.0,7.1,14.0
+Celtis australis,6.0,12.6,26.0
+Celtis australis,13.0,132.7,64.0
+Celtis australis,8.3,35.2,30.1
+Aesculus hippocastanum,22.0,314.2,75.0
+Celtis australis,8.3,35.2,30.1
+Carpinus betulus,4.0,3.1,7.0
+Carpinus betulus,4.0,7.1,7.0
+Carpinus betulus,8.0,28.3,13.0
+Celtis australis,8.3,35.2,30.1
+Carpinus betulus,20.0,12.6,60.0
+Celtis australis,8.3,35.2,30.1
+Celtis australis,8.3,35.2,30.1
+Celtis australis,8.0,28.3,22.0
+Aesculus hippocastanum,10.0,50.3,22.0
+Carpinus betulus,10.0,28.3,18.0
+Carpinus betulus,5.0,12.6,12.0
+Carpinus betulus,10.0,28.3,18.0
+Carpinus betulus,10.0,28.3,23.0
+Aesculus hippocastanum,10.0,78.5,50.0
+Aesculus hippocastanum,10.0,78.5,50.0
+Celtis australis,13.0,78.5,40.0
+Aesculus hippocastanum,10.0,50.3,60.0
+Aesculus hippocastanum,6.0,7.1,18.0
+Aesculus hippocastanum,8.4,32.7,39.6
+Aesculus hippocastanum,8.4,32.7,39.6
+Aesculus hippocastanum,8.4,32.7,39.6
+Celtis australis,8.3,35.2,30.1
+Celtis australis,8.3,35.2,30.1
+Celtis australis,8.3,35.2,30.1
+Celtis australis,8.3,35.2,30.1
+Celtis australis,8.3,35.2,30.1
+Aesculus hippocastanum,11.0,50.3,35.0
+Aesculus hippocastanum,10.0,50.3,45.0
+Aesculus hippocastanum,11.0,50.3,40.0
+Aesculus hippocastanum,6.0,19.6,24.0
+Aesculus hippocastanum,11.0,78.5,44.0
+Aesculus hippocastanum,7.0,201.1,40.0
+Celtis australis,11.0,78.5,37.0
+Celtis australis,12.0,78.5,35.0
+Celtis australis,8.3,35.2,30.1
+Aesculus hippocastanum,10.0,28.3,60.0
+Celtis australis,8.3,35.2,30.1
+Celtis australis,8.3,35.2,30.1
+Celtis australis,8.3,35.2,30.1
+Celtis australis,5.5,7.1,22.0
+Celtis australis,8.3,35.2,30.1
+Celtis australis,8.3,35.2,30.1
+Celtis australis,8.3,35.2,30.1
+Celtis australis,8.0,28.3,25.0
+Celtis australis,9.0,50.3,29.0
+Aesculus hippocastanum,8.0,28.3,45.0
+Aesculus hippocastanum,6.0,19.6,30.0
+Aesculus hippocastanum,12.0,28.3,30.0
+Aesculus hippocastanum,12.0,50.3,40.0
+Aesculus hippocastanum,7.0,12.6,28.0
+Aesculus hippocastanum,9.0,38.5,42.0
+Aesculus hippocastanum,12.0,28.3,40.0
+Aesculus hippocastanum,10.0,78.5,62.0
+Aesculus hippocastanum,8.0,28.3,50.0
+Aesculus hippocastanum,9.0,12.6,35.0
+Aesculus hippocastanum,4.0,3.1,10.0
+Aesculus hippocastanum,12.0,50.3,55.0
+Aesculus hippocastanum,8.0,12.6,45.0
+Aesculus hippocastanum,12.0,28.3,40.0
+Aesculus hippocastanum,12.0,28.3,50.0
+Aesculus hippocastanum,10.0,50.3,60.0
+Aesculus hippocastanum,6.0,7.1,18.0
+Aesculus hippocastanum,12.0,38.5,60.0
+Aesculus hippocastanum,6.0,7.1,18.0
+Aesculus hippocastanum,4.0,12.6,10.0
+Carpinus betulus,6.0,12.6,13.0
+Carpinus betulus,6.0,3.1,7.0
+Carpinus betulus,10.0,7.1,10.0
+Carpinus betulus,6.0,12.6,13.0
+Carpinus betulus,6.0,12.6,13.0
+Carpinus betulus,6.0,12.6,13.0
+Carpinus betulus,6.0,12.6,13.0
+Carpinus betulus,6.0,12.6,13.0
+Carpinus betulus,6.0,12.6,13.0
+Celtis australis,12.0,153.9,60.0
+Celtis australis,16.0,63.6,70.0
+Celtis australis,12.0,50.3,45.0
+Celtis australis,17.0,132.7,70.0
+Celtis australis,14.0,95.0,60.0
+Celtis australis,15.0,201.1,80.0
+Celtis australis,25.0,12.6,35.0
+Celtis australis,9.0,50.3,19.0
+Celtis australis,3.0,1.8,3.0
+Celtis australis,6.0,28.3,20.0
+Celtis australis,7.0,78.5,25.0
+Celtis australis,8.0,38.5,18.0
+Celtis australis,8.0,38.5,17.0
+Celtis australis,8.0,38.5,25.0
+Celtis australis,8.0,19.6,18.0
+Celtis australis,7.0,28.3,22.0
+Celtis australis,13.0,153.9,60.0
+Celtis australis,16.0,63.6,70.0
+Celtis australis,9.0,7.1,15.0
+Celtis australis,13.0,132.7,71.0
+Celtis australis,3.5,12.6,13.0
+Celtis australis,8.0,38.5,16.0
+Celtis australis,8.0,38.5,18.0
+Celtis australis,8.0,50.3,18.0
+Celtis australis,8.0,38.5,15.0
+Celtis australis,8.0,50.3,22.0
+Celtis australis,8.0,28.3,22.0
+Celtis australis,8.5,28.3,29.0
+Celtis australis,10.0,56.7,22.0
+Celtis australis,14.0,63.6,100.0
+Celtis australis,12.0,50.3,90.0
+Platanus x hispanica,24.0,283.5,120.0
+Platanus x hispanica,22.0,254.5,140.0
+Platanus x hispanica,16.0,132.7,180.0
+Platanus x hispanica,28.0,176.7,130.0
+Platanus x hispanica,25.0,254.5,140.0
+Platanus x hispanica,25.0,176.7,160.0
+Platanus x hispanica,24.0,254.5,130.0
+Platanus x hispanica,24.0,283.5,140.0
+Platanus x hispanica,30.0,415.5,210.0
+Platanus x hispanica,23.0,283.5,160.0
+Platanus x hispanica,21.0,254.5,100.0
+Platanus x hispanica,16.0,113.1,100.0
+Platanus x hispanica,21.0,227.0,110.0
+Platanus x hispanica,17.0,95.0,130.0
+Platanus x hispanica,18.0,201.1,120.0
+Platanus x hispanica,16.0,254.5,140.0
+Platanus x hispanica,23.0,380.1,160.0
+Platanus x hispanica,14.0,113.1,100.0
+Platanus x hispanica,26.0,452.4,180.0
+Platanus x hispanica,12.0,113.1,130.0
+Platanus x hispanica,18.0,314.2,160.0
+Platanus x hispanica,25.0,254.5,120.0
+Platanus x hispanica,27.0,530.9,200.0
+Platanus x hispanica,28.0,490.9,130.0
+Platanus x hispanica,24.0,227.0,100.0
+Platanus x hispanica,25.0,346.4,180.0
+Platanus x hispanica,24.0,530.9,180.0
+Platanus x hispanica,20.0,132.7,110.0
+Tilia cordata,5.0,12.6,17.0
+Celtis australis,12.0,50.3,41.0
+Celtis australis,12.0,95.0,41.0
+Celtis australis,12.0,50.3,40.0
+Celtis australis,17.0,63.6,70.0
+Celtis australis,12.0,95.0,70.0
+Celtis australis,18.0,113.1,85.0
+Celtis australis,15.0,63.6,85.0
+Celtis australis,9.0,113.1,85.0
+Celtis australis,18.0,78.5,70.0
+Celtis australis,17.0,50.3,85.0
+Celtis australis,9.0,113.1,80.0
+Celtis australis,9.0,50.3,65.0
+Celtis australis,11.0,63.6,40.0
+Celtis australis,15.0,12.6,20.0
+Celtis australis,10.0,7.1,30.0
+Celtis australis,12.0,12.6,15.0
+Aesculus hippocastanum,6.0,7.1,15.0
+Aesculus hippocastanum,8.0,28.3,40.0
+Aesculus hippocastanum,6.0,28.3,30.0
+Aesculus hippocastanum,7.0,19.6,35.0
+Aesculus hippocastanum,8.0,12.6,25.0
+Aesculus hippocastanum,14.0,63.6,60.0
+Aesculus hippocastanum,6.0,7.1,15.0
+Aesculus hippocastanum,8.0,28.3,35.0
+Aesculus hippocastanum,8.0,50.3,30.0
+Carpinus betulus,10.0,28.3,18.0
+Carpinus betulus,6.0,12.6,16.0
+Carpinus betulus,10.0,7.1,10.0
+Carpinus betulus,10.0,7.1,10.0
+Carpinus betulus,12.0,7.1,20.0
+Carpinus betulus,12.0,7.1,20.0
+Carpinus betulus,18.0,12.6,25.0
+Carpinus betulus,20.0,12.6,25.0
+Carpinus betulus,12.0,28.3,40.0
+Carpinus betulus,12.0,50.3,40.0
+Carpinus betulus,6.0,12.6,13.0
+Carpinus betulus,6.0,12.6,13.0
+Carpinus betulus,6.0,12.6,13.0
+Celtis australis,10.0,63.6,25.0
+Celtis australis,10.0,63.6,25.0
+Celtis australis,12.0,78.5,27.0
+Celtis australis,20.0,12.6,30.0
+Celtis australis,7.0,12.6,15.0
+Platanus x hispanica,25.0,283.5,160.0
+Platanus x hispanica,26.0,380.1,170.0
+Platanus x hispanica,26.0,415.5,190.0
+Platanus x hispanica,25.0,380.1,180.0
+Platanus x hispanica,20.0,113.1,90.0
+Platanus x hispanica,20.0,113.1,120.0
+Platanus x hispanica,21.0,201.1,100.0
+Aesculus hippocastanum,3.0,7.1,8.0
+Carpinus betulus,6.0,12.6,13.0
+Carpinus betulus,5.0,19.6,30.0
+Aesculus hippocastanum,7.5,12.6,18.0
+Aesculus hippocastanum,8.0,9.6,16.0
+Aesculus hippocastanum,12.0,9.6,22.0
+Celtis australis,10.0,50.3,29.0
+Celtis australis,8.0,78.5,35.0
+Platanus x hispanica,10.0,78.5,28.0
+Platanus x hispanica,10.0,95.0,26.0
+Platanus x hispanica,6.5,19.6,16.0
+Platanus x hispanica,6.5,19.6,15.0
+Tilia cordata,10.0,78.5,30.0
+Celtis australis,14.0,113.1,52.0
+Celtis australis,12.5,78.5,45.0
+Celtis australis,10.0,113.1,28.0
+Platanus x hispanica,3.0,3.1,10.0
+Tilia cordata,4.0,1.8,8.0
+Tilia cordata,5.0,7.1,10.0
+Tilia cordata,4.5,3.1,10.0
+Celtis australis,13.0,38.5,42.3
+Platanus x hispanica,24.0,314.2,110.0
+Platanus x hispanica,25.0,452.4,160.0
+Celtis australis,9.0,50.3,3.0
+Celtis australis,20.0,7.1,28.0
+Aesculus hippocastanum,8.0,28.3,28.0
+Carpinus betulus,14.0,12.6,32.8
+Carpinus betulus,12.0,28.3,21.0
+Carpinus betulus,10.0,28.3,21.0
+Carpinus betulus,12.0,38.5,22.0
+Carpinus betulus,14.0,38.5,17.0
+Carpinus betulus,13.0,38.5,26.0
+Celtis australis,9.0,50.3,25.0
+Celtis australis,8.3,35.2,30.1
+Celtis australis,8.3,35.2,30.1
+Aesculus hippocastanum,6.0,7.1,16.0
+Aesculus hippocastanum,12.0,50.3,50.0
+Aesculus hippocastanum,12.0,28.3,40.0
+Aesculus hippocastanum,8.0,50.3,22.0
+Aesculus hippocastanum,7.0,12.6,30.0
+Aesculus hippocastanum,12.0,28.3,40.0
+Aesculus hippocastanum,12.0,50.3,60.0
+Aesculus hippocastanum,8.0,28.3,20.0
+Aesculus hippocastanum,12.0,28.3,30.0
+Aesculus hippocastanum,8.0,28.3,28.0
+Aesculus hippocastanum,9.0,50.3,38.0
+Aesculus hippocastanum,8.0,12.6,35.0
+Aesculus hippocastanum,8.0,28.3,40.0
+Aesculus hippocastanum,8.0,28.3,35.0
+Aesculus hippocastanum,6.0,28.3,36.0
+Aesculus hippocastanum,6.0,28.3,25.0
+Aesculus hippocastanum,9.0,50.3,45.0
+Aesculus hippocastanum,5.0,7.1,18.0
+Aesculus hippocastanum,8.0,28.3,50.0
+Aesculus hippocastanum,10.0,28.3,30.0
+Aesculus hippocastanum,12.0,50.3,65.0
+Aesculus hippocastanum,6.0,12.6,30.0
+Aesculus hippocastanum,9.0,28.3,35.0
+Aesculus hippocastanum,12.0,63.6,65.0
+Aesculus hippocastanum,7.0,28.3,32.0
+Aesculus hippocastanum,8.0,28.3,35.0
+Aesculus hippocastanum,7.0,28.3,30.0
+Aesculus hippocastanum,12.0,28.3,65.0
+Aesculus hippocastanum,12.0,38.5,50.0
+Aesculus hippocastanum,12.0,28.3,18.0
+Aesculus hippocastanum,12.0,50.3,70.0
+Aesculus hippocastanum,7.0,28.3,30.0
+Aesculus hippocastanum,5.0,12.6,18.0
+Aesculus hippocastanum,12.0,38.5,30.0
+Aesculus hippocastanum,12.0,28.3,60.0
+Aesculus hippocastanum,7.0,28.3,20.0
+Aesculus hippocastanum,12.0,50.3,65.0
+Aesculus hippocastanum,9.0,28.3,25.0
+Aesculus hippocastanum,6.0,28.3,25.0
+Aesculus hippocastanum,9.0,28.3,60.0
+Aesculus hippocastanum,6.0,7.1,25.0
+Aesculus hippocastanum,7.0,28.3,20.0
+Aesculus hippocastanum,6.0,12.6,15.0
+Aesculus hippocastanum,12.0,78.5,85.0
+Aesculus hippocastanum,7.0,50.3,40.0
+Aesculus hippocastanum,12.0,78.5,80.0
+Aesculus hippocastanum,12.0,78.5,72.0
+Aesculus hippocastanum,12.0,50.3,72.0
+Aesculus hippocastanum,12.0,38.5,70.0
+Aesculus hippocastanum,10.0,63.6,60.0
+Aesculus hippocastanum,6.0,7.1,30.0
+Aesculus hippocastanum,12.0,28.3,40.0
+Aesculus hippocastanum,4.0,3.1,20.0
+Aesculus hippocastanum,12.0,50.3,80.0
+Aesculus hippocastanum,12.0,78.5,70.0
+Aesculus hippocastanum,10.0,38.5,50.0
+Aesculus hippocastanum,12.0,78.5,70.0
+Aesculus hippocastanum,12.0,78.5,50.0
+Aesculus hippocastanum,12.0,78.5,80.0
+Aesculus hippocastanum,10.0,19.6,45.0
+Aesculus hippocastanum,3.0,3.1,10.0
+Carpinus betulus,6.0,12.6,13.0
+Carpinus betulus,10.0,153.9,50.0
+Platanus x hispanica,25.0,314.2,190.0
+Platanus x hispanica,25.0,314.2,180.0
+Platanus x hispanica,17.0,176.7,100.0
+Platanus x hispanica,26.0,530.9,190.0
+Platanus x hispanica,26.0,380.1,100.0
+Platanus x hispanica,27.0,452.4,190.0
+Celtis australis,13.0,78.5,48.0
+Celtis australis,4.5,9.6,15.0
+Celtis australis,6.0,12.6,18.0
+Celtis australis,6.0,12.6,16.0
+Celtis australis,7.0,28.3,20.0
+Celtis australis,8.0,50.3,28.0
+Celtis australis,6.0,38.5,26.0
+Carpinus betulus,5.0,9.6,12.0
+Carpinus betulus,5.0,7.1,12.0
+Carpinus betulus,4.5,4.9,12.0
+Carpinus betulus,4.5,4.9,10.0
+Carpinus betulus,3.0,0.8,8.0
+Carpinus betulus,5.0,4.9,10.0
+Carpinus betulus,9.0,63.6,29.0
+Carpinus betulus,8.0,50.3,26.0
+Carpinus betulus,6.0,7.1,11.0
+Carpinus betulus,7.0,19.6,13.0
+Carpinus betulus,7.0,19.6,13.0
+Carpinus betulus,7.0,12.6,13.0
+Carpinus betulus,7.0,7.1,13.0
+Carpinus betulus,7.0,12.6,15.0
+Carpinus betulus,7.0,12.6,15.0
+Carpinus betulus,7.0,12.6,15.0
+Carpinus betulus,7.0,12.6,15.0
+Carpinus betulus,7.0,7.1,13.0
+Carpinus betulus,7.0,12.6,15.0
+Carpinus betulus,7.0,7.1,13.0
+Carpinus betulus,7.0,7.1,13.0
+Tilia cordata,6.0,12.6,15.0
+Tilia cordata,4.0,4.9,9.0
+Tilia cordata,4.0,7.1,11.0
+Tilia cordata,5.0,12.6,12.0
+Tilia cordata,7.0,28.3,17.0
+Tilia cordata,7.0,28.3,19.0
+Aesculus hippocastanum,8.4,32.7,39.6
+Aesculus hippocastanum,8.4,32.7,39.6
+Aesculus hippocastanum,8.4,32.7,39.6
+Aesculus hippocastanum,8.4,32.7,39.6
+Aesculus hippocastanum,8.4,32.7,39.6
+Aesculus hippocastanum,8.4,32.7,39.6
+Aesculus hippocastanum,8.4,32.7,39.6
+Aesculus hippocastanum,8.4,32.7,39.6
+Aesculus hippocastanum,8.4,32.7,39.6
+Aesculus hippocastanum,9.0,28.3,32.0
+Aesculus hippocastanum,12.0,63.6,50.0
+Aesculus hippocastanum,9.5,38.5,26.0
+Aesculus hippocastanum,10.0,38.5,25.0
+Aesculus hippocastanum,9.0,19.6,29.0
+Aesculus hippocastanum,10.0,28.3,26.0
+Aesculus hippocastanum,9.5,38.5,24.0
+Carpinus betulus,14.0,50.3,19.0
+Carpinus betulus,13.0,50.3,23.0
+Carpinus betulus,14.0,12.6,18.0
+Carpinus betulus,7.0,12.6,18.0
+Carpinus betulus,8.0,78.5,20.0
+Carpinus betulus,6.2,10.1,17.0
+Carpinus betulus,11.0,28.3,16.0
+Carpinus betulus,12.0,78.5,29.0
+Carpinus betulus,6.2,10.1,17.0
+Celtis australis,15.0,95.0,54.0
+Celtis australis,14.0,113.1,57.0
+Celtis australis,20.0,113.1,52.0
+Celtis australis,15.0,95.0,50.0
+Celtis australis,15.0,113.1,52.0
+Celtis australis,15.0,95.0,50.0
+Celtis australis,13.0,103.9,51.0
+Celtis australis,13.0,113.1,54.0
+Celtis australis,15.0,95.0,50.0
+Celtis australis,13.0,113.1,58.0
+Celtis australis,15.0,113.1,57.0
+Celtis australis,13.0,113.1,58.0
+Celtis australis,14.0,113.1,57.0
+Celtis australis,15.0,113.1,60.0
+Celtis australis,15.0,132.7,63.0
+Celtis australis,13.0,113.1,56.0
+Celtis australis,13.0,95.0,50.0
+Celtis australis,14.0,113.1,56.0
+Celtis australis,15.0,103.9,56.0
+Celtis australis,14.0,113.1,51.0
+Celtis australis,14.0,113.1,55.0
+Celtis australis,8.3,35.2,30.1
+Celtis australis,14.0,103.9,53.0
+Celtis australis,13.0,95.0,55.0
+Celtis australis,15.0,95.0,56.0
+Celtis australis,14.0,95.0,56.0
+Celtis australis,14.0,113.1,60.0
+Celtis australis,14.0,113.1,56.0
+Celtis australis,14.0,113.1,60.0
+Celtis australis,15.0,132.7,68.0
+Celtis australis,14.0,122.7,68.0
+Celtis australis,14.0,122.7,61.0
+Celtis australis,13.0,95.0,56.0
+Celtis australis,8.3,35.2,30.1
+Celtis australis,14.0,113.1,62.0
+Celtis australis,8.3,35.2,30.1
+Celtis australis,13.0,122.7,65.0
+Celtis australis,13.0,113.1,62.0
+Celtis australis,14.0,113.1,50.0
+Celtis australis,3.5,1.8,7.0
+Celtis australis,13.0,103.9,55.0
+Celtis australis,14.0,113.1,65.0
+Celtis australis,11.0,63.6,32.0
+Celtis australis,11.0,50.3,24.0
+Celtis australis,8.3,35.2,30.1
+Celtis australis,8.3,35.2,30.1
+Celtis australis,8.3,35.2,30.1
+Celtis australis,15.0,113.1,50.0
+Celtis australis,15.0,113.1,50.0
+Celtis australis,15.0,113.1,50.0
+Celtis australis,15.0,113.1,50.0
+Celtis australis,15.0,113.1,50.0
+Celtis australis,15.0,113.1,50.0
+Celtis australis,15.0,113.1,30.0
+Celtis australis,8.3,35.2,30.1
+Celtis australis,8.3,35.2,30.1
+Celtis australis,8.3,35.2,30.1
+Celtis australis,8.3,35.2,30.1
+Celtis australis,8.3,35.2,30.1
+Celtis australis,8.3,35.2,30.1
+Celtis australis,8.3,35.2,30.1
+Celtis australis,8.3,35.2,30.1
+Celtis australis,8.3,35.2,30.1
+Celtis australis,8.3,35.2,30.1
+Celtis australis,8.3,35.2,30.1
+Celtis australis,8.3,35.2,30.1
+Celtis australis,8.3,35.2,30.1
+Celtis australis,8.3,35.2,30.1
+Celtis australis,8.3,35.2,30.1
+Celtis australis,8.3,35.2,30.1
+Celtis australis,8.3,35.2,30.1
+Celtis australis,8.3,35.2,30.1
+Celtis australis,8.3,35.2,30.1
+Celtis australis,8.3,35.2,30.1
+Celtis australis,8.3,35.2,30.1
+Celtis australis,8.3,35.2,30.1
+Celtis australis,8.3,35.2,30.1
+Celtis australis,8.3,35.2,30.1
+Celtis australis,14.0,50.3,28.0
+Celtis australis,3.5,0.8,7.0
+Celtis australis,12.0,63.6,44.0
+Celtis australis,12.0,63.6,44.0
+Celtis australis,6.0,50.3,27.0
+Celtis australis,12.0,78.5,42.0
+Celtis australis,12.0,78.5,46.0
+Celtis australis,14.0,113.1,60.0
+Celtis australis,13.0,78.5,39.0
+Celtis australis,12.0,95.0,42.0
+Celtis australis,13.0,95.0,55.0
+Celtis australis,13.0,103.9,52.0
+Celtis australis,7.0,38.5,26.0
+Celtis australis,11.5,86.6,32.0
+Celtis australis,6.0,28.3,25.0
+Celtis australis,13.0,122.7,54.0
+Celtis australis,13.0,113.1,50.0
+Celtis australis,15.0,95.0,45.0
+Celtis australis,13.0,103.9,48.0
+Celtis australis,19.0,103.9,48.0
+Celtis australis,12.0,103.9,50.0
+Celtis australis,12.0,113.1,50.0
+Celtis australis,12.0,122.7,52.0
+Celtis australis,12.0,95.0,47.0
+Celtis australis,12.0,113.1,50.0
+Celtis australis,12.0,113.1,52.0
+Celtis australis,12.0,113.1,50.0
+Celtis australis,12.0,113.1,50.0
+Celtis australis,14.0,95.0,48.0
+Celtis australis,18.0,95.0,49.0
+Celtis australis,15.0,113.1,53.0
+Celtis australis,15.0,122.7,58.0
+Celtis australis,13.0,122.7,55.0
+Celtis australis,13.0,113.1,52.0
+Celtis australis,15.0,95.0,50.0
+Celtis australis,20.0,113.1,53.0
+Celtis australis,8.0,23.8,19.0
+Celtis australis,15.0,113.1,50.0
+Celtis australis,15.0,113.1,50.0
+Celtis australis,15.0,113.1,50.0
+Celtis australis,6.0,28.3,22.0
+Celtis australis,15.0,113.1,50.0
+Celtis australis,6.0,28.3,19.0
+Celtis australis,4.5,12.6,14.0
+Celtis australis,4.5,12.6,18.0
+Celtis australis,4.5,12.6,16.0
+Celtis australis,4.5,12.6,16.0
+Celtis australis,4.5,12.6,16.0
+Celtis australis,6.0,28.3,20.0
+Celtis australis,6.0,28.3,25.0
+Celtis australis,6.0,28.3,19.0
+Celtis australis,5.0,19.6,16.0
+Celtis australis,5.0,19.6,16.0
+Celtis australis,5.0,19.6,16.0
+Celtis australis,8.3,35.2,30.1
+Celtis australis,8.3,35.2,30.1
+Celtis australis,8.3,35.2,30.1
+Celtis australis,6.0,28.3,18.0
+Celtis australis,8.3,35.2,30.1
+Celtis australis,8.3,35.2,30.1
+Celtis australis,8.3,35.2,30.1
+Celtis australis,8.3,35.2,30.1
+Celtis australis,8.3,35.2,30.1
+Celtis australis,8.3,35.2,30.1
+Celtis australis,6.0,28.3,19.0
+Celtis australis,6.0,28.3,19.0
+Celtis australis,5.0,9.6,15.0
+Celtis australis,4.5,9.6,14.0
+Celtis australis,5.5,12.6,17.0
+Celtis australis,6.0,9.6,15.0
+Celtis australis,8.3,35.2,30.1
+Celtis australis,10.0,63.6,25.0
+Celtis australis,11.0,78.5,39.0
+Celtis australis,12.5,95.0,40.0
+Celtis australis,13.0,95.0,39.0
+Celtis australis,15.0,113.1,50.0
+Celtis australis,11.0,50.3,34.0
+Celtis australis,10.0,28.3,25.0
+Celtis australis,9.0,19.6,19.0
+Celtis australis,11.0,63.6,40.0
+Celtis australis,12.0,63.6,48.0
+Celtis australis,6.0,28.3,20.0
+Celtis australis,5.0,12.6,9.0
+Celtis australis,7.5,28.3,13.0
+Celtis australis,7.5,28.3,14.0
+Celtis australis,12.0,113.1,28.0
+Celtis australis,14.0,95.0,33.0
+Celtis australis,15.0,132.7,45.0
+Celtis australis,13.0,63.6,40.0
+Celtis australis,8.3,35.2,30.1
+Celtis australis,13.0,78.5,48.0
+Celtis australis,11.0,12.6,17.0
+Celtis australis,11.0,12.6,16.0
+Celtis australis,11.0,38.5,18.0
+Celtis australis,11.0,38.5,24.0
+Celtis australis,11.0,63.6,25.0
+Celtis australis,8.3,35.2,30.1
+Celtis australis,8.3,35.2,30.1
+Celtis australis,10.0,38.5,45.0
+Celtis australis,10.0,38.5,38.0
+Celtis australis,8.0,50.3,22.0
+Celtis australis,9.0,50.3,27.0
+Celtis australis,10.0,63.6,29.0
+Celtis australis,11.0,78.5,55.0
+Celtis australis,11.0,63.6,32.0
+Celtis australis,10.0,50.3,35.0
+Celtis australis,10.0,50.3,38.0
+Celtis australis,10.0,50.3,38.0
+Celtis australis,10.0,50.3,28.0
+Celtis australis,10.0,50.3,34.0
+Celtis australis,12.0,50.3,42.0
+Celtis australis,12.0,63.6,58.0
+Celtis australis,12.0,63.6,54.0
+Celtis australis,8.0,28.3,25.0
+Celtis australis,12.0,63.6,49.0
+Celtis australis,4.0,12.6,11.0
+Celtis australis,10.0,50.3,32.0
+Celtis australis,14.0,38.5,25.0
+Celtis australis,14.0,50.3,29.0
+Celtis australis,8.5,28.3,22.0
+Carpinus betulus,13.0,50.3,23.0
+Celtis australis,11.0,50.3,34.0
+Celtis australis,5.0,3.1,7.3
+Tilia cordata,4.0,3.1,9.0
+Tilia cordata,8.0,50.3,18.0
+Tilia cordata,4.0,3.1,7.0
+Tilia cordata,6.4,14.9,18.6
+Tilia cordata,6.4,14.9,18.6
+Tilia cordata,6.4,14.9,18.6
+Tilia cordata,7.0,28.3,29.0
+Tilia cordata,6.4,14.9,18.6
+Tilia cordata,6.4,14.9,18.6
+Tilia cordata,6.4,14.9,18.6
+Tilia cordata,6.4,14.9,18.6
+Tilia cordata,6.4,14.9,18.6
+Tilia cordata,6.4,14.9,18.6
+Tilia cordata,6.4,14.9,18.6
+Celtis australis,6.0,28.3,25.0
+Aesculus hippocastanum,8.4,28.3,10.0
+Aesculus hippocastanum,8.4,28.3,20.0
+Aesculus hippocastanum,8.4,28.3,20.0
+Aesculus hippocastanum,8.4,28.3,35.0
+Aesculus hippocastanum,8.4,28.3,35.0
+Aesculus hippocastanum,8.4,28.3,35.0
+Aesculus hippocastanum,8.4,28.3,35.0
+Aesculus hippocastanum,12.0,176.7,100.0
+Platanus x hispanica,26.0,314.2,200.0
+Platanus x hispanica,18.0,314.2,150.0
+Platanus x hispanica,15.0,201.1,170.0
+Platanus x hispanica,25.0,452.4,150.0
+Platanus x hispanica,18.0,227.0,180.0
+Platanus x hispanica,25.0,380.1,180.0
+Platanus x hispanica,23.0,254.5,140.0
+Platanus x hispanica,19.0,254.5,150.0
+Platanus x hispanica,18.0,254.5,130.0
+Platanus x hispanica,14.0,176.7,50.0
+Platanus x hispanica,14.0,415.5,210.0
+Platanus x hispanica,16.0,380.1,170.0
+Platanus x hispanica,22.0,346.4,170.0
+Platanus x hispanica,18.0,314.2,140.0
+Carpinus betulus,13.0,12.6,20.0
+Carpinus betulus,13.0,28.3,15.0
+Carpinus betulus,14.0,50.3,26.0
+Aesculus hippocastanum,12.0,50.3,50.0
+Aesculus hippocastanum,6.0,28.3,20.0
+Aesculus hippocastanum,12.0,113.1,76.0
+Aesculus hippocastanum,13.0,63.6,82.0
+Aesculus hippocastanum,13.0,28.3,44.0
+Aesculus hippocastanum,13.0,50.3,46.0
+Aesculus hippocastanum,5.0,12.6,12.0
+Aesculus hippocastanum,12.0,78.5,56.0
+Aesculus hippocastanum,13.0,113.1,72.0
+Aesculus hippocastanum,13.0,38.5,48.0
+Aesculus hippocastanum,5.0,7.1,15.0
+Aesculus hippocastanum,5.0,12.6,9.0
+Aesculus hippocastanum,10.0,78.5,52.0
+Aesculus hippocastanum,13.0,12.6,32.0
+Aesculus hippocastanum,12.0,63.6,60.0
+Aesculus hippocastanum,5.0,7.1,12.0
+Platanus x hispanica,22.0,176.7,64.0
+Platanus x hispanica,22.0,201.1,142.0
+Platanus x hispanica,23.0,346.4,100.0
+Platanus x hispanica,22.0,132.7,50.0
+Platanus x hispanica,21.0,50.3,55.0
+Platanus x hispanica,22.0,176.7,110.0
+Platanus x hispanica,21.0,132.7,70.0
+Platanus x hispanica,23.0,153.9,105.0
+Platanus x hispanica,25.0,153.9,90.0
+Platanus x hispanica,23.0,227.0,110.0
+Platanus x hispanica,23.0,78.5,85.0
+Platanus x hispanica,21.0,63.6,72.0
+Platanus x hispanica,25.0,283.5,100.0
+Platanus x hispanica,23.0,132.7,105.0
+Platanus x hispanica,22.0,95.0,90.0
+Platanus x hispanica,22.0,132.7,38.0
+Platanus x hispanica,24.0,254.5,135.0
+Celtis australis,14.0,113.1,58.0
+Celtis australis,18.0,63.6,58.0
+Platanus x hispanica,25.0,254.5,105.0
+Platanus x hispanica,21.0,176.7,60.0
+Platanus x hispanica,19.0,132.7,80.0
+Platanus x hispanica,24.0,346.4,110.0
+Platanus x hispanica,21.0,254.5,105.0
+Platanus x hispanica,20.0,78.5,50.0
+Platanus x hispanica,23.0,95.0,80.0
+Platanus x hispanica,21.0,113.1,80.0
+Platanus x hispanica,19.0,227.0,80.0
+Platanus x hispanica,28.0,490.9,145.0
+Celtis australis,16.0,153.9,60.0
+Celtis australis,16.0,113.1,55.0
+Celtis australis,15.0,95.0,60.0
+Platanus x hispanica,4.0,3.1,6.0
+Aesculus hippocastanum,6.0,28.3,18.0
+Aesculus hippocastanum,6.0,50.3,18.0
+Aesculus hippocastanum,7.0,50.3,18.0
+Aesculus hippocastanum,6.0,38.5,30.0
+Carpinus betulus,10.0,28.3,19.0
+Carpinus betulus,8.0,28.3,19.0
+Carpinus betulus,12.0,28.3,19.0
+Carpinus betulus,12.0,28.3,19.0
+Carpinus betulus,12.0,38.5,28.0
+Tilia cordata,7.0,19.6,14.0
+Tilia cordata,8.0,12.6,19.0
+Tilia cordata,6.0,19.6,19.0
+Celtis australis,7.0,28.3,20.0
+Celtis australis,5.0,28.3,22.0
+Celtis australis,4.0,3.1,8.0
+Celtis australis,7.0,38.5,22.0
+Celtis australis,7.0,50.3,22.0
+Celtis australis,7.0,50.3,25.0
+Celtis australis,6.0,38.5,20.0
+Celtis australis,6.0,12.6,12.0
+Celtis australis,7.0,50.3,22.0
+Celtis australis,7.0,50.3,24.0
+Celtis australis,4.0,0.8,6.0
+Celtis australis,6.0,28.3,22.0
+Celtis australis,6.0,28.3,22.0
+Celtis australis,6.0,28.3,25.0
+Celtis australis,6.0,38.5,22.0
+Celtis australis,4.0,0.8,6.0
+Celtis australis,7.0,50.3,30.0
+Celtis australis,8.0,78.5,30.0
+Celtis australis,6.0,38.5,20.0
+Celtis australis,4.0,0.8,6.0
+Celtis australis,4.0,3.1,10.0
+Celtis australis,8.0,50.3,22.0
+Celtis australis,7.0,38.5,18.0
+Celtis australis,12.0,78.5,24.0
+Celtis australis,6.0,50.3,22.0
+Celtis australis,8.0,28.3,18.0
+Celtis australis,7.0,28.3,18.0
+Celtis australis,7.0,28.3,18.0
+Celtis australis,7.0,50.3,18.0
+Celtis australis,8.0,63.6,20.0
+Celtis australis,7.0,38.5,24.0
+Celtis australis,7.0,50.3,25.0
+Celtis australis,7.0,38.5,24.0
+Celtis australis,8.0,50.3,35.0
+Celtis australis,6.0,28.3,32.0
+Celtis australis,4.0,19.6,16.0
+Celtis australis,8.0,50.3,25.0
+Celtis australis,4.0,12.6,20.0
+Celtis australis,3.0,0.8,8.0
+Celtis australis,8.0,50.3,30.0
+Celtis australis,6.0,19.6,20.0
+Celtis australis,5.0,7.1,10.0
+Celtis australis,4.0,0.8,6.0
+Celtis australis,7.0,38.5,22.0
+Celtis australis,6.0,50.3,30.0
+Celtis australis,4.0,0.8,6.0
+Celtis australis,7.0,63.6,30.0
+Celtis australis,7.0,38.5,25.0
+Celtis australis,8.0,50.3,20.0
+Celtis australis,6.0,28.3,20.0
+Celtis australis,7.0,28.3,20.0
+Celtis australis,7.0,38.5,20.0
+Celtis australis,9.0,63.6,25.0
+Celtis australis,8.0,50.3,22.0
+Celtis australis,6.0,28.3,18.0
+Celtis australis,8.0,50.3,30.0
+Celtis australis,10.0,78.5,30.0
+Celtis australis,8.0,50.3,25.0
+Celtis australis,8.0,50.3,40.0
+Celtis australis,10.0,78.5,32.0
+Celtis australis,10.0,78.5,30.0
+Celtis australis,10.0,78.5,35.0
+Celtis australis,3.0,0.8,6.0
+Celtis australis,8.0,50.3,30.0
+Celtis australis,10.0,78.5,35.0
+Celtis australis,8.0,38.5,20.0
+Celtis australis,8.0,38.5,22.0
+Celtis australis,8.0,78.5,25.0
+Celtis australis,10.0,78.5,25.0
+Celtis australis,10.0,78.5,25.0
+Celtis australis,10.0,78.5,30.0
+Celtis australis,10.0,78.5,30.0
+Celtis australis,10.0,50.3,25.0
+Celtis australis,10.0,78.5,25.0
+Celtis australis,7.0,28.3,20.0
+Aesculus hippocastanum,10.0,19.6,45.0
+Aesculus hippocastanum,9.0,38.5,45.0
+Aesculus hippocastanum,8.0,38.5,50.0
+Aesculus hippocastanum,7.0,12.6,35.0
+Aesculus hippocastanum,7.0,28.3,50.0
+Aesculus hippocastanum,12.0,50.3,80.0
+Aesculus hippocastanum,12.0,28.3,50.0
+Aesculus hippocastanum,11.0,28.3,45.0
+Aesculus hippocastanum,8.0,28.3,30.0
+Aesculus hippocastanum,12.0,78.5,55.0
+Aesculus hippocastanum,6.0,12.6,25.0
+Aesculus hippocastanum,8.0,12.6,35.0
+Aesculus hippocastanum,12.0,50.3,40.0
+Aesculus hippocastanum,7.0,12.6,40.0
+Aesculus hippocastanum,6.0,12.6,30.0
+Aesculus hippocastanum,12.0,50.3,60.0
+Aesculus hippocastanum,7.0,7.1,18.0
+Aesculus hippocastanum,14.0,50.3,60.0
+Aesculus hippocastanum,10.0,50.3,60.0
+Aesculus hippocastanum,12.0,50.3,40.0
+Aesculus hippocastanum,10.0,50.3,60.0
+Aesculus hippocastanum,12.0,78.5,60.0
+Aesculus hippocastanum,12.0,50.3,60.0
+Aesculus hippocastanum,12.0,50.3,60.0
+Aesculus hippocastanum,14.0,78.5,75.0
+Aesculus hippocastanum,14.0,113.1,75.0
+Aesculus hippocastanum,12.0,113.1,70.0
+Aesculus hippocastanum,11.0,50.3,50.0
+Platanus x hispanica,38.0,490.9,140.0
+Tilia cordata,4.5,7.1,16.0
+Tilia cordata,7.0,38.5,26.0
+Tilia cordata,10.0,28.3,22.0
+Tilia cordata,6.0,12.6,15.0
+Tilia cordata,5.0,12.6,15.0
+Tilia cordata,6.0,19.6,19.0
+Tilia cordata,6.0,12.6,18.0
+Tilia cordata,7.0,12.6,16.0
+Tilia cordata,6.0,12.6,18.0
+Tilia cordata,8.0,12.6,17.0
+Tilia cordata,6.0,12.6,14.0
+Tilia cordata,6.0,12.6,18.0
+Tilia cordata,6.0,12.6,16.0
+Tilia cordata,6.0,12.6,16.0
+Tilia cordata,6.0,12.6,16.0
+Tilia cordata,8.0,28.3,17.0
+Tilia cordata,7.0,19.6,18.0
+Tilia cordata,6.0,12.6,15.0
+Tilia cordata,3.0,3.1,9.0
+Aesculus hippocastanum,4.0,3.1,12.0
+Aesculus hippocastanum,4.0,3.1,11.0
+Aesculus hippocastanum,12.0,78.5,50.0
+Aesculus hippocastanum,4.0,3.1,12.0
+Aesculus hippocastanum,3.0,1.3,9.0
+Aesculus hippocastanum,13.0,78.5,65.0
+Aesculus hippocastanum,4.0,3.1,10.0
+Aesculus hippocastanum,5.0,12.6,19.0
+Aesculus hippocastanum,8.0,38.5,28.0
+Aesculus hippocastanum,9.0,50.3,50.0
+Aesculus hippocastanum,8.0,28.3,28.0
+Aesculus hippocastanum,10.0,50.3,33.0
+Aesculus hippocastanum,12.0,50.3,60.0
+Aesculus hippocastanum,4.0,3.1,11.0
+Aesculus hippocastanum,9.0,28.3,48.0
+Aesculus hippocastanum,3.5,3.1,11.0
+Aesculus hippocastanum,4.0,3.1,12.0
+Aesculus hippocastanum,6.0,12.6,20.0
+Aesculus hippocastanum,8.0,50.3,40.0
+Aesculus hippocastanum,3.0,0.8,9.0
+Aesculus hippocastanum,3.5,3.1,10.0
+Aesculus hippocastanum,3.0,0.8,7.0
+Aesculus hippocastanum,10.0,95.0,58.0
+Aesculus hippocastanum,3.0,3.1,10.0
+Aesculus hippocastanum,3.5,3.1,10.0
+Aesculus hippocastanum,8.0,113.1,44.0
+Aesculus hippocastanum,13.0,113.1,85.0
+Aesculus hippocastanum,12.0,113.1,75.0
+Aesculus hippocastanum,6.0,12.6,18.0
+Aesculus hippocastanum,7.0,12.6,20.0
+Aesculus hippocastanum,8.0,78.5,50.0
+Aesculus hippocastanum,7.0,50.3,45.0
+Aesculus hippocastanum,4.0,7.1,12.0
+Aesculus hippocastanum,6.0,12.6,24.0
+Aesculus hippocastanum,8.0,28.3,35.0
+Aesculus hippocastanum,5.0,12.6,18.0
+Aesculus hippocastanum,9.0,78.5,50.0
+Aesculus hippocastanum,7.0,12.6,19.0
+Aesculus hippocastanum,3.0,3.1,11.0
+Aesculus hippocastanum,7.0,28.3,28.0
+Aesculus hippocastanum,7.0,19.6,28.0
+Aesculus hippocastanum,9.0,78.5,42.0
+Aesculus hippocastanum,3.5,0.8,10.0
+Aesculus hippocastanum,3.5,3.1,11.0
+Aesculus hippocastanum,4.0,3.1,14.0
+Aesculus hippocastanum,10.0,113.1,60.0
+Aesculus hippocastanum,3.5,1.8,9.0
+Aesculus hippocastanum,10.0,78.5,60.0
+Aesculus hippocastanum,10.0,78.5,60.0
+Aesculus hippocastanum,9.0,38.5,32.0
+Aesculus hippocastanum,10.0,78.5,65.0
+Aesculus hippocastanum,10.0,113.1,80.0
+Aesculus hippocastanum,9.0,78.5,40.0
+Aesculus hippocastanum,9.0,78.5,40.0
+Aesculus hippocastanum,10.0,78.5,50.0
+Aesculus hippocastanum,10.0,95.0,55.0
+Aesculus hippocastanum,3.5,1.8,9.0
+Aesculus hippocastanum,3.5,1.8,9.0
+Aesculus hippocastanum,10.0,95.0,60.0
+Aesculus hippocastanum,11.0,113.1,60.0
+Aesculus hippocastanum,4.0,3.1,10.0
+Aesculus hippocastanum,11.0,95.0,70.0
+Aesculus hippocastanum,11.0,95.0,70.0
+Aesculus hippocastanum,4.0,3.1,12.0
+Aesculus hippocastanum,11.0,95.0,70.0
+Aesculus hippocastanum,3.5,3.1,10.0
+Aesculus hippocastanum,11.0,95.0,60.0
+Aesculus hippocastanum,11.0,113.1,80.0
+Aesculus hippocastanum,12.0,113.1,70.0
+Aesculus hippocastanum,12.0,113.1,70.0
+Aesculus hippocastanum,8.0,19.6,22.0
+Aesculus hippocastanum,12.0,113.1,85.0
+Aesculus hippocastanum,3.5,3.1,11.0
+Aesculus hippocastanum,11.0,95.0,70.0
+Aesculus hippocastanum,11.0,95.0,70.0
+Aesculus hippocastanum,3.0,3.1,12.0
+Aesculus hippocastanum,12.0,132.7,80.0
+Aesculus hippocastanum,12.0,113.1,70.0
+Carpinus betulus,6.0,12.6,18.5
+Carpinus betulus,6.0,19.6,26.1
+Carpinus betulus,8.0,19.6,23.2
+Carpinus betulus,9.0,7.1,19.7
+Carpinus betulus,8.0,19.6,70.0
+Carpinus betulus,9.0,50.3,34.4
+Carpinus betulus,9.0,38.5,28.7
+Carpinus betulus,6.0,19.6,17.5
+Carpinus betulus,7.0,28.3,20.7
+Carpinus betulus,8.0,19.6,17.5
+Carpinus betulus,8.0,28.3,23.6
+Carpinus betulus,12.0,50.3,32.8
+Carpinus betulus,8.0,12.6,20.7
+Carpinus betulus,7.0,15.9,18.1
+Carpinus betulus,4.0,7.1,10.2
+Carpinus betulus,7.0,19.6,22.9
+Tilia cordata,5.0,3.1,8.0
+Tilia cordata,15.0,63.6,65.0
+Tilia cordata,20.0,38.5,60.0
+Tilia cordata,15.0,28.3,60.0
+Tilia cordata,4.0,7.1,10.0
+Tilia cordata,3.5,4.9,9.0
+Tilia cordata,15.0,38.5,62.0
+Tilia cordata,18.0,28.3,60.0
+Tilia cordata,18.0,38.5,65.0
+Tilia cordata,15.0,50.3,63.0
+Tilia cordata,18.0,38.5,62.0
+Tilia cordata,18.0,38.5,65.0
+Tilia cordata,19.0,28.3,60.0
+Tilia cordata,19.0,38.5,60.0
+Tilia cordata,4.0,4.9,9.0
+Tilia cordata,21.0,50.3,60.0
+Tilia cordata,21.0,38.5,60.0
+Tilia cordata,21.0,38.5,60.0
+Tilia cordata,4.0,7.1,10.0
+Tilia cordata,21.0,63.6,66.0
+Aesculus hippocastanum,9.0,113.1,55.0
+Aesculus hippocastanum,5.0,28.3,19.0
+Aesculus hippocastanum,8.5,78.5,50.0
+Aesculus hippocastanum,4.0,12.6,19.0
+Aesculus hippocastanum,3.0,0.8,9.0
+Aesculus hippocastanum,10.0,78.5,65.0
+Aesculus hippocastanum,3.5,3.1,13.0
+Aesculus hippocastanum,3.5,3.1,12.0
+Aesculus hippocastanum,3.5,3.1,13.0
+Aesculus hippocastanum,3.5,3.1,13.0
+Aesculus hippocastanum,4.0,7.1,16.0
+Aesculus hippocastanum,11.0,132.7,80.0
+Aesculus hippocastanum,12.0,132.7,85.0
+Aesculus hippocastanum,12.0,132.7,50.0
+Aesculus hippocastanum,10.0,113.1,48.0
+Aesculus hippocastanum,3.0,3.1,11.0
+Aesculus hippocastanum,9.0,95.0,60.0
+Aesculus hippocastanum,4.0,4.9,15.0
+Aesculus hippocastanum,11.0,95.0,60.0
+Aesculus hippocastanum,10.0,95.0,50.0
+Aesculus hippocastanum,10.0,95.0,55.0
+Aesculus hippocastanum,3.5,4.9,10.0
+Aesculus hippocastanum,3.5,4.9,11.0
+Aesculus hippocastanum,3.5,4.9,12.0
+Aesculus hippocastanum,3.0,1.8,10.0
+Aesculus hippocastanum,9.5,95.0,55.0
+Aesculus hippocastanum,4.5,15.9,13.0
+Aesculus hippocastanum,5.5,38.5,22.0
+Aesculus hippocastanum,3.5,1.8,8.0
+Aesculus hippocastanum,4.5,12.6,12.0
+Aesculus hippocastanum,7.0,12.6,16.0
+Aesculus hippocastanum,7.0,38.5,25.0
+Aesculus hippocastanum,9.5,50.3,55.0
+Aesculus hippocastanum,5.5,19.6,22.0
+Aesculus hippocastanum,5.0,15.9,19.0
+Aesculus hippocastanum,3.0,1.8,9.0
+Aesculus hippocastanum,7.0,19.6,14.0
+Aesculus hippocastanum,7.0,15.9,16.0
+Aesculus hippocastanum,6.0,15.9,13.0
+Aesculus hippocastanum,8.5,38.5,45.0
+Aesculus hippocastanum,10.5,50.3,53.0
+Aesculus hippocastanum,5.0,7.1,11.0
+Aesculus hippocastanum,6.0,12.6,17.0
+Aesculus hippocastanum,9.0,12.6,20.0
+Aesculus hippocastanum,5.5,19.6,13.0
+Aesculus hippocastanum,8.0,50.3,48.0
+Aesculus hippocastanum,5.6,4.9,13.0
+Aesculus hippocastanum,7.0,19.6,22.0
+Aesculus hippocastanum,3.0,3.1,8.0
+Aesculus hippocastanum,11.0,63.6,59.0
+Aesculus hippocastanum,9.0,50.3,40.0
+Aesculus hippocastanum,9.0,50.3,42.0
+Aesculus hippocastanum,11.0,95.0,58.0
+Aesculus hippocastanum,10.0,78.5,56.0
+Aesculus hippocastanum,11.0,113.1,68.0
+Aesculus hippocastanum,12.0,78.5,69.0
+Aesculus hippocastanum,12.0,95.0,55.0
+Aesculus hippocastanum,11.0,78.5,50.0
+Aesculus hippocastanum,12.5,113.1,68.0
+Aesculus hippocastanum,12.0,113.1,58.0
+Aesculus hippocastanum,12.0,113.1,63.0
+Aesculus hippocastanum,12.0,113.1,60.0
+Aesculus hippocastanum,3.5,4.9,13.0
+Aesculus hippocastanum,12.5,122.7,88.0
+Aesculus hippocastanum,3.5,4.9,13.0
+Aesculus hippocastanum,12.0,132.7,62.0
+Aesculus hippocastanum,2.5,1.8,8.0
+Aesculus hippocastanum,2.5,3.1,10.0
+Aesculus hippocastanum,3.0,1.8,10.0
+Aesculus hippocastanum,4.0,12.6,18.0
+Aesculus hippocastanum,5.0,12.6,22.0
+Aesculus hippocastanum,4.0,9.6,16.0
+Aesculus hippocastanum,4.0,9.6,16.0
+Aesculus hippocastanum,4.5,12.6,15.0
+Aesculus hippocastanum,4.0,12.6,16.0
+Aesculus hippocastanum,4.5,9.6,16.0
+Aesculus hippocastanum,4.0,4.9,15.0
+Aesculus hippocastanum,3.0,3.1,10.0
+Aesculus hippocastanum,3.0,3.1,9.0
+Aesculus hippocastanum,11.0,78.5,60.0
+Aesculus hippocastanum,6.0,7.1,12.0
+Aesculus hippocastanum,5.5,9.6,13.0
+Aesculus hippocastanum,8.0,50.3,60.0
+Aesculus hippocastanum,8.0,50.3,40.0
+Aesculus hippocastanum,8.0,19.6,19.0
+Aesculus hippocastanum,11.0,50.3,50.0
+Aesculus hippocastanum,8.0,50.3,24.0
+Aesculus hippocastanum,4.0,7.1,10.0
+Aesculus hippocastanum,4.0,12.6,18.0
+Aesculus hippocastanum,3.5,4.9,15.0
+Aesculus hippocastanum,10.0,78.5,70.0
+Aesculus hippocastanum,9.5,95.0,70.0
+Aesculus hippocastanum,3.5,1.8,10.0
+Aesculus hippocastanum,4.0,9.6,16.0
+Aesculus hippocastanum,3.5,4.9,12.0
+Aesculus hippocastanum,4.0,7.1,18.0
+Aesculus hippocastanum,3.5,3.1,9.0
+Aesculus hippocastanum,3.5,3.1,10.0
+Aesculus hippocastanum,3.5,4.9,12.0
+Aesculus hippocastanum,11.0,113.1,80.0
+Aesculus hippocastanum,3.5,7.1,12.0
+Aesculus hippocastanum,3.0,1.8,8.0
+Aesculus hippocastanum,3.5,4.9,17.0
+Aesculus hippocastanum,3.5,4.9,14.0
+Aesculus hippocastanum,3.5,9.6,14.0
+Aesculus hippocastanum,12.0,50.3,60.0
+Aesculus hippocastanum,4.0,9.6,15.0
+Aesculus hippocastanum,5.0,12.6,18.0
+Aesculus hippocastanum,4.5,9.6,18.0
+Aesculus hippocastanum,5.5,9.6,16.0
+Aesculus hippocastanum,4.5,9.6,18.0
+Aesculus hippocastanum,4.5,9.6,18.0
+Aesculus hippocastanum,5.0,12.6,18.0
+Aesculus hippocastanum,5.5,12.6,18.0
+Carpinus betulus,7.0,19.6,20.0
+Carpinus betulus,8.0,12.6,17.0
+Carpinus betulus,7.0,28.3,20.0
+Carpinus betulus,6.0,38.5,19.0
+Carpinus betulus,3.0,1.8,10.0
+Carpinus betulus,3.0,1.8,10.0
+Carpinus betulus,6.0,38.5,20.0
+Carpinus betulus,4.0,7.1,15.0
+Carpinus betulus,8.0,19.6,19.0
+Carpinus betulus,7.0,7.1,16.0
+Carpinus betulus,8.0,19.6,17.0
+Carpinus betulus,7.0,19.6,18.0
+Carpinus betulus,7.0,19.6,17.0
+Carpinus betulus,6.0,12.6,12.0
+Carpinus betulus,7.0,28.3,13.0
+Carpinus betulus,6.0,12.6,16.0
+Carpinus betulus,5.0,7.1,14.0
+Carpinus betulus,4.0,3.1,10.0
+Carpinus betulus,3.0,3.1,16.0
+Carpinus betulus,6.0,19.6,15.0
+Carpinus betulus,7.0,28.3,20.0
+Carpinus betulus,7.0,3.1,13.0
+Carpinus betulus,8.0,12.6,20.0
+Carpinus betulus,7.0,7.1,15.0
+Carpinus betulus,6.0,12.6,14.0
+Carpinus betulus,6.0,1.8,10.0
+Carpinus betulus,6.0,3.1,12.0
+Carpinus betulus,6.0,4.9,14.0
+Carpinus betulus,4.0,4.9,12.0
+Carpinus betulus,5.0,12.6,13.0
+Carpinus betulus,8.0,12.6,13.0
+Carpinus betulus,8.0,19.6,15.0
+Carpinus betulus,7.0,7.1,15.0
+Carpinus betulus,9.0,19.6,20.0
+Carpinus betulus,9.0,19.6,20.0
+Carpinus betulus,8.0,38.5,20.0
+Carpinus betulus,8.0,50.3,20.0
+Carpinus betulus,8.0,38.5,20.0
+Carpinus betulus,7.0,28.3,18.0
+Carpinus betulus,8.0,12.6,20.0
+Carpinus betulus,4.0,1.8,10.0
+Carpinus betulus,3.5,0.8,10.0
+Carpinus betulus,7.0,28.3,19.0
+Carpinus betulus,6.0,12.6,19.0
+Carpinus betulus,5.0,7.1,19.0
+Carpinus betulus,9.0,38.5,20.0
+Carpinus betulus,8.0,50.3,19.0
+Carpinus betulus,6.0,7.1,18.0
+Carpinus betulus,5.0,7.1,12.0
+Carpinus betulus,4.0,19.6,10.0
+Carpinus betulus,9.0,19.6,20.0
+Carpinus betulus,10.0,38.5,30.0
+Carpinus betulus,7.5,28.3,6.0
+Carpinus betulus,9.0,28.3,25.0
+Carpinus betulus,9.0,19.6,30.0
+Carpinus betulus,9.0,28.3,35.0
+Carpinus betulus,5.0,12.6,12.0
+Carpinus betulus,4.0,7.1,10.0
+Carpinus betulus,9.0,19.6,25.0
+Carpinus betulus,10.0,38.5,25.0
+Carpinus betulus,9.0,12.6,20.0
+Carpinus betulus,10.0,38.5,30.0
+Carpinus betulus,10.0,95.0,29.0
+Carpinus betulus,10.0,28.3,29.0
+Carpinus betulus,12.0,38.5,30.0
+Carpinus betulus,12.0,28.3,34.0
+Carpinus betulus,4.0,1.8,10.0
+Carpinus betulus,4.0,1.8,8.0
+Carpinus betulus,8.0,12.6,10.0
+Carpinus betulus,7.0,3.1,4.0
+Carpinus betulus,4.0,0.8,10.0
+Carpinus betulus,4.0,3.1,8.0
+Carpinus betulus,4.0,1.8,10.0
+Carpinus betulus,4.0,3.1,11.0
+Carpinus betulus,3.5,1.8,10.0
+Carpinus betulus,4.0,1.8,12.0
+Carpinus betulus,7.0,19.6,30.0
+Carpinus betulus,7.0,28.3,20.0
+Carpinus betulus,10.0,63.6,20.0
+Carpinus betulus,3.5,1.8,10.0
+Carpinus betulus,11.0,50.3,20.0
+Carpinus betulus,3.5,1.8,5.0
+Aesculus hippocastanum,13.0,38.5,35.0
+Aesculus hippocastanum,15.0,28.3,38.0
+Aesculus hippocastanum,12.0,38.5,40.0
+Aesculus hippocastanum,13.0,50.3,37.0
+Aesculus hippocastanum,15.0,50.3,33.0
+Aesculus hippocastanum,14.0,50.3,52.0
+Aesculus hippocastanum,15.0,19.6,48.0
+Aesculus hippocastanum,13.0,19.6,45.0
+Aesculus hippocastanum,15.0,50.3,67.5
+Celtis australis,13.0,50.3,35.0
+Celtis australis,15.0,63.6,44.0
+Celtis australis,16.0,78.5,54.0
+Celtis australis,17.0,38.5,58.0
+Celtis australis,16.0,12.6,40.0
+Celtis australis,17.0,19.6,60.0
+Celtis australis,16.0,15.9,45.0
+Celtis australis,14.0,15.9,47.0
+Celtis australis,14.0,15.9,47.0
+Celtis australis,2.0,0.8,6.0
+Celtis australis,17.0,28.3,56.0
+Tilia cordata,2.5,1.8,8.0
+Tilia cordata,2.5,1.8,9.0
+Tilia cordata,2.5,1.8,8.0
+Tilia cordata,5.0,3.1,11.0
+Tilia cordata,4.0,1.8,9.0
+Platanus x hispanica,8.0,28.3,25.0
+Platanus x hispanica,4.0,3.1,10.0
+Platanus x hispanica,10.0,63.6,40.0
+Platanus x hispanica,9.0,56.7,29.0
+Platanus x hispanica,4.0,4.9,12.0
+Platanus x hispanica,10.0,50.3,43.0
+Platanus x hispanica,8.0,44.2,22.0
+Platanus x hispanica,11.0,78.5,44.0
+Platanus x hispanica,8.5,50.3,32.0
+Platanus x hispanica,8.0,50.3,32.0
+Platanus x hispanica,4.5,3.1,12.0
+Platanus x hispanica,8.0,50.3,26.0
+Platanus x hispanica,5.0,9.6,11.0
+Platanus x hispanica,5.0,4.9,6.0
+Platanus x hispanica,4.5,7.1,14.0
+Platanus x hispanica,4.5,4.9,16.0
+Platanus x hispanica,9.0,38.5,33.0
+Platanus x hispanica,11.0,38.5,27.0
+Platanus x hispanica,6.0,3.1,8.0
+Platanus x hispanica,5.0,4.9,10.0
+Platanus x hispanica,5.5,3.1,11.0
+Platanus x hispanica,6.0,9.6,11.0
+Platanus x hispanica,8.0,28.3,24.0
+Platanus x hispanica,5.0,1.8,8.0
+Platanus x hispanica,20.0,113.1,80.0
+Platanus x hispanica,20.0,113.1,80.0
+Platanus x hispanica,20.0,113.1,80.0
+Platanus x hispanica,15.0,113.1,30.0
+Platanus x hispanica,20.0,113.1,80.0
+Platanus x hispanica,20.0,113.1,80.0
+Platanus x hispanica,22.0,78.5,100.0
+Platanus x hispanica,22.0,113.1,60.0
+Platanus x hispanica,25.0,113.1,110.0
+Platanus x hispanica,24.0,113.1,95.0
+Platanus x hispanica,23.0,132.7,130.0
+Platanus x hispanica,24.0,176.7,100.0
+Platanus x hispanica,18.0,176.7,115.0
+Platanus x hispanica,22.0,153.9,80.0
+Platanus x hispanica,24.0,132.7,80.0
+Platanus x hispanica,24.0,201.1,80.0
+Platanus x hispanica,24.0,314.2,135.0
+Platanus x hispanica,24.0,153.9,95.0
+Platanus x hispanica,24.0,153.9,95.0
+Platanus x hispanica,23.0,113.1,100.0
+Platanus x hispanica,24.0,153.9,105.0
+Platanus x hispanica,24.0,176.7,105.0
+Platanus x hispanica,24.0,283.5,110.0
+Platanus x hispanica,6.0,28.3,19.0
+Platanus x hispanica,24.0,254.5,120.0
+Platanus x hispanica,5.5,3.1,9.0
+Platanus x hispanica,25.0,254.5,140.0
+Platanus x hispanica,12.0,19.6,29.0
+Platanus x hispanica,25.0,314.2,135.0
+Platanus x hispanica,22.0,113.1,55.0
+Platanus x hispanica,24.0,254.5,110.0
+Platanus x hispanica,24.0,254.5,110.0
+Platanus x hispanica,25.0,314.2,140.0
+Platanus x hispanica,24.0,153.9,75.0
+Platanus x hispanica,24.0,254.5,100.0
+Platanus x hispanica,24.0,254.5,110.0
+Platanus x hispanica,24.0,254.5,100.0
+Platanus x hispanica,24.0,227.0,75.0
+Platanus x hispanica,24.0,201.1,95.0
+Platanus x hispanica,16.0,314.2,230.0
+Platanus x hispanica,15.0,113.1,35.0
+Platanus x hispanica,4.5,7.1,10.0
+Platanus x hispanica,8.0,56.7,28.0
+Platanus x hispanica,6.0,7.1,9.0
+Platanus x hispanica,9.0,50.3,37.0
+Platanus x hispanica,4.5,9.6,10.0
+Platanus x hispanica,4.5,4.9,11.0
+Platanus x hispanica,4.5,4.9,9.0
+Platanus x hispanica,12.0,78.5,34.0
+Platanus x hispanica,4.5,7.1,9.0
+Platanus x hispanica,4.0,4.9,9.0
+Platanus x hispanica,11.0,50.3,28.0
+Platanus x hispanica,6.0,9.6,12.0
+Platanus x hispanica,6.0,9.6,10.0
+Platanus x hispanica,11.0,63.6,36.0
+Platanus x hispanica,10.5,50.3,29.0
+Platanus x hispanica,11.0,56.7,34.0
+Platanus x hispanica,4.5,9.6,10.0
+Carpinus betulus,3.0,0.8,8.0
+Carpinus betulus,7.0,12.6,26.0
+Carpinus betulus,6.0,12.6,20.0
+Carpinus betulus,4.0,9.6,10.0
+Carpinus betulus,3.0,7.1,20.0
+Carpinus betulus,3.0,12.6,12.0
+Carpinus betulus,8.0,19.6,30.0
+Carpinus betulus,7.0,19.6,36.0
+Carpinus betulus,8.0,19.6,20.0
+Carpinus betulus,5.0,7.1,12.0
+Carpinus betulus,10.0,28.3,30.0
+Carpinus betulus,3.0,3.1,8.0
+Carpinus betulus,4.0,7.1,10.0
+Carpinus betulus,4.0,9.6,10.0
+Carpinus betulus,5.0,12.6,15.0
+Carpinus betulus,5.0,9.6,16.0
+Carpinus betulus,3.0,4.9,10.0
+Carpinus betulus,5.0,3.1,10.0
+Carpinus betulus,4.0,4.9,9.0
+Carpinus betulus,5.5,7.1,14.0
+Carpinus betulus,4.0,4.9,12.0
+Carpinus betulus,8.0,19.6,20.0
+Carpinus betulus,7.0,7.1,20.0
+Carpinus betulus,8.0,28.3,28.0
+Carpinus betulus,7.0,28.3,26.0
+Carpinus betulus,8.0,19.6,26.0
+Carpinus betulus,8.0,28.3,28.0
+Carpinus betulus,11.0,28.3,32.0
+Celtis australis,7.0,19.6,17.0
+Carpinus betulus,9.0,28.3,38.0
+Carpinus betulus,10.0,28.3,39.0
+Carpinus betulus,10.5,28.3,39.0
+Carpinus betulus,9.0,28.3,37.0
+Carpinus betulus,7.0,19.6,17.0
+Carpinus betulus,8.0,12.6,20.0
+Carpinus betulus,10.0,33.2,25.0
+Carpinus betulus,9.0,38.5,13.0
+Carpinus betulus,12.0,38.5,35.0
+Carpinus betulus,11.0,19.6,39.0
+Carpinus betulus,11.0,50.3,48.0
+Carpinus betulus,12.0,50.3,31.0
+Carpinus betulus,11.0,63.6,43.0
+Platanus x hispanica,16.0,201.1,60.0
+Platanus x hispanica,15.0,113.1,53.0
+Carpinus betulus,3.0,0.8,6.0
+Carpinus betulus,3.0,0.8,6.0
+Carpinus betulus,3.0,0.8,6.0
+Carpinus betulus,3.0,0.8,6.0
+Carpinus betulus,3.5,0.8,5.0
+Celtis australis,12.0,95.0,40.0
+Celtis australis,8.0,50.3,32.0
+Celtis australis,9.0,50.3,29.0
+Celtis australis,11.0,63.6,33.0
+Celtis australis,8.5,12.6,18.0
+Celtis australis,10.0,50.3,24.0
+Celtis australis,11.0,78.5,38.0
+Celtis australis,11.0,78.5,38.0
+Celtis australis,10.0,63.6,34.0
+Celtis australis,11.0,78.5,42.0
+Celtis australis,11.0,78.5,42.0
+Celtis australis,10.0,63.6,34.0
+Celtis australis,10.5,78.5,42.0
+Celtis australis,6.0,7.1,12.0
+Celtis australis,6.0,7.1,12.0
+Celtis australis,5.0,12.6,9.0
+Celtis australis,4.0,12.6,9.0
+Aesculus hippocastanum,12.0,50.3,66.9
+Celtis australis,12.0,78.5,37.0
+Celtis australis,9.0,38.5,38.0
+Celtis australis,9.0,38.5,29.0
+Celtis australis,9.0,38.5,26.0
+Celtis australis,9.0,38.5,25.0
+Celtis australis,9.0,38.5,33.0
+Celtis australis,9.0,38.5,26.0
+Celtis australis,6.0,12.6,18.0
+Celtis australis,9.0,38.5,39.0
+Celtis australis,9.0,38.5,27.0
+Celtis australis,6.0,12.6,22.0
+Celtis australis,9.0,38.5,26.0
+Celtis australis,9.0,38.5,22.0
+Celtis australis,9.0,38.5,34.0
+Celtis australis,9.0,38.5,22.0
+Celtis australis,9.0,38.5,28.0
+Celtis australis,9.0,38.5,24.0
+Celtis australis,9.0,38.5,33.0
+Celtis australis,9.0,38.5,32.0
+Celtis australis,9.0,38.5,39.0
+Celtis australis,9.0,38.5,32.0
+Celtis australis,7.0,19.6,22.0
+Celtis australis,7.0,19.6,21.0
+Celtis australis,9.0,38.5,39.0
+Celtis australis,9.0,38.5,27.0
+Celtis australis,9.0,38.5,35.0
+Celtis australis,9.0,38.5,29.0
+Celtis australis,7.0,19.6,24.0
+Celtis australis,9.0,38.5,32.0
+Celtis australis,7.0,19.6,22.0
+Celtis australis,9.0,38.5,29.0
+Celtis australis,9.0,38.5,26.0
+Celtis australis,9.0,38.5,29.0
+Celtis australis,9.0,38.5,33.0
+Celtis australis,9.0,38.5,32.0
+Celtis australis,9.0,38.5,28.0
+Celtis australis,9.0,38.5,28.0
+Celtis australis,9.0,38.5,36.0
+Celtis australis,9.0,38.5,27.0
+Celtis australis,9.0,38.5,32.0
+Celtis australis,9.0,38.5,31.0
+Celtis australis,6.0,19.6,24.0
+Celtis australis,6.0,19.6,24.0
+Celtis australis,5.0,12.6,19.0
+Celtis australis,9.0,38.5,34.0
+Celtis australis,9.0,38.5,33.0
+Celtis australis,9.0,38.5,28.0
+Celtis australis,7.0,28.3,24.0
+Celtis australis,7.0,28.3,24.0
+Celtis australis,9.0,38.5,29.0
+Celtis australis,9.0,38.5,29.0
+Celtis australis,9.0,38.5,27.0
+Celtis australis,9.0,38.5,34.0
+Celtis australis,9.0,38.5,32.0
+Celtis australis,9.0,38.5,31.0
+Celtis australis,9.0,38.5,33.0
+Celtis australis,9.0,38.5,38.0
+Celtis australis,9.0,38.5,31.0
+Celtis australis,9.0,38.5,35.0
+Celtis australis,9.0,38.5,27.0
+Celtis australis,9.0,38.5,29.0
+Celtis australis,9.0,38.5,26.0
+Celtis australis,10.0,50.3,29.0
+Celtis australis,10.0,50.3,29.0
+Celtis australis,10.0,50.3,31.0
+Celtis australis,10.0,50.3,33.0
+Celtis australis,10.0,50.3,48.0
+Celtis australis,10.0,50.3,50.0
+Celtis australis,10.0,50.3,34.0
+Celtis australis,10.0,50.3,33.0
+Celtis australis,10.0,50.3,34.0
+Celtis australis,10.0,50.3,38.0
+Celtis australis,10.0,50.3,34.0
+Celtis australis,10.0,50.3,41.0
+Celtis australis,10.0,50.3,38.0
+Celtis australis,10.0,50.3,40.0
+Celtis australis,10.0,50.3,36.0
+Celtis australis,10.0,50.3,38.0
+Celtis australis,10.0,50.3,31.0
+Celtis australis,12.0,78.5,43.0
+Celtis australis,12.0,78.5,48.0
+Celtis australis,12.0,78.5,38.0
+Celtis australis,12.0,78.5,46.0
+Celtis australis,12.0,78.5,35.0
+Celtis australis,12.0,78.5,54.0
+Celtis australis,12.0,78.5,44.0
+Celtis australis,12.0,78.5,34.0
+Celtis australis,12.0,78.5,34.0
+Celtis australis,12.0,78.5,39.0
+Celtis australis,10.0,50.3,24.0
+Celtis australis,12.0,78.5,44.0
+Celtis australis,12.0,78.5,41.0
+Celtis australis,12.0,78.5,44.0
+Celtis australis,12.0,78.5,48.0
+Celtis australis,12.0,78.5,43.0
+Celtis australis,12.0,78.5,32.0
+Celtis australis,12.0,78.5,46.0
+Celtis australis,12.0,78.5,52.0
+Celtis australis,12.0,78.5,54.0
+Celtis australis,13.0,78.5,60.0
+Celtis australis,13.0,78.5,60.0
+Celtis australis,12.0,78.5,39.0
+Celtis australis,13.0,78.5,56.0
+Celtis australis,13.0,78.5,55.0
+Celtis australis,13.0,78.5,46.0
+Celtis australis,13.0,78.5,50.0
+Celtis australis,13.0,78.5,46.0
+Celtis australis,13.0,78.5,45.0
+Celtis australis,8.0,19.6,28.0
+Celtis australis,11.0,28.3,26.0
+Carpinus betulus,4.0,3.1,7.0
+Carpinus betulus,4.0,3.1,7.0
+Platanus x hispanica,4.0,1.8,7.0
+Platanus x hispanica,8.0,50.3,19.0
+Carpinus betulus,6.0,28.3,16.0
+Carpinus betulus,6.0,38.5,20.0
+Carpinus betulus,5.0,12.6,13.0
+Carpinus betulus,5.0,19.6,16.0
+Carpinus betulus,5.0,28.3,14.0
+Carpinus betulus,6.0,38.5,18.0
+Carpinus betulus,4.0,19.6,14.0
+Platanus x hispanica,24.0,113.1,60.0
+Platanus x hispanica,12.0,38.5,19.0
+Platanus x hispanica,26.0,314.2,125.0
+Platanus x hispanica,24.0,254.5,110.0
+Platanus x hispanica,22.0,176.7,110.0
+Platanus x hispanica,24.0,254.5,100.0
+Platanus x hispanica,22.0,176.7,90.0
+Carpinus betulus,6.0,12.6,13.0
+Tilia cordata,4.0,4.9,10.0
+Celtis australis,12.0,78.5,40.0
+Celtis australis,13.0,95.0,48.0
+Celtis australis,8.0,28.3,20.0
+Celtis australis,13.0,95.0,42.0
+Celtis australis,13.0,113.1,44.0
+Celtis australis,12.0,63.6,34.0
+Celtis australis,13.0,113.1,44.0
+Celtis australis,9.0,78.5,26.0
+Celtis australis,7.0,50.3,24.0
+Celtis australis,7.0,28.3,18.0
+Celtis australis,7.0,28.3,18.0
+Celtis australis,7.0,28.3,18.0
+Celtis australis,8.0,50.3,20.0
+Celtis australis,9.0,50.3,26.0
+Celtis australis,9.0,50.3,25.0
+Celtis australis,9.0,38.5,19.0
+Celtis australis,7.0,28.3,18.0
+Celtis australis,8.0,38.5,20.0
+Platanus x hispanica,8.0,38.5,16.0
+Platanus x hispanica,7.0,28.3,16.0
+Platanus x hispanica,24.0,490.9,160.0
+Platanus x hispanica,4.0,1.8,6.0
+Platanus x hispanica,25.0,113.1,110.0
+Platanus x hispanica,6.0,28.3,10.0
+Platanus x hispanica,16.0,78.5,38.0
+Platanus x hispanica,8.0,50.3,16.0
+Platanus x hispanica,24.0,452.4,150.0
+Aesculus hippocastanum,5.0,7.1,15.0
+Aesculus hippocastanum,11.0,38.5,70.0
+Aesculus hippocastanum,6.0,7.1,18.0
+Aesculus hippocastanum,3.0,3.1,8.0
+Aesculus hippocastanum,3.0,3.1,8.0
+Aesculus hippocastanum,2.0,0.8,6.0
+Aesculus hippocastanum,10.0,28.3,60.0
+Platanus x hispanica,10.0,38.5,40.0
+Platanus x hispanica,17.0,63.6,80.0
+Platanus x hispanica,17.0,254.5,90.0
+Platanus x hispanica,18.0,254.5,100.0
+Platanus x hispanica,18.0,201.1,70.0
+Platanus x hispanica,10.0,28.3,28.0
+Platanus x hispanica,18.0,78.5,80.0
+Platanus x hispanica,27.0,95.0,55.0
+Platanus x hispanica,18.0,95.0,65.0
+Platanus x hispanica,20.0,95.0,65.0
+Platanus x hispanica,22.0,254.5,80.0
+Platanus x hispanica,28.0,254.5,115.0
+Celtis australis,12.0,78.5,50.0
+Celtis australis,10.0,78.5,29.0
+Celtis australis,10.0,113.1,28.0
+Platanus x hispanica,4.0,1.8,7.0
+Tilia cordata,4.5,0.8,8.0
+Tilia cordata,4.0,0.8,6.0
+Tilia cordata,4.0,0.8,7.0
+Tilia cordata,4.0,3.1,7.0
+Tilia cordata,6.0,4.9,9.0
+Tilia cordata,6.0,4.9,9.0
+Tilia cordata,6.0,3.1,9.0
+Tilia cordata,6.0,3.1,9.0
+Platanus x hispanica,5.0,1.8,8.0
+Platanus x hispanica,5.0,1.8,8.0
+Platanus x hispanica,6.0,28.3,16.0
+Platanus x hispanica,4.0,1.8,8.0
+Platanus x hispanica,4.5,1.8,7.0
+Platanus x hispanica,6.0,3.1,8.0
+Platanus x hispanica,6.0,3.1,9.0
+Platanus x hispanica,6.0,3.1,9.0
+Platanus x hispanica,4.0,0.8,7.0
+Platanus x hispanica,8.0,28.3,16.0
+Platanus x hispanica,10.0,50.3,17.0
+Platanus x hispanica,6.0,28.3,17.0
+Platanus x hispanica,7.0,28.3,15.0
+Platanus x hispanica,8.0,38.5,17.0
+Platanus x hispanica,7.0,38.5,18.0
+Platanus x hispanica,7.0,38.5,16.0
+Platanus x hispanica,7.0,38.5,16.0
+Platanus x hispanica,8.0,50.3,18.0
+Platanus x hispanica,8.0,50.3,18.0
+Platanus x hispanica,8.0,50.3,18.0
+Platanus x hispanica,8.0,50.3,18.0
+Platanus x hispanica,9.0,50.3,17.0
+Platanus x hispanica,10.0,63.6,19.0
+Platanus x hispanica,8.0,50.3,19.0
+Platanus x hispanica,8.0,50.3,18.0
+Platanus x hispanica,4.0,0.8,8.0
+Tilia cordata,13.0,78.5,36.0
+Tilia cordata,13.0,78.5,35.0
+Tilia cordata,4.0,3.1,7.0
+Tilia cordata,7.0,28.3,25.0
+Tilia cordata,4.0,3.1,10.0
+Tilia cordata,7.0,28.3,20.0
+Tilia cordata,4.0,3.1,8.0
+Tilia cordata,7.0,28.3,20.0
+Tilia cordata,7.0,28.3,20.0
+Tilia cordata,8.0,19.6,22.0
+Tilia cordata,7.0,28.3,22.0
+Tilia cordata,8.0,28.3,23.0
+Tilia cordata,6.0,28.3,16.0
+Tilia cordata,6.0,28.3,16.0
+Tilia cordata,8.0,38.5,21.0
+Tilia cordata,8.0,38.5,19.0
+Tilia cordata,6.0,28.3,17.0
+Tilia cordata,6.0,28.3,17.0
+Tilia cordata,6.0,28.3,15.0
+Tilia cordata,6.0,28.3,17.0
+Tilia cordata,8.0,38.5,18.0
+Tilia cordata,8.0,38.5,21.0
+Tilia cordata,6.0,19.6,13.0
+Tilia cordata,6.0,19.6,13.0
+Tilia cordata,6.0,28.3,15.0
+Tilia cordata,6.0,28.3,15.0
+Tilia cordata,6.0,28.3,15.0
+Tilia cordata,5.0,7.1,10.0
+Tilia cordata,5.0,7.1,11.0
+Tilia cordata,5.0,19.6,12.0
+Tilia cordata,4.0,1.8,8.0
+Tilia cordata,4.0,1.8,8.0
+Tilia cordata,4.0,1.8,8.0
+Tilia cordata,8.0,50.3,21.0
+Tilia cordata,8.0,38.5,20.0
+Tilia cordata,8.0,38.5,20.0
+Tilia cordata,7.0,28.3,13.0
+Tilia cordata,8.0,38.5,20.0
+Tilia cordata,4.0,1.8,7.0
+Carpinus betulus,4.5,1.8,8.0
+Tilia cordata,12.0,78.5,26.0
+Tilia cordata,4.0,3.1,8.0
+Tilia cordata,4.0,3.1,8.0
+Celtis australis,3.5,0.8,7.0
+Celtis australis,3.5,0.8,6.0
+Celtis australis,3.5,1.8,6.0
+Celtis australis,4.0,1.8,6.0
+Celtis australis,4.0,1.8,6.0
+Celtis australis,6.0,19.6,12.0
+Celtis australis,5.0,12.6,14.0
+Celtis australis,3.5,1.8,7.0
+Celtis australis,5.0,12.6,11.0
+Celtis australis,3.5,1.8,7.0
+Aesculus hippocastanum,8.0,63.6,60.0
+Aesculus hippocastanum,11.0,78.5,58.0
+Celtis australis,4.0,12.6,14.0
+Celtis australis,6.0,19.6,15.0
+Platanus x hispanica,5.0,7.1,13.0
+Platanus x hispanica,5.0,12.6,14.0
+Platanus x hispanica,6.0,12.6,15.0
+Platanus x hispanica,6.0,12.6,15.0
+Platanus x hispanica,6.0,7.1,14.0
+Platanus x hispanica,6.0,12.6,15.0
+Platanus x hispanica,6.0,12.6,15.0
+Platanus x hispanica,6.0,12.6,15.0
+Platanus x hispanica,6.0,19.6,16.0
+Platanus x hispanica,6.0,28.3,17.0
+Platanus x hispanica,6.0,7.1,14.0
+Platanus x hispanica,7.0,28.3,17.0
+Platanus x hispanica,6.0,12.6,13.0
+Platanus x hispanica,6.0,12.6,13.0
+Platanus x hispanica,4.0,1.8,6.0
+Platanus x hispanica,7.0,28.3,17.0
+Platanus x hispanica,4.0,1.8,8.0
+Platanus x hispanica,7.0,28.3,17.0
+Platanus x hispanica,6.0,19.6,16.0
+Platanus x hispanica,6.0,28.3,17.0
+Platanus x hispanica,6.0,28.3,15.0
+Platanus x hispanica,6.0,28.3,15.0
+Platanus x hispanica,6.0,28.3,15.0
+Platanus x hispanica,6.0,28.3,15.0
+Platanus x hispanica,6.0,28.3,16.0
+Platanus x hispanica,4.0,1.8,8.0
+Platanus x hispanica,4.5,1.8,8.0
+Platanus x hispanica,4.5,1.8,8.0
+Platanus x hispanica,4.5,1.8,8.0
+Celtis australis,3.5,1.8,6.0
+Platanus x hispanica,14.0,50.3,35.0
+Platanus x hispanica,11.0,50.3,21.0
+Platanus x hispanica,13.0,113.1,41.0
+Platanus x hispanica,13.0,78.5,34.0
+Platanus x hispanica,12.0,78.5,28.0
+Platanus x hispanica,10.0,28.3,16.0
+Celtis australis,4.0,12.6,8.0
+Tilia cordata,16.0,63.6,40.0
+Platanus x hispanica,7.0,1.8,13.0
+Aesculus hippocastanum,3.0,32.7,8.0
+Platanus x hispanica,6.0,1.8,8.0
+Platanus x hispanica,6.0,1.8,8.0
+Platanus x hispanica,6.0,1.8,8.0
+Platanus x hispanica,6.0,1.8,8.0
+Platanus x hispanica,3.0,72.5,7.0
+Platanus x hispanica,3.0,72.5,7.0
+Platanus x hispanica,3.0,72.5,7.0
+Platanus x hispanica,3.0,72.5,7.0
+Platanus x hispanica,3.0,72.5,7.0
+Platanus x hispanica,3.0,72.5,7.0
+Platanus x hispanica,3.0,72.5,7.0
+Platanus x hispanica,3.0,72.5,7.0
+Platanus x hispanica,3.0,72.5,7.0
+Platanus x hispanica,3.0,72.5,7.0
+Platanus x hispanica,3.0,72.5,7.0
+Platanus x hispanica,3.0,72.5,7.0
+Platanus x hispanica,3.0,72.5,7.0
+Platanus x hispanica,3.0,72.5,7.0
+Platanus x hispanica,3.0,72.5,7.0
+Platanus x hispanica,3.0,72.5,7.0
+Platanus x hispanica,3.0,72.5,7.0
+Platanus x hispanica,3.0,72.5,7.0
+Platanus x hispanica,3.0,72.5,7.0
+Platanus x hispanica,3.0,72.5,7.0
+Platanus x hispanica,3.0,72.5,7.0
+Platanus x hispanica,3.0,72.5,7.0
+Platanus x hispanica,3.0,72.5,7.0
+Celtis australis,3.5,1.8,7.0
+Celtis australis,3.5,3.1,9.0
+Celtis australis,4.0,1.8,9.0
+Celtis australis,4.0,1.8,9.0
+Celtis australis,4.0,1.8,9.0
+Platanus x hispanica,6.0,19.6,16.0
+Platanus x hispanica,6.5,19.6,17.0
+Platanus x hispanica,6.5,19.6,17.0
+Platanus x hispanica,5.0,7.1,9.0
+Platanus x hispanica,6.0,12.6,11.0
+Platanus x hispanica,6.0,19.6,15.0
+Platanus x hispanica,6.0,19.6,15.0
+Platanus x hispanica,6.5,19.6,18.0
+Platanus x hispanica,6.5,19.6,16.0
+Platanus x hispanica,6.5,28.3,18.0
+Platanus x hispanica,7.0,38.5,22.0
+Platanus x hispanica,7.0,38.5,22.0
+Platanus x hispanica,7.0,28.3,19.0
+Platanus x hispanica,7.0,38.5,21.0
+Platanus x hispanica,7.0,28.3,20.0
+Platanus x hispanica,6.0,28.3,16.0
+Platanus x hispanica,6.0,28.3,16.0
+Platanus x hispanica,6.0,28.3,16.0
+Platanus x hispanica,7.0,38.5,20.0
+Platanus x hispanica,6.0,12.6,12.0
+Platanus x hispanica,5.0,7.1,10.0
+Platanus x hispanica,6.0,12.6,18.0
+Platanus x hispanica,6.0,12.6,16.0
+Platanus x hispanica,6.0,12.6,16.0
+Platanus x hispanica,6.0,12.6,16.0
+Platanus x hispanica,6.0,12.6,16.0
+Platanus x hispanica,4.0,0.8,8.0
+Platanus x hispanica,7.0,28.3,24.0
+Platanus x hispanica,6.0,19.6,18.0
+Platanus x hispanica,7.0,28.3,25.0
+Platanus x hispanica,5.0,0.8,8.0
+Platanus x hispanica,5.0,1.8,7.0
+Platanus x hispanica,6.0,19.6,18.0
+Platanus x hispanica,7.0,38.5,25.0
+Platanus x hispanica,4.0,0.8,7.0
+Platanus x hispanica,4.0,0.8,7.0
+Platanus x hispanica,6.0,28.3,16.0
+Platanus x hispanica,5.0,7.1,12.0
+Platanus x hispanica,7.0,28.3,19.0
+Platanus x hispanica,6.0,19.6,16.0
+Platanus x hispanica,6.0,19.6,16.0
+Platanus x hispanica,6.0,19.6,16.0
+Celtis australis,12.0,50.3,45.0
+Celtis australis,13.0,78.5,55.0
+Celtis australis,7.0,28.3,19.0
+Tilia cordata,4.0,4.9,9.0
+Tilia cordata,4.0,4.9,9.0
+Tilia cordata,4.0,4.9,9.0
+Tilia cordata,4.0,4.9,9.0
+Platanus x hispanica,7.0,38.5,26.0
+Platanus x hispanica,19.0,283.5,90.0
+Platanus x hispanica,17.0,254.5,90.0
+Platanus x hispanica,17.0,227.0,65.0
+Platanus x hispanica,16.0,176.7,50.0
+Platanus x hispanica,18.0,227.0,83.0
+Platanus x hispanica,19.0,153.9,85.0
+Platanus x hispanica,19.0,95.0,75.0
+Platanus x hispanica,21.0,283.5,85.0
+Platanus x hispanica,5.0,7.1,12.0
+Celtis australis,5.0,19.6,14.0
+Tilia cordata,12.0,78.5,35.0
+Tilia cordata,11.0,50.3,32.0
+Tilia cordata,10.0,28.3,18.0
+Tilia cordata,11.0,50.3,32.0
+Tilia cordata,11.0,50.3,32.0
+Tilia cordata,11.0,50.3,32.0
+Tilia cordata,11.0,50.3,32.0
+Tilia cordata,11.0,50.3,32.0
+Tilia cordata,11.0,50.3,32.0
+Tilia cordata,11.0,50.3,32.0
+Tilia cordata,11.0,50.3,32.0
+Carpinus betulus,4.0,3.1,17.0
+Carpinus betulus,6.0,7.1,18.0
+Carpinus betulus,6.0,7.1,32.0
+Carpinus betulus,5.0,7.1,18.0
+Carpinus betulus,5.0,7.1,20.0
+Carpinus betulus,5.0,7.1,19.0
+Carpinus betulus,6.0,7.1,25.0
+Carpinus betulus,6.0,7.1,22.0
+Carpinus betulus,6.0,7.1,24.0
+Carpinus betulus,5.0,7.1,17.0
+Carpinus betulus,5.0,7.1,17.0
+Carpinus betulus,4.0,7.1,16.0
+Carpinus betulus,4.0,3.1,18.0
+Carpinus betulus,4.0,3.1,16.0
+Carpinus betulus,5.0,7.1,12.0
+Carpinus betulus,6.0,7.1,19.0
+Carpinus betulus,4.0,12.6,17.0
+Carpinus betulus,4.0,12.6,17.0
+Carpinus betulus,4.0,3.1,14.0
+Carpinus betulus,5.0,12.6,18.0
+Carpinus betulus,4.0,7.1,15.0
+Carpinus betulus,4.0,3.1,15.0
+Carpinus betulus,3.0,3.1,12.0
+Carpinus betulus,4.0,3.1,16.0
+Carpinus betulus,3.0,3.1,12.0
+Carpinus betulus,4.0,3.1,11.0
+Carpinus betulus,4.0,3.1,14.0
+Carpinus betulus,4.0,7.1,17.0
+Carpinus betulus,4.0,3.1,12.0
+Carpinus betulus,4.0,3.1,12.0
+Carpinus betulus,4.0,3.1,12.0
+Carpinus betulus,4.0,3.1,12.0
+Carpinus betulus,4.0,3.1,14.0
+Carpinus betulus,3.0,3.1,12.0
+Carpinus betulus,4.0,7.1,14.0
+Carpinus betulus,4.0,7.1,12.0
+Carpinus betulus,4.0,3.1,14.0
+Platanus x hispanica,9.0,28.3,31.0
+Carpinus betulus,7.0,50.3,30.0
+Carpinus betulus,4.0,3.1,12.0
+Carpinus betulus,4.0,3.1,12.0
+Carpinus betulus,4.0,3.1,15.0
+Carpinus betulus,4.0,3.1,15.0
+Carpinus betulus,4.0,3.1,16.0
+Carpinus betulus,4.0,0.8,6.0
+Platanus x hispanica,13.0,78.5,55.0
+Platanus x hispanica,12.0,63.6,35.0
+Platanus x hispanica,14.0,113.1,57.0
+Platanus x hispanica,13.0,95.0,62.0
+Carpinus betulus,4.0,3.1,15.0
+Carpinus betulus,4.0,3.1,17.0
+Carpinus betulus,3.0,3.1,11.0
+Carpinus betulus,5.0,0.8,6.0
+Carpinus betulus,3.0,0.8,7.0
+Carpinus betulus,3.0,0.8,11.0
+Carpinus betulus,3.0,0.8,8.0
+Carpinus betulus,4.0,3.1,16.0
+Carpinus betulus,3.0,3.1,14.0
+Carpinus betulus,3.0,3.1,14.0
+Carpinus betulus,3.0,3.1,16.0
+Carpinus betulus,3.0,3.1,14.0
+Carpinus betulus,4.0,3.1,16.0
+Carpinus betulus,5.0,3.1,16.0
+Carpinus betulus,4.0,3.1,17.0
+Carpinus betulus,4.0,3.1,14.0
+Carpinus betulus,4.0,3.1,16.0
+Carpinus betulus,4.0,3.1,15.0
+Carpinus betulus,3.0,3.1,16.0
+Carpinus betulus,3.0,3.1,14.0
+Carpinus betulus,3.0,3.1,14.0
+Carpinus betulus,3.0,3.1,11.0
+Carpinus betulus,4.0,3.1,17.0
+Carpinus betulus,5.0,3.1,18.0
+Celtis australis,5.0,19.6,22.0
+Celtis australis,5.0,12.6,19.0
+Celtis australis,6.0,19.6,30.0
+Celtis australis,7.0,19.6,35.0
+Celtis australis,6.0,19.6,25.0
+Celtis australis,7.0,19.6,35.0
+Celtis australis,8.0,50.3,42.0
+Celtis australis,7.0,50.3,22.0
+Celtis australis,7.0,50.3,20.0
+Celtis australis,6.0,38.5,28.0
+Celtis australis,6.0,50.3,35.0
+Celtis australis,5.0,38.5,24.0
+Aesculus hippocastanum,8.0,50.3,55.0
+Celtis australis,6.0,28.3,21.0
+Celtis australis,5.0,28.3,19.0
+Celtis australis,5.0,28.3,28.0
+Celtis australis,11.0,153.9,80.0
+Celtis australis,9.0,63.6,52.0
+Celtis australis,9.0,50.3,44.0
+Celtis australis,8.0,63.6,60.0
+Celtis australis,10.0,113.1,76.0
+Celtis australis,5.0,19.6,55.0
+Celtis australis,18.0,153.9,92.3
+Aesculus hippocastanum,9.0,12.6,60.0
+Tilia cordata,13.0,63.6,60.0
+Celtis australis,5.0,3.1,10.0
+Celtis australis,4.0,3.1,10.0
+Celtis australis,5.0,7.1,11.0
+Celtis australis,5.0,7.1,11.0
+Celtis australis,5.0,7.1,10.0
+Tilia cordata,6.0,19.6,35.0
+Tilia cordata,9.0,28.3,32.0
+Tilia cordata,9.0,28.3,44.0
+Tilia cordata,10.0,50.3,42.0
+Tilia cordata,8.0,28.3,20.0
+Celtis australis,12.0,113.1,70.0
+Celtis australis,6.0,28.3,24.0
+Platanus x hispanica,6.0,28.3,28.0
+Platanus x hispanica,6.0,12.6,20.0
+Aesculus hippocastanum,14.0,201.1,75.0
+Platanus x hispanica,16.0,254.5,105.0
+Aesculus hippocastanum,3.5,1.8,8.0
+Aesculus hippocastanum,3.5,1.8,8.0
+Aesculus hippocastanum,3.5,1.8,8.0
+Aesculus hippocastanum,3.5,1.8,8.0
+Aesculus hippocastanum,3.5,1.8,8.0
+Aesculus hippocastanum,3.5,1.8,8.0
+Aesculus hippocastanum,9.0,63.6,35.0
+Aesculus hippocastanum,10.0,78.5,38.0
+Aesculus hippocastanum,10.0,113.1,55.0
+Carpinus betulus,8.0,113.1,34.0
+Aesculus hippocastanum,9.0,78.5,60.0
+Aesculus hippocastanum,12.0,113.1,42.0
+Aesculus hippocastanum,9.0,95.0,52.0
+Aesculus hippocastanum,9.0,95.0,52.0
+Carpinus betulus,8.0,50.3,23.0
+Aesculus hippocastanum,7.0,50.3,38.0
+Aesculus hippocastanum,8.0,95.0,55.0
+Aesculus hippocastanum,10.0,78.5,40.0
+Aesculus hippocastanum,8.0,50.3,29.0
+Aesculus hippocastanum,10.0,153.9,60.0
+Aesculus hippocastanum,18.0,113.1,40.0
+Aesculus hippocastanum,11.0,78.5,60.0
+Aesculus hippocastanum,11.0,78.5,60.0
+Aesculus hippocastanum,21.0,176.7,68.0
+Tilia cordata,14.0,113.1,30.0
+Tilia cordata,17.0,95.0,30.0
+Celtis australis,4.0,3.1,10.0
+Celtis australis,6.0,50.3,28.0
+Celtis australis,6.0,50.3,35.0
+Celtis australis,7.0,113.1,38.0
+Celtis australis,8.0,113.1,50.0
+Celtis australis,9.0,95.0,50.0
+Celtis australis,8.0,95.0,48.0
+Celtis australis,7.0,63.6,45.0
+Celtis australis,8.0,63.6,35.0
+Celtis australis,6.0,63.6,45.0
+Celtis australis,5.0,38.5,21.0
+Celtis australis,7.0,28.3,24.0
+Celtis australis,5.0,19.6,28.0
+Celtis australis,6.0,63.6,28.0
+Celtis australis,7.0,63.6,29.0
+Celtis australis,7.0,95.0,28.0
+Celtis australis,7.0,95.0,29.0
+Celtis australis,6.0,50.3,28.0
+Celtis australis,8.0,95.0,55.0
+Celtis australis,7.0,63.6,50.0
+Celtis australis,8.0,63.6,35.0
+Celtis australis,8.0,95.0,45.0
+Platanus x hispanica,23.0,153.9,90.0
+Platanus x hispanica,24.0,254.5,104.0
+Tilia cordata,18.0,113.1,75.0
+Tilia cordata,3.0,0.8,8.0
+Tilia cordata,3.0,0.8,10.0
+Tilia cordata,3.0,0.8,8.0
+Tilia cordata,3.0,0.8,8.0
+Tilia cordata,3.0,0.8,8.0
+Platanus x hispanica,3.0,0.8,8.0
+Tilia cordata,9.0,38.5,60.0
+Aesculus hippocastanum,8.0,38.5,56.0
+Aesculus hippocastanum,8.0,38.5,30.0
+Aesculus hippocastanum,8.0,38.5,30.0
+Celtis australis,6.0,63.6,28.0
+Aesculus hippocastanum,5.0,12.6,19.0
+Celtis australis,5.0,12.6,19.0
+Celtis australis,7.0,113.1,70.0
+Celtis australis,7.0,113.1,70.0
+Celtis australis,7.0,113.1,70.0
+Celtis australis,4.0,7.1,18.0
+Celtis australis,4.0,7.1,18.0
+Celtis australis,4.0,7.1,18.0
+Celtis australis,4.0,7.1,18.0
+Celtis australis,4.0,7.1,18.0
+Celtis australis,4.0,7.1,18.0
+Celtis australis,4.0,7.1,18.0
+Celtis australis,4.0,7.1,18.0
+Celtis australis,4.0,50.3,45.0
+Celtis australis,4.0,50.3,30.0
+Platanus x hispanica,12.0,153.9,60.0
+Platanus x hispanica,12.0,153.9,60.0
+Platanus x hispanica,12.0,153.9,70.0
+Platanus x hispanica,12.0,153.9,60.0
+Aesculus hippocastanum,9.0,50.3,40.0
+Aesculus hippocastanum,9.0,50.3,40.0
+Aesculus hippocastanum,9.0,50.3,50.0
+Aesculus hippocastanum,9.0,50.3,50.0
+Aesculus hippocastanum,9.0,50.3,50.0
+Platanus x hispanica,28.0,346.4,110.0
+Platanus x hispanica,16.0,346.4,90.0
+Aesculus hippocastanum,10.0,78.5,38.0
+Aesculus hippocastanum,10.0,78.5,60.0
+Aesculus hippocastanum,10.0,78.5,60.0
+Platanus x hispanica,4.0,7.1,10.0
+Platanus x hispanica,4.0,7.1,10.0
+Platanus x hispanica,7.0,95.0,29.0
+Platanus x hispanica,7.0,95.0,29.0
+Platanus x hispanica,4.0,7.1,10.0
+Platanus x hispanica,20.0,227.0,120.0
+Tilia cordata,8.0,50.3,25.0
+Tilia cordata,8.0,50.3,25.0
+Tilia cordata,8.0,50.3,30.0
+Celtis australis,5.0,50.3,35.0
+Celtis australis,5.0,50.3,35.0
+Tilia cordata,8.0,50.3,25.0
+Tilia cordata,8.0,50.3,25.0
+Tilia cordata,8.0,50.3,25.0
+Tilia cordata,8.0,50.3,35.0
+Tilia cordata,8.0,50.3,35.0
+Tilia cordata,8.0,50.3,35.0
+Tilia cordata,8.0,50.3,30.0
+Tilia cordata,8.0,50.3,35.0
+Tilia cordata,8.0,50.3,30.0
+Tilia cordata,8.0,50.3,30.0
+Tilia cordata,8.0,50.3,30.0
+Tilia cordata,8.0,50.3,30.0
+Tilia cordata,8.0,50.3,30.0
+Celtis australis,6.0,113.1,45.0
+Celtis australis,6.0,113.1,75.0
+Celtis australis,3.0,28.3,18.0
+Celtis australis,6.0,113.1,75.0
+Celtis australis,3.0,28.3,18.0
+Celtis australis,5.0,28.3,29.0
+Celtis australis,5.0,28.3,29.0
+Celtis australis,5.0,28.3,29.0
+Celtis australis,5.0,28.3,29.0
+Celtis australis,5.0,28.3,29.0
+Celtis australis,5.0,28.3,29.0
+Celtis australis,5.0,28.3,29.0
+Celtis australis,5.0,28.3,29.0
+Celtis australis,5.0,28.3,29.0
+Celtis australis,5.0,28.3,29.0
+Celtis australis,5.0,28.3,29.0
+Celtis australis,5.0,28.3,29.0
+Celtis australis,5.0,28.3,29.0
+Celtis australis,5.0,28.3,50.0
+Celtis australis,4.0,3.1,15.0
+Celtis australis,4.0,3.1,15.0
+Aesculus hippocastanum,6.0,38.5,32.0
+Aesculus hippocastanum,6.0,38.5,30.0
+Tilia cordata,7.0,95.0,30.0
+Celtis australis,5.0,50.3,30.0
+Celtis australis,5.0,50.3,30.0
+Celtis australis,5.0,50.3,50.0
+Tilia cordata,5.0,28.3,21.0
+Tilia cordata,5.0,28.3,28.0
+Tilia cordata,5.0,28.3,28.0
+Platanus x hispanica,8.0,95.0,60.0
+Tilia cordata,5.0,7.1,15.0
+Tilia cordata,5.0,7.1,15.0
+Celtis australis,4.0,19.6,30.0
+Celtis australis,4.0,19.6,15.0
+Tilia cordata,4.0,3.1,19.0
+Celtis australis,6.0,12.6,30.0
+Celtis australis,6.0,12.6,30.0
+Celtis australis,6.0,12.6,30.0
+Celtis australis,5.0,38.5,31.0
+Celtis australis,5.0,38.5,24.0
+Celtis australis,3.0,0.8,10.0
+Tilia cordata,3.0,0.8,10.0
+Carpinus betulus,3.0,0.8,10.0
+Carpinus betulus,3.0,0.8,10.0
+Carpinus betulus,3.0,0.8,10.0
+Platanus x hispanica,9.0,63.6,41.0
+Platanus x hispanica,9.0,63.6,41.0
+Platanus x hispanica,9.0,63.6,35.0
+Platanus x hispanica,9.0,63.6,41.0
+Platanus x hispanica,9.0,63.6,41.0
+Platanus x hispanica,9.0,63.6,28.0
+Aesculus hippocastanum,6.0,19.6,63.0
+Aesculus hippocastanum,5.0,19.6,50.0
+Aesculus hippocastanum,5.0,19.6,50.0
+Aesculus hippocastanum,5.0,19.6,50.0
+Celtis australis,4.0,3.1,14.0
+Celtis australis,6.0,12.6,24.0
+Celtis australis,5.0,12.6,21.0
+Platanus x hispanica,4.0,38.5,22.0
+Platanus x hispanica,3.0,19.6,14.0
+Platanus x hispanica,2.0,3.1,8.0
+Platanus x hispanica,2.0,3.1,14.0
+Platanus x hispanica,2.0,3.1,14.0
+Platanus x hispanica,2.0,3.1,14.0
+Carpinus betulus,4.0,12.6,18.0
+Carpinus betulus,4.0,12.6,18.0
+Tilia cordata,4.0,3.1,12.0
+Carpinus betulus,4.0,7.1,21.0
+Carpinus betulus,4.0,7.1,21.0
+Carpinus betulus,4.0,7.1,21.0
+Carpinus betulus,4.0,7.1,21.0
+Carpinus betulus,4.0,7.1,21.0
+Carpinus betulus,4.0,7.1,21.0
+Platanus x hispanica,5.0,12.6,16.0
+Celtis australis,3.0,7.1,14.0
+Aesculus hippocastanum,7.0,28.3,30.0
+Platanus x hispanica,12.0,38.5,28.0
+Celtis australis,11.0,50.3,46.0
+Tilia cordata,14.0,50.3,46.0
+Tilia cordata,4.0,3.1,12.0
+Tilia cordata,4.0,3.1,12.0
+Tilia cordata,4.0,3.1,12.0
+Tilia cordata,4.0,3.1,12.0
+Tilia cordata,4.0,3.1,12.0
+Tilia cordata,7.0,28.3,22.0
+Tilia cordata,7.0,28.3,22.0
+Tilia cordata,7.0,28.3,22.0
+Tilia cordata,7.0,28.3,22.0
+Tilia cordata,7.0,28.3,22.0
+Tilia cordata,7.0,28.3,22.0
+Tilia cordata,7.0,28.3,22.0
+Tilia cordata,7.0,28.3,22.0
+Celtis australis,6.0,50.3,41.0
+Celtis australis,6.0,50.3,41.0
+Celtis australis,6.0,19.6,46.0
+Celtis australis,3.0,0.8,8.0
+Celtis australis,3.0,0.8,8.0
+Celtis australis,5.0,12.6,14.0
+Celtis australis,6.0,63.6,51.0
+Celtis australis,6.0,63.6,40.0
+Celtis australis,6.0,63.6,44.0
+Celtis australis,4.0,28.3,24.0
+Celtis australis,4.0,28.3,24.0
+Celtis australis,4.0,19.6,15.0
+Celtis australis,4.0,19.6,15.0
+Celtis australis,4.0,19.6,15.0
+Aesculus hippocastanum,4.0,19.6,15.0
+Platanus x hispanica,12.0,50.3,41.0
+Tilia cordata,12.0,95.0,44.0
+Platanus x hispanica,12.0,12.6,32.0
+Platanus x hispanica,19.0,113.1,60.0
+Celtis australis,3.0,0.8,15.0
+Celtis australis,3.0,0.8,15.0
+Tilia cordata,8.0,38.5,31.0
+Celtis australis,5.0,7.1,12.0
+Tilia cordata,13.0,78.5,38.0
+Tilia cordata,14.0,113.1,48.0
+Tilia cordata,13.0,113.1,48.0
+Tilia cordata,4.0,38.5,18.0
+Tilia cordata,6.0,38.5,24.0
+Tilia cordata,7.0,63.6,42.0
+Tilia cordata,13.0,63.6,42.0
+Tilia cordata,13.0,63.6,42.0
+Tilia cordata,13.0,63.6,42.0
+Tilia cordata,13.0,63.6,54.0
+Celtis australis,8.0,63.6,55.0
+Aesculus hippocastanum,5.0,19.6,25.0
+Aesculus hippocastanum,11.0,113.1,58.0
+Aesculus hippocastanum,11.0,113.1,58.0
+Aesculus hippocastanum,6.0,113.1,45.0
+Aesculus hippocastanum,6.0,113.1,45.0
+Aesculus hippocastanum,6.0,113.1,33.0
+Carpinus betulus,5.0,50.3,25.0
+Carpinus betulus,12.0,254.5,46.2
+Aesculus hippocastanum,12.0,50.3,41.0
+Aesculus hippocastanum,12.0,28.3,34.0
+Aesculus hippocastanum,12.0,50.3,44.0
+Tilia cordata,5.0,12.6,15.0
+Tilia cordata,19.0,95.0,75.0
+Tilia cordata,19.0,95.0,75.0
+Tilia cordata,19.0,95.0,75.0
+Carpinus betulus,8.0,50.3,35.0
+Carpinus betulus,5.0,3.1,16.0
+Carpinus betulus,8.0,50.3,45.0
+Carpinus betulus,8.0,50.3,45.0
+Aesculus hippocastanum,8.0,19.6,60.0
+Celtis australis,12.0,113.1,70.0
+Carpinus betulus,6.0,19.6,35.0
+Carpinus betulus,6.0,19.6,35.0
+Carpinus betulus,6.0,19.6,42.0
+Celtis australis,4.0,3.1,8.0
+Celtis australis,4.0,3.1,8.0
+Celtis australis,6.0,3.1,30.0
+Celtis australis,9.0,50.3,60.0
+Celtis australis,6.0,3.1,28.0
+Celtis australis,8.0,28.3,50.0
+Celtis australis,8.0,28.3,50.0
+Celtis australis,8.0,7.1,26.0
+Celtis australis,6.0,7.1,22.0
+Celtis australis,6.0,28.3,53.0
+Celtis australis,6.0,7.1,18.0
+Celtis australis,8.0,7.1,27.0
+Celtis australis,8.0,7.1,29.0
+Celtis australis,10.0,28.3,47.0
+Celtis australis,10.0,28.3,47.0
+Celtis australis,8.0,12.6,28.0
+Celtis australis,13.0,12.6,60.0
+Aesculus hippocastanum,8.0,19.6,65.0
+Celtis australis,13.0,227.0,60.0
+Aesculus hippocastanum,12.0,63.6,80.0
+Aesculus hippocastanum,10.0,12.6,43.0
+Aesculus hippocastanum,10.0,12.6,48.0
+Aesculus hippocastanum,10.0,12.6,41.0
+Aesculus hippocastanum,10.0,12.6,63.0
+Aesculus hippocastanum,10.0,28.3,63.0
+Aesculus hippocastanum,10.0,38.5,70.0
+Aesculus hippocastanum,10.0,38.5,66.0
+Aesculus hippocastanum,10.0,38.5,66.0
+Aesculus hippocastanum,10.0,38.5,58.0
+Aesculus hippocastanum,7.0,12.6,41.0
+Aesculus hippocastanum,7.0,12.6,51.0
+Aesculus hippocastanum,12.0,28.3,68.0
+Aesculus hippocastanum,9.0,12.6,54.0
+Aesculus hippocastanum,9.0,7.1,47.0
+Aesculus hippocastanum,12.0,19.6,53.0
+Aesculus hippocastanum,9.0,63.6,61.0
+Aesculus hippocastanum,9.0,12.6,58.0
+Aesculus hippocastanum,9.0,63.6,71.0
+Aesculus hippocastanum,7.0,7.1,28.0
+Aesculus hippocastanum,15.0,113.1,100.0
+Celtis australis,15.0,50.3,78.0
+Aesculus hippocastanum,8.0,50.3,60.0
+Celtis australis,4.0,7.1,18.0
+Celtis australis,8.0,113.1,58.0
+Aesculus hippocastanum,7.0,28.3,42.0
+Aesculus hippocastanum,9.0,50.3,48.0
+Aesculus hippocastanum,7.0,28.3,41.0
+Aesculus hippocastanum,8.0,28.3,44.0
+Aesculus hippocastanum,9.0,38.5,41.0
+Aesculus hippocastanum,14.0,50.3,49.0
+Tilia cordata,10.0,50.3,28.0
+Tilia cordata,11.0,78.5,28.0
+Tilia cordata,10.0,50.3,30.0
+Tilia cordata,11.0,50.3,28.0
+Carpinus betulus,10.0,78.5,25.0
+Carpinus betulus,6.0,19.6,17.0
+Carpinus betulus,9.0,28.3,20.0
+Carpinus betulus,8.0,7.1,15.0
+Carpinus betulus,8.0,7.1,12.0
+Carpinus betulus,8.0,12.6,20.0
+Carpinus betulus,8.0,12.6,10.0
+Carpinus betulus,8.0,28.3,14.0
+Tilia cordata,10.0,19.6,25.0
+Platanus x hispanica,12.0,38.5,39.0
+Tilia cordata,18.0,113.1,45.0
+Celtis australis,5.0,38.5,30.0
+Tilia cordata,5.0,12.6,21.0
+Tilia cordata,5.0,12.6,30.0
+Tilia cordata,5.0,12.6,28.0
+Tilia cordata,5.0,12.6,28.0
+Tilia cordata,5.0,12.6,28.0
+Tilia cordata,5.0,12.6,28.0
+Tilia cordata,8.0,38.5,32.0
+Tilia cordata,8.0,38.5,32.0
+Tilia cordata,6.0,95.0,41.0
+Carpinus betulus,6.0,12.6,25.0
+Carpinus betulus,6.0,12.6,25.0
+Carpinus betulus,6.0,12.6,25.0
+Carpinus betulus,6.0,12.6,25.0
+Carpinus betulus,6.0,12.6,25.0
+Carpinus betulus,6.0,12.6,25.0
+Carpinus betulus,6.0,12.6,25.0
+Carpinus betulus,6.0,12.6,25.0
+Carpinus betulus,6.0,12.6,25.0
+Carpinus betulus,6.0,12.6,25.0
+Carpinus betulus,6.0,12.6,25.0
+Carpinus betulus,6.0,12.6,25.0
+Carpinus betulus,6.0,12.6,25.0
+Carpinus betulus,6.0,12.6,25.0
+Platanus x hispanica,13.0,132.7,44.0
+Platanus x hispanica,13.0,132.7,44.0
+Platanus x hispanica,6.0,19.6,16.0
+Platanus x hispanica,8.0,19.6,25.0
+Platanus x hispanica,8.0,19.6,32.0
+Platanus x hispanica,12.0,50.3,34.0
+Platanus x hispanica,12.0,50.3,34.0
+Platanus x hispanica,12.0,50.3,30.0
+Celtis australis,7.0,19.6,35.0
+Celtis australis,8.0,63.6,58.0
+Celtis australis,6.0,78.5,35.0
+Celtis australis,7.0,28.3,42.0
+Celtis australis,7.0,28.3,50.0
+Celtis australis,7.0,28.3,24.0
+Celtis australis,7.0,28.3,33.0
+Aesculus hippocastanum,6.0,28.3,54.0
+Aesculus hippocastanum,9.0,19.6,48.0
+Aesculus hippocastanum,9.0,19.6,48.0
+Aesculus hippocastanum,9.0,19.6,48.0
+Aesculus hippocastanum,9.0,28.3,57.0
+Aesculus hippocastanum,9.0,50.3,62.0
+Aesculus hippocastanum,9.0,50.3,62.0
+Aesculus hippocastanum,9.0,50.3,62.0
+Aesculus hippocastanum,6.0,28.3,58.0
+Aesculus hippocastanum,6.0,28.3,45.0
+Aesculus hippocastanum,8.0,28.3,50.0
+Tilia cordata,6.0,28.3,31.0
+Tilia cordata,6.0,28.3,31.0
+Tilia cordata,6.0,28.3,28.0
+Tilia cordata,6.0,28.3,33.0
+Tilia cordata,6.0,28.3,30.0
+Platanus x hispanica,17.0,113.1,55.0
+Tilia cordata,7.0,19.6,35.0
+Tilia cordata,9.0,19.6,35.0
+Tilia cordata,9.0,19.6,35.0
+Tilia cordata,9.0,50.3,35.0
+Tilia cordata,9.0,50.3,35.0
+Tilia cordata,7.0,19.6,35.0
+Tilia cordata,7.0,19.6,35.0
+Carpinus betulus,4.0,3.1,18.0
+Carpinus betulus,4.0,3.1,18.0
+Carpinus betulus,4.0,3.1,18.0
+Carpinus betulus,4.0,3.1,17.0
+Carpinus betulus,4.0,3.1,17.0
+Carpinus betulus,4.0,3.1,17.0
+Carpinus betulus,4.0,3.1,17.0
+Carpinus betulus,4.0,3.1,17.0
+Carpinus betulus,4.0,3.1,17.0
+Carpinus betulus,4.0,3.1,17.0
+Celtis australis,13.0,50.3,80.0
+Carpinus betulus,4.0,3.1,18.0
+Carpinus betulus,4.0,3.1,18.0
+Carpinus betulus,4.0,3.1,18.0
+Carpinus betulus,4.0,3.1,18.0
+Carpinus betulus,4.0,3.1,18.0
+Carpinus betulus,4.0,3.1,18.0
+Carpinus betulus,4.0,3.1,18.0
+Carpinus betulus,4.0,3.1,18.0
+Carpinus betulus,4.0,3.1,18.0
+Carpinus betulus,4.0,3.1,18.0
+Carpinus betulus,4.0,3.1,18.0
+Carpinus betulus,4.0,3.1,18.0
+Carpinus betulus,4.0,3.1,18.0
+Carpinus betulus,4.0,3.1,18.0
+Carpinus betulus,4.0,3.1,18.0
+Carpinus betulus,4.0,3.1,18.0
+Carpinus betulus,4.0,3.1,18.0
+Carpinus betulus,4.0,3.1,18.0
+Carpinus betulus,4.0,3.1,18.0
+Carpinus betulus,4.0,3.1,18.0
+Carpinus betulus,4.0,3.1,18.0
+Carpinus betulus,4.0,3.1,18.0
+Carpinus betulus,4.0,3.1,18.0
+Carpinus betulus,4.0,3.1,18.0
+Carpinus betulus,4.0,3.1,18.0
+Carpinus betulus,4.0,3.1,18.0
+Carpinus betulus,4.0,3.1,18.0
+Carpinus betulus,4.0,3.1,18.0
+Carpinus betulus,4.0,3.1,18.0
+Carpinus betulus,4.0,3.1,18.0
+Carpinus betulus,4.0,3.1,18.0
+Carpinus betulus,4.0,3.1,18.0
+Carpinus betulus,4.0,3.1,18.0
+Carpinus betulus,4.0,3.1,18.0
+Carpinus betulus,4.0,3.1,18.0
+Carpinus betulus,4.0,3.1,18.0
+Carpinus betulus,4.0,3.1,18.0
+Carpinus betulus,4.0,3.1,18.0
+Carpinus betulus,4.0,3.1,18.0
+Aesculus hippocastanum,6.0,19.6,41.0
+Celtis australis,6.0,50.3,38.0
+Celtis australis,4.0,50.3,35.0
+Tilia cordata,7.0,19.6,25.0
+Tilia cordata,7.0,19.6,30.0
+Tilia cordata,7.0,19.6,30.0
+Carpinus betulus,3.0,0.8,5.0
+Carpinus betulus,3.0,0.8,5.0
+Carpinus betulus,3.0,0.8,5.0
+Aesculus hippocastanum,6.0,28.3,35.0
+Aesculus hippocastanum,6.0,28.3,35.0
+Aesculus hippocastanum,3.0,7.1,14.0
+Aesculus hippocastanum,6.0,28.3,30.0
+Aesculus hippocastanum,3.0,7.1,14.0
+Aesculus hippocastanum,4.0,7.1,21.0
+Aesculus hippocastanum,3.0,7.1,14.0
+Platanus x hispanica,21.0,113.1,140.0
+Aesculus hippocastanum,8.0,113.1,60.5
+Aesculus hippocastanum,15.0,113.1,92.0
+Aesculus hippocastanum,10.0,63.6,47.0
+Aesculus hippocastanum,14.0,95.0,70.0
+Tilia cordata,3.0,0.8,10.0
+Celtis australis,6.0,19.6,34.0
+Aesculus hippocastanum,10.0,12.6,60.0
+Aesculus hippocastanum,10.0,12.6,48.0
+Aesculus hippocastanum,8.0,12.6,60.0
+Aesculus hippocastanum,10.0,12.6,60.0
+Carpinus betulus,10.0,12.6,50.0
+Aesculus hippocastanum,10.0,12.6,60.0
+Celtis australis,8.0,19.6,35.0
+Celtis australis,8.0,19.6,35.0
+Celtis australis,8.0,19.6,35.0
+Celtis australis,8.0,19.6,52.0
+Celtis australis,5.0,12.6,20.0
+Celtis australis,5.0,12.6,20.0
+Celtis australis,5.0,12.6,32.0
+Celtis australis,5.0,12.6,20.0
+Celtis australis,5.0,12.6,20.0
+Celtis australis,5.0,12.6,20.0
+Celtis australis,5.0,12.6,20.0
+Celtis australis,5.0,12.6,20.0
+Celtis australis,5.0,12.6,31.0
+Celtis australis,6.0,19.6,28.0
+Celtis australis,6.0,19.6,28.0
+Celtis australis,6.0,19.6,28.0
+Celtis australis,6.0,19.6,28.0
+Celtis australis,6.0,19.6,35.0
+Celtis australis,6.0,19.6,28.0
+Celtis australis,6.0,19.6,25.0
+Aesculus hippocastanum,7.0,28.3,41.0
+Aesculus hippocastanum,7.0,28.3,30.0
+Aesculus hippocastanum,7.0,28.3,35.0
+Aesculus hippocastanum,7.0,28.3,42.0
+Aesculus hippocastanum,6.0,28.3,32.0
+Aesculus hippocastanum,8.0,28.3,37.0
+Aesculus hippocastanum,8.0,28.3,48.0
+Aesculus hippocastanum,8.0,28.3,48.0
+Platanus x hispanica,11.0,28.3,36.0
+Platanus x hispanica,11.0,63.6,62.0
+Platanus x hispanica,18.0,63.6,62.0
+Celtis australis,8.0,38.5,48.0
+Celtis australis,8.0,38.5,56.0
+Carpinus betulus,8.0,28.3,34.0
+Carpinus betulus,8.0,28.3,34.0
+Carpinus betulus,8.0,28.3,26.0
+Celtis australis,6.0,19.6,35.0
+Celtis australis,6.0,19.6,27.0
+Celtis australis,6.0,19.6,27.0
+Celtis australis,6.0,19.6,27.0
+Celtis australis,6.0,19.6,27.0
+Celtis australis,6.0,28.3,35.0
+Celtis australis,6.0,28.3,35.0
+Celtis australis,6.0,28.3,25.0
+Celtis australis,6.0,28.3,25.0
+Celtis australis,6.0,28.3,25.0
+Celtis australis,6.0,28.3,25.0
+Celtis australis,6.0,28.3,25.0
+Celtis australis,6.0,28.3,25.0
+Celtis australis,6.0,28.3,25.0
+Carpinus betulus,5.0,12.6,18.0
+Carpinus betulus,5.0,12.6,18.0
+Celtis australis,5.0,12.6,18.0
+Celtis australis,5.0,12.6,18.0
+Celtis australis,5.0,12.6,18.0
+Celtis australis,5.0,12.6,18.0
+Celtis australis,5.0,12.6,18.0
+Celtis australis,5.0,12.6,18.0
+Celtis australis,5.0,12.6,18.0
+Celtis australis,5.0,12.6,18.0
+Carpinus betulus,4.0,7.1,18.0
+Carpinus betulus,4.0,7.1,18.0
+Carpinus betulus,4.0,7.1,18.0
+Carpinus betulus,4.0,7.1,18.0
+Carpinus betulus,4.0,7.1,18.0
+Carpinus betulus,4.0,7.1,18.0
+Carpinus betulus,4.0,7.1,18.0
+Carpinus betulus,4.0,7.1,18.0
+Carpinus betulus,4.0,7.1,18.0
+Carpinus betulus,4.0,7.1,18.0
+Carpinus betulus,4.0,7.1,18.0
+Carpinus betulus,4.0,7.1,18.0
+Carpinus betulus,4.0,7.1,18.0
+Celtis australis,4.0,19.6,26.0
+Celtis australis,4.0,19.6,35.0
+Celtis australis,4.0,19.6,35.0
+Celtis australis,4.0,19.6,42.0
+Celtis australis,4.0,19.6,42.0
+Celtis australis,4.0,19.6,42.0
+Celtis australis,4.0,19.6,42.0
+Platanus x hispanica,3.0,3.1,14.0
+Celtis australis,5.0,19.6,35.0
+Celtis australis,5.0,19.6,28.0
+Celtis australis,5.0,3.1,16.0
+Tilia cordata,5.0,7.1,18.0
+Tilia cordata,5.0,7.1,18.0
+Celtis australis,5.0,7.1,38.0
+Celtis australis,5.0,7.1,38.0
+Celtis australis,5.0,7.1,38.0
+Aesculus hippocastanum,5.0,7.1,38.0
+Aesculus hippocastanum,6.0,19.6,38.0
+Platanus x hispanica,21.0,78.5,125.0
+Platanus x hispanica,24.0,254.5,145.0
+Platanus x hispanica,26.0,201.1,185.0
+Aesculus hippocastanum,10.0,38.5,28.0
+Aesculus hippocastanum,10.0,38.5,32.0
+Aesculus hippocastanum,10.0,38.5,55.0
+Platanus x hispanica,16.0,78.5,185.0
+Platanus x hispanica,16.0,113.1,100.0
+Aesculus hippocastanum,17.0,113.1,100.0
+Platanus x hispanica,21.0,63.6,95.0
+Platanus x hispanica,18.0,78.5,110.0
+Platanus x hispanica,27.0,176.7,180.0
+Platanus x hispanica,25.0,38.5,90.0
+Aesculus hippocastanum,3.0,0.8,5.0
+Aesculus hippocastanum,3.0,0.8,5.0
+Aesculus hippocastanum,3.0,0.8,5.0
+Aesculus hippocastanum,3.0,0.8,5.0
+Aesculus hippocastanum,9.0,38.5,55.0
+Aesculus hippocastanum,9.0,38.5,50.0
+Aesculus hippocastanum,3.0,0.8,12.0
+Aesculus hippocastanum,3.0,0.8,12.0
+Aesculus hippocastanum,3.0,0.8,12.0
+Aesculus hippocastanum,3.0,0.8,12.0
+Platanus x hispanica,20.0,227.0,178.3
+Platanus x hispanica,20.0,227.0,159.2
+Platanus x hispanica,20.0,227.0,159.2
+Platanus x hispanica,26.0,254.5,184.6
+Aesculus hippocastanum,15.0,50.3,80.0
+Aesculus hippocastanum,15.0,50.3,80.0
+Aesculus hippocastanum,16.0,50.3,80.0
+Platanus x hispanica,8.0,19.6,29.0
+Platanus x hispanica,25.0,78.5,160.0
+Platanus x hispanica,25.0,78.5,150.0
+Platanus x hispanica,10.0,28.3,41.0
+Platanus x hispanica,10.0,19.6,28.0
+Platanus x hispanica,27.0,227.0,140.0
+Celtis australis,14.0,38.5,64.0
+Celtis australis,14.0,38.5,64.0
+Platanus x hispanica,8.0,12.6,17.0
+Platanus x hispanica,8.0,12.6,17.0
+Platanus x hispanica,16.0,50.3,70.0
+Aesculus hippocastanum,14.0,113.1,85.0
+Aesculus hippocastanum,13.0,63.6,70.0
+Aesculus hippocastanum,10.0,28.3,32.0
+Aesculus hippocastanum,10.0,28.3,34.0
+Aesculus hippocastanum,15.0,63.6,68.0
+Celtis australis,14.0,78.5,74.0
+Celtis australis,6.0,7.1,12.0
+Celtis australis,15.0,78.5,71.0
+Celtis australis,17.0,113.1,90.0
+Aesculus hippocastanum,7.0,78.5,50.0
+Tilia cordata,12.0,38.5,52.0
+Platanus x hispanica,21.0,95.0,88.0
+Tilia cordata,16.0,50.3,70.0
+Platanus x hispanica,22.0,95.0,79.0
+Celtis australis,5.0,0.8,14.0
+Platanus x hispanica,23.0,201.1,100.0
+Platanus x hispanica,23.0,201.1,90.0
+Platanus x hispanica,17.0,113.1,74.0
+Platanus x hispanica,9.0,50.3,23.0
+Platanus x hispanica,8.0,38.5,18.0
+Celtis australis,17.0,28.3,74.5
+Carpinus betulus,10.0,38.5,29.0
+Aesculus hippocastanum,3.0,0.8,15.0
+Aesculus hippocastanum,14.0,19.6,65.6
+Aesculus hippocastanum,15.0,38.5,56.0
+Aesculus hippocastanum,13.0,19.6,59.2
+Aesculus hippocastanum,13.0,50.3,59.5
+Tilia cordata,15.0,12.6,48.4
+Aesculus hippocastanum,15.0,50.3,48.1
+Tilia cordata,18.0,63.6,91.4
+Aesculus hippocastanum,14.0,38.5,83.7
+Aesculus hippocastanum,14.0,28.3,59.2
+Carpinus betulus,6.2,10.1,17.0
+Carpinus betulus,6.2,10.1,17.0
+Carpinus betulus,6.2,10.1,17.0
+Carpinus betulus,6.2,10.1,17.0
+Celtis australis,8.3,35.2,30.1
+Carpinus betulus,6.2,10.1,17.0
