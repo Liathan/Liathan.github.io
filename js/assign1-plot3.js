@@ -1,9 +1,3 @@
-// -------------------------------------------------------------------------
-// Assignment 1: BarChart (first plot)
-// We want to show the aboundance of each tree Circoscrizione in Trento's territory
-//--------------------------------------------------------------------------
-
-
 // Refer to the id div
 const id_ref_3 = "#small-multiple-stacked-barchart"
 
@@ -26,148 +20,185 @@ const svg_3 = d3.select(id_ref_3)
 
 cose3 = 0
 // Parse the Data
-d3.csv("../data/assign1-plot3.csv").then(function(data, num=15) {
+d3.csv("../data/assign1-plot3.csv").then(function(data) {
 
     // Extract the highest "num" values
-    const topNum = data.slice(0,num).reverse();
+    const topNum = data.slice(0)//.reverse();
     const subgroups = data.columns.slice(1);
     var max_widths_3 = Array(6)
+    var cumsum = []
     var sum = 0
-    for(i = 0; i < 6; ++i)
-    {
-        max_widths_3[i] = Math.max.apply(Math, topNum.map(function(value) {
-            return value[subgroups[i]]/2; }))
-        
-        var y = d3.scaleBand()
-        .range([0, height_3])
-        .domain(topNum.map(function(d) { return d.Circoscrizione; }))
-        .padding(.1);
 
-        if(i==0)
-        {  
-        svg_3.append("g")
-        //.attr("class", "y-ticks")
+    const color = d3.scaleOrdinal()
+        .domain(subgroups)
+        .range(["#ff595e", "#ffca3a", '#8ac926', '#1982c4', '#6a4c93', '#606470']);
+
+    for( i = 0; i < 6; ++i)
+    {
+        max =  Math.max.apply(Math, topNum.map(function(value) { return value[subgroups[i]] / 3; }))
+        sum += max
+        max_widths_3[i] = (max)
+        cumsum.push(sum)
+    }
+
+    var y = d3.scaleBand()
+    .range([0, height_3])
+    .domain(topNum.map(function(d) { return d.Circoscrizione; }))
+    .padding(.1);
+    
+    //--------------------------- X ---------------------------------
+    const x1 = d3.scaleLinear()
+    .domain([0, max_widths_3[0] / 3])
+    .range([0, max_widths_3[0] ]);
+    cose3 = x1
+    
+    const x2 = d3.scaleLinear()
+    .domain([0, max_widths_3[1] / 3])
+    .range([0, max_widths_3[1] ]);
+
+    const x3 = d3.scaleLinear()
+    .domain([0, max_widths_3[2] / 3])
+    .range([0, max_widths_3[2] ]);
+
+    const x4 = d3.scaleLinear()
+    .domain([0, max_widths_3[3] / 3])
+    .range([0, max_widths_3[3] ]);
+    
+    const x5 = d3.scaleLinear()
+    .domain([0, max_widths_3[4] / 3])
+    .range([0, max_widths_3[4] ]);
+
+    const x6 = d3.scaleLinear()
+    .domain([0, max_widths_3[5] / 3])
+    .range([0, max_widths_3[5] ]);
+
+    // ------------------------------ Y axis --------------------------------
+    svg_3.append("g")
+    //.attr("class", "y-ticks")
+    .call(d3.axisLeft(y))
+    .attr("transform", `translate(${margin_3.left}, 0)`)
+    .selectAll("text")
+        .style("text-anchor", "end")
+        .style("font-size", "10px")
+
+    svg_3.append("g")
+    //.attr("class", "y-ticks")
+    .call(d3.axisLeft(y))
+    .attr("transform", `translate(${margin_3.left + cumsum[0]}, 0)`)
+    .selectAll("text")
+        .style("text-anchor", "end")
+        .style("font-size", "0px")
+
+    svg_3.append("g")
+    //.attr("class", "y-ticks")
+    .call(d3.axisLeft(y))
+    .attr("transform", `translate(${margin_3.left + cumsum[1]}, 0)`)
+    .selectAll("text")
+        .style("text-anchor", "end")
+        .style("font-size", "0px")
+
+    svg_3.append("g")
+    //.attr("class", "y-ticks")
+    .call(d3.axisLeft(y))
+    .attr("transform", `translate(${margin_3.left + cumsum[2]}, 0)`)
+    .selectAll("text")
+        .style("text-anchor", "end")
+        .style("font-size", "0px")
+        // Add x axis
+
+    
+    svg_3.append("g")
+    //.attr("class", "y-ticks")
         .call(d3.axisLeft(y))
-        .attr("transform", `translate(${margin_3.left+sum+5}, ${margin_3.top})`)
-        .selectAll("text")
-            .style("text-anchor", "end")
-            .style("font-size", "12px")
-        }
-        else
-        {  
-        svg_3.append("g")
-        //.attr("class", "y-ticks")
-        .call(d3.axisLeft(y))
-        .attr("transform", `translate(${margin_3.left+sum+5}, ${margin_3.top})`)
+        .attr("transform", `translate(${margin_3.left + cumsum[3]}, 0)`)
         .selectAll("text")
             .style("text-anchor", "end")
             .style("font-size", "0px")
-        }
-        
-        // Add x axis
-        const x = d3.scaleLinear()
-        .domain([0, max_widths_3[i]])
-        .range([sum+5+margin_3.left, (sum + max_widths_3[i])/5]);
-        
-        console.log("AAAAAAAAAAAA", Math.ceil(max_widths_3[i]/100)*100, max_widths_3[i])
 
-        cose3 = x
-        sum += max_widths_3[i]
-        console.log("XXXXXXXXXXX", x)
-        svg_3.selectAll(id_ref_3)
-        .data(topNum)
-        .join("rect")
-            .attr("x", x(0))
-            .attr("y", function(d) {  return y(d.Circoscrizione); })
-            //.attr("width", function(d) { return Math.max(x(d["Celtis australis"])-width_3, 0); })
-            .attr("width", function(d) { console.log(d[subgroups[i]]); return x(d[subgroups[i]])/max_widths_3[i]; })
-            .attr("height", y.bandwidth() )
-            .attr("fill", "#1c7c54")
-            .attr("opacity", 0.5);
-    } 
-    // cose3 = max_widths_3
-    // Compute the max_width of the x axis
-    // const max_width_3 = Math.max.apply(Math, topNum.map(function(value) {
-    //     return value["Celtis australis"];
-    // }));
-
-    // // Add x axis
-    // const x = d3.scaleLinear()
-    //     .domain([0, Math.ceil(max_width_3/100)*100])
-    //     .range([0, width_3/5]);
-    // svg_3.append("g")
-    //     .attr("transform", "translate(0," + height_3 + ")")
-    //     .call(d3.axisBottom(x))
-    //     .selectAll("text")
-    //         .attr("transform", "translate(-10,0)rotate(-45)")
-    //         .style("text-anchor", "end")
-    //         .style("font-size", "12px");
-
-    // // Y axis
-    // // const y = d3.scaleBand()
-    // //     .range([0, height_3])
-    // //     .domain(topNum.map(function(d) { return d.Circoscrizione; }))
-    // //     .padding(.1);
-    // // svg_3.append("g")
-    // //     //.attr("class", "y-ticks")
-    // //     .call(d3.axisLeft(y))
-    // //     .selectAll("text")
-    // //         .style("text-anchor", "end")
-    // //         .style("font-size", "12px")
-
-    // // create a tooltip
-    // const tooltip = d3.select(id_ref_3)
-    //     .append("div")
-    //     .attr("class", "tooltip")
-    //     .style("font-size", "14px")
-    //     .style("background-color", "white")
-    //     .style("border", "solid")
-    //     .style("border-width", "1px")
-    //     .style("border-radius", "5px")
-    //     .style("padding", "10px")
-    //     .style("opacity", 0);
-
-    // // Show the bars
-    // svg_3.selectAll(id_ref_3)
-    //     .data(topNum)
-    //     .join("rect")
-    //         .attr("x", x(0))
-    //         .attr("y", function(d) { return y(d.Circoscrizione); })
-    //         //.attr("width", function(d) { return Math.max(x(d["Celtis australis"])-width_3, 0); })
-    //         .attr("width", function(d) { return x(0); })
-    //         .attr("height", y.bandwidth() )
-    //         .attr("fill", "#1c7c54")
-    //         .attr("opacity", 0.5);
+    svg_3.append("g")
+    //.attr("class", "y-ticks")
+        .call(d3.axisLeft(y))
+        .attr("transform", `translate(${margin_3.left + cumsum[4]}, 0)`)
+        .selectAll("text")
+            .style("text-anchor", "end")
+            .style("font-size", "0px")
     
-    // // Title
-    // svg_3.append("text")
-    //     .attr("x", ((width_3 - (margin_3.left - margin_3.right)) / 2))             
-    //     .attr("y", 0 - (margin_3.top / 2))
-    //     .style("class", "h2")
-    //     .style("font-size", "18px")
-    //     .attr("text-anchor", "middle")  
-    //     .style("text-decoration", "underline")  
-    //     .text("Aboundance of tree Circoscrizione - Top " + num);
+    // ----------------------------------- Plotting ---------------------------
+    console.log(topNum)
+    svg_3.selectAll(id_ref_3)
+    .data(topNum)
+    .join("rect")
+        .attr("x", x1(0))
+        .attr("y", function(d) {  return y(d.Circoscrizione); })
+        //.attr("width", function(d) { return Math.max(x(d["Celtis australis"])-width_3, 0); })
+        .attr("width", function(d) {console.log(d['Circoscrizione'], subgroups[0], x1(d[subgroups[0]])); return x1(d[subgroups[0]]) / 3;})
+        .attr("height", y.bandwidth() )
+        .attr("fill", color(subgroups[0]))
+        .attr("opacity", 0.5)
+        .attr("transform", `translate(${margin_3.left}, 0)`)
+    
+    svg_3.selectAll(id_ref_3)
+    .data(topNum)
+    .join("rect")
+        .attr("x", x2(0))
+        .attr("y", function(d) {  return y(d.Circoscrizione); })
+        //.attr("width", function(d) { return Math.max(x(d["Celtis australis"])-width_3, 0); })
+        .attr("width", function(d) { return x2(d[subgroups[1]]) / 3; })
+        .attr("height", y.bandwidth() )
+        .attr("fill", color(subgroups[1]))
+        .attr("opacity", 0.5)
+        .attr("transform", `translate(${margin_3.left + cumsum[0]}, 0)`)
 
-    // // X axis label
-    // svg_3.append("text")      // text label for the x axis
-    //     .attr("x", (width_3 / 2))
-    //     .attr("y", (height_3 + margin_3.bottom))
-    //     .style("class", "h2")
-    //     .style("font-size", "16px")
-    //     .style("text-anchor", "middle")
-    //     .text("Count");
+    svg_3.selectAll(id_ref_3)
+    .data(topNum)
+    .join("rect")
+        .attr("x", x3(0))
+        .attr("y", function(d) {  return y(d.Circoscrizione); })
+        //.attr("width", function(d) { return Math.max(x(d["Celtis australis"])-width_3, 0); })
+        .attr("width", function(d) { return x3(d[subgroups[2]]) / 3; })
+        .attr("height", y.bandwidth() )
+        .attr("fill", color(subgroups[2]))
+        .attr("opacity", 0.5)
+        .attr("transform", `translate(${margin_3.left + cumsum[1]}, 0)`);
 
-    // // // Y axis label
-    // // svg_3.append("text")      // text label for the y axis
-    // //     .attr("x", (-height_3 / 2))
-    // //     .attr("y", -170)
-    // //     .style("text-anchor", "middle")
-    // //     .style("class", "h2")
-    // //     .style("font-size", "16px")
-    // //     .attr("transform", "rotate(-90)")
-    // //     .text("Tree Circoscrizione");
+    svg_3.selectAll(id_ref_3)
+    .data(topNum)
+    .join("rect")
+        .attr("x", x4(0))
+        .attr("y", function(d) {  return y(d.Circoscrizione); })
+        //.attr("width", function(d) { return Math.max(x(d["Celtis australis"])-width_3, 0); })
+        .attr("width", function(d) { return x4(d[subgroups[3]]) / 3; })
+        .attr("height", y.bandwidth() )
+        .attr("fill", color(subgroups[3]))
+        .attr("opacity", 0.5)
+        .attr("transform", `translate(${margin_3.left + cumsum[2]}, 0)`);
 
+
+    svg_3.selectAll(id_ref_3)
+    .data(topNum)
+    .join("rect")
+        .attr("x", x5(0))
+        .attr("y", function(d) {  return y(d.Circoscrizione); })
+        //.attr("width", function(d) { return Math.max(x(d["Celtis australis"])-width_3, 0); })
+        .attr("width", function(d) { return x5(d[subgroups[4]]) / 3; })
+        .attr("height", y.bandwidth() )
+        .attr("fill", color(subgroups[4]))
+        .attr("opacity", 0.5)
+        .attr("transform", `translate(${margin_3.left + cumsum[3]}, 0)`);
+
+    svg_3.selectAll(id_ref_3)
+    .data(topNum)
+    .join("rect")
+        .attr("x", x6(0))
+        .attr("y", function(d) {  return y(d.Circoscrizione); })
+        //.attr("width", function(d) { return Math.max(x(d["Celtis australis"])-width_3, 0); })
+        .attr("width", function(d) { return x6(d[subgroups[5]]) / 3; })
+        .attr("height", y.bandwidth() )
+        .attr("fill", color(subgroups[5]))
+        .attr("opacity", 0.5)
+        .attr("transform", `translate(${margin_3.left + cumsum[4]}, 0)`);
+    // ----------------------------- FINE PLOTTING -----------------------------
+    
     // // Animation
     // svg_3.selectAll("rect")
     //     .transition("loading")
