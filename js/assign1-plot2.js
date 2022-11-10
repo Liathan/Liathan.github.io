@@ -5,7 +5,7 @@
 //--------------------------------------------------------------------------
 
 
-// Refer to the id dive
+// Refer to the div id
 const id_ref_2 = "#stacked-barchart"
 
 // Set the dimensions and margins of the graph

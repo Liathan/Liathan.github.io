@@ -155,12 +155,13 @@
                         To do this, we will use a set of data provided in open-source mode on GitHub (<a href="https://github.com/Jeko83/">TrentoTreeMap Project</a>), which we will analyze to extrapolate all the information necessary to best represent the current situation of the trees in the Trento area.
                         We will also aim to estimate in economic terms the benefits brought by the trees in the area, or how much man would have to spend to achieve similar goals, also depriving himself of the beauty of different tree species.
                     </p>
-
-                    <form>
-                        <select id="selection" name="Circoscrizione" onchange="draw()"></select>
-                    </form>
                     
-                    <div id="waffle-chart" class="chart waffle"></div>
+                    <p>
+                        Select the circoscrizione you want to visualize in the wafflechart: 
+                        <select id="selection-waffle" name="Circoscrizione" onchange="draw()"></select>
+                    </p>
+                    
+                    <div id="waffle-chart" class="chart"></div>
                 
                 </div>
 
