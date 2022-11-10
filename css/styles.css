@@ -71,6 +71,7 @@ h2 span {
     overflow: hidden;
     height: 52px;
     transition: 0.5s;
+    z-index: 10;
 }
   
 /* Style the links inside the navigation bar */
@@ -106,7 +107,6 @@ h2 span {
     top: 0;
     right: 0;
     left: 0;
-    z-index: 1030;
   }
 
 /* When the screen is less than 1024 pixels wide, hide all links, except for the first one ("Home"). 
@@ -125,7 +125,7 @@ h2 span {
    This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
 @media screen and (max-width: 1024px) {
     .topnav.responsive {
-        position: relative;
+        position: sticky;
         height: 312px;
     }
     .topnav.responsive a.icon {
