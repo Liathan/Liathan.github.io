@@ -25,8 +25,6 @@ d3.csv("../data/assign1-plot3.csv").then(function(data) {
     // Extract the highest "num" values
     const topNum = data.slice(0)//.reverse();
     const subgroups = data.columns.slice(1);
-    var max_widths_3 = Array(6)
-    var cumsum = [0]
     var sum = 0
 
     const color = d3.scaleOrdinal()
@@ -41,23 +39,20 @@ d3.csv("../data/assign1-plot3.csv").then(function(data) {
     for( i = 0; i < 6; ++i)
     {
         max =  Math.max.apply(Math, topNum.map(function(value) { return value[subgroups[i]] / 3; }))
-        sum += max
-        max_widths_3[i] = (max)
-        cumsum.push(sum)
-
+        
         x = d3.scaleLinear()
         .domain([0, max / 3])
         .range([0, max / 3 -1]);
-
+        
         newY = (i > 0) ? d3.axisLeft(y).tickSizeInner(0).tickSizeOuter(0) : d3.axisLeft(y);
-
+        
         svg_3.append("g")
         .call(newY)
-        .attr("transform", `translate(${margin_3.left + cumsum[i]}, 0)`)
+        .attr("transform", `translate(${margin_3.left + sum}, 0)`)
         .selectAll("text")
         .style("text-anchor", "end")
         .style("font-size", `${i == 0 ? 14 : 0}px`)
-
+        
         svg_3.selectAll(id_ref_3)
         .data(topNum)
         .join("rect")
@@ -67,8 +62,9 @@ d3.csv("../data/assign1-plot3.csv").then(function(data) {
         .attr("height", y.bandwidth() )
         .attr("fill", color(subgroups[i]))
         .attr("opacity", 0.5)
-        .attr("transform", `translate(${margin_3.left + cumsum[i]}, 0)`)
+        .attr("transform", `translate(${margin_3.left + sum}, 0)`)
         
+        sum += max
 
     }
     
