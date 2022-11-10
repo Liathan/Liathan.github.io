@@ -30,7 +30,7 @@ d3.csv("../data/assign2-plot1.csv").then(function(data, n_bin=40) {
 
     // Add x axis
     const x = d3.scaleLinear()
-        .domain([0, 70])
+        .domain([0, 65])
         .range([0, width_1]);
     svg_1.append("g")
         .attr("transform", "translate(0," + height_1 + ")")
@@ -102,7 +102,7 @@ d3.csv("../data/assign2-plot1.csv").then(function(data, n_bin=40) {
         .style("font-size", "18px")
         .attr("text-anchor", "middle")  
         .style("text-decoration", "underline")  
-        .text("Aboundance of tree species - Top " + n_bin);
+        .text("Tree Hight Histogram");
 
     // X axis label
     svg_1.append("text")      // text label for the x axis
