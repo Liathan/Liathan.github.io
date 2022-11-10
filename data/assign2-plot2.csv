@@ -1,4 +1,4 @@
-Name,Height (m),Canopy Cover (m2),DBH (cm)
+Name,Height,CanopyCover,DBH
 Tilia cordata,4.5,7.1,8.0
 Tilia cordata,5.0,7.1,11.0
 Tilia cordata,5.0,7.1,11.0
