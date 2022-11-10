@@ -71,6 +71,7 @@ h2 span {
     overflow: hidden;
     height: 52px;
     transition: 0.5s;
+    z-index: 10;
 }
   
 /* Style the links inside the navigation bar */
