@@ -248,7 +248,7 @@ div.img-description p {
     pointer-events: none;
 }
 
-#selection-waffle {
+.selectionBox {
     font-family: "Fira Sans", sans-serif;
     background-color: white;
     padding-left: 0px;
