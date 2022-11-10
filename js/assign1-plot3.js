@@ -2,8 +2,8 @@
 const id_ref_3 = "#small-multiple-stacked-barchart"
 
 // Set the dimensions and margins of the graph
-const margin_3 = {top: 50, right: 20, bottom: 50, left: 200},
-    width_3 = 800 - margin_3.left - margin_3.right,
+const margin_3 = {top: 50, right: 20, bottom: 50, left: 270},
+    width_3 = 800 ,
     height_3 = 600 - margin_3.top - margin_3.bottom;
 
 // Append the svg_3 object to the page
@@ -15,7 +15,7 @@ const svg_3 = d3.select(id_ref_3)
         .attr("viewBox", '0 0 ' + (width_3+ margin_3.left + margin_3.right) +
             ' ' + (height_3 + margin_3.top + margin_3.bottom))
         .append("g")
-            .attr("transform", `translate(10, ${margin_3.top})`);
+            .attr("transform", `translate(-50, ${margin_3.top})`);
 
 
 cose3 = 0
@@ -49,28 +49,29 @@ d3.csv("../data/assign1-plot3.csv").then(function(data) {
     //--------------------------- X ---------------------------------
     const x1 = d3.scaleLinear()
     .domain([0, max_widths_3[0] / 3])
-    .range([0, max_widths_3[0] ]);
+    .range([0, max_widths_3[0] / 3-1]);
     cose3 = x1
     
     const x2 = d3.scaleLinear()
     .domain([0, max_widths_3[1] / 3])
-    .range([0, max_widths_3[1] ]);
+    .range([0, max_widths_3[1] / 3-1]);
 
     const x3 = d3.scaleLinear()
     .domain([0, max_widths_3[2] / 3])
-    .range([0, max_widths_3[2] ]);
+    .range([0, max_widths_3[2] / 3-1]);
 
     const x4 = d3.scaleLinear()
     .domain([0, max_widths_3[3] / 3])
-    .range([0, max_widths_3[3] ]);
+    .range([0, max_widths_3[3] / 3-1]);
     
     const x5 = d3.scaleLinear()
     .domain([0, max_widths_3[4] / 3])
-    .range([0, max_widths_3[4] ]);
+    .range([0, max_widths_3[4] / 3 -1]);
 
     const x6 = d3.scaleLinear()
     .domain([0, max_widths_3[5] / 3])
-    .range([0, max_widths_3[5] ]);
+    .range([0, max_widths_3[5] / 6-1]);
+    // MEGA HACK: ho cambiato la scala di other, SE lo vogliamo tenere dobbiamo commentarlo nella descrizione del grafico
 
     // ------------------------------ Y axis --------------------------------
     svg_3.append("g")
@@ -79,11 +80,11 @@ d3.csv("../data/assign1-plot3.csv").then(function(data) {
     .attr("transform", `translate(${margin_3.left}, 0)`)
     .selectAll("text")
         .style("text-anchor", "end")
-        .style("font-size", "10px")
+        .style("font-size", "14px")
 
     svg_3.append("g")
     //.attr("class", "y-ticks")
-    .call(d3.axisLeft(y))
+    .call(d3.axisLeft(y).tickSizeInner(0).tickSizeOuter(0))
     .attr("transform", `translate(${margin_3.left + cumsum[0]}, 0)`)
     .selectAll("text")
         .style("text-anchor", "end")
@@ -91,7 +92,7 @@ d3.csv("../data/assign1-plot3.csv").then(function(data) {
 
     svg_3.append("g")
     //.attr("class", "y-ticks")
-    .call(d3.axisLeft(y))
+    .call(d3.axisLeft(y).tickSizeInner(0).tickSizeOuter(0))
     .attr("transform", `translate(${margin_3.left + cumsum[1]}, 0)`)
     .selectAll("text")
         .style("text-anchor", "end")
@@ -99,7 +100,7 @@ d3.csv("../data/assign1-plot3.csv").then(function(data) {
 
     svg_3.append("g")
     //.attr("class", "y-ticks")
-    .call(d3.axisLeft(y))
+    .call(d3.axisLeft(y).tickSizeInner(0).tickSizeOuter(0))
     .attr("transform", `translate(${margin_3.left + cumsum[2]}, 0)`)
     .selectAll("text")
         .style("text-anchor", "end")
@@ -109,7 +110,7 @@ d3.csv("../data/assign1-plot3.csv").then(function(data) {
     
     svg_3.append("g")
     //.attr("class", "y-ticks")
-        .call(d3.axisLeft(y))
+        .call(d3.axisLeft(y).tickSizeInner(0).tickSizeOuter(0))
         .attr("transform", `translate(${margin_3.left + cumsum[3]}, 0)`)
         .selectAll("text")
             .style("text-anchor", "end")
@@ -117,7 +118,7 @@ d3.csv("../data/assign1-plot3.csv").then(function(data) {
 
     svg_3.append("g")
     //.attr("class", "y-ticks")
-        .call(d3.axisLeft(y))
+        .call(d3.axisLeft(y).tickSizeInner(0).tickSizeOuter(0))
         .attr("transform", `translate(${margin_3.left + cumsum[4]}, 0)`)
         .selectAll("text")
             .style("text-anchor", "end")
