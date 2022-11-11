@@ -218,8 +218,9 @@ d3.csv("../data/assign2-plot1.csv").then(function(data) {
                 // we move between near boxes (horizontally)
                 .delay(1);
 
-            tooltip.html("<span class='tooltiptext'>" + "<b>Count: " + d.length + 
-                         "</b><br>" + "Percentage: "+ (d.length / plotData_1[measureHeading_1].length * 100).toFixed(2) + "%</span>")
+            tooltip.html("<span class='tooltiptext'>" + "<b>Range: " + Math.min(...d) + " - " + Math.max(...d) + "</b>" + 
+                "<br>" + "Count: " + d.length + 
+                "<br>" + "Percentage: "+ (d.length / plotData_1[measureHeading_1].length * 100).toFixed(2) + "%</span>")
                 .style("left", (event.pageX) + "px")
                 .style("top", (event.pageY - 28) + "px");
         })
@@ -340,8 +341,9 @@ function draw1()
                 // we move between near boxes (horizontally)
                 .delay(1);
 
-            tooltip.html("<span class='tooltiptext'>" + "<b>Count: " + d.length + 
-                         "</b><br>" + "Percentage: "+ (d.length / plotData_1[measureHeading_1].length * 100).toFixed(2) + "%</span>")
+            tooltip.html("<span class='tooltiptext'>" + "<b>Range: " + Math.min(...d) + " - " + Math.max(...d) + "</b>" + 
+                "<br>" + "Count: " + d.length + 
+                "<br>" + "Percentage: "+ (d.length / plotData_1[measureHeading_1].length * 100).toFixed(2) + "%</span>")
                 .style("left", (event.pageX) + "px")
                 .style("top", (event.pageY - 28) + "px");
         })
