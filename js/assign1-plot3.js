@@ -120,15 +120,14 @@ d3.csv("../data/assign1-plot3.csv").then(function(data) {
         .attr("x", width_3 -160)
         .attr("y", (d, i) => (i * boxSize_3))
         .append("tspan")
-        // .fill((d) => color(d))
         .attr("dx", 155)
         .attr("dy", boxSize/2)
-        .style("text-anchor", "end")
-        .style("alignment-baseline", "right")
-        .style("font-size", "14px")
         .text((d) => d)
+        .style("fill", (d) => color(d))
+        .style("text-anchor", "end")
+        .style("font-size", "14px")
+        // .style("alignment-baseline", "right")
         .attr("class", d => "class"+subgroups.indexOf(d))
-        .attr("opacity", 0.5);
 
         svg_3.join("g").selectAll("rect[tag='legend_3']")
         .on("mouseover", function (event, d) {
