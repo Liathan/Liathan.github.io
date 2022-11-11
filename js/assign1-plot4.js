@@ -194,7 +194,7 @@ d3.csv("../data/assign1-plot4.csv").then(function(data) {
 
     legend_4.join("text")
     .attr("x", width_4  )
-    .attr("y", (d, i) => (i * boxSize_4))
+    .attr("y", (d, i) => i * boxSize_4 + 5)
     .append("tspan")
     .attr("dx", boxSize_4 + legend_sep_4)
     .attr("dy", boxSize_4 / 2)
