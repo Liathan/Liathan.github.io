@@ -8,10 +8,11 @@
 // Refer to the id dive
 const id_ref_4 = "#stacked-barchart-percentage"
 
-// Set the dimensions and margins of the graph
-const margin_4 = {top: 50, right: 20, bottom: 50, left: 240},
-    width_4 = 800 - margin_4.left - margin_4.right,
-    height_4 = 600 - margin_4.top - margin_4.bottom;
+const legend_sep_4 = 20
+const boxSize_4 = 40
+const margin_4 = {top: 50, right: 500, bottom: 50, left: 240},
+    width_4 = 1000,
+    height_4 = 800 - margin_4.top - margin_4.bottom;
 
 // Append the svg_4 object to the page
 const svg_4 = d3.select(id_ref_4)
@@ -19,7 +20,7 @@ const svg_4 = d3.select(id_ref_4)
         .attr("preserveAspectRatio", "xMidYMid meet")
         //.attr("width", width + margin_4.left + margin_4.right)
         //.attr("height", height + margin_4.top + margin_4.bottom)
-        .attr("viewBox", '0 0 ' + (width_4 + margin_4.left + margin_4.right) +
+        .attr("viewBox", '0 0 ' + (width_4 + margin_4.left + 400 + legend_sep_4 + boxSize_4) +
             ' ' + (height_4 + margin_4.top + margin_4.bottom))
         .append("g")
             .attr("transform", `translate(${margin_4.left}, ${margin_4.top})`);
@@ -92,6 +93,10 @@ d3.csv("../data/assign1-plot4.csv").then(function(data) {
             .join("rect")
                 .attr("x", d => x(0))
                 .attr("y", d => y(d.data.Circoscrizione))
+                .attr("class", function (d) {
+                    const species = d3.select(this.parentNode).datum().key  
+                    return "class" + subgroups.indexOf(species);
+                    })
                 .attr("width", d => x(0))
                 .attr("height", y.bandwidth())
                 .attr("opacity", 0.5);
@@ -136,40 +141,80 @@ d3.csv("../data/assign1-plot4.csv").then(function(data) {
     // Animation and filling of tooltip
     svg_4.selectAll("rect")
 
-        // MouseOver
-        .on("mouseover", function (event, d) {
+    // MouseOver
+    .on("mouseover", function (event, d) {
 
-            // Extract species names
-            const species = d3.select(this.parentNode).datum().key
+        // Extract species names
+        const species = d3.select(this.parentNode).datum().key
 
-            d3.select(event.currentTarget)
-                    .transition("selected")
-                        .duration(300)
-                        .style("opacity", 1.0);
-
-            tooltip.transition("appear-box")
-                .duration(300)
-                .style("opacity", .9)
-                // Added to control the fact that the tooltip disappear if
-                // we move between near boxes (horizontally)
-                .delay(1);
-
-            tooltip.html("<span class='tooltiptext'>" + "<b>Species: " + species + 
-                            "</b><br>" + "Percentage: "+ (d[1] - d[0]).toFixed(2) + "%</span>")
-                .style("left", (event.pageX) + "px")
-                .style("top", (event.pageY - 28) + "px");
-        })
-
-        // MouseOut
-        .on("mouseout", function (event, d) {
-
-            d3.select(event.currentTarget)
-                .transition("unselected")
+        d3.select(event.currentTarget)
+                .transition("selected")
                     .duration(300)
-                    .style("opacity", 0.5);  
+                    .style("opacity", 1.0);
 
-            tooltip.transition("disappear-box")
+        tooltip.transition("appear-box")
+            .duration(300)
+            .style("opacity", .9)
+            // Added to control the fact that the tooltip disappear if
+            // we move between near boxes (horizontally)
+            .delay(1);
+
+        tooltip.html("<span class='tooltiptext'>" + "<b>Species: " + species + 
+                        "</b><br>" + "Percentage: "+ (d[1] - d[0]).toFixed(2) + "%</span>")
+            .style("left", (event.pageX) + "px")
+            .style("top", (event.pageY - 28) + "px");
+    })
+
+    // MouseOut
+    .on("mouseout", function (event, d) {
+
+        d3.select(event.currentTarget)
+            .transition("unselected")
                 .duration(300)
-                .style("opacity", 0);
-        });
+                .style("opacity", 0.5);  
+
+        tooltip.transition("disappear-box")
+            .duration(300)
+            .style("opacity", 0);
+    });
+
+    var legend_4 = svg_4.join("g")
+    .selectAll("legend_4")
+    .data(subgroups);
+
+    legend_4.join("rect")
+    .attr("x", width_4 + legend_sep_4)
+    .attr("y", (d, i) => i * boxSize_4 + 5)
+    .attr("width", boxSize_4 - 3)
+    .attr("height", boxSize_4 - 3)
+    .attr("class", d => "class"+subgroups.indexOf(d))
+    .attr("fill", (d) => color(d))
+    .attr("opacity", 0.5)
+    .attr("tag", "legend_4");
+
+    legend_4.join("text")
+    .attr("x", width_4  )
+    .attr("y", (d, i) => (i * boxSize_4))
+    .append("tspan")
+    .attr("dx", boxSize_4 + legend_sep_4)
+    .attr("dy", boxSize_4 / 2)
+    .text((d) => d)
+    .style("fill",(d) => color(d) )
+
+    
+    svg_4.join("g").selectAll("rect[tag='legend_4']")
+    .on("mouseover", function (event, d) {
+        idx = subgroups.indexOf(d);
+        svg_4.selectAll(`.class${idx}`)
+        .transition("selected")
+        .duration(300)
+        .style("opacity", 1.0);
+    })
+    .on("mouseout", function (event, d){
+        idx = subgroups.indexOf(d);
+        svg_4.selectAll(`.class${idx}`)
+        .transition("unselected")
+        .duration(300)
+        .style("opacity", 0.5);
+    })
 });
