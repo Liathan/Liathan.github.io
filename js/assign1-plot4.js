@@ -16,14 +16,14 @@ const margin_4 = {top: 50, right: 500, bottom: 50, left: 240},
 
 // Append the svg_4 object to the page
 const svg_4 = d3.select(id_ref_4)
-    .append("svg")
-        .attr("preserveAspectRatio", "xMidYMid meet")
-        //.attr("width", width + margin_4.left + margin_4.right)
-        //.attr("height", height + margin_4.top + margin_4.bottom)
-        .attr("viewBox", '0 0 ' + (width_4 + margin_4.left + 400 + legend_sep_4 + boxSize_4) +
-            ' ' + (height_4 + margin_4.top + margin_4.bottom))
-        .append("g")
-            .attr("transform", `translate(${margin_4.left}, ${margin_4.top})`);
+.append("svg")
+.attr("preserveAspectRatio", "xMidYMid meet")
+//.attr("width", width + margin_4.left + margin_4.right)
+//.attr("height", height + margin_4.top + margin_4.bottom)
+.attr("viewBox", '0 0 ' + (width_4 + margin_4.left + 400 + legend_sep_4 + boxSize_4) +
+    ' ' + (height_4 + margin_4.top + margin_4.bottom))
+.append("g")
+.attr("transform", `translate(${margin_4.left}, ${margin_4.top})`);
 
 cose=[];
 // Parse the data
@@ -37,69 +37,70 @@ d3.csv("../data/assign1-plot4.csv").then(function(data) {
 
     // Add x axis
     const x = d3.scaleLinear()
-        .domain([0, 100])
-        .range([0, width_4]);
+    .domain([0, 100])
+    .range([0, width_4]);
+
     svg_4.append("g")
-        .attr("transform", "translate(0," + height_4 + ")")
-        .call(d3.axisBottom(x))
-        .selectAll("text")
-            .attr("transform", "translate(-10,0)rotate(-45)")
-            .style("text-anchor", "end")
-            .style("font-size", "12px");
+    .attr("transform", "translate(0," + height_4 + ")")
+    .call(d3.axisBottom(x))
+    .selectAll("text")
+    .attr("transform", "translate(-10,0)rotate(-45)")
+    .style("text-anchor", "end")
+    .style("font-size", "12px");
 
     // Add axis y
     const y = d3.scaleBand()
-        .range([0, height_4])
-        .domain(groups)
-        .padding(.1);
+    .range([0, height_4])
+    .domain(groups)
+    .padding(.1);
+
     svg_4.append("g")
-        .call(d3.axisLeft(y))
-        .selectAll("text")
-            .style("text-anchor", "end")
-            .style("font-size", "12px");
+    .call(d3.axisLeft(y))
+    .selectAll("text")
+    .style("text-anchor", "end")
+    .style("font-size", "12px");
 
     // Create a tooltip
     const tooltip = d3.select(id_ref_4)
-        .append("div")
-        .attr("class", "tooltip")
-        .style("font-size", "14px")
-        .style("background-color", "white")
-        .style("border", "solid")
-        .style("border-width", "1px")
-        .style("border-radius", "5px")
-        .style("padding", "10px")
-        .style("opacity", 0);
+    .append("div")
+    .attr("class", "tooltip")
+    .style("font-size", "14px")
+    .style("background-color", "white")
+    .style("border", "solid")
+    .style("border-width", "1px")
+    .style("border-radius", "5px")
+    .style("padding", "10px")
+    .style("opacity", 0);
         
     // Color palette = one color per subgroup
     const color = d3.scaleOrdinal()
-        .domain(subgroups)
-        .range(["#ff595e", "#ffca3a", '#8ac926', '#1982c4', '#6a4c93', '#606470']);
+    .domain(subgroups)
+    .range(["#ff595e", "#ffca3a", '#8ac926', '#1982c4', '#6a4c93', '#606470']);
         
     // Stack the data? --> Stack per subgroup (top-5 + "Others" species)
     const stackedData = d3.stack()
-        .keys(subgroups)
-        (data)
+    .keys(subgroups)(data)
     
     // Show the bars
     //svg_4.append("g")
     //    .selectAll("g")
     svg_4.selectAll(id_ref_4) 
-        // Enter in the stack data = loop key per key = group per group
-        .data(stackedData)
-        .join("g")
-            .attr("fill", d => color(d.key))
-            .selectAll("rect")
-            .data(d => d)
-            .join("rect")
-                .attr("x", d => x(0))
-                .attr("y", d => y(d.data.Circoscrizione))
-                .attr("class", function (d) {
-                    const species = d3.select(this.parentNode).datum().key  
-                    return "class" + subgroups.indexOf(species);
-                    })
-                .attr("width", d => x(0))
-                .attr("height", y.bandwidth())
-                .attr("opacity", 0.5);
+    // Enter in the stack data = loop key per key = group per group
+    .data(stackedData)
+    .join("g")
+    .attr("fill", d => color(d.key))
+    .selectAll("rect")
+    .data(d => d)
+    .join("rect")
+    .attr("x", d => x(0))
+    .attr("y", d => y(d.data.Circoscrizione))
+    .attr("class", function (d) {
+        const species = d3.select(this.parentNode).datum().key  
+        return "class" + subgroups.indexOf(species);
+        })
+    .attr("width", d => x(0))
+    .attr("height", y.bandwidth())
+    .attr("opacity", 0.5);
 
     // Title
     svg_4.append("text")
@@ -197,7 +198,7 @@ d3.csv("../data/assign1-plot4.csv").then(function(data) {
     .attr("y", (d, i) => i * boxSize_4 + 5)
     .append("tspan")
     .attr("dx", boxSize_4 + legend_sep_4)
-    .attr("dy", boxSize_4 / 2)
+    .attr("dy", boxSize_4 / 2 + 5)
     .text((d) => d)
     .style("fill",(d) => color(d) )
 
