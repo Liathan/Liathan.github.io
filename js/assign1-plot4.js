@@ -9,7 +9,7 @@
 const id_ref_4 = "#stacked-barchart-percentage"
 
 // Set the dimensions and margins of the graph
-const margin_4 = {top: 50, right: 20, bottom: 60, left: 240},
+const margin_4 = {top: 50, right: 20, bottom: 50, left: 240},
     width_4 = 800 - margin_4.left - margin_4.right,
     height_4 = 600 - margin_4.top - margin_4.bottom;
 
@@ -109,7 +109,7 @@ d3.csv("../data/assign1-plot4.csv").then(function(data) {
     // X axis label
     svg_4.append("text")      // text label for the x axis
         .attr("x", (width_4 / 2))
-        .attr("y", (height_4 + margin_4.bottom))
+        .attr("y", (height_4 + margin_4.bottom - 5))
         .style("class", "h2")
         .style("font-size", "16px")
         .style("text-anchor", "middle")
