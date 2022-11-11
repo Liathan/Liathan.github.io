@@ -63,6 +63,7 @@ d3.csv("../data/assign1-plot3.csv").then(function(data) {
         .attr("fill", color(subgroups[i]))
         .attr("opacity", 0.5)
         .attr("transform", `translate(${margin_3.left + sum}, 0)`)
+        .attr("name", subgroups[i])
         
         sum += max
 
@@ -77,40 +78,38 @@ d3.csv("../data/assign1-plot3.csv").then(function(data) {
     //     //.delay(function(d,i){return(i*100);})
 
     // // Animation and filling of tooltip
-    // svg_3.selectAll("rect")
+    svg_3.selectAll("rect")
+        // MouseOver
+        .on("mouseover", function (event, d) {
 
-    //     // MouseOver
-    //     .on("mouseover", function (event, d) {
+            const species = event.currentTarget.getAttribute("name")
+            d3.select(event.currentTarget)
+                .transition("selected")
+                    .duration(300)
+                    .style("opacity", 1.0);
 
-    //         d3.select(event.currentTarget)
-    //             .transition("selected")
-    //                 .duration(300)
-    //                 .style("opacity", 1.0);
+            tooltip.transition("appear-box")
+                .duration(300)
+                .style("opacity", .9)
+                // Added to control the fact that the tooltip disappear if
+                // we move between near boxes (horizontally)
+                .delay(1);
 
-    //         tooltip.transition("appear-box")
-    //             .duration(300)
-    //             .style("opacity", .9)
-    //             // Added to control the fact that the tooltip disappear if
-    //             // we move between near boxes (horizontally)
-    //             .delay(1);
+            tooltip.html("<span class='tooltiptext'>" + "<b>Abundance: " + d[species] + 
+                         "</b><br>" + "Average canopy size: "+ d.AverageCanopySize + "</span>")
+                .style("left", (event.pageX) + "px")
+                .style("top", (event.pageY - 28) + "px");
 
-    //         tooltip.html("<span class='tooltiptext'>" + "<b>Abundance: " + d["Celtis australis"] + 
-    //                      "</b><br>" + "Average canopy size: "+ d.AverageCanopySize + "</span>")
-    //             .style("left", (event.pageX) + "px")
-    //             .style("top", (event.pageY - 28) + "px");
+        })
+        .on("mouseout", function (event, d) {
+            d3.select(event.currentTarget)
+                .transition("unselected")
+                    .duration(300)
+                    .style("opacity", 0.5);
 
-    //     })
-
-    //     // MouseOut
-    //     .on("mouseout", function (event, d) {
-    //         d3.select(event.currentTarget)
-    //             .transition("unselected")
-    //                 .duration(300)
-    //                 .style("opacity", 0.5);
-
-    //         tooltip.transition("disappear-box")
-    //             .duration(300)
-    //             .style("opacity", 0);
-    //     });
+            tooltip.transition("disappear-box")
+                .duration(300)
+                .style("opacity", 0);
+        });
 
 });
