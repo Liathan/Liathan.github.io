@@ -2,17 +2,18 @@
 const id_ref_3 = "#small-multiple-stacked-barchart"
 
 // Set the dimensions and margins of the graph
-const margin_3 = {top: 50, right: 20, bottom: 50, left: 270},
-    width_3 = 800 ,
+const legend_sep_3 = 5
+const boxSize_3 = 40
+const margin_3 = {top: 50, right: 40, bottom: 50, left: 270},
+    width_3 = 800 + margin_3.left + margin_3.right + legend_sep_3 + boxSize_3,
     height_3 = 600 - margin_3.top - margin_3.bottom;
-
 // Append the svg_3 object to the page
 const svg_3 = d3.select(id_ref_3)
     .append("svg")
         .attr("preserveAspectRatio", "xMidYMid meet")
         //.attr("width", width_3 + margin_3.left + margin_3.right)
         //.attr("height", height_3 + margin_3.top + margin_3.bottom)
-        .attr("viewBox", '0 0 ' + (width_3+ margin_3.left + margin_3.right) +
+        .attr("viewBox", '0 0 ' + (width_3) +
             ' ' + (height_3 + margin_3.top + margin_3.bottom))
         .append("g")
             .attr("transform", `translate(-50, ${margin_3.top})`);
@@ -60,57 +61,88 @@ d3.csv("../data/assign1-plot3.csv").then(function(data) {
         .attr("y", function(d) {  return y(d.Circoscrizione); })
         .attr("width", function(d) { return x(d[subgroups[i]]) / (i == 5 ? 6: 3); })
         .attr("height", y.bandwidth() )
+        .attr("class", d => "class"+i)
         .attr("fill", color(subgroups[i]))
         .attr("opacity", 0.5)
         .attr("transform", `translate(${margin_3.left + sum}, 0)`)
+        .attr("name", subgroups[i])
         
         sum += max
 
     }
     
-    // // Animation
-    // svg_3.selectAll("rect")
-    //     .transition("loading")
-    //     .duration(800)
-    //     .attr("x", function(d) { return x(0); })
-    //     .attr("width", function(d) { return x(d["Celtis australis"]); });
-    //     //.delay(function(d,i){return(i*100);})
+    svg_3.selectAll("rect")
+        .on("mouseover", function (event, d) {
+            const species = event.currentTarget.getAttribute("name")
+            d3.select(event.currentTarget)
+            .transition("selected")
+            .duration(300)
+            .style("opacity", 1.0);
 
-    // // Animation and filling of tooltip
-    // svg_3.selectAll("rect")
+            tooltip.transition("appear-box")
+            .duration(300)
+            .style("opacity", .9)
+            .delay(1);
 
-    //     // MouseOver
-    //     .on("mouseover", function (event, d) {
+            tooltip.html("<span class='tooltiptext'>" + "<b>Abundance: " + d[species] + 
+                         "</b><br>" + "Average canopy size: "+ d.AverageCanopySize + "</span>")
+            .style("left", (event.pageX) + "px")
+            .style("top", (event.pageY - 28) + "px");
 
-    //         d3.select(event.currentTarget)
-    //             .transition("selected")
-    //                 .duration(300)
-    //                 .style("opacity", 1.0);
+        })
+        .on("mouseout", function (event, d) {
+            d3.select(event.currentTarget)
+            .transition("unselected")
+            .duration(300)
+            .style("opacity", 0.5);
 
-    //         tooltip.transition("appear-box")
-    //             .duration(300)
-    //             .style("opacity", .9)
-    //             // Added to control the fact that the tooltip disappear if
-    //             // we move between near boxes (horizontally)
-    //             .delay(1);
+            tooltip.transition("disappear-box")
+            .duration(300)
+            .style("opacity", 0);
+        });
 
-    //         tooltip.html("<span class='tooltiptext'>" + "<b>Abundance: " + d["Celtis australis"] + 
-    //                      "</b><br>" + "Average canopy size: "+ d.AverageCanopySize + "</span>")
-    //             .style("left", (event.pageX) + "px")
-    //             .style("top", (event.pageY - 28) + "px");
 
-    //     })
+        var legend_3 = svg_3.join("g")
+        .selectAll("legend_3")
+        .data(subgroups);
 
-    //     // MouseOut
-    //     .on("mouseout", function (event, d) {
-    //         d3.select(event.currentTarget)
-    //             .transition("unselected")
-    //                 .duration(300)
-    //                 .style("opacity", 0.5);
+        legend_3.join("rect")
+        .attr("x", width_3)
+        .attr("y", function(d,i){ return (i * boxSize_3)})
+        .attr("width", boxSize - 3)
+        .attr("height", boxSize - 3)
+        .attr("class", d => "class"+subgroups.indexOf(d))
+        .attr("fill", function(d){ return color(d); })
+        .attr("opacity", 0.5)
+        .attr("tag", "legend_3");
+    
+        legend_3.join("text")
+        .attr("x", width_3 -160)
+        .attr("y", function(d,i){ return (i * boxSize_3)})
+        .append("tspan")
+        .attr("dx", 155)
+        .attr("dy", boxSize/2)
+        .style("text-anchor", "end")
+        .style("alignment-baseline", "right")
+        .style("font-size", "14px")
+        .text(function(d){ return d; })
+        .attr("class", d => "class"+subgroups.indexOf(d))
+        .attr("opacity", 0.5);
 
-    //         tooltip.transition("disappear-box")
-    //             .duration(300)
-    //             .style("opacity", 0);
-    //     });
+        svg_3.join("g").selectAll("rect[tag='legend_3']")
+        .on("mouseover", function (event, d) {
+            idx = subgroups.indexOf(d);
+            svg_3.selectAll(`.class${idx}`)
+            .transition("selected")
+            .duration(300)
+            .style("opacity", 1.0);
+        })
+        .on("mouseout", function (event, d){
+            idx = subgroups.indexOf(d);
+            svg_3.selectAll(`.class${idx}`)
+            .transition("unselected")
+            .duration(300)
+            .style("opacity", 0.5);
+        })
 
 });
