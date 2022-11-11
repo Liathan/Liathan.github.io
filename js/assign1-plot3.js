@@ -103,7 +103,7 @@ d3.csv("../data/assign1-plot3.csv").then(function(data) {
 
 
         var legend_3 = svg_3.join("g")
-        .selectAll(".legend_3")
+        .selectAll("legend_3")
         .data(subgroups);
 
         legend_3.join("rect")
@@ -113,7 +113,8 @@ d3.csv("../data/assign1-plot3.csv").then(function(data) {
         .attr("height", boxSize - 3)
         .attr("class", d => "class"+subgroups.indexOf(d))
         .attr("fill", function(d){ return color(d); })
-        .attr("opacity", 0.5);
+        .attr("opacity", 0.5)
+        .attr("tag", "legend_3");
     
         legend_3.join("text")
         .attr("x", width_3 -160)
@@ -127,5 +128,21 @@ d3.csv("../data/assign1-plot3.csv").then(function(data) {
         .text(function(d){ return d; })
         .attr("class", d => "class"+subgroups.indexOf(d))
         .attr("opacity", 0.5);
+
+        svg_3.join("g").selectAll("rect[tag='legend_3']")
+        .on("mouseover", function (event, d) {
+            idx = subgroups.indexOf(d);
+            svg_3.selectAll(`.class${idx}`)
+            .transition("selected")
+            .duration(300)
+            .style("opacity", 1.0);
+        })
+        .on("mouseout", function (event, d){
+            idx = subgroups.indexOf(d);
+            svg_3.selectAll(`.class${idx}`)
+            .transition("unselected")
+            .duration(300)
+            .style("opacity", 0.5);
+        })
 
 });
