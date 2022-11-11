@@ -113,7 +113,7 @@ d3.csv("../data/assign1-plot4.csv").then(function(data) {
         .style("class", "h2")
         .style("font-size", "16px")
         .style("text-anchor", "middle")
-        .text("Count");
+        .text("Percentage (%)");
 
     // Y axis label
     svg_4.append("text")      // text label for the y axis
@@ -155,7 +155,7 @@ d3.csv("../data/assign1-plot4.csv").then(function(data) {
                 .delay(1);
 
             tooltip.html("<span class='tooltiptext'>" + "<b>Species: " + species + 
-                            "</b><br>" + "Percentage: "+ (d[1] - d[0]).toFixed(2) + "</span>")
+                            "</b><br>" + "Percentage: "+ (d[1] - d[0]).toFixed(2) + "%</span>")
                 .style("left", (event.pageX) + "px")
                 .style("top", (event.pageY - 28) + "px");
         })
