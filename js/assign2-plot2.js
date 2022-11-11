@@ -5,7 +5,7 @@
 
 
 // Refer to the id div
-const id_ref_2 = "#boxplot1"
+const id_ref_2 = "boxplot1"
 
 // Set the dimensions and margins of the graph
 const margin_2 = {top: 50, right: 20, bottom: 70, left: 70},
@@ -15,73 +15,101 @@ const margin_2 = {top: 50, right: 20, bottom: 70, left: 70},
 // Append the svg_2 object to the page
 const svg_2 = d3.select(id_ref_2)
     .append("svg")
-    .attr("width", width_2 + margin.left + margin.right)
-    .attr("height", height_2 + margin.top + margin.bottom)
+    .attr("width", width_2 + margin_2.left + margin_2.right)
+    .attr("height", height_2 + margin_2.top + margin_2.bottom)
     .append("g")
     .attr("transform",
-        "translate(" + margin.left + "," + margin.top + ")");
+        "translate(" + margin_2.left + "," + margin_2.top + ")");
 
 // Parse the Data
 d3.csv("../data/assign2-plot2.csv").then(function(data) {
 
     
 
-    // Add x axis
-    const x = d3.scaleLinear()
-        .domain([0, 65])
-        .range([0, width_2]);
-    svg_2.append("g")
-        .attr("transform", "translate(0," + height_2 + ")")
-        .call(d3.axisBottom(x))
-        .selectAll("text")
-            .attr("transform", "translate(-10,0)rotate(-45)")
-            .style("text-anchor", "end")
-            .style("font-size", "12px");
-    
+   // Compute quartiles, median, inter quantile range min and max --> these info are then used to draw the box.
+   var sumstat = d3.nest() // nest function allows to group the calculation per level of a factor
+   .key(function(d) { return d.Species;})
+   .rollup(function(d) {
+     q1 = d3.quantile(d.map(function(g) { return g.Height;}).sort(d3.ascending),.25)
+     median = d3.quantile(d.map(function(g) { return g.Height;}).sort(d3.ascending),.5)
+     q3 = d3.quantile(d.map(function(g) { return g.Height;}).sort(d3.ascending),.75)
+     interQuantileRange = q3 - q1
+     min = q1 - 1.5 * interQuantileRange
+     max = q3 + 1.5 * interQuantileRange
+     return({q1: q1, median: median, q3: q3, interQuantileRange: interQuantileRange, min: min, max: max})
+   })
+   .entries(data)
 
-    const histogram = d3.histogram()
-    .value(function(d) { return d.Height; })   // I need to give the vector of value
-    .domain(x.domain())  // then the domain of the graphic
-    .thresholds(x.ticks(n_bin)); // then the numbers of bins
+    // Show the X scale
+    var x = d3.scaleBand()
+    .range([ 0, width ])
+    .domain(["setosa", "versicolor", "virginica"])
+    .paddingInner(1)
+    .paddingOuter(.5)
+  svg2.append("g")
+    .attr("transform", "translate(0," + height + ")")
+    .call(d3.axisBottom(x))
 
-    // And apply this function to data to get the bins
-    const bins = histogram(data);
 
-
-    // Y axis: scale and draw:
-    const y = d3.scaleLinear()
-    .range([height_2, 0]);
-    y.domain([0, d3.max(bins, function(d) { return d.length; })]);   // d3.hist has to be called before the Y axis obviously
-    svg_2.append("g")
-    .call(d3.axisLeft(y))
-    .selectAll("text")
-            .style("text-anchor", "end")
-            .style("font-size", "12px");
+      // Show the Y scale
+    var y = d3.scaleLinear()
+    .domain([3,9])
+    .range([height, 0])
+    svg2.append("g").call(d3.axisLeft(y))
 
 
     // create a tooltip
-    const tooltip = d3.select(id_ref_2)
-        .append("div")
-        .attr("class", "tooltip")
-        .style("font-size", "14px")
-        .style("background-color", "white")
-        .style("border", "solid")
-        .style("border-width", "1px")
-        .style("border-radius", "5px")
-        .style("padding", "10px")
-        .style("opacity", 0);
+    // const tooltip = d3.select(id_ref_2)
+    //     .append("div")
+    //     .attr("class", "tooltip")
+    //     .style("font-size", "14px")
+    //     .style("background-color", "white")
+    //     .style("border", "solid")
+    //     .style("border-width", "1px")
+    //     .style("border-radius", "5px")
+    //     .style("padding", "10px")
+    //     .style("opacity", 0);
 
     // Show the hist
-    svg_2.selectAll(id_ref_2)
-        .data(bins)
-        .join("rect")
-         .attr("x", 1)
-     .attr("transform", function(d) {return `translate(${x(d.x0)} , ${y(d.length)})`})
-        .attr("width", function(d) { return x(d.x1) - x(d.x0) -1})
-        .attr("height", function(d) { return height_2 - y(d.length); })
+    svg2
+    .selectAll("vertLines")
+    .data(sumstat)
+    .enter()
+    .append("line")
+      .attr("x1", function(d){return(x(d.key))})
+      .attr("x2", function(d){return(x(d.key))})
+      .attr("y1", function(d){return(y(d.value.min))})
+      .attr("y2", function(d){return(y(d.value.max))})
+      .attr("stroke", "black")
+      .style("width", 40)
+
+  // rectangle for the main box
+  var boxWidth = 100
+  svg2
+    .selectAll("boxes")
+    .data(sumstat)
+    .enter()
+    .append("rect")
+        .attr("x", function(d){return(x(d.key)-boxWidth/2)})
+        .attr("y", function(d){return(y(d.value.q3))})
+        .attr("height", function(d){return(y(d.value.q1)-y(d.value.q3))})
+        .attr("width", boxWidth )
+        .attr("stroke", "black")
         .style("fill", "#69b3a2")
 
-
+  // Show the median
+  svg2
+    .selectAll("medianLines")
+    .data(sumstat)
+    .enter()
+    .append("line")
+      .attr("x1", function(d){return(x(d.key)-boxWidth/2) })
+      .attr("x2", function(d){return(x(d.key)+boxWidth/2) })
+      .attr("y1", function(d){return(y(d.value.median))})
+      .attr("y2", function(d){return(y(d.value.median))})
+      .attr("stroke", "black")
+      .style("width", 80)
+})
 
 
 //             .attr("x", x(0))
@@ -93,33 +121,33 @@ d3.csv("../data/assign2-plot2.csv").then(function(data) {
 //             .attr("opacity", 0.5);
     
 //     / Title
-    svg_2.append("text")
-        .attr("x", ((width_2 - (margin_2.left - margin_2.right)) / 2))             
-       .attr("y", 0 - (margin_2.top / 2))
-        .style("class", "h2")
-        .style("font-size", "18px")
-        .attr("text-anchor", "middle")  
-        .style("text-decoration", "underline")  
-        .text("Tree Hight Histogram");
+    // svg_2.append("text")
+    //     .attr("x", ((width_2 - (margin_2.left - margin_2.right)) / 2))             
+    //    .attr("y", 0 - (margin_2.top / 2))
+    //     .style("class", "h2")
+    //     .style("font-size", "18px")
+    //     .attr("text-anchor", "middle")  
+    //     .style("text-decoration", "underline")  
+    //     .text("Tree Hight Histogram");
 
-    // X axis label
-    svg_2.append("text")      // text label for the x axis
-        .attr("x", (width_2 / 2))
-        .attr("y", (height_2 + 50))
-        .style("class", "h2")
-        .style("font-size", "16px")
-        .style("text-anchor", "middle")
-        .text("Height (m)");
+    // // X axis label
+    // svg_2.append("text")      // text label for the x axis
+    //     .attr("x", (width_2 / 2))
+    //     .attr("y", (height_2 + 50))
+    //     .style("class", "h2")
+    //     .style("font-size", "16px")
+    //     .style("text-anchor", "middle")
+    //     .text("Height (m)");
 
-    // Y axis label
-    svg_2.append("text")      // text label for the y axis
-        .attr("x", (-height_2 / 2))
-        .attr("y", -50)
-        .style("text-anchor", "middle")
-        .style("class", "h2")
-        .style("font-size", "16px")
-        .attr("transform", "rotate(-90)")
-        .text("Tree Count");
+    // // Y axis label
+    // svg_2.append("text")      // text label for the y axis
+    //     .attr("x", (-height_2 / 2))
+    //     .attr("y", -50)
+    //     .style("text-anchor", "middle")
+    //     .style("class", "h2")
+    //     .style("font-size", "16px")
+    //     .attr("transform", "rotate(-90)")
+    //     .text("Tree Count");
 
 //     // Animation
 //     svg_2.selectAll("rect")
@@ -165,5 +193,4 @@ d3.csv("../data/assign2-plot2.csv").then(function(data) {
 //                 .duration(300)
 //                 .style("opacity", 0);
 //         });
-
-});
+//});
