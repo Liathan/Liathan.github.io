@@ -121,12 +121,12 @@ d3.csv('../data/assign1-plot5.csv').then(function(data, i) {
         .style("text-decoration", "underline")  
         .text(`Top-5 tree species + \"Others\" in Circoscrizione: ${circoscrizioneHeading}`);
 
-    // Legend
-    var legend = svg_5.join("g")
-            .selectAll(".legend")
+    // legend_5
+    var legend_5 = svg_5.join("g")
+            .selectAll(".legend_5")
                 .data(subgroups);
     
-    legend.join("rect")
+    legend_5.join("rect")
         .attr("x", (boxSize * (howManyAcross+1)) + boxGap )
         .attr("y", function(d,i){ return (i * boxSize) + 1/5*(boxSize*howManyAcross); })
         .attr("width", boxSize - 3)
@@ -135,7 +135,7 @@ d3.csv('../data/assign1-plot5.csv').then(function(data, i) {
         .attr("fill", function(d){ return color(d); })
         .attr("opacity", 0.5);
     
-    legend.join("text")
+    legend_5.join("text")
         .attr("x", (boxSize * (howManyAcross+1)) + boxGap + boxSize + 10)
         .attr("y", function(d,i){ return (i * boxSize) + 1/5*(boxSize*howManyAcross); })
         .append("tspan")
