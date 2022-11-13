@@ -112,22 +112,22 @@ d3.csv("../data/assign1-plot3.csv").then(function(data) {
         .attr("width", boxSize - 3)
         .attr("height", boxSize - 3)
         .attr("class", d => "class"+subgroups.indexOf(d))
-        .attr("fill", function(d){ return color(d); })
+        .attr("fill", (d) => color(d))
         .attr("opacity", 0.5)
         .attr("tag", "legend_3");
     
         legend_3.join("text")
         .attr("x", width_3 -160)
-        .attr("y", function(d,i){ return (i * boxSize_3)})
+        .attr("y", (d, i) => (i * boxSize_3))
         .append("tspan")
         .attr("dx", 155)
         .attr("dy", boxSize/2)
+        .text((d) => d)
+        .style("fill", (d) => color(d))
         .style("text-anchor", "end")
-        .style("alignment-baseline", "right")
         .style("font-size", "14px")
-        .text(function(d){ return d; })
+        // .style("alignment-baseline", "right")
         .attr("class", d => "class"+subgroups.indexOf(d))
-        .attr("opacity", 0.5);
 
         svg_3.join("g").selectAll("rect[tag='legend_3']")
         .on("mouseover", function (event, d) {
