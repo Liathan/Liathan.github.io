@@ -60,7 +60,7 @@ var max_width_1 = [];
 // Histogram
 var histogram = [];
 
-// create a tooltip
+// Create a tooltip
 const tooltip = d3.select(id_ref_1)
     .append("div")
     .attr("class", "tooltip")
