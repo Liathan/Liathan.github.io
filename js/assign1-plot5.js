@@ -49,7 +49,7 @@ selectItem = document.getElementById("selection-waffle")
 
 // The selected "Circoscrizione"
 var circoscrizioneHeading = '';
-var cose5 = 0;
+
 // Create a tooltip
 const tooltip = d3.select(id_ref_5)
 .append("div")
@@ -243,7 +243,6 @@ function draw()
         .style("opacity", .9)
         .delay(1);
 
-        cose5 = tooltipData;
         // tooltip.html("<span class='tooltiptext'>" + "<b>Species: " + d + 
         //     "</b><br>" + "Percentage: "+ count(d) + "%</span>")
         tooltip.html("<span class='tooltiptext'>" + "<b>Species: " + d + 
