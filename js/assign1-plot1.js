@@ -8,9 +8,9 @@
 const id_ref_1 = "#barchart-abundance"
 
 // Set the dimensions and margins of the graph
-const margin_1 = {top: 50, right: 20, bottom: 50, left: 190},
-    width_1 = 800 - margin_1.left - margin_1.right,
-    height_1 = 600 - margin_1.top - margin_1.bottom;
+const margin_1 = {top: 50, right: 20, bottom: 60, left: 210},
+    width_1 = 1024 - margin_1.left - margin_1.right,
+    height_1 = 768 - margin_1.top - margin_1.bottom;
 
 // Append the svg_1 object to the page
 const svg_1 = d3.select(id_ref_1)
@@ -44,6 +44,7 @@ d3.csv("../data/assign1-plot1.csv").then(function(data, num=15) {
         .selectAll("text")
             .attr("transform", "translate(-10,0)rotate(-45)")
             .style("text-anchor", "end")
+            .style("font-family", "Fira Sans, sans-serif")
             .style("font-size", "12px");
 
     // Y axis
@@ -56,7 +57,8 @@ d3.csv("../data/assign1-plot1.csv").then(function(data, num=15) {
         .call(d3.axisLeft(y))
         .selectAll("text")
             .style("text-anchor", "end")
-            .style("font-size", "12px")
+            .style("font-family", "Fira Sans, sans-serif")
+            .style("font-size", "12px");
 
     // create a tooltip
     const tooltip = d3.select(id_ref_1)
@@ -104,7 +106,7 @@ d3.csv("../data/assign1-plot1.csv").then(function(data, num=15) {
     // Y axis label
     svg_1.append("text")      // text label for the y axis
         .attr("x", (-height_1 / 2))
-        .attr("y", -170)
+        .attr("y", -190)
         .style("text-anchor", "middle")
         .style("class", "h2")
         .style("font-size", "16px")
@@ -138,7 +140,7 @@ d3.csv("../data/assign1-plot1.csv").then(function(data, num=15) {
                 .delay(1);
 
             tooltip.html("<span class='tooltiptext'>" + "<b>Abundance: " + d.Count + 
-                         "</b><br>" + "Average canopy size: "+ d.AverageCanopySize + "</span>")
+                         "</b><br>" + "Average canopy size: "+ d.AverageCanopySize + "m\u00B2</span>")
                 .style("left", (event.pageX) + "px")
                 .style("top", (event.pageY - 28) + "px");
 
