@@ -10,8 +10,8 @@ const id_ref_1 = "#histogram-height";
 
 // Set the dimensions and margins of the graph
 const margin_1 = {top: 50, right: 20, bottom: 70, left: 70},
-    width_1 = 800 - margin_1.left - margin_1.right,
-    height_1 = 600 - margin_1.top - margin_1.bottom;
+    width_1 = 1024 - margin_1.left - margin_1.right,
+    height_1 = 768 - margin_1.top - margin_1.bottom;
 
 // Append the svg_1 object to the page
 const svg_1 = d3.select(id_ref_1)
@@ -27,17 +27,17 @@ const svg_1 = d3.select(id_ref_1)
 // SelectBox to choose the measure to show and the number of bins
 var selectItem_hist_measure = document.getElementById("selection-histogram-measure");
 var selectItem_hist_n_bins = document.getElementById("selection-histogram-n-bins");
-for(t = 10; t < 61; t=t+10)
+for(t = 20; t < 61; t=t+20)
 {
     selectItem_hist_n_bins.appendChild(new Option(t, t));
 };
 
 // Default choice for n_bins: 30
-selectItem_hist_n_bins.selectedIndex = 2;
+selectItem_hist_n_bins.selectedIndex = 1;
 
 // The selected measure and number of bins
 var measureHeading_1 = '';
-var n_bins_1 = 10;
+var n_bins_1 = 0;
 
 // The possible measures (Height, CanopySize, Diameter)
 var subgroups_1 = [];
@@ -123,8 +123,9 @@ d3.csv("../data/assign2-plot1.csv").then(function(data) {
         .selectAll("text")
             .attr("transform", "translate(-10,0)rotate(-45)")
             .style("text-anchor", "end")
+            .style("font-family", "Fira Sans, sans-serif")
             .style("font-size", "12px");
-    
+
     // Histogram
     histogram = d3.histogram()
         // I need to give the vector of value
@@ -146,6 +147,7 @@ d3.csv("../data/assign2-plot1.csv").then(function(data) {
         .call(d3.axisLeft(y))
         .selectAll("text")
                 .style("text-anchor", "end")
+                .style("font-family", "Fira Sans, sans-serif")
                 .style("font-size", "12px");
 
     // Show the hist
@@ -218,7 +220,7 @@ d3.csv("../data/assign2-plot1.csv").then(function(data) {
                 // we move between near boxes (horizontally)
                 .delay(1);
 
-            tooltip.html("<span class='tooltiptext'>" + "<b>Range: " + Math.min(...d) + " - " + Math.max(...d) + "</b>" + 
+            tooltip.html("<span class='tooltiptext'>" + "<b>Range: " + d.x0 + " - " + d.x1 + "</b>" + 
                 "<br>" + "Count: " + d.length + 
                 "<br>" + "Percentage: "+ (d.length / plotData_1[measureHeading_1].length * 100).toFixed(2) + "%</span>")
                 .style("left", (event.pageX) + "px")

@@ -58,8 +58,7 @@ d3.csv("../data/assign1-plot1.csv").then(function(data, num=15) {
         .selectAll("text")
             .style("text-anchor", "end")
             .style("font-family", "Fira Sans, sans-serif")
-            .style("font-size", "12px")
-            .style("text-transform", "uppercase")
+            .style("font-size", "12px");
 
     // create a tooltip
     const tooltip = d3.select(id_ref_1)
