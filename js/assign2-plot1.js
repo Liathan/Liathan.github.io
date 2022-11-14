@@ -6,7 +6,7 @@
 
 
 // Refer to the id div
-const id_ref_1 = "#histogram-height";
+const id_ref_1 = "#histogram-tree-size";
 
 // Set the dimensions and margins of the graph
 const margin_1 = {top: 50, right: 20, bottom: 70, left: 70},
@@ -73,7 +73,7 @@ const tooltip = d3.select(id_ref_1)
     .style("opacity", 0);
 
 // Possible label for x axis depending on the selected measure
-var x_label = ["Height (m)", "Canopy size (m2)", "Diameter (cm)"];
+var x_label = ["Height (m)", "Canopy size (m\u00B2)", "Diameter (cm)", "Leaf area (m\u00B2)"];
 
 // Parse the Data
 d3.csv("../data/assign2-plot1.csv").then(function(data) {
@@ -82,9 +82,9 @@ d3.csv("../data/assign2-plot1.csv").then(function(data) {
     subgroups_1 = data.columns;
 
     // Load possible options for "measures" in the selectBox
-    for(j = 0; j < 3; ++j)
+    for(j = 0; j < subgroups_1.length; ++j)
     {
-        opt = new Option(subgroups_1[j], subgroups_1[j]);
+        opt = new Option(subgroups_1[j].replace("_", " "), subgroups_1[j]);
         selectItem_hist_measure.appendChild(opt);
     };
 
@@ -98,16 +98,19 @@ d3.csv("../data/assign2-plot1.csv").then(function(data) {
     tmp_height = [];
     tmp_canopy = [];
     tmp_diameter = [];
+    tmp_leafarea = [];
     for(k = 0; k < data.length; ++k)
     {
         tmp_height.push(data[k][subgroups_1[0]]);
         tmp_canopy.push(data[k][subgroups_1[1]]);
         tmp_diameter.push(data[k][subgroups_1[2]]);
+        tmp_leafarea.push(data[k][subgroups_1[3]]);
     };
 
     plotData_1[subgroups_1[0]] = tmp_height;
     plotData_1[subgroups_1[1]] = tmp_canopy;
     plotData_1[subgroups_1[2]] = tmp_diameter;
+    plotData_1[subgroups_1[3]] = tmp_leafarea;
 
     // Max value on x axis
     max_width_1 = ((Math.ceil(Math.max(...plotData_1[measureHeading_1])/5)*5)+5);
@@ -172,7 +175,7 @@ d3.csv("../data/assign2-plot1.csv").then(function(data) {
         .attr("text-anchor", "middle")  
         .style("text-decoration", "underline")
         .attr("class", "hist-title")  
-        .text(`Trees ${measureHeading_1} Histogram`);
+        .text(`Trees ${measureHeading_1.replace("_", " ").toLowerCase()} histogram`);
 
     // X axis label
     svg_1.append("text")
@@ -272,6 +275,7 @@ function draw1()
         .selectAll("text")
             .attr("transform", "translate(-10,0)rotate(-45)")
             .style("text-anchor", "end")
+            .style("font-family", "Fira Sans, sans-serif")
             .style("font-size", "12px");
 
     // Histogram
@@ -295,6 +299,7 @@ function draw1()
         .call(d3.axisLeft(y))
         .selectAll("text")
                 .style("text-anchor", "end")
+                .style("font-family", "Fira Sans, sans-serif")
                 .style("font-size", "12px");
 
     // Show the hist
@@ -312,7 +317,7 @@ function draw1()
 
     // Update title
     svg_1.select(".hist-title")
-        .text(`Trees ${measureHeading_1} Histogram`);
+        .text(`Trees ${measureHeading_1.replace("_", " ").toLowerCase()} histogram`);
     
     // Update x axis label
     svg_1.select(".hist-axisX")

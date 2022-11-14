@@ -18,8 +18,6 @@ const svg_3 = d3.select(id_ref_3)
         .append("g")
             .attr("transform", `translate(${margin_3.left}, ${margin_3.top})`);
 
-
-cose3 = 0
 // Parse the Data
 d3.csv("../data/assign1-plot3.csv").then(function(data) {
 
