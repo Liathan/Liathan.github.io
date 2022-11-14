@@ -12,9 +12,9 @@ const boxSize_2 = 40
 const legend_sep_2 = 20
 
 // Set the dimensions and margins of the graph
-const margin_2 = {top: 50, right: 200, bottom: 60, left: 240},
-    width_2 = 800 ,
-    height_2 = 600 - margin_2.top - margin_2.bottom;
+const margin_2 = {top: 50, right: 60, bottom: 60, left: 240},
+    width_2 = 1024 - margin_2.left - margin_2.right,
+    height_2 = 768 - margin_2.top - margin_2.bottom;
 
 // Append the svg_2 object to the page
 const svg_2 = d3.select(id_ref_2)
@@ -22,18 +22,17 @@ const svg_2 = d3.select(id_ref_2)
         .attr("preserveAspectRatio", "xMidYMid meet")
         //.attr("width", width + margin_2.left + margin_2.right)
         //.attr("height", height + margin_2.top + margin_2.bottom)
-        .attr("viewBox", '0 0 ' + (width_2 + margin_2.left + legend_sep_2 + boxSize_2) +
+        .attr("viewBox", '0 0 ' + (width_2 + margin_2.left + margin_2.right) +
             ' ' + (height_2 + margin_2.top + margin_2.bottom))
         .append("g")
             .attr("transform", `translate(${margin_2.left}, ${margin_2.top})`);
 
-cose = 0;
 // Parse the data
 d3.csv("../data/assign1-plot2.csv").then(function(data) {
        
     // Extract subgroups
     const subgroups = data.columns.slice(1);
-    cose2 = subgroups;
+
     // Extract circoscrizioni
     const groups = data.map(d => (d.Circoscrizione));
 
@@ -41,14 +40,15 @@ d3.csv("../data/assign1-plot2.csv").then(function(data) {
     const x = d3.scaleLinear()
     .domain([0, 3100])
     .range([0, width_2]);
-    
+
     svg_2.append("g")
     .attr("transform", "translate(0," + height_2 + ")")
     .call(d3.axisBottom(x))
     .selectAll("text")
-    .attr("transform", "translate(-10,0)rotate(-45)")
-    .style("text-anchor", "end")
-    .style("font-size", "12px");
+        .attr("transform", "translate(-10,0)rotate(-45)")
+        .style("text-anchor", "end")
+        .style("font-family", "Fira Sans, sans-serif")
+        .style("font-size", "12px");
 
     // Add axis y
     const y = d3.scaleBand()
@@ -59,8 +59,9 @@ d3.csv("../data/assign1-plot2.csv").then(function(data) {
     svg_2.append("g")
     .call(d3.axisLeft(y))
     .selectAll("text")
-    .style("text-anchor", "end")
-    .style("font-size", "12px");
+        .style("text-anchor", "end")
+        .style("font-family", "Fira Sans, sans-serif")
+        .style("font-size", "12px");
 
     // Create a tooltip
     const tooltip = d3.select(id_ref_2)
@@ -83,6 +84,7 @@ d3.csv("../data/assign1-plot2.csv").then(function(data) {
     const stackedData = d3.stack()
     .keys(subgroups)(data)
     
+    // Make the bars
     svg_2.selectAll(id_ref_2) 
     .data(stackedData)
     .join("g")
@@ -135,42 +137,7 @@ d3.csv("../data/assign1-plot2.csv").then(function(data) {
     .duration(800)
     .attr("x", function(d) { return x(d[0]); })
     .attr("width", function(d) { return x(d[1]) - x(d[0]); });
-
-    // Animation and filling of tooltip
-    svg_2.selectAll("rect")
-    .on("mouseover", function (event, d) {
-
-        const species = d3.select(this.parentNode).datum().key
-
-        d3.select(event.currentTarget)
-        .transition("selected")
-        .duration(300)
-        .style("opacity", 1.0);
-
-        tooltip.transition("appear-box")
-        .duration(300)
-        .style("opacity", .9)
-        // Added to control the fact that the tooltip disappear if
-        // we move between near boxes (horizontally)
-        .delay(1);
-
-        tooltip.html("<span class='tooltiptext'>" + "<b>Species: " + species + 
-                        "</b><br>" + "Abundance: "+ (d[1] - d[0]) + "</span>")
-        .style("left", (event.pageX) + "px")
-        .style("top", (event.pageY - 28) + "px");
-    })
-    .on("mouseout", function (event, d) {
-
-    d3.select(event.currentTarget)
-    .transition("unselected")
-    .duration(300)
-    .style("opacity", 0.5);  
-
-    tooltip.transition("disappear-box")
-    .duration(300)
-    .style("opacity", 0);
-    });
-
+    
     var legend_2 = svg_2.join("g")
     .selectAll("legend_2")
     .data(subgroups);
@@ -191,11 +158,67 @@ d3.csv("../data/assign1-plot2.csv").then(function(data) {
     .append("tspan")
     .attr("dx", -5)
     .attr("dy", boxSize_2 / 2 + 5)
+    .attr("class", d => "class"+subgroups.indexOf(d))
     .text((d) => d)
-    .style("fill",(d) => color(d) )
+    .style("fill",(d) => color(d))
+    .style("font-size", "14px")
     .style("text-anchor", "end")
+    .attr("opacity", 0.5)
+    .attr("tag", "legend_2");
 
+    // Animation and filling of tooltip
+    svg_2.selectAll("rect")
     
+    // MouseOver
+    .on("mouseover", function (event, d) {
+
+        const species = d3.select(this.parentNode).datum().key
+
+        d3.select(event.currentTarget)
+        .transition("selected")
+        .duration(300)
+        .style("opacity", 1.0);
+
+        class_of_interest = event.currentTarget.classList[0]
+        svg_2.selectAll(`rect.${class_of_interest}[tag='legend_2'],
+                         tspan.${class_of_interest}[tag='legend_2']`)
+        .transition("selected")
+        .duration(300)
+        .style("opacity", 1.0);
+
+        tooltip.transition("appear-box")
+        .duration(300)
+        .style("opacity", .9)
+        // Added to control the fact that the tooltip disappear if
+        // we move between near boxes (horizontally)
+        .delay(1);
+
+        tooltip.html("<span class='tooltiptext'>" + "<b>Species: " + species + 
+                        "</b><br>" + "Abundance: "+ (d[1] - d[0]) + "</span>")
+        .style("left", (event.pageX) + "px")
+        .style("top", (event.pageY - 28) + "px");
+    })
+    
+    // MouseOut
+    .on("mouseout", function (event, d) {
+
+        d3.select(event.currentTarget)
+        .transition("unselected")
+        .duration(300)
+        .style("opacity", 0.5);  
+
+        class_of_interest = event.currentTarget.classList[0]
+        svg_2.selectAll(`rect.${class_of_interest}[tag='legend_2'], 
+                         tspan.${class_of_interest}[tag='legend_2']`)
+        .transition("selected")
+        .duration(300)
+        .style("opacity", 0.5);
+
+        tooltip.transition("disappear-box")
+        .duration(300)
+        .style("opacity", 0);
+    });
+        
     svg_2.join("g").selectAll("rect[tag='legend_2']")
     .on("mouseover", function (event, d) {
         idx = subgroups.indexOf(d);

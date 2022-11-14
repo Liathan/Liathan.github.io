@@ -10,9 +10,9 @@ const id_ref_4 = "#stacked-barchart-percentage"
 
 const legend_sep_4 = 20
 const boxSize_4 = 40
-const margin_4 = {top: 50, right: 500, bottom: 50, left: 240},
-    width_4 = 1000,
-    height_4 = 800 - margin_4.top - margin_4.bottom;
+const margin_4 = {top: 50, right: 250, bottom: 50, left: 220},
+    width_4 = 1024 - margin_4.left - margin_4.right,
+    height_4 = 768 - margin_4.top - margin_4.bottom;
 
 // Append the svg_4 object to the page
 const svg_4 = d3.select(id_ref_4)
@@ -20,7 +20,7 @@ const svg_4 = d3.select(id_ref_4)
 .attr("preserveAspectRatio", "xMidYMid meet")
 //.attr("width", width + margin_4.left + margin_4.right)
 //.attr("height", height + margin_4.top + margin_4.bottom)
-.attr("viewBox", '0 0 ' + (width_4 + margin_4.left + 400 + legend_sep_4 + boxSize_4) +
+.attr("viewBox", '0 0 ' + (width_4 + margin_4.left + margin_4.right) +
     ' ' + (height_4 + margin_4.top + margin_4.bottom))
 .append("g")
 .attr("transform", `translate(${margin_4.left}, ${margin_4.top})`);
@@ -46,6 +46,7 @@ d3.csv("../data/assign1-plot4.csv").then(function(data) {
     .selectAll("text")
     .attr("transform", "translate(-10,0)rotate(-45)")
     .style("text-anchor", "end")
+    .style("font-family", "Fira Sans, sans-serif")
     .style("font-size", "12px");
 
     // Add axis y
@@ -58,6 +59,7 @@ d3.csv("../data/assign1-plot4.csv").then(function(data) {
     .call(d3.axisLeft(y))
     .selectAll("text")
     .style("text-anchor", "end")
+    .style("font-family", "Fira Sans, sans-serif")
     .style("font-size", "12px");
 
     // Create a tooltip
@@ -124,7 +126,7 @@ d3.csv("../data/assign1-plot4.csv").then(function(data) {
     // Y axis label
     svg_4.append("text")      // text label for the y axis
         .attr("x", (-height_4 / 2))
-        .attr("y", -220)
+        .attr("y", -200)
         .style("text-anchor", "middle")
         .style("class", "h2")
         .style("font-size", "16px")
@@ -139,6 +141,34 @@ d3.csv("../data/assign1-plot4.csv").then(function(data) {
         .attr("width", function(d) { return x(d[1]) - x(d[0]); });
         //.delay(function(d,i){console.log(i) ; return(i*10);})
 
+    var legend_4 = svg_4.join("g")
+    .selectAll("legend_4")
+    .data(subgroups);
+
+    legend_4.join("rect")
+    .attr("x", width_4 + legend_sep_4)
+    .attr("y", (d, i) => i * boxSize_4 + 5)
+    .attr("width", boxSize_4 - 3)
+    .attr("height", boxSize_4 - 3)
+    .attr("class", d => "class"+subgroups.indexOf(d))
+    .attr("fill", (d) => color(d))
+    .attr("opacity", 0.5)
+    .attr("tag", "legend_4");
+
+    legend_4.join("text")
+    .attr("x", width_4 )
+    .attr("y", (d, i) => i * boxSize_4 + 5)
+    .append("tspan")
+    .attr("dx", boxSize_4 + legend_sep_4 + 5)
+    .attr("dy", boxSize_4 / 2 + 5)
+    .text((d) => d)
+    .style("fill",(d) => color(d))
+    .style("font-size", "14px")
+    .attr("class", d => "class"+subgroups.indexOf(d))
+    .attr("opacity", 0.5)
+    .attr("tag", "legend_4");
+
+
     // Animation and filling of tooltip
     svg_4.selectAll("rect")
 
@@ -152,6 +182,13 @@ d3.csv("../data/assign1-plot4.csv").then(function(data) {
                 .transition("selected")
                     .duration(300)
                     .style("opacity", 1.0);
+
+        class_of_interest = event.currentTarget.classList[0]
+        svg_4.selectAll(`rect.${class_of_interest}[tag='legend_4'],
+                        tspan.${class_of_interest}[tag='legend_4']`)
+        .transition("selected")
+        .duration(300)
+        .style("opacity", 1.0);
 
         tooltip.transition("appear-box")
             .duration(300)
@@ -172,36 +209,19 @@ d3.csv("../data/assign1-plot4.csv").then(function(data) {
         d3.select(event.currentTarget)
             .transition("unselected")
                 .duration(300)
-                .style("opacity", 0.5);  
+                .style("opacity", 0.5);
+
+        class_of_interest = event.currentTarget.classList[0]
+        svg_4.selectAll(`rect.${class_of_interest}[tag='legend_4'],
+                        tspan.${class_of_interest}[tag='legend_4']`)
+        .transition("selected")
+        .duration(300)
+        .style("opacity", 0.5);
 
         tooltip.transition("disappear-box")
             .duration(300)
             .style("opacity", 0);
     });
-
-    var legend_4 = svg_4.join("g")
-    .selectAll("legend_4")
-    .data(subgroups);
-
-    legend_4.join("rect")
-    .attr("x", width_4 + legend_sep_4)
-    .attr("y", (d, i) => i * boxSize_4 + 5)
-    .attr("width", boxSize_4 - 3)
-    .attr("height", boxSize_4 - 3)
-    .attr("class", d => "class"+subgroups.indexOf(d))
-    .attr("fill", (d) => color(d))
-    .attr("opacity", 0.5)
-    .attr("tag", "legend_4");
-
-    legend_4.join("text")
-    .attr("x", width_4  )
-    .attr("y", (d, i) => i * boxSize_4 + 5)
-    .append("tspan")
-    .attr("dx", boxSize_4 + legend_sep_4)
-    .attr("dy", boxSize_4 / 2 + 5)
-    .text((d) => d)
-    .style("fill",(d) => color(d) )
-
     
     svg_4.join("g").selectAll("rect[tag='legend_4']")
     .on("mouseover", function (event, d) {

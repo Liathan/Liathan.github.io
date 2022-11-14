@@ -10,12 +10,16 @@ const id_ref_5 = "#waffle-chart"
 
 // Set the dimensions and margins of the graph
 const margin_5 = {top: 50, right: 40, bottom: 60, left: 40},
-    width_5 = 800 - margin_5.left - margin_5.right,
-    height_5 = 460 - margin_5.top - margin_5.bottom,
+    width_5 = 1024 - margin_5.left - margin_5.right,
+    height_5 = 480 - margin_5.top - margin_5.bottom,
     boxSize = 40, //Size of each box
     boxGap = 50, // Space between each box
     howManyAcross = 10; // 10 boxes per line 
     // howManyAcross = Math.floor(width_5 / boxSize);
+
+// Dimension of g tag in svg (verified after visualization)
+const g_xdim_5 = 707.36;
+const g_x_translate_5 = (width_5 - g_xdim_5) / 2;
   
 // Append the svg_5 object to the page
 const svg_5 = d3.select(id_ref_5)
@@ -26,7 +30,7 @@ const svg_5 = d3.select(id_ref_5)
 .attr("viewBox", '0 0 ' + (width_5 + margin_5.left + margin_5.right) + 
     ' ' + (height_5 + margin_5.top + margin_5.bottom))
 .append("g")
-.attr("transform", `translate(${margin_5.left}, ${margin_5.top})`);
+.attr("transform", `translate(${margin_5.left+g_x_translate_5}, ${margin_5.top})`);
 
 // Subgroups
 var subgroups = [];
@@ -45,7 +49,7 @@ selectItem = document.getElementById("selection-waffle")
 
 // The selected "Circoscrizione"
 var circoscrizioneHeading = '';
-
+var cose5 = 0;
 // Create a tooltip
 const tooltip = d3.select(id_ref_5)
 .append("div")
@@ -85,7 +89,12 @@ d3.csv('../data/assign1-plot5.csv').then(function(data, i) {
                 tmp_plot.push(Array(Math.max(Math.round(data[j][subgroups[k]]), 1)).fill(subgroups[k]));
                 tmp_tooltip.push(Array(data[j][subgroups[k]]))
             }
+            else {
+                tmp_tooltip.push(Array('0'))
+            }
         }
+
+        console.log(tmp_tooltip)
         plotData[circo] = tmp_plot.flat()
         tooltipData[circo] = tmp_tooltip.flat()
 
@@ -114,7 +123,7 @@ d3.csv('../data/assign1-plot5.csv').then(function(data, i) {
 
     // Title
     svg_5.append("text")
-    .attr("x", ((width_5 - (margin_5.left - margin_5.right)) / 2))             
+    .attr("x", ((width_5 - (margin_5.left - margin_5.right) - (g_x_translate_5*2)) / 2))             
     .attr("y", 0 - (margin_5.top / 2))
     .attr("class", "waffle-title")
     .style("class", "h2")
@@ -148,6 +157,7 @@ d3.csv('../data/assign1-plot5.csv').then(function(data, i) {
     .style("font-size", "14px")
     .text((d) => d)
     .attr("class", d => "class"+subgroups.indexOf(d))
+    .attr("opacity", 0.5)
 
     // Animation and filling of tooltip
     svg_5.join("g")
@@ -168,7 +178,7 @@ d3.csv('../data/assign1-plot5.csv').then(function(data, i) {
         // tooltip.html("<span class='tooltiptext'>" + "<b>Species: " + d + 
         //     "</b><br>" + "Percentage: "+ count(d) + "%</span>")
         tooltip.html("<span class='tooltiptext'>" + "<b>Species: " + d + 
-            "</b><br>" + "Percentage: "+ tooltipData[circoscrizioneHeading][subgroups.indexOf(d)] + "%</span>")
+            "</b><br>" + "Percentage: "+ parseFloat(tooltipData[circoscrizioneHeading][subgroups.indexOf(d)]).toFixed(2) + "%</span>")
         .style("left", (event.pageX) + "px")
         .style("top", (event.pageY - 28) + "px");
         })
@@ -233,10 +243,11 @@ function draw()
         .style("opacity", .9)
         .delay(1);
 
+        cose5 = tooltipData;
         // tooltip.html("<span class='tooltiptext'>" + "<b>Species: " + d + 
         //     "</b><br>" + "Percentage: "+ count(d) + "%</span>")
         tooltip.html("<span class='tooltiptext'>" + "<b>Species: " + d + 
-            "</b><br>" + "Percentage: "+ tooltipData[circoscrizioneHeading][subgroups.indexOf(d)] + "%</span>")
+            "</b><br>" + "Percentage: "+ parseFloat(tooltipData[circoscrizioneHeading][subgroups.indexOf(d)]).toFixed(2) + "%</span>")
         .style("left", (event.pageX) + "px")
         .style("top", (event.pageY - 28) + "px");
     })
