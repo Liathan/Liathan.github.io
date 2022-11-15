@@ -16,26 +16,26 @@ const margin_5 = {top: 50, right: 40, bottom: 60, left: 40},
 
 // Append the svg_5 object to the page
 const svg_5 = d3.select(id_ref_5)
-    .append("svg")
-        .attr("preserveAspectRatio", "xMidYMid meet")
-        //.attr("width", width_5 + margin_5.left + margin_5.right)
-        //.attr("height", height_5 + margin_5.top + margin_5.bottom)
-        .attr("viewBox", '0 0 ' + (width_5 + margin_5.left + margin_5.right) +
-            ' ' + (height_5 + margin_5.top + margin_5.bottom))
-        .append("g")
-            .attr("transform", `translate(${margin_5.left}, ${margin_5.top})`);
+.append("svg")
+.attr("preserveAspectRatio", "xMidYMid meet")
+//.attr("width", width_5 + margin_5.left + margin_5.right)
+//.attr("height", height_5 + margin_5.top + margin_5.bottom)
+.attr("viewBox", '0 0 ' + (width_5 + margin_5.left + margin_5.right) +
+    ' ' + (height_5 + margin_5.top + margin_5.bottom))
+.append("g")
+.attr("transform", `translate(${margin_5.left}, ${margin_5.top})`);
 
 // Create a tooltip
-const tooltip_5 = d3.select(id_ref_1)
-    .append("div")
-    .attr("class", "tooltip")
-    .style("font-size", "14px")
-    .style("background-color", "white")
-    .style("border", "solid")
-    .style("border-width", "1px")
-    .style("border-radius", "5px")
-    .style("padding", "10px")
-    .style("opacity", 0);
+const tooltip_5 = d3.select(id_ref_5)
+.append("div")
+.attr("class", "tooltip")
+.style("font-size", "14px")
+.style("background-color", "white")
+.style("border", "solid")
+.style("border-width", "1px")
+.style("border-radius", "5px")
+.style("padding", "10px")
+.style("opacity", 0);
 
 // Possible label for x axis depending on the selected measure
 var x_label = ["Height (m)", "Canopy size (m\u00B2)", "Diameter (cm)", "Leaf area (m\u00B2)"];
@@ -43,12 +43,39 @@ var x_label = ["Height (m)", "Canopy size (m\u00B2)", "Diameter (cm)", "Leaf are
 var cose5;
 
 // Parse the Data
-d3.csv('../data/assign2-plot5.csv', function(data, i) {
+d3.csv('../data/assign2-plot5.csv').then( function(data) {
+    const max_X_5 = d3.max(data, (d) => d["Height"])
+    const max_Y_5 = d3.max(data, (d) => d["CO2"])
+    const trees = [...new Set(data.map(d => d["Species"]))]
+    
+    console.log([...new Set(data.map(d => d["Height"]))])
+    const x = d3.scaleLinear()
+    .domain([0, max_X_5])
+    .range([0, width_5])
 
-    // Extract subgroups (tree measures)
-    subgroups_5 = data;
-    cose5 = subgroups_5;
+    const y = d3.scaleLinear()
+    .domain([0, max_Y_5])
+    .range([height_5, 0])
 
+    svg_5.append("g")
+    .call(d3.axisBottom(x))
+    .attr("transform", `translate(0, ${height_5})`)
+
+    svg_5.append("g")
+    .call(d3.axisLeft(y))
+    // .attr("transform", `translate(0, ${height_5})`)
+
+
+    svg_5.append("g")
+    .selectAll(".bubble")
+    .data(data)
+    .join("circle")
+    .attr("cx", (d) => x(d["Height"]))
+    .attr("cy", d => y(d["CO2"]))
+    .attr("r", 2)
+    
+    console.log(max_Y_5)
+    cose5 = y
 });
 
 //     // Load possible options for "measures" in the selectBox
