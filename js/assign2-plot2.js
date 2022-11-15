@@ -24,38 +24,39 @@ const svg_2 = d3.select(id_ref_2)
 // Parse the Data
 d3.csv("../data/assign2-plot2.csv").then(function(data) {
 
-    
+  top5 = d3.group(data)
 
-   // Compute quartiles, median, inter quantile range min and max --> these info are then used to draw the box.
-   var sumstat = d3.nest() // nest function allows to group the calculation per level of a factor
-   .key(function(d) { return d.Species;})
-   .rollup(function(d) {
-     q1 = d3.quantile(d.map(function(g) { return g.Height;}).sort(d3.ascending),.25)
-     median = d3.quantile(d.map(function(g) { return g.Height;}).sort(d3.ascending),.5)
-     q3 = d3.quantile(d.map(function(g) { return g.Height;}).sort(d3.ascending),.75)
-     interQuantileRange = q3 - q1
-     min = q1 - 1.5 * interQuantileRange
-     max = q3 + 1.5 * interQuantileRange
-     return({q1: q1, median: median, q3: q3, interQuantileRange: interQuantileRange, min: min, max: max})
-   })
-   .entries(data)
+ 
+
+  var sumstat =  d3.rollup(data,function(d) {
+    q1 = d3.quantile(d.map(function(g) { return g.Height;}).sort(d3.ascending),.25)
+    median = d3.quantile(d.map(function(g) { return g.Heighth;}).sort(d3.ascending),.5)
+    q3 = d3.quantile(d.map(function(g) { return g.Height;}).sort(d3.ascending),.75)
+    interQuantileRange = q3 - q1
+    min = q1 - 1.5 * interQuantileRange
+    max = q3 + 1.5 * interQuantileRange
+    return({q1: q1, median: median, q3: q3, interQuantileRange: interQuantileRange, min: min, max: max})
+  })
+   
+   console.log(sumstat)
+   
 
     // Show the X scale
     var x = d3.scaleBand()
-    .range([ 0, width ])
+    .range([ 0, width_2 ])
     .domain(["setosa", "versicolor", "virginica"])
     .paddingInner(1)
     .paddingOuter(.5)
-  svg2.append("g")
-    .attr("transform", "translate(0," + height + ")")
+  svg_2.append("g")
+    .attr("transform", "translate(0," + height_2 + ")")
     .call(d3.axisBottom(x))
 
 
       // Show the Y scale
     var y = d3.scaleLinear()
     .domain([3,9])
-    .range([height, 0])
-    svg2.append("g").call(d3.axisLeft(y))
+    .range([height_2, 0])
+    svg_2.append("g").call(d3.axisLeft(y))
 
 
     // create a tooltip
@@ -71,7 +72,7 @@ d3.csv("../data/assign2-plot2.csv").then(function(data) {
     //     .style("opacity", 0);
 
     // Show the hist
-    svg2
+    svg_2
     .selectAll("vertLines")
     .data(sumstat)
     .enter()
@@ -85,7 +86,7 @@ d3.csv("../data/assign2-plot2.csv").then(function(data) {
 
   // rectangle for the main box
   var boxWidth = 100
-  svg2
+  svg_2
     .selectAll("boxes")
     .data(sumstat)
     .enter()
@@ -98,7 +99,7 @@ d3.csv("../data/assign2-plot2.csv").then(function(data) {
         .style("fill", "#69b3a2")
 
   // Show the median
-  svg2
+  svg_2
     .selectAll("medianLines")
     .data(sumstat)
     .enter()
