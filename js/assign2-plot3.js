@@ -39,7 +39,7 @@ d3.csv("../data/assign2-plot3.csv").then(function(data) {
 
     // Add Y axis
     const y = d3.scaleLinear()
-    .domain([0, max_Y])
+    .domain([0, max_Y + 5])
     .range([ height_3, 0]);
     svg_3.append("g")
     .call(d3.axisLeft(y));
@@ -53,6 +53,7 @@ d3.csv("../data/assign2-plot3.csv").then(function(data) {
         .attr("cy", function (d) { return y(d.CO2); } )
         .attr("r", 1.5)
         .style("fill", "#69b3a2")
+        
 
     //Title
     svg_3.append("text")
@@ -82,5 +83,11 @@ d3.csv("../data/assign2-plot3.csv").then(function(data) {
         .style("font-size", "16px")
         .attr("transform", "rotate(-90)")
         .text("Count");
+
+    
+
+
+
+
 
 })
