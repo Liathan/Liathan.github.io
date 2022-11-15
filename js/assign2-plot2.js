@@ -28,24 +28,12 @@ d3.csv("../data/assign2-plot2.csv", function(data) {
 
 
     
-  // Compute quartiles, median, inter quantile range min and max --> these info are then used to draw the box.
-  var sumstat = d3.nest() // nest function allows to group the calculation per level of a factor
-    .key(function(d) { return d.Species;})
-    .rollup(function(d) {
-      q1 = d3.quantile(d.map(function(g) { return g.Sepal_Length;}).sort(d3.ascending),.25)
-      median = d3.quantile(d.map(function(g) { return g.Sepal_Length;}).sort(d3.ascending),.5)
-      q3 = d3.quantile(d.map(function(g) { return g.Sepal_Length;}).sort(d3.ascending),.75)
-      interQuantileRange = q3 - q1
-      min = q1 - 1.5 * interQuantileRange
-      max = q3 + 1.5 * interQuantileRange
-      return({q1: q1, median: median, q3: q3, interQuantileRange: interQuantileRange, min: min, max: max})
-    })
-    .entries(data)
 
   // Show the X scale
   var x = d3.scaleBand()
     .range([ 0, width ])
-    .domain(["Aesculus hippocastanum", "Platanus x hispanica", "Celtis australis","Carpinus betulus","Tilia cordata"])
+    //.domain(["Aesculus hippocastanum", "Platanus x hispanica", "Celtis australis","Carpinus betulus","Tilia cordata"])
+    .domain(["Tilia cordata"])
     .paddingInner(1)
     .paddingOuter(.5)
   svg.append("g")
@@ -64,10 +52,10 @@ d3.csv("../data/assign2-plot2.csv", function(data) {
     .data(sumstat)
     .enter()
     .append("line")
-      .attr("x1", function(d){return(x(d.key))})
-      .attr("x2", function(d){return(x(d.key))})
-      .attr("y1", function(d){return(y(d.value.min))})
-      .attr("y2", function(d){return(y(d.value.max))})
+      .attr("x1", function(d){return(x("Tilia cordata"))})
+      .attr("x2", function(d){return(x("Tilia cordata"))})
+      .attr("y1", function(d){return(y(-0.5))})
+      .attr("y2", function(d){return(y(-0.5))})
       .attr("stroke", "black")
       .style("width", 40)
 
@@ -78,9 +66,9 @@ d3.csv("../data/assign2-plot2.csv", function(data) {
     .data(sumstat)
     .enter()
     .append("rect")
-        .attr("x", function(d){return(x(d.key)-boxWidth/2)})
-        .attr("y", function(d){return(y(d.value.q3))})
-        .attr("height", function(d){return(y(d.value.q1)-y(d.value.q3))})
+        .attr("x", function(d){return(x("Tilia cordata")-boxWidth/2)})
+        .attr("y", function(d){return(y(7))})
+        .attr("height", function(d){return(y(d4)-y(7))})
         .attr("width", boxWidth )
         .attr("stroke", "black")
         .style("fill", "#69b3a2")
@@ -91,10 +79,10 @@ d3.csv("../data/assign2-plot2.csv", function(data) {
     .data(sumstat)
     .enter()
     .append("line")
-      .attr("x1", function(d){return(x(d.key)-boxWidth/2) })
-      .attr("x2", function(d){return(x(d.key)+boxWidth/2) })
-      .attr("y1", function(d){return(y(d.value.median))})
-      .attr("y2", function(d){return(y(d.value.median))})
+      .attr("x1", function(d){return(x("Tilia cordata")-boxWidth/2) })
+      .attr("x2", function(d){return(x("Tilia cordata")+boxWidth/2) })
+      .attr("y1", function(d){return(y(5))})
+      .attr("y2", function(d){return(y(5))})
       .attr("stroke", "black")
       .style("width", 80)
 })
