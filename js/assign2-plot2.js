@@ -55,10 +55,12 @@ d3.csv("../data/assign2-plot2.csv").then(function(data) {
             median = d3.quantile(d[1].map(function(g) { return g.Height;}).sort(d3.ascending),.5)
             q3 = d3.quantile(d[1].map(function(g) { return g.Height;}).sort(d3.ascending),.75)
             interQuantileRange = q3 - q1
-            tmp_min = q1 - 1.5 * interQuantileRange
-            min = (tmp_min > 0) ? tmp_min : 0
-            tmp_max = q3 + 1.5 * interQuantileRange
-            max = (max_data > tmp_max) ? tmp_max : max_data
+            //tmp_min = q1 - 1.5 * interQuantileRange
+            //min = (tmp_min > 0) ? tmp_min : 0
+            min = Math.max(0, q1 - 1.5 * interQuantileRange)
+            //tmp_max = q3 + 1.5 * interQuantileRange
+            //max = (max_data > tmp_max) ? tmp_max : max_data
+            max = Math.min(max_data, q3 + 1.5 * interQuantileRange)
             return ({key: d[0], q1: q1, median: median, q3: q3, interQuantileRange: interQuantileRange, min: min, max: max})
         });
 
