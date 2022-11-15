@@ -26,14 +26,14 @@ const svg_1 = d3.select(id_ref_1)
 
 // SelectBox to choose the measure to show and the number of bins
 var selectItem_hist_measure = document.getElementById("selection-histogram-measure");
-var selectItem_hist_n_bins = document.getElementById("selection-histogram-n-bins");
-for(t = 20; t < 61; t=t+20)
-{
-    selectItem_hist_n_bins.appendChild(new Option(t, t));
-};
+var selectItem_hist_bin_size = document.getElementById("selection-histogram-n-bins");
+selectItem_hist_bin_size.appendChild(new Option("Small", 1));
+selectItem_hist_bin_size.appendChild(new Option("Normal", 2));
+selectItem_hist_bin_size.appendChild(new Option("Big", 5));
+selectItem_hist_bin_size.appendChild(new Option("Giant", 10));
 
 // Default choice for n_bins: 30
-selectItem_hist_n_bins.selectedIndex = 1;
+selectItem_hist_bin_size.selectedIndex = 1;
 
 // The selected measure and number of bins
 var measureHeading_1 = '';
@@ -55,7 +55,8 @@ var y = [];
 var bins = [];
 
 // Max width for the x axis
-var max_width_1 = [];
+var max_width_1 = 0;
+var max_for_bins = 0;
 
 // Histogram
 var histogram = [];
@@ -92,7 +93,7 @@ d3.csv("../data/assign2-plot1.csv").then(function(data) {
     measureHeading_1 = selectItem_hist_measure.value;
 
     // Take the selected number of bins
-    n_bins_1 = selectItem_hist_n_bins.value;
+    bin_size = selectItem_hist_bin_size.value;
 
     // Extracting and preparing data for each measure plot
     tmp_height = [];
@@ -128,6 +129,17 @@ d3.csv("../data/assign2-plot1.csv").then(function(data) {
             .style("text-anchor", "end")
             .style("font-family", "Fira Sans, sans-serif")
             .style("font-size", "12px");
+
+    
+    max_for_bins = max_width_1;
+
+    while (max_for_bins >= 100)
+    {
+        max_for_bins = Math.round(max_for_bins/10);
+    }
+
+    // Compute the number of bins
+    n_bins_1 = max_for_bins/bin_size;
 
     // Histogram
     histogram = d3.histogram()
@@ -250,8 +262,8 @@ function draw1()
     // New selected measure
     measureHeading_1 = selectItem_hist_measure.value;
 
-    // New selected number of bins
-    n_bins_1 = selectItem_hist_n_bins.value;
+    // New selected bin size
+    bin_size = selectItem_hist_bin_size.value;
 
     // Delete the previous data
     svg_1.selectAll("rect")
@@ -278,6 +290,16 @@ function draw1()
             .style("font-family", "Fira Sans, sans-serif")
             .style("font-size", "12px");
 
+    max_for_bins = max_width_1;
+
+    while (max_for_bins >= 100)
+    {
+        max_for_bins = Math.round(max_for_bins/10);
+    };
+
+    // Compute the number of bins
+    n_bins_1 = max_for_bins/bin_size;
+    
     // Histogram
     histogram = d3.histogram()
         // I need to give the vector of value
@@ -348,7 +370,7 @@ function draw1()
                 // we move between near boxes (horizontally)
                 .delay(1);
 
-            tooltip.html("<span class='tooltiptext'>" + "<b>Range: " + Math.min(...d) + " - " + Math.max(...d) + "</b>" + 
+            tooltip.html("<span class='tooltiptext'>" + "<b>Range: " + d.x0 + " - " + d.x1 + "</b>" + 
                 "<br>" + "Count: " + d.length + 
                 "<br>" + "Percentage: "+ (d.length / plotData_1[measureHeading_1].length * 100).toFixed(2) + "%</span>")
                 .style("left", (event.pageX) + "px")
