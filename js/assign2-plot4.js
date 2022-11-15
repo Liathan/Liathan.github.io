@@ -1,75 +1,47 @@
-const id_ref_4 = "#small-multiple-scatterplot"
+// set the dimensions and margins of the graph
+const margin = {top: 10, right: 30, bottom: 30, left: 60},
+    width = 460 - margin.left - margin.right,
+    height = 400 - margin.top - margin.bottom;
 
+// append the svg object to the body of the page
+const svg = d3.select("#my_dataviz")
+  .append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform",
+          `translate(${margin.left}, ${margin.top})`);
 
-const trees=["Tilia cordata","Carpinus betulus","Celtis australis","Platanus x hispanica","Aesculus hippocastanum"]
+//Read the data
+d3.csv("../data/assign2-plot3.csv").then(function(data) {
+  // Add X axis
+  const x = d3.scaleLinear()
+    .domain([4, 8])
+    .range([ 0, width ]);
+  svg.append("g")
+    .attr("transform", `translate(0, ${height})`)
+    .call(d3.axisBottom(x));
 
-const margin_4 = { top: 50, right: 20, bottom: 70, left: 70},
-            cWidth = 100
-            cHeight = 100
-            width_4 = (cWidth + margin_4.left + margin_4.right) * trees.length,
-            height_4 = (cHeight + margin_4.top + margin_4.bottom) ;
+  // Add Y axis
+  const y = d3.scaleLinear()
+    .domain([0, 9])
+    .range([ height, 0]);
+  svg.append("g")
+    .call(d3.axisLeft(y));
 
-              // set the ranges
-        var x = d3.scaleLinear().range([0, cWidth]);
-        var y = d3.scaleLinear().range([cHeight, 0]);
- 
-        // Scale the range BUT not based on the data
-        x.domain([0, 1]);
-        y.domain([0, 0.3]);
+  // Color scale: give me a specie name, I return a color
+  const color = d3.scaleOrdinal()
+    .domain(["", "", "" ])
+    .range([ "#440154ff", "#21908dff", "#fde725ff"])
 
-        var svg = d3.select("body").append("svg")
-        .attr("width", width_4)
-        .attr("height", height_4)
-        .append("g")
-        ;
+  // Add dots
+  svg.append('g')
+    .selectAll("dot")
+    .data(data)
+    .join("circle")
+      .attr("cx", function (d) { return x(d.Leaf_Area); } )
+      .attr("cy", function (d) { return y(d.CO2); } )
+      .attr("r", 5)
+      .style("fill", function (d) { return color(d.Species) } )
 
-
-
-        d3.csv("../data/assign2-plot3.csv").then(function(data) {
-            for (j = 0; j < trees.length; j++) {
-                var tree = trees[j];
-                var gtree = svg.append("g")
-                .attr("id", tree)
-                .attr("transform",
-                "translate(" + (j * (cWidth + margin_4.left + margin_4.right)) + "," + 0 + ")");
-
-            gtree.append("text")
-                .attr("class", "label")
-                .attr("x", cWidth / 2 + 30)
-                .attr("y", height_4 - 5)
-                .style("text-anchor", "center")
-                .text(tree);
-                var filtered = data.filter(function (d) { return d.Species == tree ; });
-
-                 // Add the scatterplot
-                 gtree.selectAll(".dot")
-                 .data(filtered)
-                 .join("circle")
-                .attr("cx", function (d) { return x(d.Leaf_area); } )
-                .attr("cy", function (d) { return y(d.CO2); } )
-                 gtree.append("g")
-                 .attr("transform", "translate(0," + cHeight + ")")
-                 .call(d3.axisBottom(x));
-
-             gtree.append("text")
-                 .attr("class", "label")
-                 .attr("x", cWidth)
-                 .attr("y", cHeight - 5)
-                 .style("text-anchor", "end")
-                 .text("Leaf_Area");
-
-             // Add the Y Axis
-             gtree.append("g")
-                 .call(d3.axisLeft(y));
-
-             gtree.append("text")
-                 .attr("class", "label")
-                 .attr("transform", "rotate(-90)")
-                 .attr("y", 10)
-                 .attr("x", 0)
-                 .style("text-anchor", "end")
-                 .text("CO2");
-         }
-     
- });
-        
+})
