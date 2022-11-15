@@ -76,7 +76,7 @@ const tooltip = d3.select(id_ref_1)
 var x_label = ["Height (m)", "Canopy size (m\u00B2)", "Diameter (cm)", "Leaf area (m\u00B2)"];
 
 // Parse the Data
-d3.csv("../data/assign2-plot1.csv").then(function(data) {
+d3.csv("../data/assign2-plot2.csv", function(data) {
 
     // Extract subgroups (tree measures)
     subgroups_1 = data.columns;

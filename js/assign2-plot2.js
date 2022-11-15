@@ -22,7 +22,7 @@ const svg_2 = d3.select(id_ref_2)
         "translate(" + margin_2.left + "," + margin_2.top + ")");
 
 // Parse the Data
-d3.csv("../data/assign2-plot2.csv").then(function(data) {
+d3.csv("../data/assign2-plot2.csv", function(data) {
 
   top5 = d3.group(data)
 
@@ -30,7 +30,7 @@ d3.csv("../data/assign2-plot2.csv").then(function(data) {
 
   var sumstat =  d3.rollup(data,function(d) {
     q1 = d3.quantile(d.map(function(g) { return g.Height;}).sort(d3.ascending),.25)
-    median = d3.quantile(d.map(function(g) { return g.Heighth;}).sort(d3.ascending),.5)
+    median = d3.quantile(d.map(function(g) { return g.Height;}).sort(d3.ascending),.5)
     q3 = d3.quantile(d.map(function(g) { return g.Height;}).sort(d3.ascending),.75)
     interQuantileRange = q3 - q1
     min = q1 - 1.5 * interQuantileRange
@@ -38,7 +38,7 @@ d3.csv("../data/assign2-plot2.csv").then(function(data) {
     return({q1: q1, median: median, q3: q3, interQuantileRange: interQuantileRange, min: min, max: max})
   })
    
-   console.log(sumstat)
+  
    
 
     // Show the X scale
