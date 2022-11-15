@@ -74,7 +74,7 @@ d3.csv("../data/assign2-plot3.csv").then(function(data) {
         .text("CO2");
 
     // Y axis label
-    svg_1.append("text")
+    svg_3.append("text")
         .attr("x", (-height_3 / 2))
         .attr("y", -50)
         .style("text-anchor", "middle")
