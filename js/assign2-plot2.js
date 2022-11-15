@@ -4,9 +4,8 @@
 //--------------------------------------------------------------------------
 
 
-
 // Refer to the id div
-const id_ref_2 = "boxplot-tree-size"
+const id_ref_2 = "boxplot1"
 
 // Set the dimensions and margins of the graph
 const margin_2 = {top: 50, right: 20, bottom: 70, left: 70},
@@ -23,23 +22,29 @@ const svg_2 = d3.select(id_ref_2)
         "translate(" + margin_2.left + "," + margin_2.top + ")");
 
 // Parse the Data
-d3.csv("../data/assign2-plot2.csv").then(function(data) {
+d3.csv("../data/assign2-plot2.csv", function(data) {
 
+  top5 = d3.group(data)
 
+ 
 
-
-  
-    
-  // Compute quartiles, median, inter quantile range min and max --> these info are then used to draw the box.
-  // Compute quartiles, median, inter quantile range min and max --> these info are then used to draw the box.
-
+  var sumstat =  d3.rollup(data,function(d) {
+    q1 = d3.quantile(d.map(function(g) { return g.Height;}).sort(d3.ascending),.25)
+    median = d3.quantile(d.map(function(g) { return g.Height;}).sort(d3.ascending),.5)
+    q3 = d3.quantile(d.map(function(g) { return g.Height;}).sort(d3.ascending),.75)
+    interQuantileRange = q3 - q1
+    min = q1 - 1.5 * interQuantileRange
+    max = q3 + 1.5 * interQuantileRange
+    return({q1: q1, median: median, q3: q3, interQuantileRange: interQuantileRange, min: min, max: max})
+  })
    
-    console.log(sumstat)
+  
+   
 
     // Show the X scale
     var x = d3.scaleBand()
     .range([ 0, width_2 ])
-    .domain(["Tilia Cordata", "Carpinus Australis", "Celtis Australis"])
+    .domain(["setosa", "versicolor", "virginica"])
     .paddingInner(1)
     .paddingOuter(.5)
   svg_2.append("g")
@@ -67,7 +72,8 @@ d3.csv("../data/assign2-plot2.csv").then(function(data) {
     //     .style("opacity", 0);
 
     // Show the hist
-    svg_2.selectAll("vertLines")
+    svg_2
+    .selectAll("vertLines")
     .data(sumstat)
     .enter()
     .append("line")
@@ -80,7 +86,8 @@ d3.csv("../data/assign2-plot2.csv").then(function(data) {
 
   // rectangle for the main box
   var boxWidth = 100
-  svg_2.selectAll("boxes")
+  svg_2
+    .selectAll("boxes")
     .data(sumstat)
     .enter()
     .append("rect")
