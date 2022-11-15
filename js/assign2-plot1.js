@@ -1,7 +1,8 @@
 // -------------------------------------------------------------------------
 // Assignment 2: Histogram (first plot)
 // We want to show the distribution of some measures of trees in Trento's 
-// territory. We analyze: Height (m), Canopy Size (m2), and Diameter (cm)
+// territory.
+// We analyze: Height (m), Canopy Size (m2), Diameter (cm), and Leaf Area (m2).
 //--------------------------------------------------------------------------
 
 
@@ -39,7 +40,7 @@ selectItem_hist_bin_size.selectedIndex = 1;
 var measureHeading_1 = '';
 var n_bins_1 = 0;
 
-// The possible measures (Height, CanopySize, Diameter)
+// The possible measures (Height, CanopySize, Diameter, Leaf Area)
 var subgroups_1 = [];
 
 // Data array for plotting
