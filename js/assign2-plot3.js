@@ -23,7 +23,7 @@ const svg_3 = d3.select("#scatterplot")
     .attr("transform", `translate(${margin_3.left}, ${margin_3.top})`);
 
     const color = d3.scaleOrdinal()
-                .domain(["Tilia cordata","Carpinus betulus","Celtis australis","Platanus x hispanica","Tilia x europaea","Aesculus hippocastanum"])
+                .domain(["Tilia cordata","Carpinus betulus","Celtis australis","Platanus x hispanica","Tilia x europaea", "Aesculus hippocastanum"])
                 .range(["#440154ff", "#21908dff", "#fde725ff" , "#009bff" , "#08e8de" , "#191970" ]);
 
 //Read the data
