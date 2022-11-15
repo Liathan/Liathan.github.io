@@ -37,7 +37,7 @@ var subgroups_2 = [];
 // Y axis
 var y = [];
 
-var cose=0;
+var cose=0, cose2=0;
 
 // Read the data and compute summary statistics for each specie
 d3.csv("../data/assign2-plot2.csv").then(function(data) {
@@ -54,6 +54,7 @@ d3.csv("../data/assign2-plot2.csv").then(function(data) {
             q1 = d3.quantile(d[1].map(function(g) { return g.Height;}).sort(d3.ascending),.25)
             median = d3.quantile(d[1].map(function(g) { return g.Height;}).sort(d3.ascending),.5)
             q3 = d3.quantile(d[1].map(function(g) { return g.Height;}).sort(d3.ascending),.75)
+            mean = d3.mean(d[1].map(function(g) { return g.Height;}))
             interQuantileRange = q3 - q1
             //tmp_min = q1 - 1.5 * interQuantileRange
             //min = (tmp_min > 0) ? tmp_min : 0
@@ -61,13 +62,35 @@ d3.csv("../data/assign2-plot2.csv").then(function(data) {
             //tmp_max = q3 + 1.5 * interQuantileRange
             //max = (max_data > tmp_max) ? tmp_max : max_data
             max = Math.min(max_data, q3 + 1.5 * interQuantileRange)
-            return ({key: d[0], q1: q1, median: median, q3: q3, interQuantileRange: interQuantileRange, min: min, max: max})
+            return ({key: d[0], q1: q1, median: median, q3: q3, interQuantileRange: interQuantileRange, min: min, max: max, mean: mean})
         });
 
-    cose = sumstat;
+    var outlier = [];
+    for(i = 0; i < sumstat.length; ++i)
+    {
+        current_species = sumstat[i].key
+        current_max = sumstat[i].max
+        current_min = sumstat[i].min
+
+        for(j = 0; j < data.length; ++j)
+        {
+            if ((data[j].Species === current_species) && ((data[j].Height < current_min) || (data[j].Height > current_max)))
+                {
+                    outlier.push(data[j])
+                }
+        }
+    }
+
+    cose = outlier;
 
     // X axis label
     x_label = [...new Set(d3.map(data, d => d.Species))];
+
+    // Color respect to the subgroups (tree species)
+    var color = d3.scaleOrdinal()
+        .domain(x_label)
+        .range(["#ff595e", "#ffca3a", '#8ac926', '#1982c4', '#6a4c93']);
+    
     
     // Show the X scale
     var x = d3.scaleBand()
@@ -86,6 +109,7 @@ d3.csv("../data/assign2-plot2.csv").then(function(data) {
 
     // Y axis max value
     y_max = (Math.ceil(max_data+(5/100*max_data))/5)*5
+    
     // Show the Y scale
     var y = d3.scaleLinear()
         .domain([0, y_max])
@@ -102,10 +126,11 @@ d3.csv("../data/assign2-plot2.csv").then(function(data) {
         .data(sumstat)
         .enter()
         .append("line")
+            .attr("class", "iqr-line")
             .attr("x1", function(d){return(x(d.key))})
             .attr("x2", function(d){return(x(d.key))})
             .attr("y1", function(d){return(y(d.min))})
-            .attr("y2", function(d){return(y(d.max))})
+            .attr("y2", function(d){return(y(d.min))})
             .attr("stroke", "black")
             .style("width", 40);
 
@@ -116,36 +141,135 @@ d3.csv("../data/assign2-plot2.csv").then(function(data) {
         .data(sumstat)
         .enter()
         .append("rect")
+            .attr("class", "boxplot-rect")
             .attr("x", function(d){return(x(d.key)-boxWidth/2)})
-            .attr("y", function(d){return(y(d.q3))})
-            .attr("height", function(d){return(y(d.q1)-y(d.q3))})
-            .attr("width", boxWidth )
+            .attr("y", function(d){return(y(d.q1))})
+            .attr("height", function(d){return(0)})
+            .attr("width", boxWidth)
             .attr("stroke", "black")
-            .style("fill", "#69b3a2")
+            .style("fill", d => color(d.key))
+            .attr("fill-opacity", 0.5);
 
     // Show the median
     svg_2.selectAll("medianLines")
         .data(sumstat)
         .enter()
         .append("line")
+            .attr("class", "median-line")
             .attr("x1", function(d){return(x(d.key)-boxWidth/2) })
-            .attr("x2", function(d){return(x(d.key)+boxWidth/2) })
+            .attr("x2", function(d){return(x(d.key)-boxWidth/2) })
             .attr("y1", function(d){return(y(d.median))})
             .attr("y2", function(d){return(y(d.median))})
             .attr("stroke", "black")
-            .style("width", 80)
+            .style("width", 80);
 
     // Add individual points with jitter
     var jitterWidth = 50
     svg_2.selectAll("indPoints")
-    .data(data)
+    .data(outlier)
     .enter()
     .append("circle")
+        .attr("class", "data-point")
         .attr("cx", function(d){return(x(d.Species) - jitterWidth/2 + Math.random()*jitterWidth )})
+        .attr("cy", function(d){return(height_2)})
+        .attr("r", 0)
+        .style("fill", d => color(d.Species))
+        .attr("stroke", "black");
+
+    
+    // Title
+    svg_2.append("text")
+        .attr("x", ((width_2 - (margin_2.left - margin_2.right)) / 2))             
+        .attr("y", 0 - (margin_2.top / 2))
+        .style("class", "h2")
+        .style("font-size", "18px")
+        .attr("text-anchor", "middle")  
+        .style("text-decoration", "underline")
+        .attr("class", "hist-title")  
+        .text(`Boxplot of height for the top-5 tree species`);
+        //.text(`Trees ${measureHeading_1.replace("_", " ").toLowerCase()} histogram`);
+
+    // X axis label
+    svg_2.append("text")
+        .attr("x", (width_2 / 2))
+        .attr("y", (height_2 + 50))
+        .style("class", "h2")
+        .style("font-size", "16px")
+        .style("text-anchor", "middle")
+        .text("Species");
+
+    // Y axis label
+    svg_2.append("text")
+        .attr("x", (-height_2 / 2))
+        .attr("y", -50)
+        .style("text-anchor", "middle")
+        .style("class", "h2")
+        .style("font-size", "16px")
+        .attr("transform", "rotate(-90)")
+        .text("Count");
+
+    // Animations
+    svg_2.selectAll(".iqr-line")
+        .transition("loading")
+        .duration(800)
+        .attr("y2", function(d){return(y(d.max))});
+
+    svg_2.selectAll(".boxplot-rect")
+        .transition("loading")
+        .duration(800)
+        .attr("y", function(d){return(y(d.q3))})
+        .attr("height", function(d){return(y(d.q1)-y(d.q3))})
+        .delay(700);
+
+    svg_2.selectAll(".median-line")
+        .transition("loading")
+        .duration(800)
+        .attr("x2", function(d){return(x(d.key)+boxWidth/2) })
+        .delay(1500);
+    
+    svg_2.selectAll(".data-point")
+        .transition("loading")
+        .duration(800)
         .attr("cy", function(d){return(y(d.Height))})
         .attr("r", 4)
-        .style("fill", "white")
-        .attr("stroke", "black")
+        .delay(2300);
 
+    // Animation and filling of tooltip
+    svg_2.selectAll("rect")
+
+        // MouseOver
+        .on("mouseover", function (event, d) {
+
+            d3.select(event.currentTarget)
+                .transition("selected")
+                    .duration(300)
+                    .style("fill-opacity", 1.0);
+
+            tooltip.transition("appear-box")
+                .duration(300)
+                .style("opacity", .9)
+                // Added to control the fact that the tooltip disappear if
+                // we move between near boxes (horizontally)
+                .delay(1);
+
+            tooltip.html("<span class='tooltiptext'>" + "<b>Species: " + d.key + "</b>" + 
+                "<br>" + "Q1: " + d.q1.toFixed(2) + " - Q3: " + d.q3.toFixed(2) + 
+                "<br>" + "Mean: " + d.mean.toFixed(2) + 
+                "<br>" + "Median: " + d.median.toFixed(2) + "</span>")
+                .style("left", (event.pageX) + "px")
+                .style("top", (event.pageY - 28) + "px");
+        })
+
+        // MouseOut
+        .on("mouseout", function (event, d) {
+            d3.select(event.currentTarget)
+                .transition("unselected")
+                    .duration(300)
+                    .style("fill-opacity", 0.5);
+
+            tooltip.transition("disappear-box")
+                .duration(300)
+                .style("opacity", 0);
+        });
 
 });
