@@ -24,32 +24,13 @@ d3.csv("../data/assign2-plot4.csv").then(function (data) {
 
     
 
-    var max_X = d3.max(data, function(d) { return +d.Leaf_area;} );
-
-    // Add X axis
-    const x = d3.scaleLinear()
-    .domain([0, max_X])
-    .range([ 0, width_4 ]);
-    svg_3.append("g")
-    .attr("transform", `translate(0, ${height_3})`)
-    .call(d3.axisBottom(x));
-
-    var max_Y = d3.max(data, function(d) { return +d.CO2;} );
-
-    // Add Y axis
-    const y = d3.scaleLinear()
-    .domain([0, max_Y])
-    .range([ height_4, 0]);
-    svg_3.append("g")
-    .call(d3.axisLeft(y));
-
-    const color = d3.scaleOrdinal()
-        .domain(sortable)
-        .range(["#440154ff", "#21908dff", "#fde725ff" , "#009bff" , "#08e8de" , "#191970" ]);
+   const color = d3.scaleOrdinal()
+                .domain(sortable)
+                .range(["#440154ff", "#21908dff", "#fde725ff" , "#009bff" , "#08e8de" , "#191970" ]);
 
     // small multiples: for each specie, build a plot
     sortable.map(d => d[0]).forEach(e => {
-        const svg_4 = d3.select("#small-multiple-scatterplot")
+        const svg_4 = d3.select(id_ref_4)
             .append("svg")
             .attr("width", width_4 + margin_4.left + margin_4.right)
           .attr("height", height_4 + margin_4.top + margin_4.bottom)
@@ -58,6 +39,29 @@ d3.csv("../data/assign2-plot4.csv").then(function (data) {
                 "translate(" + margin_4.left * 2 + "," + margin_4.top * 3 + ")")
             .style("margin_4-bottom", "50px");
 
+            var max_X = d3.max(data, function(d) { return +d.Leaf_area;} );
+
+            // Add X axis
+            const x = d3.scaleLinear()
+            .domain([0, max_X])
+            .range([ 0, width_4 ]);
+            svg_4.append("g")
+            .attr("transform", `translate(0, ${height_3})`)
+            .call(d3.axisBottom(x));
+        
+            var max_Y = d3.max(data, function(d) { return +d.CO2;} );
+        
+            // Add Y axis
+            const y = d3.scaleLinear()
+            .domain([0, max_Y])
+            .range([ height_4, 0]);
+            svg_4.append("g")
+            .call(d3.axisLeft(y));
+     
+
+
+           
+            
         svg_4.append("g")
             .attr("transform", "translate(0," + height_4 + ")")
             .call(d3.axisBottom(x));
@@ -80,6 +84,7 @@ d3.csv("../data/assign2-plot4.csv").then(function (data) {
             .attr("cy", function (d) { return y(d.CO2); })
             .attr("r", 3)
             .style("fill", function (d) { return color(d.Species) })
+          
 
         svg_4.append("text")
             .attr("text-anchor", "end")
@@ -97,8 +102,11 @@ d3.csv("../data/assign2-plot4.csv").then(function (data) {
     .attr("transform", "rotate(-90)")
     .text("CO2");
 
-          
-    
+   
+
+
+
+
        
     });
   })
