@@ -37,13 +37,33 @@ var subgroups_2 = [];
 // Y axis
 var y = [];
 
+// Data
+var data = [];
+
 var cose=0, cose2=0;
 
-// Read the data and compute summary statistics for each specie
-d3.csv("../data/assign2-plot2.csv").then(function(data) {
+// Function to plot different measures depending on the selectionBox
+function draw2() {
 
-    // Y axis max value
-    max_data = Math.max(...Array.from(d3.map(data, d => d.Height)))
+    // Remove previous boxplot and information (like y axis)
+    svg_2.selectAll(".plot2_title")
+        .remove();
+    svg_2.selectAll(".plot2_axisY")
+        .remove();
+    svg_2.selectAll(".iqr-line")
+        .remove();
+    svg_2.selectAll(".boxplot-rect")
+        .remove();
+    svg_2.selectAll(".median-line")
+        .remove();
+    svg_2.selectAll(".data-point")
+        .remove();
+
+    // Selected measure
+    measureHeading_2 = selectItem_boxplot_measure.value;
+
+    // max data assumed for the selected measure
+    max_data = Math.max(...Array.from(d3.map(data, d => d[measureHeading_2])))
 
     // Compute quartiles, median, inter quantile range min and max --> these info are then used to draw the box.
     //var sumstat = d3.nest() // nest function allows to group the calculation per level of a factor
@@ -51,10 +71,10 @@ d3.csv("../data/assign2-plot2.csv").then(function(data) {
     //  .rollup(function(d) {
     var sumstat = Array.from(d3.group(data, d => d.Species))
         .map(function(d) {
-            q1 = d3.quantile(d[1].map(function(g) { return g.Height;}).sort(d3.ascending),.25)
-            median = d3.quantile(d[1].map(function(g) { return g.Height;}).sort(d3.ascending),.5)
-            q3 = d3.quantile(d[1].map(function(g) { return g.Height;}).sort(d3.ascending),.75)
-            mean = d3.mean(d[1].map(function(g) { return g.Height;}))
+            q1 = d3.quantile(d[1].map(function(g) { return g[measureHeading_2];}).sort(d3.ascending),.25)
+            median = d3.quantile(d[1].map(function(g) { return g[measureHeading_2];}).sort(d3.ascending),.5)
+            q3 = d3.quantile(d[1].map(function(g) { return g[measureHeading_2];}).sort(d3.ascending),.75)
+            mean = d3.mean(d[1].map(function(g) { return g[measureHeading_2];}))
             interQuantileRange = q3 - q1
             //tmp_min = q1 - 1.5 * interQuantileRange
             //min = (tmp_min > 0) ? tmp_min : 0
@@ -74,14 +94,12 @@ d3.csv("../data/assign2-plot2.csv").then(function(data) {
 
         for(j = 0; j < data.length; ++j)
         {
-            if ((data[j].Species === current_species) && ((data[j].Height < current_min) || (data[j].Height > current_max)))
+            if ((data[j].Species === current_species) && ((data[j][measureHeading_2] < current_min) || (data[j][measureHeading_2] > current_max)))
                 {
                     outlier.push(data[j])
                 }
         }
     }
-
-    cose = outlier;
 
     // X axis label
     x_label = [...new Set(d3.map(data, d => d.Species))];
@@ -90,7 +108,6 @@ d3.csv("../data/assign2-plot2.csv").then(function(data) {
     var color = d3.scaleOrdinal()
         .domain(x_label)
         .range(["#ff595e", "#ffca3a", '#8ac926', '#1982c4', '#6a4c93']);
-    
     
     // Show the X scale
     var x = d3.scaleBand()
@@ -115,6 +132,7 @@ d3.csv("../data/assign2-plot2.csv").then(function(data) {
         .domain([0, y_max])
         .range([height_2, 0])
     svg_2.append("g")
+        .attr("class", "plot2_axisY")
         .call(d3.axisLeft(y))
         .selectAll("text")
             .style("text-anchor", "end")
@@ -179,6 +197,7 @@ d3.csv("../data/assign2-plot2.csv").then(function(data) {
     
     // Title
     svg_2.append("text")
+        .attr("class", "plot2-title")
         .attr("x", ((width_2 - (margin_2.left - margin_2.right)) / 2))             
         .attr("y", 0 - (margin_2.top / 2))
         .style("class", "h2")
@@ -186,8 +205,8 @@ d3.csv("../data/assign2-plot2.csv").then(function(data) {
         .attr("text-anchor", "middle")  
         .style("text-decoration", "underline")
         .attr("class", "hist-title")  
-        .text(`Boxplot of height for the top-5 tree species`);
-        //.text(`Trees ${measureHeading_1.replace("_", " ").toLowerCase()} histogram`);
+        //.text(`Boxplot of height for the top-5 tree species`);
+        .text(`Boxplot of ${measureHeading_2.replace("_", " ").toLowerCase()} for the top-5 tree species`);
 
     // X axis label
     svg_2.append("text")
@@ -200,13 +219,14 @@ d3.csv("../data/assign2-plot2.csv").then(function(data) {
 
     // Y axis label
     svg_2.append("text")
+        .attr("class", ".plot2_axisY")
         .attr("x", (-height_2 / 2))
         .attr("y", -50)
         .style("text-anchor", "middle")
         .style("class", "h2")
         .style("font-size", "16px")
         .attr("transform", "rotate(-90)")
-        .text("Count");
+        .text(`${measureHeading_2.replace("_", " ")}`);
 
     // Animations
     svg_2.selectAll(".iqr-line")
@@ -230,7 +250,7 @@ d3.csv("../data/assign2-plot2.csv").then(function(data) {
     svg_2.selectAll(".data-point")
         .transition("loading")
         .duration(800)
-        .attr("cy", function(d){return(y(d.Height))})
+        .attr("cy", function(d){return(y(d[measureHeading_2]))})
         .attr("r", 4)
         .delay(2300);
 
@@ -271,5 +291,24 @@ d3.csv("../data/assign2-plot2.csv").then(function(data) {
                 .duration(300)
                 .style("opacity", 0);
         });
+
+}
+
+// Read the data and compute summary statistics for each species
+d3.csv("../data/assign2-plot2.csv").then(function(dataframe) {
+
+    data = dataframe;
+
+    // Extract subgroups (possible measures)
+    subgroups_2 = data.columns.slice(1);
+
+    // Load possible options for "measures" in the selectBox
+    for(j = 0; j < subgroups_2.length; ++j)
+    {
+        opt = new Option(subgroups_2[j].replace("_", " "), subgroups_2[j]);
+        selectItem_boxplot_measure.appendChild(opt);
+    };
+
+    draw2();
 
 });
