@@ -122,7 +122,7 @@ function draw3() {
         .attr("cx", function (d) { return x(d[measureHeading_3]); } )
         .attr("cy", function (d) { return y_3(d.CO2); } )
         .attr("r", 0)
-        .attr("stroke", "black")
+        //.attr("stroke", "black")
         .style("fill", function (d) { return color(d.Species) })
         .attr("opacity", 0.5);
     
