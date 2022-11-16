@@ -36,19 +36,23 @@ var subgroups_2 = [];
 
 // Y axis
 var y = [];
+var y_label = ["Height (m)", "Diameter (cm)", "Canopy size (m\u00B2)", "Leaf area (m\u00B2)"];
 
 // Data
-var data = [];
+var data2 = [];
 
 var cose=0, cose2=0;
 
 // Function to plot different measures depending on the selectionBox
 function draw2() {
 
+    // Load data
+    var data = data2;
+
     // Remove previous boxplot and information (like y axis)
-    svg_2.selectAll(".plot2_title")
+    svg_2.selectAll("text")
         .remove();
-    svg_2.selectAll(".plot2_axisY")
+    svg_2.selectAll(".plot2-axisY")
         .remove();
     svg_2.selectAll(".iqr-line")
         .remove();
@@ -117,9 +121,9 @@ function draw2() {
         .paddingOuter(.5)
     svg_2.append("g")
         .attr("transform", "translate(0," + height_2 + ")")
-        .call(d3.axisBottom(x))
+        .call(d3.axisBottom(x).tickSizeInner(0).tickSizeOuter(0))
         .selectAll("text")
-            //.attr("transform", "translate(-10,0)rotate(-45)")
+            .attr("transform", "translate(0,10)")
             .style("text-anchor", "center")
             .style("font-family", "Fira Sans, sans-serif")
             .style("font-size", "12px");
@@ -132,7 +136,7 @@ function draw2() {
         .domain([0, y_max])
         .range([height_2, 0])
     svg_2.append("g")
-        .attr("class", "plot2_axisY")
+        .attr("class", "plot2-axisY")
         .call(d3.axisLeft(y))
         .selectAll("text")
             .style("text-anchor", "end")
@@ -204,7 +208,6 @@ function draw2() {
         .style("font-size", "18px")
         .attr("text-anchor", "middle")  
         .style("text-decoration", "underline")
-        .attr("class", "hist-title")  
         //.text(`Boxplot of height for the top-5 tree species`);
         .text(`Boxplot of ${measureHeading_2.replace("_", " ").toLowerCase()} for the top-5 tree species`);
 
@@ -219,14 +222,14 @@ function draw2() {
 
     // Y axis label
     svg_2.append("text")
-        .attr("class", ".plot2_axisY")
+        .attr("class", ".plot2-axisY")
         .attr("x", (-height_2 / 2))
         .attr("y", -50)
         .style("text-anchor", "middle")
         .style("class", "h2")
         .style("font-size", "16px")
         .attr("transform", "rotate(-90)")
-        .text(`${measureHeading_2.replace("_", " ")}`);
+        .text(y_label[subgroups_2.indexOf(measureHeading_2)]);
 
     // Animations
     svg_2.selectAll(".iqr-line")
@@ -295,9 +298,9 @@ function draw2() {
 }
 
 // Read the data and compute summary statistics for each species
-d3.csv("../data/assign2-plot2.csv").then(function(dataframe) {
+d3.csv("../data/assign2-plot2.csv").then(function(data) {
 
-    data = dataframe;
+    data2 = data;
 
     // Extract subgroups (possible measures)
     subgroups_2 = data.columns.slice(1);
