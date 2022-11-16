@@ -6,7 +6,7 @@ d3.csv("../data/assign2-plot4.csv").then(function (data) {
     // set the dimensions and margin_4s of the graph
     const margin_4 = { top: 10, right: 20, bottom: 70, left: 30 },
     width_4 = 1024 - margin_4.left - margin_4.right,
-    height_4 = 400- margin_4.top - margin_4.bottom;
+    height_4 = 400 - margin_4.top - margin_4.bottom;
 
     
     const names = data.map(d => d.Species);
@@ -32,11 +32,13 @@ d3.csv("../data/assign2-plot4.csv").then(function (data) {
     sortable.map(d => d[0]).forEach(e => {
         const svg_4 = d3.select(id_ref_4)
             .append("svg")
-            .attr("width", width_4 + margin_4.left + margin_4.right)
-          .attr("height", height_4 + margin_4.top + margin_4.bottom)
+                .attr("preserveAspectRatio", "xMidYMid meet")
+                .attr("viewBox", '0 0 ' + (width_4 + margin_4.left + margin_4.right) +
+                    ' ' + (height_4 + margin_4.top + margin_4.bottom))
+                // .attr("width", width_4 + margin_4.left + margin_4.right)
+                // .attr("height", height_4 + margin_4.top + margin_4.bottom)
             .append("g")
-            .attr("transform",
-                "translate(" + margin_4.left * 2 + "," + margin_4.top * 3 + ")")
+                .attr("transform", "translate(" + margin_4.left * 2 + "," + margin_4.top * 3 + ")")
             .style("margin_4-bottom", "50px");
 
             var max_X = d3.max(data, function(d) { return +d.Leaf_area;} );
