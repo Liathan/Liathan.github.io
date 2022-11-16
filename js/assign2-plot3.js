@@ -122,9 +122,10 @@ function draw3() {
         .attr("cx", function (d) { return x(d[measureHeading_3]); } )
         .attr("cy", function (d) { return y_3(d.CO2); } )
         .attr("r", 0)
-        //.attr("stroke", "black")
+        .attr("stroke", "black")
         .style("fill", function (d) { return color(d.Species) })
-        .attr("opacity", 0.5);
+        .attr("stroke-opacity", 0.5)
+        .attr("fill-opacity", 0.5);
         
     //Title
     svg_3.append("text")
@@ -150,7 +151,8 @@ function draw3() {
     svg_3.selectAll("circle")
         .transition("loading")
         .duration(800)
-        .attr("r", 4);
+        .attr("r", 4)
+        .delay(function(d,i){return(i);});
 
     // Animation and filling of tooltip
     svg_3.selectAll("circle")
@@ -162,14 +164,16 @@ function draw3() {
         svg_3.selectAll("circle")
             .transition("selected")
             .duration(300)
-            .style("opacity", 0.05);
+            .attr("stroke-opacity", 0)
+            .attr("fill-opacity", 0.05);
 
         // Select all the circle with this specific class (tree species)
         idx_d = tree_species.indexOf(d.Species);
         svg_3.selectAll(`.class${idx_d}`)
             .transition("selected")
             .duration(300)
-            .style("opacity", 1.0);
+            .attr("stroke-opacity", 1.0)
+            .attr("fill-opacity", 1.0);
 
         tooltip.transition("appear-box")
             .duration(300)
@@ -192,14 +196,16 @@ function draw3() {
         svg_3.selectAll("circle")
             .transition("unselected")
             .duration(300)
-            .style("opacity", 0.5);
+            .attr("stroke-opacity", 0.5)
+            .attr("fill-opacity", 0.5);
 
         // Select all the circle with this specific class (tree species)
         idx_d = tree_species.indexOf(d.Species);
         svg_3.selectAll(`.class${idx_d}`)
         .transition("unselected")
         .duration(300)
-        .style("opacity", 0.5); 
+        .attr("stroke-opacity", 0.5)
+        .attr("fill-opacity", 0.5); 
 
         tooltip.transition("disappear-box")
             .duration(300)
@@ -218,7 +224,7 @@ function draw3() {
     .attr("height", boxSize - 3)
     .attr("class", d => "class"+tree_species.indexOf(d))
     .attr("fill", function(d){ return color(d); })
-    .attr("opacity", 0.5);
+    .attr("fill-opacity", 0.5);
     
     legend_3.join("text")
     .attr("x", (width_3 - margin_3.right - boxGap - 10))
@@ -232,7 +238,7 @@ function draw3() {
     .style("font-size", "14px")
     .text((d) => d)
     .attr("class", d => "class"+tree_species.indexOf(d))
-    .attr("opacity", 0.5)
+    .attr("fill-opacity", 0.5)
 
     // Animation with legend
     svg_3.selectAll("rect")
@@ -244,14 +250,16 @@ function draw3() {
         svg_3.selectAll("circle")
             .transition("selected")
             .duration(300)
-            .style("opacity", 0.05);
+            .attr("stroke-opacity", 0)
+            .attr("fill-opacity", 0.05);
 
         // Select all the circle with this specific class (tree species)
         idx_d = tree_species.indexOf(d);
         svg_3.selectAll(`.class${idx_d}`)
             .transition("selected")
             .duration(300)
-            .style("opacity", 1.0);
+            .attr("stroke-opacity", 1.0)
+            .attr("fill-opacity", 1.0);
     })
 
     // MouseOut
@@ -261,14 +269,16 @@ function draw3() {
         svg_3.selectAll("circle")
             .transition("unselected")
             .duration(300)
-            .style("opacity", 0.5);
+            .attr("stroke-opacity", 0.5)
+            .attr("fill-opacity", 0.5);
 
         // Select all the circle with this specific class (tree species)
         idx_d = tree_species.indexOf(d);
         svg_3.selectAll(`.class${idx_d}`)
         .transition("unselected")
         .duration(300)
-        .style("opacity", 0.5); 
+        .attr("stroke-opacity", 0.5)
+        .attr("fill-opacity", 0.5); 
     });
 
 };
