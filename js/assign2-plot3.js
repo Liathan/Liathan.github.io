@@ -150,7 +150,8 @@ function draw3() {
     svg_3.selectAll("circle")
         .transition("loading")
         .duration(800)
-        .attr("r", 4);
+        .attr("r", 4)
+        .delay(function(d,i){return(i);});
 
     // Animation and filling of tooltip
     svg_3.selectAll("circle")
