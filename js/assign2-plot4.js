@@ -48,7 +48,7 @@ d3.csv("../data/assign2-plot4.csv").then(function (data) {
             .domain([0, max_X])
             .range([ 0, width_4 ]);
             svg_4.append("g")
-            .attr("transform", `translate(0, ${height_3})`)
+            .attr("transform", `translate(0, ${height_4})`)
             .call(d3.axisBottom(x));
         
             var max_Y = d3.max(data, function(d) { return +d.CO2;} );
