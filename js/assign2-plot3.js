@@ -36,8 +36,8 @@ const svg_3 = d3.select(id_ref_3)
 // Read the data
 d3.csv("../data/assign2-plot3.csv").then(function(data) {
 
-    // Recall the top-5/6 tree names + "Others"
-    subgroups_3 = color.domain()
+    // Recall the top-6 tree names, without "Others"
+    subgroups_3 = color.domain().slice(0,6)
 
     // X axis max value
     var max_X_value = d3.max(data, function(d) { return +d.Leaf_area; } );
