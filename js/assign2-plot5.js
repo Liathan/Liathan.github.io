@@ -51,9 +51,9 @@ d3.csv('../data/assign2-plot5.csv').then( function(data) {
     const max_Z_5 = d3.max(data, d => +d["Canopy_size"])
     const trees = [...new Set(data.map(d => d["Species"]))]
 
-    const color = d3.scaleOrdinal()
-    .domain(trees)
-    .range(["#ff595e", "#ffca3a", '#8ac926', '#1982c4', '#6a4c93', '#606470']);
+    // const color = d3.scaleOrdinal()
+    // .domain(trees)
+    // .range(["#ff595e", "#ffca3a", '#8ac926', '#1982c4', '#6a4c93', '#606470']);
 
     console.log(max_X_5, max_Y_5)
     const x = d3.scaleLinear()

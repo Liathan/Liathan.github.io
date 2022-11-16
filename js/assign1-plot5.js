@@ -42,7 +42,7 @@ var plotData = [];
 var tooltipData = [];
 
 // Color variable for the top-5 tree species + "Others" class
-var color = [];
+//var color = [];
 
 // SelectBox to choose the "Circoscrizione" to show
 selectItem = document.getElementById("selection-waffle")
@@ -69,9 +69,9 @@ d3.csv('../data/assign1-plot5.csv').then(function(data, i) {
     subgroups = data.columns.slice(1);
     
     // Update color respect to the subgroups (tree species)
-    color = d3.scaleOrdinal()
-    .domain(subgroups)
-    .range(["#ff595e", "#ffca3a", '#8ac926', '#1982c4', '#6a4c93', '#606470']);
+    // color = d3.scaleOrdinal()
+    // .domain(subgroups)
+    // .range(["#ff595e", "#ffca3a", '#8ac926', '#1982c4', '#6a4c93', '#606470']);
 
     // Load possible options for "Circoscrizione" in the selectBox
     // Also load data to plot the different wafflecharts
@@ -94,7 +94,7 @@ d3.csv('../data/assign1-plot5.csv').then(function(data, i) {
             }
         }
 
-        console.log(tmp_tooltip)
+        // console.log(tmp_tooltip)
         plotData[circo] = tmp_plot.flat()
         tooltipData[circo] = tmp_tooltip.flat()
 

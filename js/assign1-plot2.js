@@ -76,9 +76,9 @@ d3.csv("../data/assign1-plot2.csv").then(function(data) {
     .style("opacity", 0);
         
     // Color palette = one color per subgroup
-    const color = d3.scaleOrdinal()
-    .domain(subgroups)
-    .range(["#ff595e", "#ffca3a", '#8ac926', '#1982c4', '#6a4c93', '#606470']);
+    // const color = d3.scaleOrdinal()
+    // .domain(subgroups)
+    // .range(["#ff595e", "#ffca3a", '#8ac926', '#1982c4', '#6a4c93', '#606470']);
     
     // Stack the data? --> Stack per subgroup (top-5 + "Others" species)
     const stackedData = d3.stack()
