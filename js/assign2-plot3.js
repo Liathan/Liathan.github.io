@@ -25,9 +25,9 @@ const svg_3 = d3.select("#scatterplot")
     .append("g")
         .attr("transform", `translate(${margin_3.left}, ${margin_3.top})`);
 
-    const color = d3.scaleOrdinal()
-                .domain(["Tilia cordata", "Carpinus betulus", "Celtis australis", "Platanus x hispanica", "Tilia x europaea", "Aesculus hippocastanum"])
-                .range(["#440154ff", "#21908dff", "#fde725ff" , "#009bff" , "#08e8de" , "#191970" ]);
+    // const color = d3.scaleOrdinal()
+    //             .domain(["Tilia cordata", "Carpinus betulus", "Celtis australis", "Platanus x hispanica", "Tilia x europaea", "Aesculus hippocastanum"])
+    //             .range(["#440154ff", "#21908dff", "#fde725ff" , "#009bff" , "#08e8de" , "#191970" ]);
 
 //Read the data
 d3.csv("../data/assign2-plot3.csv").then(function(data) {
