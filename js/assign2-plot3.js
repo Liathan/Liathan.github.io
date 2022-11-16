@@ -17,13 +17,16 @@ const margin_3 = {top: 50, right: 20, bottom: 70, left: 70},
 // append the svg_3 object to the body of the page
 const svg_3 = d3.select("#scatterplot")
     .append("svg")
-    .attr("width", width_3 + margin_3.left + margin_3.right)
-    .attr("height", height_3 + margin_3.top + margin_3.bottom)
+        .attr("preserveAspectRatio", "xMidYMid meet")
+        .attr("viewBox", '0 0 ' + (width_3 + margin_3.left + margin_3.right) +
+        ' ' + (height_3 + margin_3.top + margin_3.bottom))
+        // .attr("width", width_3 + margin_3.left + margin_3.right)
+        // .attr("height", height_3 + margin_3.top + margin_3.bottom)
     .append("g")
-    .attr("transform", `translate(${margin_3.left}, ${margin_3.top})`);
+        .attr("transform", `translate(${margin_3.left}, ${margin_3.top})`);
 
     const color = d3.scaleOrdinal()
-                .domain(["Tilia cordata","Carpinus betulus","Celtis australis","Platanus x hispanica","Tilia x europaea", "Aesculus hippocastanum"])
+                .domain(["Tilia cordata", "Carpinus betulus", "Celtis australis", "Platanus x hispanica", "Tilia x europaea", "Aesculus hippocastanum"])
                 .range(["#440154ff", "#21908dff", "#fde725ff" , "#009bff" , "#08e8de" , "#191970" ]);
 
 //Read the data
