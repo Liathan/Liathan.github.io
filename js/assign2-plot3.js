@@ -110,7 +110,7 @@ d3.csv("../data/assign2-plot3.csv").then(function(data) {
         .style("class", "h2")
         .style("font-size", "16px")
         .attr("transform", "rotate(-90)")
-        .text("CO2");
+        .text("CO2 (kg/yr)");
 
     // Animations
     svg_3.selectAll("circle")
@@ -155,18 +155,18 @@ d3.csv("../data/assign2-plot3.csv").then(function(data) {
         // Select all circles
         svg_3.selectAll("circle")
             .transition("selected")
-            .duration(1)
+            .duration(0)
             .style("opacity", 0.2);
 
         // Select all the circle with this specific class (tree species)
         idx_d = subgroups_3.indexOf(d.Species);
         svg_3.selectAll(`.class${idx_d}`)
             .transition("selected")
-            .duration(1)
+            .duration(0)
             .style("opacity", 1.0);
 
         tooltip.transition("appear-box")
-            .duration(300)
+            .duration(0)
             .style("opacity", .9)
             // Added to control the fact that the tooltip disappear if
             // we move between near boxes (horizontally)
@@ -184,23 +184,57 @@ d3.csv("../data/assign2-plot3.csv").then(function(data) {
 
         // Select all circles
         svg_3.selectAll("circle")
-            .transition("selected")
-            .duration(1)
+            .transition("unselect")
+            .duration(0)
             .style("opacity", 0.5);
 
         // Select all the circle with this specific class (tree species)
         idx_d = subgroups_3.indexOf(d.Species);
         svg_3.selectAll(`.class${idx_d}`)
         .transition("unselected")
-        .duration(300)
+        .duration(0)
         .style("opacity", 0.5); 
 
         tooltip.transition("disappear-box")
-            .duration(300)
+            .duration(0)
             .style("opacity", 0);
     });
 
-    
+    svg_3.selectAll("rect")
+
+    // MouseOver
+    .on("mouseover", function (event, d) {
+
+        // Select all circles
+        svg_3.selectAll("circle")
+            .transition("selected")
+            .duration(0)
+            .style("opacity", 0.2);
+
+        // Select all the circle with this specific class (tree species)
+        idx_d = subgroups_3.indexOf(d);
+        svg_3.selectAll(`.class${idx_d}`)
+            .transition("selected")
+            .duration(0)
+            .style("opacity", 1.0);
+    })
+
+    // MouseOut
+    .on("mouseout", function (event, d) {
+
+        // Select all circles
+        svg_3.selectAll("circle")
+            .transition("unselect")
+            .duration(0)
+            .style("opacity", 0.5);
+
+        // Select all the circle with this specific class (tree species)
+        idx_d = subgroups_3.indexOf(d);
+        svg_3.selectAll(`.class${idx_d}`)
+        .transition("unselected")
+        .duration(0)
+        .style("opacity", 0.5); 
+    });
 })
 
   
