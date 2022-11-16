@@ -109,9 +109,9 @@ function draw2() {
     x_label = [...new Set(d3.map(data, d => d.Species))];
 
     // Color respect to the subgroups (tree species)
-    var color = d3.scaleOrdinal()
-        .domain(x_label)
-        .range(["#ff595e", "#ffca3a", '#8ac926', '#1982c4', '#6a4c93']);
+    // var color = d3.scaleOrdinal()
+    //     .domain(x_label)
+    //     .range(["#ff595e", "#ffca3a", '#8ac926', '#1982c4', '#6a4c93']);
     
     // Show the X scale
     var x = d3.scaleBand()
