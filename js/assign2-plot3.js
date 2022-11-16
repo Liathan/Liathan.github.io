@@ -1,7 +1,8 @@
 // -------------------------------------------------------------------------
-// Assignment 2: Histogram (first plot)
-// We want to show the distribution of some measures of trees in Trento's 
-// territory. We analyze: Height (m), Canopy Size (m2), and Diameter (cm)
+// Assignment 2: Scatterplot (third plot)
+// We want to show the CO2 (y axis) with respect to some measures of trees 
+// in Trento's territory. 
+// We analyze: Height (m), Diameter (cm), Canopy Size (m2), and Leaf area (m2).
 //--------------------------------------------------------------------------
 
 
@@ -15,7 +16,7 @@ const margin_3 = {top: 50, right: 20, bottom: 70, left: 70},
 
 
 // append the svg_3 object to the body of the page
-const svg_3 = d3.select("#scatterplot")
+const svg_3 = d3.select(id_ref_3)
     .append("svg")
         .attr("preserveAspectRatio", "xMidYMid meet")
         .attr("viewBox", '0 0 ' + (width_3 + margin_3.left + margin_3.right) +
@@ -25,19 +26,19 @@ const svg_3 = d3.select("#scatterplot")
     .append("g")
         .attr("transform", `translate(${margin_3.left}, ${margin_3.top})`);
 
-    const color = d3.scaleOrdinal()
-                .domain(["Tilia cordata", "Carpinus betulus", "Celtis australis", "Platanus x hispanica", "Tilia x europaea", "Aesculus hippocastanum"])
-                .range(["#440154ff", "#21908dff", "#fde725ff" , "#009bff" , "#08e8de" , "#191970" ]);
+    // const color = d3.scaleOrdinal()
+    //             .domain(["Tilia cordata", "Carpinus betulus", "Celtis australis", "Platanus x hispanica", "Tilia x europaea", "Aesculus hippocastanum"])
+    //             .range(["#440154ff", "#21908dff", "#fde725ff" , "#009bff" , "#08e8de" , "#191970" ]);
 
-//Read the data
+// Read the data
 d3.csv("../data/assign2-plot3.csv").then(function(data) {
 
-    var max_X = d3.max(data, function(d) { return +d.Leaf_area;} );
+    var max_X_value = d3.max(data, function(d) { return d.Leaf_area;} );
 
     // Add X axis
     const x = d3.scaleLinear()
-    .domain([0, max_X])
-    .range([ 0, width_3 ]);
+        .domain([0, max_X])
+        .range([ 0, width_3 ]);
     svg_3.append("g")
     .attr("transform", `translate(0, ${height_3})`)
     .call(d3.axisBottom(x));
