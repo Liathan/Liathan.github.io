@@ -125,7 +125,7 @@ function draw3() {
         //.attr("stroke", "black")
         .style("fill", function (d) { return color(d.Species) })
         .attr("opacity", 0.5);
-    
+        
     //Title
     svg_3.append("text")
         .attr("x", ((width_3 - (margin_3.left - margin_3.right)) / 2))             
