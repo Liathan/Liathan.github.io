@@ -70,6 +70,18 @@ d3.csv("../data/assign1-plot3.csv").then(function(data) {
 
     }
 
+    // Create a tooltip
+    const tooltip = d3.select(id_ref_3)
+        .append("div")
+        .attr("class", "tooltip")
+        .style("font-size", "14px")
+        .style("background-color", "white")
+        .style("border", "solid")
+        .style("border-width", "1px")
+        .style("border-radius", "5px")
+        .style("padding", "10px")
+        .style("opacity", 0);
+
     // Title
     svg_3.append("text")
     .attr("x", ((width_3 - (margin_3.left - margin_3.right)) / 2))             

@@ -63,7 +63,7 @@ var max_for_bins = 0;
 var histogram = [];
 
 // Create a tooltip
-const tooltip = d3.select(id_ref_1)
+const tooltip_1 = d3.select(id_ref_1)
     .append("div")
     .attr("class", "tooltip")
     .style("font-size", "14px")
@@ -218,7 +218,7 @@ d3.csv("../data/assign2-plot1.csv").then( function(data) {
         .attr("height", function(d) { return height_1 - y(d.length); });
         //.delay(function(d,i){return(i*100);})
 
-    // Animation and filling of tooltip
+    // Animation and filling of tooltip_1
     svg_1.selectAll("rect")
 
         // MouseOver
@@ -229,14 +229,14 @@ d3.csv("../data/assign2-plot1.csv").then( function(data) {
                     .duration(300)
                     .style("opacity", 1.0);
 
-            tooltip.transition("appear-box")
+            tooltip_1.transition("appear-box")
                 .duration(300)
                 .style("opacity", .9)
-                // Added to control the fact that the tooltip disappear if
+                // Added to control the fact that the tooltip_1 disappear if
                 // we move between near boxes (horizontally)
                 .delay(1);
 
-            tooltip.html("<span class='tooltiptext'>" + "<b>Range: " + d.x0 + " - " + d.x1 + "</b>" + 
+            tooltip_1.html("<span class='tooltiptext'>" + "<b>Range: " + d.x0 + " - " + d.x1 + "</b>" + 
                 "<br>" + "Count: " + d.length + 
                 "<br>" + "Percentage: "+ (d.length / plotData_1[measureHeading_1].length * 100).toFixed(2) + "%</span>")
                 .style("left", (event.pageX) + "px")
@@ -250,7 +250,7 @@ d3.csv("../data/assign2-plot1.csv").then( function(data) {
                     .duration(300)
                     .style("opacity", 0.5);
 
-            tooltip.transition("disappear-box")
+            tooltip_1.transition("disappear-box")
                 .duration(300)
                 .style("opacity", 0);
         });
@@ -353,7 +353,7 @@ function draw1()
         .attr("y", function(d) { return 0; })
         .attr("height", function(d) { return height_1 - y(d.length); });
 
-    // Animation and filling of tooltip
+    // Animation and filling of tooltip_1
     svg_1.selectAll("rect")
 
         // MouseOver
@@ -364,14 +364,14 @@ function draw1()
                     .duration(300)
                     .style("opacity", 1.0);
 
-            tooltip.transition("appear-box")
+            tooltip_1.transition("appear-box")
                 .duration(300)
                 .style("opacity", .9)
-                // Added to control the fact that the tooltip disappear if
+                // Added to control the fact that the tooltip_1 disappear if
                 // we move between near boxes (horizontally)
                 .delay(1);
 
-            tooltip.html("<span class='tooltiptext'>" + "<b>Range: " + d.x0 + " - " + d.x1 + "</b>" + 
+            tooltip_1.html("<span class='tooltiptext'>" + "<b>Range: " + d.x0 + " - " + d.x1 + "</b>" + 
                 "<br>" + "Count: " + d.length + 
                 "<br>" + "Percentage: "+ (d.length / plotData_1[measureHeading_1].length * 100).toFixed(2) + "%</span>")
                 .style("left", (event.pageX) + "px")
@@ -385,7 +385,7 @@ function draw1()
                     .duration(300)
                     .style("opacity", 0.5);
 
-            tooltip.transition("disappear-box")
+            tooltip_1.transition("disappear-box")
                 .duration(300)
                 .style("opacity", 0);
         });

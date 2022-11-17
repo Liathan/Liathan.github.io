@@ -66,6 +66,18 @@ function draw2() {
     // Selected measure
     measureHeading_2 = selectItem_boxplot_measure.value;
 
+    // Create a tooltip
+    const tooltip = d3.select(id_ref_2)
+        .append("div")
+        .attr("class", "tooltip")
+        .style("font-size", "14px")
+        .style("background-color", "white")
+        .style("border", "solid")
+        .style("border-width", "1px")
+        .style("border-radius", "5px")
+        .style("padding", "10px")
+        .style("opacity", 0);
+
     // max data assumed for the selected measure
     max_data = Math.max(...Array.from(d3.map(data, d => d[measureHeading_2])))
 

@@ -64,6 +64,18 @@ function draw4() {
     // Selected measure
     measureHeading_4 = selectItem_small_multiple_scatterplot_measure.value;
 
+    // Create a tooltip
+    const tooltip = d3.select(id_ref_4)
+    .append("div")
+    .attr("class", "tooltip")
+    .style("font-size", "14px")
+    .style("background-color", "white")
+    .style("border", "solid")
+    .style("border-width", "1px")
+    .style("border-radius", "5px")
+    .style("padding", "10px")
+    .style("opacity", 0);
+
     //Title
     svg_4.append("text")
         .attr("x", ((width_4 - (margin_4.left - margin_4.right)) / 2))             
@@ -168,7 +180,7 @@ function draw4() {
        svg_4.selectAll("circle")
            .transition("selected")
            .duration(300)
-           .style("fill-opacity", 0.2)
+           .style("fill-opacity", 0.05)
            .style("stroke-opacity", 0);
 
        // Select all the circle with this specific class (tree species)

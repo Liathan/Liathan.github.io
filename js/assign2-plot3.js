@@ -71,6 +71,18 @@ function draw3() {
     // Selected measure
     measureHeading_3 = selectItem_scatterplot_measure.value;
 
+    // Create a tooltip
+    const tooltip = d3.select(id_ref_3)
+    .append("div")
+    .attr("class", "tooltip")
+    .style("font-size", "14px")
+    .style("background-color", "white")
+    .style("border", "solid")
+    .style("border-width", "1px")
+    .style("border-radius", "5px")
+    .style("padding", "10px")
+    .style("opacity", 0);
+
     // X axis max value
     var max_X_value = d3.max(data, function(d) { return +d[measureHeading_3]; } );
     var x_max = (Math.ceil(max_X_value+(5/100*max_X_value))/5)*5;

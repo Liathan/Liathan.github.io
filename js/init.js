@@ -28,4 +28,4 @@ d3.csv("../data/assign1-plot1.csv").then(function (data)
     const trees = [...data.slice(0,6).map(d => d["Species"])]
     trees.push("Others");
     color.domain(trees)
-})
+});
