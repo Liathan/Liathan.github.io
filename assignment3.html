@@ -27,8 +27,8 @@
             <div class="content">
                 <a href="index.html">Home</a>
                 <a href="assignment1.html">Assignment 1</a>
-                <a href="#" class="active">Assignment 2</a>
-                <a href="#">Assignment 3</a>
+                <a href="assignment2.html" >Assignment 2</a>
+                <a href="#"class="active">Assignment 3</a>
                 <a href="#">Assignment 4</a>
                 <a href="#">Assignment 5</a>
                 <a href="javascript:void(0);" class="icon" onclick="toggle_icon_menu_topnav()">
@@ -38,13 +38,13 @@
         </div>
         
         <div id="main-content" class="content">
-            <div id="assignment-2" class="section">
+            <div id="assignment-3" class="section">
                 <!-- This is the text for assignment-2 -->
-                <h2>Assignment 2: <span>Distributions and correlations</span></h2>
+                <h2>Assignment 3: <span>Maps</span></h2>
                             
                 <div class="subsection">
 
-                    <h3>Histogram of tree size</h3>
+                    <h3>choropleth Map - tree abundance</h3>
 
                     <p>
                      With the histogram the user can visualize the distribution of a certain measurement type of the trees in the whole dataset.
@@ -69,7 +69,7 @@
                 
                 <div class="subsection">
 
-                    <h3>Boxplot of top-5 tree size</h3>
+                    <h3>choropleth Map - density</h3>
 
                     <p>
                     Considering the same measurements saw before we now visualize the boxplots of the top-5 species.
@@ -91,7 +91,7 @@
 
                 <div class="subsection">
 
-                    <h3>Scatterplot</h3>
+                    <h3>choropleth Map - oxygen production</h3>
 
                     <p>
                     For the top-6 most populated tree species we display a scatterplot having on the x-axis the size (Height,diameter,...) and on the y-axis 
@@ -112,7 +112,7 @@
 
                 <div class="subsection">
 
-                    <h3>Small multiple scatterplot</h3>
+                    <h3>choropleth Map - dot density</h3>
 
                     <p>
                         The visualization via multiple small scatterplot, as it separates the tree types, help us to see the different distrubutions of the points based on the species.
@@ -132,7 +132,27 @@
 
                 <div class="subsection">
 
-                    <h3>Bubblechart</h3>
+                    <h3>choropleth Map - dot density (top10)</h3>
+
+                    <p>
+                    With the bubble chart we analyze the same things of the third plot, but we can also 
+                    add another information, visualized through the size of the points, which in this case is the "Canopy size". 
+                    </p>
+                    
+                    <p>
+                        Select the measurement you want to visualize in the bubblechart: 
+                        <select id="selection-bubblechart-measure" class="selectionBox" name="Measure" onchange="draw5(data5)"></select>
+                    </p>
+                    
+                    <div id="bubblechart-canopysize" class="chart"></div>
+                
+                </div>
+
+                <hr>
+
+                <div class="subsection">
+
+                    <h3>Cartogram</h3>
 
                     <p>
                     With the bubble chart we analyze the same things of the third plot, but we can also 
