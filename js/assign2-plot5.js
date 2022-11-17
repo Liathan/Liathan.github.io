@@ -71,6 +71,18 @@ function draw5() {
 
     measureHeading_5 = selectItem_bubblechart_measure.value;
 
+    // Create a tooltip
+    const tooltip = d3.select(id_ref_5)
+    .append("div")
+    .attr("class", "tooltip")
+    .style("font-size", "14px")
+    .style("background-color", "white")
+    .style("border", "solid")
+    .style("border-width", "1px")
+    .style("border-radius", "5px")
+    .style("padding", "10px")
+    .style("opacity", 0);
+
     var max_X_5 = d3.max(data, (d) => +d[measureHeading_5]) // il più serve a convertire le stringhe in numeri. JS ....
     max_X_5 = Math.ceil(max_X_5+(5/100*max_X_5))
     var max_Y_5 = d3.max(data, (d) => +d["CO2"])
