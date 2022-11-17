@@ -26,9 +26,9 @@ d3.csv("../data/assign1-plot3.csv").then(function(data) {
     const subgroups = data.columns.slice(1);
     var sum = 0
 
-    const color = d3.scaleOrdinal()
-        .domain(subgroups)
-        .range(["#ff595e", "#ffca3a", '#8ac926', '#1982c4', '#6a4c93', '#606470']);
+    // const color = d3.scaleOrdinal()
+    //     .domain(subgroups)
+    //     .range(["#ff595e", "#ffca3a", '#8ac926', '#1982c4', '#6a4c93', '#606470']);
 
     var y = d3.scaleBand()
     .range([0, height_3])
@@ -69,6 +69,18 @@ d3.csv("../data/assign1-plot3.csv").then(function(data) {
         sum += max
 
     }
+
+    // Create a tooltip
+    const tooltip = d3.select(id_ref_3)
+        .append("div")
+        .attr("class", "tooltip")
+        .style("font-size", "14px")
+        .style("background-color", "white")
+        .style("border", "solid")
+        .style("border-width", "1px")
+        .style("border-radius", "5px")
+        .style("padding", "10px")
+        .style("opacity", 0);
 
     // Title
     svg_3.append("text")

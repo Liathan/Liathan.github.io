@@ -19,3 +19,13 @@ function toggle_icon_menu_topnav() {
         console.log(x.classList)
     }
 }
+
+// Possible other palette
+//const color = d3.scaleOrdinal().range(["#ff595e", "#ff924c", "#ffca3a", "#8ac926", "#1982c4", "#6a4c93", "#606470"])
+const color = d3.scaleOrdinal().range(["#ff595e", "#ff924c", "#8ac926", "#1982c4", "#6a4c93", "#582f0e", "#606470"])
+d3.csv("../data/assign1-plot1.csv").then(function (data)
+{
+    const trees = [...data.slice(0,6).map(d => d["Species"])]
+    trees.push("Others");
+    color.domain(trees)
+});

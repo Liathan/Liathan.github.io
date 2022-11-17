@@ -12,8 +12,8 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="css/styles.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Fira+Sans">
-        <script src="js/init.js"></script>
         <script src="https://d3js.org/d3.v7.min.js"></script>
+        <script src="js/init.js"></script>
     </head>
     
     <body>
@@ -93,6 +93,11 @@
                         We will also aim to estimate in economic terms the benefits brought by the trees in the area, or how much man would have to spend to achieve similar goals, also depriving himself of the beauty of different tree species.
                     </p>
 
+                    <p>
+                        Select the measurement you want to visualize in the boxplot: 
+                        <select id="selection-boxplot-measure" class="selectionBox" name="Measure" onchange="draw2(data2)"></select>
+                    </p>
+
                     <div id="boxplot-tree-size" class="chart"></div>
 
                 </div>
@@ -115,6 +120,11 @@
                         The main objective of this project will be to understand which species are the most widespread, those that bring greater benefits and how they are arranged in the territory of the municipality of Trento.
                         To do this, we will use a set of data provided in open-source mode on GitHub (<a href="https://github.com/Jeko83/">TrentoTreeMap Project</a>), which we will analyze to extrapolate all the information necessary to best represent the current situation of the trees in the Trento area.
                         We will also aim to estimate in economic terms the benefits brought by the trees in the area, or how much man would have to spend to achieve similar goals, also depriving himself of the beauty of different tree species.
+                    </p>
+
+                    <p>
+                        Select the measurement you want to visualize in the scatterplot: 
+                        <select id="selection-scatterplot-measure" class="selectionBox" name="Measure" onchange="draw3(data3)"></select>
                     </p>
 
                     <div id="scatterplot" class="chart"></div>
@@ -141,6 +151,11 @@
                         We will also aim to estimate in economic terms the benefits brought by the trees in the area, or how much man would have to spend to achieve similar goals, also depriving himself of the beauty of different tree species.
                     </p>
 
+                    <p>
+                        Select the measurement you want to visualize in the small multiple scatterplot: 
+                        <select id="selection-small-multiple-scatterplot-measure" class="selectionBox" name="Measure" onchange="draw4(data4)"></select>
+                    </p>
+
                     <div id="small-multiple-scatterplot" class="chart"></div>
 
                 </div>
@@ -165,10 +180,10 @@
                         We will also aim to estimate in economic terms the benefits brought by the trees in the area, or how much man would have to spend to achieve similar goals, also depriving himself of the beauty of different tree species.
                     </p>
                     
-                    <!-- <p>
-                        Select the circoscrizione you want to visualize in the wafflechart: 
-                        <select id="selection-waffle" name="Circoscrizione" onchange="draw()"></select>
-                    </p> -->
+                    <p>
+                        Select the measurement you want to visualize in the bubblechart: 
+                        <select id="selection-bubblechart-measure" class="selectionBox" name="Measure" onchange="draw5(data5)"></select>
+                    </p>
                     
                     <div id="bubblechart-canopysize" class="chart"></div>
                 
@@ -184,10 +199,10 @@
 
         <!-- Put here the js for the chart -->
         <script src="js/assign2-plot1.js"></script>
-        <!-- <script src="js/assign2-plot2.js"></script> -->
+        <script src="js/assign2-plot2.js"></script>
         <script src="js/assign2-plot3.js"></script>
-        <!-- <script src="js/assign2-plot4.js"></script>
-        <script src="js/assign2-plot5.js"></script> -->
+        <script src="js/assign2-plot4.js"></script>
+        <script src="js/assign2-plot5.js"></script> 
 
 
 
