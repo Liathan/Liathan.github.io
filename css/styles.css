@@ -274,6 +274,10 @@ div.img-description p {
     font-style: italic;
 }
 
+.font-bold {
+    font-style: bold;
+}
+
 .padding-header {
     padding-left: 20px;
     padding-right: 20px;
