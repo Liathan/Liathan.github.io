@@ -18,11 +18,13 @@
     
     <body>
     
+        <!-- HEADER -->
         <header class="padding-header">
             <h1>Ecobenefit of Trento's trees</h1>
             <h3>Ornitorinco Group - Data Visualization: <br> Caprile, Marchi, Marinelli, Medone, Piazza</h3>
         </header>
 
+        <!-- NAVIGATION MENU -->
         <div id="myTopnav" class="topnav stickyNav">
             <div class="content">
                 <a href="index.html">Home</a>
@@ -37,21 +39,23 @@
             </div>
         </div>
         
+        <!-- MAIN CONTENT -->
         <div id="main-content" class="content">
+
+            <!-- ASSIGNMENT 3 -->
             <div id="assignment-3" class="section">
-                <!-- This is the text for assignment-2 -->
+
                 <h2>Assignment 3: <span>Maps</span></h2>
-                            
+                          
+                <!-- FIRST PLOT: CHOROPLETH MAP - TREE ABUNDANCE -->
                 <div class="subsection">
-
-                    <h3>choropleth Map - tree abundance</h3>
-
+                    <h3>Choropleth map - tree abundance</h3>
+                    <!--
                     <p>
-                     With the histogram the user can visualize the distribution of a certain measurement type of the trees in the whole dataset.
-                     The user can also choose the range of compression of the bins to consider for the visualization of the histogram.
-                     The general behaviour of the distributions seems to follow an asymmetrical and right skewed shape. 
+                        With the histogram the user can visualize the distribution of a certain measurement type of the trees in the whole dataset.
+                        The user can also choose the range of compression of the bins to consider for the visualization of the histogram.
+                        The general behaviour of the distributions seems to follow an asymmetrical and right skewed shape. 
                     </p>
-
                     <p>
                         Select the measurement you want to visualize in the histogram: 
                         <select id="selection-histogram-measure" class="selectionBox" name="Measure" onchange="draw1()"></select>
@@ -60,131 +64,117 @@
                         Select the number of bins you want to visualize in the histogram:
                         <select id="selection-histogram-n-bins" class="selectionBox" name="N_bins" onchange="draw1()"></select>
                     </p>
-
                     <div id="histogram-tree-size" class="chart"></div>
-                
+                    -->
                 </div>
 
                 <hr>
                 
+                <!-- SECOND PLOT CHOROPLETH MAP - DENSITY -->
                 <div class="subsection">
-
-                    <h3>choropleth Map - density</h3>
-
+                    <h3>Choropleth map - density</h3>
+                    <!-- 
                     <p>
-                    Considering the same measurements saw before we now visualize the boxplots of the top-5 species.
-                    Due to the boxplot we can display some descriptive statistical informations like the median, the maximimum/minimum and the quartiles.
-                    Potentials outliers are plotted as individual points.
-                    For example, looking at the height we can instantly see that "Platanus x hispanica" are usually higher respect to the other species, and more spread, lookind at the IQR.
+                        Considering the same measurements saw before we now visualize the boxplots of the top-5 species.
+                        Due to the boxplot we can display some descriptive statistical informations like the median, the maximimum/minimum and the quartiles.
+                        Potentials outliers are plotted as individual points.
+                        For example, looking at the height we can instantly see that "Platanus x hispanica" are usually higher respect to the other species, and more spread, lookind at the IQR.
                     </p>
-
                     <p>
                         Select the measurement you want to visualize in the boxplot: 
                         <select id="selection-boxplot-measure" class="selectionBox" name="Measure" onchange="draw2(data2)"></select>
                     </p>
-
                     <div id="boxplot-tree-size" class="chart"></div>
-
+                    -->
                 </div>
 
                 <hr>
 
+                <!-- THIRD PLOT: CHOROPLETH MAP - OXYGEN PRODUCTION -->
                 <div class="subsection">
-
-                    <h3>choropleth Map - oxygen production</h3>
-
+                    <h3>Choropleth map - oxygen production</h3>
+                    <!-- 
                     <p>
-                    For the top-6 most populated tree species we display a scatterplot having on the x-axis the size (Height,diameter,...) and on the y-axis 
-                    the kg of CO<sub>2</sub> absorbed in a year.
-
+                        For the top-6 most populated tree species we display a scatterplot having on the x-axis the size (Height,diameter,...) and on the y-axis 
+                        the kg of CO&#8322; absorbed in a year.
                     </p>
-
                     <p>
                         Select the measurement you want to visualize in the scatterplot: 
                         <select id="selection-scatterplot-measure" class="selectionBox" name="Measure" onchange="draw3(data3)"></select>
                     </p>
-
                     <div id="scatterplot" class="chart"></div>
-
+                    -->
                 </div>
 
                 <hr>
 
+                <!-- FOURTH PLOT: CHOROPLETH MAP - DOT DENSITY -->
                 <div class="subsection">
-
-                    <h3>choropleth Map - dot density</h3>
-
+                    <h3>Choropleth map - dot density</h3>
+                    <!--  
                     <p>
                         The visualization via multiple small scatterplot, as it separates the tree types, help us to see the different distrubutions of the points based on the species.
-                        For example we can now notice how "Tilia x europaea" and "Celtis australis" beahaviour on absorbing CO<sub>2</sub>, changing the tree height, is different.
+                        For example we can now notice how "Tilia x europaea" and "Celtis australis" beahaviour on absorbing CO&#8322;, changing the tree height, is different.
                     </p>
-
                     <p>
                         Select the measurement you want to visualize in the small multiple scatterplot: 
                         <select id="selection-small-multiple-scatterplot-measure" class="selectionBox" name="Measure" onchange="draw4(data4)"></select>
                     </p>
-
                     <div id="small-multiple-scatterplot" class="chart"></div>
-
+                    -->
                 </div>
 
                 <hr>
 
+                <!-- FIFTH PLOT: CHOROPLETH MAP - DOT DENSITY (TOP 10) -->
                 <div class="subsection">
-
-                    <h3>choropleth Map - dot density (top10)</h3>
-
+                    <h3>choropleth map - dot density (top 10)</h3>
+                    <!--
                     <p>
-                    With the bubble chart we analyze the same things of the third plot, but we can also 
-                    add another information, visualized through the size of the points, which in this case is the "Canopy size". 
-                    </p>
-                    
+                        With the bubble chart we analyze the same things of the third plot, but we can also 
+                        add another information, visualized through the size of the points, which in this case is the "Canopy size". 
+                    </p> 
                     <p>
                         Select the measurement you want to visualize in the bubblechart: 
                         <select id="selection-bubblechart-measure" class="selectionBox" name="Measure" onchange="draw5(data5)"></select>
                     </p>
-                    
                     <div id="bubblechart-canopysize" class="chart"></div>
-                
+                    -->
                 </div>
 
                 <hr>
 
+                <!-- EXTRA PLOT: CARTOGRAM -->
                 <div class="subsection">
-
-                    <h3>Cartogram</h3>
-
+                    <h3>(EXTRA) Cartogram</h3>
+                    <!--
                     <p>
-                    With the bubble chart we analyze the same things of the third plot, but we can also 
-                    add another information, visualized through the size of the points, which in this case is the "Canopy size". 
+                        With the bubble chart we analyze the same things of the third plot, but we can also 
+                        add another information, visualized through the size of the points, which in this case is the "Canopy size". 
                     </p>
-                    
                     <p>
                         Select the measurement you want to visualize in the bubblechart: 
                         <select id="selection-bubblechart-measure" class="selectionBox" name="Measure" onchange="draw5(data5)"></select>
                     </p>
-                    
                     <div id="bubblechart-canopysize" class="chart"></div>
-                
+                    -->
                 </div>
 
             </div> 
 
-        </div>
+        </div> <!-- END OF MAIN CONTENT -->
         
+        <!-- FOOTER -->
         <footer>
             <div class="text-center font-italic">&copy; Copyright Ornitorinco 2022</div>
         </footer>
 
         <!-- Put here the js for the chart -->
-        <script src="js/assign2-plot1.js"></script>
-        <script src="js/assign2-plot2.js"></script>
-        <script src="js/assign2-plot3.js"></script>
-        <script src="js/assign2-plot4.js"></script>
-        <script src="js/assign2-plot5.js"></script> 
-
-
-
+        <!-- <script src="js/assign3-plot1.js"></script> -->
+        <!-- <script src="js/assign3-plot2.js"></script> -->
+        <!-- <script src="js/assign3-plot3.js"></script> -->
+        <!-- <script src="js/assign3-plot4.js"></script> -->
+        <!-- <script src="js/assign3-plot5.js"></script> -->
 
     </body>
 </html>

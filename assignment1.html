@@ -18,11 +18,13 @@
     
     <body>
     
+        <!-- HEADER -->
         <header class="padding-header">
             <h1>Ecobenefit of Trento's trees</h1>
             <h3>Ornitorinco Group - Data Visualization: <br> Caprile, Marchi, Marinelli, Medone, Piazza</h3>
         </header>
 
+        <!-- NAVIGATION MENU -->
         <div id="myTopnav" class="topnav stickyNav">
             <div class="content">
                 <a href="index.html">Home</a>
@@ -37,96 +39,96 @@
             </div>
         </div>
         
+        <!-- MAIN CONTENT -->
         <div id="main-content" class="content">
+            
+            <!-- ASSIGNMENT 1 -->
             <div id="assignment-1" class="section">
-                <!-- This is the text for assignment 1 -->
+
                 <h2>Assignment 1: <span>Comparing categories</span></h2>
-                            
+                  
+                <!-- FIRST PLOT: BARCHART -->
                 <div class="subsection">
-
-                    <h3>BarChart of abundance of each tree species (Top 15)</h3>
-
+                    <h3>Barchart of abundance of each tree species (top 15)</h3>
                     <p>
-                        Thanks to the barchart we can visualize the quantity of trees by species.
-                        Since there are 224 tree species, it is reasonable to view only the species of the 15 most numerous trees.
-                        Moving the mouse on the bar we can view the exact count and the average canopy size.
+                        We can visualize the quantity of trees by species thanks to the barchart.
+                        Since there are 224 tree species, it is reasonable to view only the 15 most numerous species.
+                        Moving the mouse over the single bars, we can visualize the exact count and the average canopy size of each species.
                     </p>
-                
-
                     <div id="barchart-abundance" class="chart"></div>
-                
                 </div>
 
                 <hr>
                 
+                <!-- SECOND PLOT: STACKED BARCHART -->
                 <div class="subsection">
-
-                    <h3>Stacked Barchart</h3>
-
+                    <h3>Stacked barchart of abundance of tree species in each <span class="font-italic">circoscrizione</span></h3>
                     <p>
-                        Now let's analyze the amount of trees taking into consideration the neighborhood in which it is located. The trees that did not belong to the top 5 were grouped into "others".
-                        It's interesting to note that in the neighborhood with the most trees, the most numerous tree species
-                         is not "Celtis australis", even if it is the most numerous species among all the neighborhoods. 
+                        Now, let's analyze the amount of trees, taking into consideration the neighborhood in which they are located.
+                        The trees that did not belong to the top 5 species were grouped into the <span class="font-italic font-bold">Others</span> category.
+                        It's interesting to note that in the most numerous neighborhood, the most numerous tree species is not
+                        <span class="font-italic">Celtis australis</span>, even if it is the most numerous species among all the neighborhoods.
+                        As we can expect from the nature of the <span class="font-italic">Others</span> class, it is the most numerous in each
+                        <span class="font-italic">circoscrizione</span>.
+                        Moving the mouse over a specific portion of a bar, we can visualize the exact amount of trees for the selected species in a district.
                     </p>
-
                     <div id="stacked-barchart" class="chart"></div>
-
                 </div>
 
                 <hr>
 
+                <!-- THIRD PLOT: SMALL MULTIPLE STACKED BARCHART -->
                 <div class="subsection">
-
-                    <h3>Small Multiple Stacked Barchart</h3>
-
+                    <h3>Small multiple stacked barchart of abundance of tree species in each <span class="font-italic">circoscrizione</span></h3>
                     <p>
-                        We always analyze the number of trees in the various neighborhoods.
-                        The visualization via multiple small stacked barchart, as it 
-                        separates the tree types, help us to see in each district the amount of tree species.
+                        We always analyze the number of trees in the various neighborhoods. The visualization via the small multiple
+                        stacked barchart, as it separates the tree types, help us to compare the amounts of a specific tree species with
+                        respect to the different districts they belong to. 
+                        Moving the mouse over the single bars, we can visualize the exact count of each species in a district.
                     </p>
-
                     <div id="small-multiple-stacked-barchart" class="chart"></div>
-
                 </div>
 
                 <hr>
 
+                <!-- FOURTH PLOT: PERCENTAGE STACKED BARCHART -->
                 <div class="subsection">
-
-                    <h3>Stacked Barchart Percentage</h3>
-
+                    <h3>Percentage stacked barchart of tree species in each <span class="font-italic">circoscrizione</span></h3>
                     <p>
-                    Similarly to the second graph, we analyze the abundance of trees in each neighborhood,
-                     but displaying them in percentage terms.
+                        Similarly to the second graph (stacked barchart), we analyze the abundance of the tree species in each neighborhood,
+                        but displaying them in percentage terms. In this way, it could be easier to understand the distribution of the species
+                        in each <span class="font-italic">circoscrizione</span> respect to the graph before. For example we can look for the 
+                        <span class="font-bold">POVO</span> <span class="font-italic">circoscrizione</span>: in the stacked barchart, some
+                        tree species are not visible because they are to little in the bar (due to their small amount); instead, they could be
+                        appreciable in the percentage stacked barchart, thanks to the visualization using percentages.
+                        Moving the mouse over a specific portion of a bar, we can visualize the percentage of a tree species in a district.
                     </p>
-
                     <div id="stacked-barchart-percentage" class="chart"></div>
-
                 </div>
 
                 <hr>
 
+                <!-- FIFTH PLOT: WAFFLECHART -->
                 <div class="subsection">
-
-                    <h3>WaffleChart (for example)</h3>
+                    <h3>Wafflechart of the percentage of tree species in each <span class="font-italic">circoscrizione</span></h3>
                     <p>
-                    Always considering the top 5 trees we now create a wafflechart for each neighborhood that can be chosen via the drop-down menu.
-                    Each piece corresponds to approximately one percentage point.
+                        Always considering the top 5 tree species plus the <span class="font-italic">Others</span> class, now we create a wafflechart
+                        for each neighborhood that can be chosen via the drop-down menu. Each piece corresponds to approximately one percentage point.
+                        Moving the mouse over the single cell of the wafflechart, we can visualize the exact percentage of each species, highlighting
+                        all the other cells of the same tree species.
                     </p>
-                    
                     <p>
-                        Select the circoscrizione you want to visualize in the wafflechart: 
+                        Select the <span class="font-italic">circoscrizione</span> you want to visualize in the wafflechart: 
                         <select id="selection-waffle" class="selectionBox" name="Circoscrizione" onchange="draw()"></select>
                     </p>
-                    
                     <div id="waffle-chart" class="chart"></div>
-                
                 </div>
 
             </div> 
 
-        </div>
+        </div> <!-- END OF MAIN CONTENT -->
         
+        <!-- FOOTER -->
         <footer>
             <div class="text-center font-italic">&copy; Copyright Ornitorinco 2022</div>
         </footer>
@@ -137,9 +139,6 @@
         <script src="js/assign1-plot3.js"></script>
         <script src="js/assign1-plot4.js"></script>
         <script src="js/assign1-plot5.js"></script>
-
-
-
 
     </body>
 </html>
