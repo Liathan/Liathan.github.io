@@ -35,8 +35,8 @@ var measureHeading_2 = '';
 var subgroups_2 = [];
 
 // Y axis
-var y = [];
-var y_label = ["Height (m)", "Diameter (cm)", "Canopy size (m\u00B2)", "Leaf area (m\u00B2)"];
+var y_2 = [];
+var y_label_2 = ["Height (m)", "Diameter (cm)", "Canopy size (m\u00B2)", "Leaf area (m\u00B2)"];
 
 // Data
 var data2 = [];
@@ -65,6 +65,18 @@ function draw2() {
 
     // Selected measure
     measureHeading_2 = selectItem_boxplot_measure.value;
+
+    // Create a tooltip
+    const tooltip = d3.select(id_ref_2)
+        .append("div")
+        .attr("class", "tooltip")
+        .style("font-size", "14px")
+        .style("background-color", "white")
+        .style("border", "solid")
+        .style("border-width", "1px")
+        .style("border-radius", "5px")
+        .style("padding", "10px")
+        .style("opacity", 0);
 
     // max data assumed for the selected measure
     max_data = Math.max(...Array.from(d3.map(data, d => d[measureHeading_2])))
@@ -109,9 +121,9 @@ function draw2() {
     x_label = [...new Set(d3.map(data, d => d.Species))];
 
     // Color respect to the subgroups (tree species)
-    var color = d3.scaleOrdinal()
-        .domain(x_label)
-        .range(["#ff595e", "#ffca3a", '#8ac926', '#1982c4', '#6a4c93']);
+    // var color = d3.scaleOrdinal()
+    //     .domain(x_label)
+    //     .range(["#ff595e", "#ffca3a", '#8ac926', '#1982c4', '#6a4c93']);
     
     // Show the X scale
     var x = d3.scaleBand()
@@ -132,12 +144,12 @@ function draw2() {
     y_max = (Math.ceil(max_data+(5/100*max_data))/5)*5
     
     // Show the Y scale
-    var y = d3.scaleLinear()
+    y_2 = d3.scaleLinear()
         .domain([0, y_max])
         .range([height_2, 0])
     svg_2.append("g")
         .attr("class", "plot2-axisY")
-        .call(d3.axisLeft(y))
+        .call(d3.axisLeft(y_2))
         .selectAll("text")
             .style("text-anchor", "end")
             .style("font-family", "Fira Sans, sans-serif")
@@ -151,8 +163,8 @@ function draw2() {
             .attr("class", "iqr-line")
             .attr("x1", function(d){return(x(d.key))})
             .attr("x2", function(d){return(x(d.key))})
-            .attr("y1", function(d){return(y(d.min))})
-            .attr("y2", function(d){return(y(d.min))})
+            .attr("y1", function(d){return(y_2(d.min))})
+            .attr("y2", function(d){return(y_2(d.min))})
             .attr("stroke", "black")
             .style("width", 40);
 
@@ -165,7 +177,7 @@ function draw2() {
         .append("rect")
             .attr("class", "boxplot-rect")
             .attr("x", function(d){return(x(d.key)-boxWidth/2)})
-            .attr("y", function(d){return(y(d.q1))})
+            .attr("y", function(d){return(y_2(d.q1))})
             .attr("height", function(d){return(0)})
             .attr("width", boxWidth)
             .attr("stroke", "black")
@@ -180,8 +192,8 @@ function draw2() {
             .attr("class", "median-line")
             .attr("x1", function(d){return(x(d.key)-boxWidth/2) })
             .attr("x2", function(d){return(x(d.key)-boxWidth/2) })
-            .attr("y1", function(d){return(y(d.median))})
-            .attr("y2", function(d){return(y(d.median))})
+            .attr("y1", function(d){return(y_2(d.median))})
+            .attr("y2", function(d){return(y_2(d.median))})
             .attr("stroke", "black")
             .style("width", 80);
 
@@ -229,19 +241,19 @@ function draw2() {
         .style("class", "h2")
         .style("font-size", "16px")
         .attr("transform", "rotate(-90)")
-        .text(y_label[subgroups_2.indexOf(measureHeading_2)]);
+        .text(y_label_2[subgroups_2.indexOf(measureHeading_2)]);
 
     // Animations
     svg_2.selectAll(".iqr-line")
         .transition("loading")
         .duration(800)
-        .attr("y2", function(d){return(y(d.max))});
+        .attr("y2", function(d){return(y_2(d.max))});
 
     svg_2.selectAll(".boxplot-rect")
         .transition("loading")
         .duration(800)
-        .attr("y", function(d){return(y(d.q3))})
-        .attr("height", function(d){return(y(d.q1)-y(d.q3))})
+        .attr("y", function(d){return(y_2(d.q3))})
+        .attr("height", function(d){return(y_2(d.q1)-y_2(d.q3))})
         .delay(700);
 
     svg_2.selectAll(".median-line")
@@ -253,7 +265,7 @@ function draw2() {
     svg_2.selectAll(".data-point")
         .transition("loading")
         .duration(800)
-        .attr("cy", function(d){return(y(d[measureHeading_2]))})
+        .attr("cy", function(d){return(y_2(d[measureHeading_2]))})
         .attr("r", 4)
         .delay(2300);
 

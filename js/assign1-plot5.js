@@ -51,7 +51,7 @@ selectItem = document.getElementById("selection-waffle")
 var circoscrizioneHeading = '';
 
 // Create a tooltip
-const tooltip = d3.select(id_ref_5)
+const tooltip_5 = d3.select(id_ref_5)
 .append("div")
 .attr("class", "tooltip")
 .style("font-size", "14px")
@@ -159,7 +159,7 @@ d3.csv('../data/assign1-plot5.csv').then(function(data, i) {
     .attr("class", d => "class"+subgroups.indexOf(d))
     .attr("opacity", 0.5)
 
-    // Animation and filling of tooltip
+    // Animation and filling of tooltip_5
     svg_5.join("g")
     .selectAll("rect")
     .on("mouseover", function (event, d) {
@@ -170,14 +170,14 @@ d3.csv('../data/assign1-plot5.csv').then(function(data, i) {
         .duration(300)
         .style("opacity", 1.0);
 
-        tooltip.transition("appear-box")
+        tooltip_5.transition("appear-box")
         .duration(300)
         .style("opacity", .9)
         .delay(1);
 
-        // tooltip.html("<span class='tooltiptext'>" + "<b>Species: " + d + 
+        // tooltip_5.html("<span class='tooltiptext'>" + "<b>Species: " + d + 
         //     "</b><br>" + "Percentage: "+ count(d) + "%</span>")
-        tooltip.html("<span class='tooltiptext'>" + "<b>Species: " + d + 
+        tooltip_5.html("<span class='tooltiptext'>" + "<b>Species: " + d + 
             "</b><br>" + "Percentage: "+ parseFloat(tooltipData[circoscrizioneHeading][subgroups.indexOf(d)]).toFixed(2) + "%</span>")
         .style("left", (event.pageX) + "px")
         .style("top", (event.pageY - 28) + "px");
@@ -190,7 +190,7 @@ d3.csv('../data/assign1-plot5.csv').then(function(data, i) {
         .duration(300)
         .style("opacity", 0.5);  
 
-        tooltip.transition("disappear-box")
+        tooltip_5.transition("disappear-box")
         .duration(300)
         .style("opacity", 0);
         });
@@ -226,7 +226,7 @@ function draw()
     svg_5.select(".waffle-title")
     .text(`Top-5 tree species + \"Others\" in Circoscrizione: ${circoscrizioneHeading}`)
 
-    // Update the animation and filling of tooltip
+    // Update the animation and filling of tooltip_5
     svg_5.join("g")
     .selectAll("rect")
     // MouseOver
@@ -238,14 +238,14 @@ function draw()
         .duration(300)
         .style("opacity", 1.0);
 
-        tooltip.transition("appear-box")
+        tooltip_5.transition("appear-box")
         .duration(300)
         .style("opacity", .9)
         .delay(1);
 
-        // tooltip.html("<span class='tooltiptext'>" + "<b>Species: " + d + 
+        // tooltip_5.html("<span class='tooltiptext'>" + "<b>Species: " + d + 
         //     "</b><br>" + "Percentage: "+ count(d) + "%</span>")
-        tooltip.html("<span class='tooltiptext'>" + "<b>Species: " + d + 
+        tooltip_5.html("<span class='tooltiptext'>" + "<b>Species: " + d + 
             "</b><br>" + "Percentage: "+ parseFloat(tooltipData[circoscrizioneHeading][subgroups.indexOf(d)]).toFixed(2) + "%</span>")
         .style("left", (event.pageX) + "px")
         .style("top", (event.pageY - 28) + "px");
@@ -258,7 +258,7 @@ function draw()
         .duration(300)
         .style("opacity", 0.5);  
 
-        tooltip.transition("disappear-box")
+        tooltip_5.transition("disappear-box")
         .duration(300)
         .style("opacity", 0);
     });            
