@@ -28,7 +28,7 @@ const svg_2 = d3.select(id_ref_2)
             .attr("transform", `translate(${margin_2.left}, ${margin_2.top})`);
 
 // Parse the data
-d3.csv("../data/assign1-plot2.csv").then(function(data) {
+d3.csv("../../data/assign1/assign1-plot2.csv").then(function(data) {
        
     // Extract subgroups
     const subgroups = data.columns.slice(1);

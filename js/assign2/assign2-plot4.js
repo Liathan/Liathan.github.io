@@ -230,7 +230,7 @@ function draw4() {
 };
 
 // Parse the data
-d3.csv("../data/assign2-plot4.csv").then(function(data) {
+d3.csv("../../data/assign2/assign2-plot4.csv").then(function(data) {
 
     data4 = data;
 

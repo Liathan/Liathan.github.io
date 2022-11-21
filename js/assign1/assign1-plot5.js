@@ -63,7 +63,7 @@ const tooltip_5 = d3.select(id_ref_5)
 .style("opacity", 0);
 
 // Parse the data
-d3.csv('../data/assign1-plot5.csv').then(function(data, i) {
+d3.csv('../../data/assign1/assign1-plot5.csv').then(function(data, i) {
     
     // Extract subgroups (tree species)
     subgroups = data.columns.slice(1);

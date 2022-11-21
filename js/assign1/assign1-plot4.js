@@ -27,7 +27,7 @@ const svg_4 = d3.select(id_ref_4)
 
 cose=[];
 // Parse the data
-d3.csv("../data/assign1-plot4.csv").then(function(data) {
+d3.csv("../../data/assign1/assign1-plot4.csv").then(function(data) {
        
     // Extract subgroups
     const subgroups = data.columns.slice(1);
