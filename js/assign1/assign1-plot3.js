@@ -19,7 +19,7 @@ const svg_3 = d3.select(id_ref_3)
             .attr("transform", `translate(${margin_3.left}, ${margin_3.top})`);
 
 // Parse the Data
-d3.csv("../data/assign1-plot3.csv").then(function(data) {
+d3.csv("../../data/assign1/assign1-plot3.csv").then(function(data) {
 
     // Extract the highest "num" values
     const topNum = data.slice(0)//.reverse();

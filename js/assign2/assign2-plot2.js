@@ -310,7 +310,7 @@ function draw2() {
 }
 
 // Read the data and compute summary statistics for each species
-d3.csv("../data/assign2-plot2.csv").then(function(data) {
+d3.csv("../../data/assign2/assign2-plot2.csv").then(function(data) {
 
     data2 = data;
 

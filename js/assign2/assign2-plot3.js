@@ -296,7 +296,7 @@ function draw3() {
 };
 
 // Read the data
-d3.csv("../data/assign2-plot3.csv").then(function(data) {
+d3.csv("../../data/assign2/assign2-plot3.csv").then(function(data) {
 
     // Save data in a shared variable
     data3 = data;

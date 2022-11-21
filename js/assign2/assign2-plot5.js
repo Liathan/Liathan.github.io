@@ -294,7 +294,7 @@ function draw5() {
 };
 
 // Parse the Data
-d3.csv('../data/assign2-plot5.csv').then(function(data) {
+d3.csv('../../data/assign2/assign2-plot5.csv').then(function(data) {
 
     // Save data in a shared variable
     data5 = data;
