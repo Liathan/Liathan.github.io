@@ -201,7 +201,7 @@ function draw5() {
     })
 
     // MouseOut
-    .on("mouseout", function (event, d) {
+    .on("mouseleave", function (event, d) {
 
         // Select all circles
         svg_5.selectAll("circle")
@@ -270,7 +270,7 @@ function draw5() {
             .attr("fill-opacity", 0.05);
 
         // Select all the circle with this specific class (tree species)
-        idx_d = tree_species.indexOf(d);
+        idx_d = tree_species_5.indexOf(d);
         svg_5.selectAll(`.class${idx_d}`)
             .transition("selected")
             .duration(300)
@@ -279,7 +279,7 @@ function draw5() {
     })
 
     // MouseOut
-    .on("mouseout", function (event, d) {
+    .on("mouseleave", function (event, d) {
 
         // Select all circles
         svg_5.selectAll("circle")
@@ -289,7 +289,7 @@ function draw5() {
             .attr("fill-opacity", 0.5);
 
         // Select all the circle with this specific class (tree species)
-        idx_d = tree_species.indexOf(d);
+        idx_d = tree_species_5.indexOf(d);
         svg_5.selectAll(`.class${idx_d}`)
         .transition("unselected")
         .duration(300)
