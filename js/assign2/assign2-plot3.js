@@ -202,7 +202,7 @@ function draw3() {
     })
 
     // MouseOut
-    .on("mouseout", function (event, d) {
+    .on("mouseleave", function (event, d) {
 
         // Select all circles
         svg_3.selectAll("circle")
@@ -275,7 +275,7 @@ function draw3() {
     })
 
     // MouseOut
-    .on("mouseout", function (event, d) {
+    .on("mouseleave", function (event, d) {
 
         // Select all circles
         svg_3.selectAll("circle")
