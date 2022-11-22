@@ -39,7 +39,7 @@ var selectItem_scatterplot_measure = document.getElementById("selection-scatterp
 var measureHeading_3 = '';
 
 // The possible tree species
-var tree_species = [];
+var tree_species_3 = [];
 
 // The possible measures (Height, CanopySize, Diameter, Leaf Area)
 var subgroups_3 = [];
@@ -130,7 +130,7 @@ function draw3() {
     .selectAll("dot")
     .data(data)
     .join("circle")
-        .attr("class", d => `class${tree_species.indexOf(d.Species)}`)
+        .attr("class", d => `class${tree_species_3.indexOf(d.Species)}`)
         .attr("cx", function (d) { return x(d[measureHeading_3]); } )
         .attr("cy", function (d) { return y_3(d.CO2); } )
         .attr("r", 0)
@@ -180,7 +180,7 @@ function draw3() {
             .attr("fill-opacity", 0.05);
 
         // Select all the circle with this specific class (tree species)
-        idx_d = tree_species.indexOf(d.Species);
+        idx_d = tree_species_3.indexOf(d.Species);
         svg_3.selectAll(`.class${idx_d}`)
             .transition("selected")
             .duration(300)
@@ -212,7 +212,7 @@ function draw3() {
             .attr("fill-opacity", 0.5);
 
         // Select all the circle with this specific class (tree species)
-        idx_d = tree_species.indexOf(d.Species);
+        idx_d = tree_species_3.indexOf(d.Species);
         svg_3.selectAll(`.class${idx_d}`)
         .transition("unselected")
         .duration(300)
@@ -227,14 +227,14 @@ function draw3() {
     // legend_3
     var legend_3 = svg_3.join("g")
     .selectAll(".legend_3")
-    .data(tree_species);
+    .data(tree_species_3);
     
     legend_3.join("rect")
     .attr("x", (width_3 - margin_3.right - boxGap))
     .attr("y", function(d,i){ return (i * boxSize) + 1/5*(boxSize*howManyAcross); })
     .attr("width", boxSize - 3)
     .attr("height", boxSize - 3)
-    .attr("class", d => "class"+tree_species.indexOf(d))
+    .attr("class", d => "class"+tree_species_3.indexOf(d))
     .attr("fill", function(d){ return color(d); })
     .attr("fill-opacity", 0.5);
     
@@ -249,7 +249,7 @@ function draw3() {
     .style("text-anchor", "end")
     .style("font-size", "14px")
     .text((d) => d)
-    .attr("class", d => "class"+tree_species.indexOf(d))
+    .attr("class", d => "class"+tree_species_3.indexOf(d))
     .attr("fill-opacity", 0.5)
 
     // Animation with legend
@@ -266,7 +266,7 @@ function draw3() {
             .attr("fill-opacity", 0.05);
 
         // Select all the circle with this specific class (tree species)
-        idx_d = tree_species.indexOf(d);
+        idx_d = tree_species_3.indexOf(d);
         svg_3.selectAll(`.class${idx_d}`)
             .transition("selected")
             .duration(300)
@@ -285,7 +285,7 @@ function draw3() {
             .attr("fill-opacity", 0.5);
 
         // Select all the circle with this specific class (tree species)
-        idx_d = tree_species.indexOf(d);
+        idx_d = tree_species_3.indexOf(d);
         svg_3.selectAll(`.class${idx_d}`)
         .transition("unselected")
         .duration(300)
@@ -302,7 +302,7 @@ d3.csv("../../data/assign2/assign2-plot3.csv").then(function(data) {
     data3 = data;
     
     // Recall the top-6 tree names, without "Others"
-    tree_species = color.domain().slice(0,6);
+    tree_species_3 = color.domain().slice(0,6);
 
     // Extract subgroups (possible measures)
     subgroups_3 = data.columns.slice(1,5);
