@@ -1,6 +1,6 @@
 // -------------------------------------------------------------------------
-// Assignment 3: Choropleth map abundance (first plot)
-// We want to show the abundance of trees in each neighborhood 
+// Assignment 3: Choropleth map density (second plot)
+// We want to show the density of trees in each neighborhood 
 // ("Circoscrizione") of Trento's territory
 //--------------------------------------------------------------------------
 
@@ -45,12 +45,12 @@ var projection = d3.geoIdentity().reflectY(true)
 const data_2_Density = new Map();
 const data_2_Count = new Map(); 
 const colorScale_2 = d3.scaleThreshold()
-    .domain([0.0001, 0.0004, 0.001, 0.005, 0.01, 0.02])
+    .domain([0.0001, 0.0005, 0.001, 0.005, 0.01, 0.02])
     .range(d3.schemeGreens[7]);
 
 // Add color legend
 shapeWidthLegend_2 = 100;
-const labels_2 = ['0-0.0001', '0.0001-0.0004', '0.0004-0.001', '0.001-0.005', '0.005- 0.01', ' 0.01- 0.02', '> 0.02'];
+const labels_2 = ['0-0.0001', '0.0001-0.0005', '0.0005-0.001', '0.001-0.005', '0.005- 0.01', ' 0.01- 0.02', '> 0.02'];
 const legend_2_size = shapeWidthLegend_2*labels_2.length;
 
 const legend_2 = d3.legendColor()
@@ -147,10 +147,9 @@ Promise.all([
             
             // Tooltip content
             tooltip_2.html("<span class='tooltiptext'>" + "<b>Name: " + d.properties.nome +
-                "</b><br>" + "Density: " + data_2_Density.get(d.properties.nome) +
-                "<br>"+ "Area (Km\u00B2): " + (d.properties.area/Math.pow(10, 6)).toFixed(2) +
-                "<br> Tree Abundance: "+ data_2_Count.get(d.properties.nome)                
-                + "</span>")
+                "</b><br>" + "Density: " + data_2_Density.get(d.properties.nome).toFixed(5) +
+                "<br>" + "Tree Abundance: " + data_2_Count.get(d.properties.nome) +               
+                "<br>" + "Area (Km\u00B2): " + (d.properties.area/Math.pow(10, 6)).toFixed(2) + "</span>")
             .style("left", (event.pageX) + "px")
             .style("top", (event.pageY - 28) + "px");
         })
