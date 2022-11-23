@@ -201,7 +201,7 @@ function draw5() {
     })
 
     // MouseOut
-    .on("mouseout", function (event, d) {
+    .on("mouseleave", function (event, d) {
 
         // Select all circles
         svg_5.selectAll("circle")
@@ -223,17 +223,22 @@ function draw5() {
             .style("opacity", 0);
     });
 
+    // For legend
+    const boxSize = 40; // Size of each box
+    const boxGap = 50; // Space between each box
+    const howManyAcross = 10; // 10 boxes per line 
+
     // legend_5
-    var legend_5 = svg_5.join("g")
+    const legend_5 = svg_5.join("g")
     .selectAll(".legend_5")
-    .data(tree_species);
+    .data(tree_species_5);
     
     legend_5.join("rect")
     .attr("x", (width_5 - margin_5.right - boxGap))
     .attr("y", function(d,i){ return (i * boxSize) + 1/5*(boxSize*howManyAcross); })
     .attr("width", boxSize - 3)
     .attr("height", boxSize - 3)
-    .attr("class", d => "class"+tree_species.indexOf(d))
+    .attr("class", d => "class"+tree_species_5.indexOf(d))
     .attr("fill", function(d){ return color(d); })
     .attr("fill-opacity", 0.5);
     
@@ -248,8 +253,8 @@ function draw5() {
     .style("text-anchor", "end")
     .style("font-size", "14px")
     .text((d) => d)
-    .attr("class", d => "class"+tree_species.indexOf(d))
-    .attr("fill-opacity", 0.5)
+    .attr("class", d => "class"+tree_species_5.indexOf(d))
+    .attr("fill-opacity", 0.5);
 
     // Animation with legend
     svg_5.selectAll("rect")
@@ -265,7 +270,7 @@ function draw5() {
             .attr("fill-opacity", 0.05);
 
         // Select all the circle with this specific class (tree species)
-        idx_d = tree_species.indexOf(d);
+        idx_d = tree_species_5.indexOf(d);
         svg_5.selectAll(`.class${idx_d}`)
             .transition("selected")
             .duration(300)
@@ -274,7 +279,7 @@ function draw5() {
     })
 
     // MouseOut
-    .on("mouseout", function (event, d) {
+    .on("mouseleave", function (event, d) {
 
         // Select all circles
         svg_5.selectAll("circle")
@@ -284,7 +289,7 @@ function draw5() {
             .attr("fill-opacity", 0.5);
 
         // Select all the circle with this specific class (tree species)
-        idx_d = tree_species.indexOf(d);
+        idx_d = tree_species_5.indexOf(d);
         svg_5.selectAll(`.class${idx_d}`)
         .transition("unselected")
         .duration(300)

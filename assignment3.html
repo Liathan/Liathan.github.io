@@ -13,6 +13,7 @@
         <link rel="stylesheet" href="css/styles.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Fira+Sans">
         <script src="https://d3js.org/d3.v7.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.13.0/d3-legend.js"></script>
         <script src="js/init.js"></script>
     </head>
     
@@ -84,10 +85,10 @@
                         Select the measurement you want to visualize in the boxplot: 
                         <select id="selection-boxplot-measure" class="selectionBox" name="Measure" onchange="draw2(data2)"></select>
                     </p>
-                    <div id="boxplot-tree-size" class="chart"></div>
+                    
                     -->
                 </div>
-
+                <div id="choropleth-map-density" class="chart"></div>
                 <hr>
 
                 <!-- THIRD PLOT: CHOROPLETH MAP - OXYGEN PRODUCTION -->
@@ -171,7 +172,7 @@
 
         <!-- Put here the js for the chart -->
         <script src="js/assign3/assign3-plot1.js"></script>
-        <!-- <script src="js/assign3/assign3-plot2.js"></script> -->
+        <script src="js/assign3/assign3-plot2.js"></script> 
         <!-- <script src="js/assign3/assign3-plot3.js"></script> -->
         <!-- <script src="js/assign3/assign3-plot4.js"></script> -->
         <!-- <script src="js/assign3/assign3-plot5.js"></script> -->
