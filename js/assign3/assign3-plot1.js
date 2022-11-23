@@ -146,7 +146,7 @@ Promise.all([
             // Tooltip content
             tooltip_1.html("<span class='tooltiptext'>" + "<b>Name: " + d.properties.nome +
                 "</b><br>" + "Tree Abundance: " + data_1.get(d.properties.nome) +
-                "<br>" + "Area (m\u00B2): " + (d.properties.area/Math.pow(10, 6)).toFixed(2) + "</span>")
+                "<br>" + "Area (Km\u00B2): " + (d.properties.area/Math.pow(10, 6)).toFixed(2) + "</span>")
             .style("left", (event.pageX) + "px")
             .style("top", (event.pageY - 28) + "px");
         })

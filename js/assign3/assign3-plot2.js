@@ -42,7 +42,8 @@ const path2 = d3.geoPath();
 var projection = d3.geoIdentity().reflectY(true)
 
 // Data and color scale
-const data_2 = new Map();
+const data_2_Density = new Map();
+const data_2_Count = new Map(); 
 const colorScale_2 = d3.scaleThreshold()
     .domain([0.0001, 0.0004, 0.001, 0.005, 0.01, 0.02])
     .range(d3.schemeGreens[7]);
@@ -95,7 +96,8 @@ const tooltip_2 = d3.select(id_ref_2)
 Promise.all([
     d3.json("../../data/raw_data/circoscrizioni.json"),
     d3.csv("../../data/assign3/assign3-plot2.csv", function (d) {
-        data_2.set(d["Circoscrizione"], +d["density"])
+        data_2_Density.set(d["Circoscrizione"], +d["density"])
+        data_2_Count.set(d['Circoscrizione'], +d['Count'])
     })])
     .then(function (loadData) {
 
@@ -111,7 +113,7 @@ Promise.all([
             // draw each country
             .attr("d", d3.geoPath().projection(projection))
             // set the color of each country
-            .attr("fill", (d) => colorScale_2(data_2.get(d.properties.nome)))
+            .attr("fill", (d) => colorScale_2(data_2_Density.get(d.properties.nome)))
             .style("fill-opacity", "0.9")
             .attr("class", (d) => `circo${d.properties.numero_cir}`)
             .style("stroke", "white")
@@ -145,8 +147,10 @@ Promise.all([
             
             // Tooltip content
             tooltip_2.html("<span class='tooltiptext'>" + "<b>Name: " + d.properties.nome +
-                "</b><br>" + "Density: " + data_2.get(d.properties.nome) +
-                "<br>"+ "Area (m\u00B2): " + (d.properties.area/Math.pow(10, 6)).toFixed(2) + "</span>")
+                "</b><br>" + "Density: " + data_2_Density.get(d.properties.nome) +
+                "<br>"+ "Area (Km\u00B2): " + (d.properties.area/Math.pow(10, 6)).toFixed(2) +
+                "<br> Tree Abundance: "+ data_2_Count.get(d.properties.nome)                
+                + "</span>")
             .style("left", (event.pageX) + "px")
             .style("top", (event.pageY - 28) + "px");
         })
