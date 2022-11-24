@@ -51,22 +51,15 @@
             <!-- FIRST PLOT: CHOROPLETH MAP - TREE ABUNDANCE -->
             <div class="subsection">
                 <h3>Choropleth map - tree abundance</h3>
-                <!--
+              
                     <p>
-                        With the histogram the user can visualize the distribution of a certain measurement type of the trees in the whole dataset.
-                        The user can also choose the range of compression of the bins to consider for the visualization of the histogram.
-                        The general behaviour of the distributions seems to follow an asymmetrical and right skewed shape. 
+                        It is possible to visualize the entire maps of Trento city divided per neighborhoods. The total number of neighborhoods is 11. In this first choropleth map we want to display
+                        the tree abundance of each neighborhood . Thanks to a green color map (light green to dark green) we can understand in which neighborhood we have the majority of trees. 
+                        In the tooltip , there's also the area of each neighborhood. For example , the greatest amount of trees is in the neighborhood called "S.Giuseppe-S.Chiara"
                     </p>
-                    <p>
-                        Select the measurement you want to visualize in the histogram: 
-                        <select id="selection-histogram-measure" class="selectionBox" name="Measure" onchange="draw1()"></select>
-                    </p>
-                    <p>
-                        Select the number of bins you want to visualize in the histogram:
-                        <select id="selection-histogram-n-bins" class="selectionBox" name="N_bins" onchange="draw1()"></select>
-                    </p>
-                    <div id="histogram-tree-size" class="chart"></div>
-                    -->
+                   
+                    
+                    
             </div>
             <div id="choropleth-map-abundance" class="chart"></div>
             <hr>
@@ -74,19 +67,15 @@
             <!-- SECOND PLOT CHOROPLETH MAP - DENSITY -->
             <div class="subsection">
                 <h3>Choropleth map - density</h3>
-                <!-- 
+                 
                     <p>
-                        Considering the same measurements saw before we now visualize the boxplots of the top-5 species.
-                        Due to the boxplot we can display some descriptive statistical informations like the median, the maximimum/minimum and the quartiles.
-                        Potentials outliers are plotted as individual points.
-                        For example, looking at the height we can instantly see that "Platanus x hispanica" are usually higher respect to the other species, and more spread, lookind at the IQR.
+                        This plot is very similar to the one above. It takes in consideration the tree densities for each neighborhood.
+                        This type of visualization helps us to compare neighborhoods in terms of sizes thanks to "area" field in the tooltip. 
+                        We can see that in small neighborhood, in the centre of Trento,  there's a major concentration of trees.
                     </p>
-                    <p>
-                        Select the measurement you want to visualize in the boxplot: 
-                        <select id="selection-boxplot-measure" class="selectionBox" name="Measure" onchange="draw2(data2)"></select>
-                    </p>
+                   
                     
-                    -->
+                    
             </div>
             <div id="choropleth-map-density" class="chart"></div>
             <hr>
@@ -94,15 +83,14 @@
             <!-- THIRD PLOT: CHOROPLETH MAP - OXYGEN PRODUCTION -->
             <div class="subsection">
                 <h3>Choropleth map - oxygen production</h3>
-                <!-- 
+                 
                     <p>
-                        For the top-6 most populated tree species we display a scatterplot having on the x-axis the size (Height,diameter,...) and on the y-axis 
-                        the kg of CO&#8322; absorbed in a year.
+                        In this plot we want to show the trees' oxygen production for each neighborhood. But in this case we are using a different kind of color map that goes starting from 0 to max of total
+                        oxygen production values (white to dark blue). This plot is correlated to the others because neighborhoods with a high number of trees have a high value of oxygen production.
+                        But in this case the greatest producer of oxygen is "Centro storico piedicastello", even though it has a lower tree abundance than "S.Giuseeppe -S.Chiara". This happens probably becuase in the first
+                        neighborhood there are more tree suitable for the oxygen production..
                     </p>
-                    <p>
-                        Select the measurement you want to visualize in the scatterplot: 
-                        <select id="selection-scatterplot-measure" class="selectionBox" name="Measure" onchange="draw3(data3)"></select>
-
+                   
                 <div id="choropleth-map-oxygen" class="chart"></div>
                     
                 </div>
