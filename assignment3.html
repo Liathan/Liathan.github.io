@@ -1,57 +1,57 @@
 <!DOCTYPE HTML>
 <html lang="en-us">
 
-    <head>
-        <meta charset="utf-8">
-        <!-- To manage incompatibility with older version of Internet Explorer / Edge -->
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <!-- To manage the text respect to the device of the user (mobile, tablet, pc, and so on) -->
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Ecobenefit of Trento's trees</title>
-        <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="css/styles.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Fira+Sans">
-        <script src="https://d3js.org/d3.v7.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.13.0/d3-legend.js"></script>
-        <script src="js/init.js"></script>
-    </head>
-    
-    <body>
-    
-        <!-- HEADER -->
-        <header class="padding-header">
-            <h1>Ecobenefit of Trento's trees</h1>
-            <h3>Ornitorinco Group - Data Visualization: <br> Caprile, Marchi, Marinelli, Medone, Piazza</h3>
-        </header>
+<head>
+    <meta charset="utf-8">
+    <!-- To manage incompatibility with older version of Internet Explorer / Edge -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- To manage the text respect to the device of the user (mobile, tablet, pc, and so on) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ecobenefit of Trento's trees</title>
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Fira+Sans">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.13.0/d3-legend.js"></script>
+    <script src="js/init.js"></script>
+</head>
 
-        <!-- NAVIGATION MENU -->
-        <div id="myTopnav" class="topnav stickyNav">
-            <div class="content">
-                <a href="index.html">Home</a>
-                <a href="assignment1.html">Assignment 1</a>
-                <a href="assignment2.html" >Assignment 2</a>
-                <a href="#" class="active">Assignment 3</a>
-                <a href="#">Assignment 4</a>
-                <a href="#">Assignment 5</a>
-                <a href="javascript:void(0);" class="icon" onclick="toggle_icon_menu_topnav()">
-                    <i class="fa fa-bars"></i>
-                </a>
-            </div>
+<body>
+
+    <!-- HEADER -->
+    <header class="padding-header">
+        <h1>Ecobenefit of Trento's trees</h1>
+        <h3>Ornitorinco Group - Data Visualization: <br> Caprile, Marchi, Marinelli, Medone, Piazza</h3>
+    </header>
+
+    <!-- NAVIGATION MENU -->
+    <div id="myTopnav" class="topnav stickyNav">
+        <div class="content">
+            <a href="index.html">Home</a>
+            <a href="assignment1.html">Assignment 1</a>
+            <a href="assignment2.html">Assignment 2</a>
+            <a href="#" class="active">Assignment 3</a>
+            <a href="#">Assignment 4</a>
+            <a href="#">Assignment 5</a>
+            <a href="javascript:void(0);" class="icon" onclick="toggle_icon_menu_topnav()">
+                <i class="fa fa-bars"></i>
+            </a>
         </div>
-        
-        <!-- MAIN CONTENT -->
-        <div id="main-content" class="content">
+    </div>
 
-            <!-- ASSIGNMENT 3 -->
-            <div id="assignment-3" class="section">
+    <!-- MAIN CONTENT -->
+    <div id="main-content" class="content">
 
-                <h2>Assignment 3: <span>Maps</span></h2>
-                          
-                <!-- FIRST PLOT: CHOROPLETH MAP - TREE ABUNDANCE -->
-                <div class="subsection">
-                    <h3>Choropleth map - tree abundance</h3>
-                    <!--
+        <!-- ASSIGNMENT 3 -->
+        <div id="assignment-3" class="section">
+
+            <h2>Assignment 3: <span>Maps</span></h2>
+
+            <!-- FIRST PLOT: CHOROPLETH MAP - TREE ABUNDANCE -->
+            <div class="subsection">
+                <h3>Choropleth map - tree abundance</h3>
+                <!--
                     <p>
                         With the histogram the user can visualize the distribution of a certain measurement type of the trees in the whole dataset.
                         The user can also choose the range of compression of the bins to consider for the visualization of the histogram.
@@ -67,14 +67,14 @@
                     </p>
                     <div id="histogram-tree-size" class="chart"></div>
                     -->
-                </div>
-                <div id="choropleth-map-abundance" class="chart"></div>
-                <hr>
-                
-                <!-- SECOND PLOT CHOROPLETH MAP - DENSITY -->
-                <div class="subsection">
-                    <h3>Choropleth map - density</h3>
-                    <!-- 
+            </div>
+            <div id="choropleth-map-abundance" class="chart"></div>
+            <hr>
+
+            <!-- SECOND PLOT CHOROPLETH MAP - DENSITY -->
+            <div class="subsection">
+                <h3>Choropleth map - density</h3>
+                <!-- 
                     <p>
                         Considering the same measurements saw before we now visualize the boxplots of the top-5 species.
                         Due to the boxplot we can display some descriptive statistical informations like the median, the maximimum/minimum and the quartiles.
@@ -87,14 +87,14 @@
                     </p>
                     
                     -->
-                </div>
-                <div id="choropleth-map-density" class="chart"></div>
-                <hr>
+            </div>
+            <div id="choropleth-map-density" class="chart"></div>
+            <hr>
 
-                <!-- THIRD PLOT: CHOROPLETH MAP - OXYGEN PRODUCTION -->
-                <div class="subsection">
-                    <h3>Choropleth map - oxygen production</h3>
-                    <!-- 
+            <!-- THIRD PLOT: CHOROPLETH MAP - OXYGEN PRODUCTION -->
+            <div class="subsection">
+                <h3>Choropleth map - oxygen production</h3>
+                <!-- 
                     <p>
                         For the top-6 most populated tree species we display a scatterplot having on the x-axis the size (Height,diameter,...) and on the y-axis 
                         the kg of CO&#8322; absorbed in a year.
@@ -105,14 +105,14 @@
                     </p>
                     <div id="scatterplot" class="chart"></div>
                     -->
-                </div>
+            </div>
 
-                <hr>
+            <hr>
 
-                <!-- FOURTH PLOT: CHOROPLETH MAP - DOT DENSITY -->
-                <div class="subsection">
-                    <h3>Choropleth map - dot density</h3>
-                    <!--  
+            <!-- FOURTH PLOT: CHOROPLETH MAP - DOT DENSITY -->
+            <div class="subsection">
+                <h3>Choropleth map - dot density</h3>
+                <!--  
                     <p>
                         The visualization via multiple small scatterplot, as it separates the tree types, help us to see the different distrubutions of the points based on the species.
                         For example we can now notice how "Tilia x europaea" and "Celtis australis" beahaviour on absorbing CO&#8322;, changing the tree height, is different.
@@ -121,16 +121,16 @@
                         Select the measurement you want to visualize in the small multiple scatterplot: 
                         <select id="selection-small-multiple-scatterplot-measure" class="selectionBox" name="Measure" onchange="draw4(data4)"></select>
                     </p>
-                    <div id="small-multiple-scatterplot" class="chart"></div>
-                    -->
-                </div>
+                -->
+                <div id="dot-density-map" class="chart"></div>
+            </div>
 
-                <hr>
+            <hr>
 
-                <!-- FIFTH PLOT: CHOROPLETH MAP - DOT DENSITY (TOP 10) -->
-                <div class="subsection">
-                    <h3>choropleth map - dot density (top 10)</h3>
-                    <!--
+            <!-- FIFTH PLOT: CHOROPLETH MAP - DOT DENSITY (TOP 10) -->
+            <div class="subsection">
+                <h3>choropleth map - dot density (top 10)</h3>
+                <!--
                     <p>
                         With the bubble chart we analyze the same things of the third plot, but we can also 
                         add another information, visualized through the size of the points, which in this case is the "Canopy size". 
@@ -141,14 +141,14 @@
                     </p>
                     <div id="bubblechart-canopysize" class="chart"></div>
                     -->
-                </div>
+            </div>
 
-                <hr>
+            <hr>
 
-                <!-- EXTRA PLOT: CARTOGRAM -->
-                <div class="subsection">
-                    <h3>(EXTRA) Cartogram</h3>
-                    <!--
+            <!-- EXTRA PLOT: CARTOGRAM -->
+            <div class="subsection">
+                <h3>(EXTRA) Cartogram</h3>
+                <!--
                     <p>
                         With the bubble chart we analyze the same things of the third plot, but we can also 
                         add another information, visualized through the size of the points, which in this case is the "Canopy size". 
@@ -159,23 +159,24 @@
                     </p>
                     <div id="bubblechart-canopysize" class="chart"></div>
                     -->
-                </div>
+            </div>
 
-            </div> 
+        </div>
 
-        </div> <!-- END OF MAIN CONTENT -->
-        
-        <!-- FOOTER -->
-        <footer>
-            <div class="text-center font-italic">&copy; Copyright Ornitorinco 2022</div>
-        </footer>
+    </div> <!-- END OF MAIN CONTENT -->
 
-        <!-- Put here the js for the chart -->
-        <script src="js/assign3/assign3-plot1.js"></script>
-        <script src="js/assign3/assign3-plot2.js"></script> 
-        <!-- <script src="js/assign3/assign3-plot3.js"></script> -->
-        <!-- <script src="js/assign3/assign3-plot4.js"></script> -->
-        <!-- <script src="js/assign3/assign3-plot5.js"></script> -->
+    <!-- FOOTER -->
+    <footer>
+        <div class="text-center font-italic">&copy; Copyright Ornitorinco 2022</div>
+    </footer>
 
-    </body>
+    <!-- Put here the js for the chart -->
+    <script src="js/assign3/assign3-plot1.js"></script>
+    <script src="js/assign3/assign3-plot2.js"></script>
+    <!-- <script src="js/assign3/assign3-plot3.js"></script> -->
+    <script src="js/assign3/assign3-plot4.js"></script>
+    <!-- <script src="js/assign3/assign3-plot5.js"></script> -->
+
+</body>
+
 </html>
