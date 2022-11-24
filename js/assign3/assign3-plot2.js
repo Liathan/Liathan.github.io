@@ -49,7 +49,7 @@ const colorScale_2 = d3.scaleThreshold()
     .range(d3.schemeGreens[7]);
 
 // Add color legend
-shapeWidthLegend_2 = 100;
+shapeWidthLegend_2 = 70;
 const labels_2 = ['0', '0.0001', '0.0005', '0.001', '0.005', ' 0.01', '0.02'];
 const legend_2_size = shapeWidthLegend_2*labels_2.length;
 
@@ -111,9 +111,7 @@ Promise.all([
         .selectAll("path")
         .data(topo.features)
         .join("path")
-            // draw each country
             .attr("d", d3.geoPath().projection(projection))
-            // set the color of each country
             .attr("fill", (d) => colorScale_2(data_2_Density.get(d.properties.nome)))
             .style("fill-opacity", "0.9")
             .attr("class", (d) => `circo${d.properties.numero_cir}`)
