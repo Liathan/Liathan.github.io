@@ -50,7 +50,7 @@ const colorScale_3 = d3.scaleThreshold()
 
 // Add color legend
 shapeWidthlegend_3 = 100;
-const labels_3 = ['0-1000', '1000-2000', '2000-4000', '4000-10000', '10000- 50000',  '> 50000'];
+const labels_3 = ['0', '1000', '2000', '4000', '10000', '> 50000'];
 const legend_3_size = shapeWidthlegend_3*labels_3.length;
 
 const legend_3 = d3.legendColor()
@@ -58,8 +58,8 @@ const legend_3 = d3.legendColor()
     .shapePadding(0)
     .orient("horizontal")
     .shapeWidth(shapeWidthlegend_3)
-    .scale(colorScale_3);
-
+    .scale(colorScale_3)
+    .labelAlign("start") ;
 svg_3.append("g")
     .attr("class", "legendThreshold")
     .attr("font-family", "Fira Sans, sans-serif")
@@ -147,7 +147,7 @@ Promise.all([
             
             // Tooltip content
             tooltip_3.html("<span class='tooltiptext'>" + "<b>Name: " + d.properties.nome +
-                "</b><br>" + "Oxygen: " + data_3_Oxygen.get(d.properties.nome).toFixed(1) +
+                "</b><br>" + "Oxygen (kg/yr): " + data_3_Oxygen.get(d.properties.nome).toFixed(1) +
                 "<br>" + "Tree Abundance: " + data_3_Count.get(d.properties.nome) +               
                 "<br>" + "Area (Km\u00B2): " + (d.properties.area/Math.pow(10, 6)).toFixed(2) + "</span>")
             .style("left", (event.pageX) + "px")
