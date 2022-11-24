@@ -121,7 +121,7 @@ Promise.all([
         .join("circle")
         .attr("cx", d => projection_4(d.geometry.coordinates)[0])
         .attr("cy", d => projection_4(d.geometry.coordinates)[1])
-        .attr("r", "1")
+        .attr("r", "2")
         .attr("fill", colorDot)
         
 
