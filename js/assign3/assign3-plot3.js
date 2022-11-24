@@ -50,7 +50,7 @@ const colorScale_3 = d3.scaleThreshold()
 
 // Add color legend
 shapeWidthlegend_3 = 100;
-const labels_3 = ['0', '1000', '2000', '4000', '10000', '> 50000'];
+const labels_3 = ['0', '1000', '2000', '4000', '10000', '50000',];
 const legend_3_size = shapeWidthlegend_3*labels_3.length;
 
 const legend_3 = d3.legendColor()
