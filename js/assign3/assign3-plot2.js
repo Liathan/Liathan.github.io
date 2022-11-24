@@ -50,7 +50,7 @@ const colorScale_2 = d3.scaleThreshold()
 
 // Add color legend
 shapeWidthLegend_2 = 100;
-const labels_2 = ['0-0.0001', '0.0001-0.0005', '0.0005-0.001', '0.001-0.005', '0.005- 0.01', ' 0.01- 0.02', '> 0.02'];
+const labels_2 = ['0', '0.0001', '0.0005', '0.001', '0.005', ' 0.01', '> 0.02'];
 const legend_2_size = shapeWidthLegend_2*labels_2.length;
 
 const legend_2 = d3.legendColor()
@@ -58,7 +58,8 @@ const legend_2 = d3.legendColor()
     .shapePadding(0)
     .orient("horizontal")
     .shapeWidth(shapeWidthLegend_2)
-    .scale(colorScale_2);
+    .scale(colorScale_2)
+    .labelAlign("start");
 
 svg_2.append("g")
     .attr("class", "legendThreshold")
