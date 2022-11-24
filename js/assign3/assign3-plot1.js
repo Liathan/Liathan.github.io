@@ -109,9 +109,7 @@ Promise.all([
         .selectAll("path")
         .data(topo.features)
         .join("path")
-            // draw each country
             .attr("d", d3.geoPath().projection(projection))
-            // set the color of each country
             .attr("fill", (d) => colorScale_1(data_1.get(d.properties.nome)))
             .style("fill-opacity", "0.9")
             .attr("class", (d) => `circo${d.properties.numero_cir}`)

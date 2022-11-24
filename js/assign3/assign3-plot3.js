@@ -45,12 +45,12 @@ var projection = d3.geoIdentity().reflectY(true)
 const data_3_Oxygen = new Map();
 const data_3_Count = new Map(); 
 const colorScale_3 = d3.scaleThreshold()
-    .domain([ 1000, 2000, 4000, 10000,50000, 53818.4])
+    .domain([1000, 2000, 4000, 10000, 50000])
     .range(d3.schemeBlues[6]);
 
 // Add color legend
-shapeWidthlegend_3 = 100;
-const labels_3 = ['0', '1000', '2000', '4000', '10000', '50000',];
+shapeWidthlegend_3 = 70;
+const labels_3 = ['0', '1000', '2000', '4000', '10000', '50000'];
 const legend_3_size = shapeWidthlegend_3*labels_3.length;
 
 const legend_3 = d3.legendColor()
@@ -59,7 +59,8 @@ const legend_3 = d3.legendColor()
     .orient("horizontal")
     .shapeWidth(shapeWidthlegend_3)
     .scale(colorScale_3)
-    .labelAlign("start") ;
+    .labelAlign("start");
+    
 svg_3.append("g")
     .attr("class", "legendThreshold")
     .attr("font-family", "Fira Sans, sans-serif")
@@ -110,9 +111,7 @@ Promise.all([
         .selectAll("path")
         .data(topo.features)
         .join("path")
-            // draw each country
             .attr("d", d3.geoPath().projection(projection))
-            // set the color of each country
             .attr("fill", (d) => colorScale_3(data_3_Oxygen.get(d.properties.nome)))
             .style("fill-opacity", "0.9")
             .attr("class", (d) => `circo${d.properties.numero_cir}`)
