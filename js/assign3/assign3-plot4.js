@@ -146,7 +146,6 @@ Promise.all([
                 .style("opacity", "0.9");
             
             // Tooltip content
-            console.log(trees)
             tooltip_4.html("<span class='tooltiptext'>" + "<b>Name: " + d.properties.nome + "</b></span>")
             .style("left", (event.pageX) + "px")
             .style("top", (event.pageY - 28) + "px");

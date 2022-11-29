@@ -12,11 +12,9 @@ function toggle_icon_menu_topnav() {
     var x = document.getElementById("myTopnav");
     if (x.classList.contains("topnav") && !x.classList.contains("responsive")) {
         x.classList.add("responsive");
-        console.log(x.classList)
     } 
     else {
         x.classList.remove("responsive");
-        console.log(x.classList)
     }
 }
 
