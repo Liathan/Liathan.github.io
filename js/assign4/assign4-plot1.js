@@ -30,14 +30,13 @@ d3.csv("../../data/assign4/assign4.csv").then( function(data) {
   // group the data: I want to draw one line per group
   const sumstat = d3.group(data, d => d.year); // nest function allows to group the calculation per level of a factor
 
-  // Add X axis --> it is a date format
+  const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
   const x = d3.scaleLinear()
-    //.domain(["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"])
-    .domain([1,12])
-    .range([ 0, width_1 ]);
+  .domain([1,12])
+  .range([ 0, width_1 ]);
   svg_1.append("g")
     .attr("transform", `translate(0, ${height_1})`)
-    .call(d3.axisBottom(x).ticks(5));
+    .call(d3.axisBottom(x).ticks(12).tickFormat((d, i) =>months[i])); 
 
   // Add Y axis
   const y = d3.scaleLinear()
@@ -50,7 +49,11 @@ d3.csv("../../data/assign4/assign4.csv").then( function(data) {
   const color_avg = d3.scaleOrdinal()
     .domain(["1993","1997","2001","2005","2009","2013","2017","2021"])
     .range(['#ff2d00','#fff700','#2aff00','#00ffe0','#005dff','#6b0cff','#ff00d8','#fa8d01'])
-    
+
+    const color_avg_aux = d3.scaleOrdinal()
+    .domain(["1993","1997","2001","2005","2009","2013","2017","2021"])
+    .range(['#ff2d00','#fff700','#2aff00','#00ffe0','#005dff','#6b0cff','#ff00d8','#fa8d01'])
+ 
 // color min scuro
     const color_max = d3.scaleOrdinal()
     .domain(["1993","1997","2001","2005","2009","2013","2017","2021"])
@@ -96,24 +99,12 @@ d3.csv("../../data/assign4/assign4.csv").then( function(data) {
         .attr("cx",function (d) {return x(d.month);})
         .attr("cy",function (d) {return y(d.avg);})
         .attr("r",3)
-        
-        // svg_1.selectAll(".line")
-        // .data(sumstat)
-        // .join("path")
-        // .attr("fill","transparent")
-        // .attr("stroke", function(d){ return color(d[0]) })
-        // .attr("stroke-width_1", 1.5)
-        // .attr("d", function(d){
-        //   return d3.line()
-        //     .x(function(d) { return x(d.month); })
-         
-        //     .y(function(d) { return y(+d.avg); })
-        //     (d[1])
-        // })
+       
+   
         const legend_1 = svg_1.append("g")
         .selectAll(".legend_1")
-        .data(color_avg.domain());
-        console.log(color_avg.domain())
+        .data(color_avg_aux.domain());
+        
         
         legend_1.join("circle")
         .attr("cx", (width_1 + 100))
