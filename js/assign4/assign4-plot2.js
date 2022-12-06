@@ -16,6 +16,13 @@ const svg_2 = d3.select(id_ref_2)
     .append("g")
     .attr("transform", `translate(${margin_2.left}, ${margin_2.top})`);
 
+var groupBy = function(xs, key) {
+    return xs.reduce(function(rv, x) {
+        (rv[x[key]] = rv[x[key]] || []).push(x);
+        return rv;
+    }, {});
+    };
+
 // Title
 // svg_2.append("text")
 //     .attr("x", ((width_2 - (width_2 + margin_2.left - margin_2.right)) / 2))             
@@ -26,8 +33,12 @@ const svg_2 = d3.select(id_ref_2)
 //     .style("text-decoration", "underline")  
 //     .text("Density of trees in Trento's neighborhoods");
 
+var pippo;
+var years = new Set
 d3.csv("../../data/assign4/assign4-plot2.csv").then( function (data)
 {
+    for(i = 0; i < data.length; ++i)
+        years.add(data[i]['year'])    
     var max = data.reduce((x, y) => Math.max(x, y.avg), -Infinity)
     var names = ["January", "February", "March", "April", "May", "June",
                 "July", "August", "September", "October", "November", "December"]
@@ -65,7 +76,7 @@ d3.csv("../../data/assign4/assign4-plot2.csv").then( function (data)
     .join("g")
     .attr("transform", `translate(${width_2 / 2}, ${height_2 / 2})`)
     .attr("class", "axis")
-
+    
     axis.append("line")
     .attr("x1", 0)
     .attr("y1", 0)
@@ -74,7 +85,7 @@ d3.csv("../../data/assign4/assign4-plot2.csv").then( function (data)
     .attr("class", "line")
     .style("stroke", "lightgrey")
     .style("stroke-width", "2px")
-
+    
     axis.append("text")
     .attr("class", "text")
     .attr("text-anchor", "middle")
@@ -82,37 +93,20 @@ d3.csv("../../data/assign4/assign4-plot2.csv").then( function (data)
     .attr("y", (d, i) => scale(30) *1.15 * Math.sin(angle * i - Math.PI / 2))
     .text(d => d)
     
-	var radarLine = d3.lineRadial()
-    .curve(d3.curveLinearClosed)
-    .radius(function(d) { return 100; })
-    .angle(function(d,i) {	return i*angleSlice; });
+    byYear = groupBy(data, "year")
 
-    var blobWrapper = svg_2.selectAll(".radarWrapper")
-    .data(data)
-    .join("g")
-    .attr("transform", `translate(${width_2 / 2}, ${height_2 / 2})`)
-    .attr("class", "radarWrapper")
-
-
-    blobWrapper.append("path")
-    .attr("d", (d, i) => radarLine(d))
-    .style("fill", (d, i) => color( color.domain()[i]))
-    .style("fill-opacity", 0.35)
-
-    blobWrapper.append("path")
-    .attr("class", "radarstroke")
-    .attr("d", d => radarLine(d))
-    .style("stroke-width", "3px")
-    .style("stroke", (d, i) => color( color.domain()[i]))
-    .style("fill", "none")
-
-    blobWrapper.selectAll(".radarCircle")
-    .data( (d,i) => d)
-    .join("circle")
-    .attr("r", 1)
-    .attr("cx", (d,i) => scale(d.avg) * Math.cos(angle * i - Math.PI / 2))
-    .attr("cy", (d,i) => scale(d.avg) * Math.sin(angle * i - Math.PI / 2))
-    .style("fill", (d, i) => color( color.domain()[i]))
-    .style("fill-opacity", 0.8)
-
+    fooX = (l,i) => scale(l) * Math.cos(angle * i - Math.PI / 2)
+    fooY = (l,i) => scale(l) * Math.sin(angle * i - Math.PI / 2)
+    years = Array.from(years)
+    years.forEach( yearEl => 
+        svg_2.append("g")
+        .attr("transform", `translate(${width_2 / 2}, ${height_2 / 2})`)
+        .append("polygon")
+        .data( [ byYear[yearEl] ] )
+        .attr("points", d => d.reduce((acc, el) => acc + fooX(el.avg, (el.month -1)) + "," + fooY(el.avg, (el.month -1))+" ", ""))
+        .attr("stroke", (d => color(years.indexOf(yearEl))))
+        .attr("stroke-width", "3px")
+        .attr("fill", (d => color(years.indexOf(yearEl))))
+        .attr("fill-opacity", 0.05)
+    )
 })
