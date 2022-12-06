@@ -1,8 +1,8 @@
 // -------------------------------------------------------------------------
-// Assignment 3: Choropleth map dot density - top 6 tree species + "Others" (fifth plot)
+// Assignment 3: Choropleth map dot density - top 6 tree year + "Others" (fifth plot)
 // We want to show the density of trees in each neighborhood 
 // ("Circoscrizione") of Trento's territory visualizing a point for each tree
-// highlighting the top 6 tree species + "Others" 
+// highlighting the top 6 tree year + "Others" 
 //--------------------------------------------------------------------------
 const id_ref_1 = "#linechart";
 // set the dimensions and margin_1s of the graph
@@ -25,7 +25,7 @@ const svg_1 = d3.select(id_ref_1)
                                   ${(1 - scaleFactor_1) * height_1 / 2 + margin_1.top})`);
 
 //Read the data
-d3.csv("../../data/assign4/assign4.csv").then( function(data) {
+d3.csv("../../data/assign4/assign4-plot1.csv").then( function(data) {
 
   // group the data: I want to draw one line per group
   const sumstat = d3.group(data, d => d.year); // nest function allows to group the calculation per level of a factor
@@ -51,11 +51,11 @@ d3.csv("../../data/assign4/assign4.csv").then( function(data) {
     .domain(["1993","1997","2001","2005","2009","2013","2017","2021"])
     .range(['#ff2d00','#fff700','#2aff00','#00ffe0','#005dff','#6b0cff','#ff00d8','#fa8d01'])
     
-// color min scuro
+// color max scuro
     const color_max = d3.scaleOrdinal()
     .domain(["1993","1997","2001","2005","2009","2013","2017","2021"])
     .range(['#be0000','#bfbc01','#157f00','#00a38f','#00348e','#4b159e','#9e0186','#a85e00'])
-// color max chiaro
+// color min chiaro
     const color_min = d3.scaleOrdinal()
     .domain(["1993","1997","2001","2005","2009","2013","2017","2021"])
     .range(['#ff6565','#fffd86','#89ff84','#79ffdc','#68adff','#b484ff','#ff81ec','#ffbb65'])
@@ -92,7 +92,7 @@ d3.csv("../../data/assign4/assign4.csv").then( function(data) {
         .selectAll(".circle")
         .data(data)
         .join("circle")
-        .attr("fill",function(d){return color_avg(color_avg.domain().indexOf(d.year))})
+        .attr("fill",function(d){return color_avg(d.year)})
         .attr("cx",function (d) {return x(d.month);})
         .attr("cy",function (d) {return y(d.avg);})
         .attr("r",3)
@@ -113,7 +113,6 @@ d3.csv("../../data/assign4/assign4.csv").then( function(data) {
         const legend_1 = svg_1.append("g")
         .selectAll(".legend_1")
         .data(color_avg.domain());
-        console.log(color_avg.domain())
         
         legend_1.join("circle")
         .attr("cx", (width_1 + 100))
@@ -129,7 +128,8 @@ d3.csv("../../data/assign4/assign4.csv").then( function(data) {
         .style("alignment-baseline", "middle")
         .style("text-anchor", "end")
         .style("font-size", "14px")
-        .text(d => d)
-   
+        .text(d => d)   
+
+
 
 })
