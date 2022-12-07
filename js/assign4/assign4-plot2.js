@@ -39,18 +39,18 @@ svg_2.append("text")
 
 color_2 = d3.scaleOrdinal().range(["#F00314", "#FF8019", "#FAE603", "#28E10A", "#3BB5FF", "#0500C7", "#5C03FA", "#DE00ED"])
 
-var years = new Set
+var years_2 = new Set
 d3.csv("../../data/assign4/assign4-plot2.csv").then( function (data)
 {
     for(i = 0; i < data.length; ++i)
-        years.add(data[i]['year'])    
+        years_2.add(data[i]['year'])    
     
     var names = ["January", "February", "March", "April", "May", "June",
     "July", "August", "September", "October", "November", "December"]
     
-    years = Array.from(years)
+    years_2 = Array.from(years_2)
 
-    color_2.domain(years)
+    color_2.domain(years_2)
 
     var numAxis = 4
     var radius = height_2 / 2
@@ -102,9 +102,9 @@ d3.csv("../../data/assign4/assign4-plot2.csv").then( function (data)
     .attr("y", (d, i) => yCoord(30, i) * 1.15)
     .text(d => d)
     
-    byYear = groupBy(data, "year")
+    var byYear = groupBy(data, "year")
 
-    years.forEach( yearEl => 
+    years_2.forEach( yearEl => 
         svg_2.append("g")
         .attr("transform", `translate(${width_2 / 2}, ${height_2 / 2})`)
         .append("polygon")
@@ -118,7 +118,7 @@ d3.csv("../../data/assign4/assign4-plot2.csv").then( function (data)
 
     var legend_2 = svg_2.append("g")
     .selectAll(".legend2")
-    .data(years)
+    .data(years_2)
 
     legend_2.join("rect")
     .attr("x", 0)
