@@ -36,31 +36,47 @@ function kernelEpanechnikov(k) {
     };
 }
 var years_3 = new Set
+var names = ["January", "February", "March", "April", "May", "June",
+"July", "August", "September", "October", "November", "December"]
+
+var min, max, xAxis, yBandAxis, yDensityAxis, byYear
+const selectionBox = document.getElementById("ridgeSelection")
+
+console.log(selectionBox)
+
 d3.csv("../../data/assign4/assign4-plot3.csv").then( function (data)
 {
     for(i = 0; i < data.length; ++i)
-        years_3.add(data[i]['year'])  
+        years_3.add(data[i]['year']) 
     
-    var names = ["January", "February", "March", "April", "May", "June",
-    "July", "August", "September", "October", "November", "December"]
-
-    var min = data.reduce((acc, el) => Math.min(acc, el.min), Infinity)
-    var max = data.reduce((acc, el) => Math.max(acc, el.max), -Infinity)
-
-    var xAxis = d3.scaleLinear().domain([min - 0.01, max + 0.01]).range([0, width_3])
-    var yBandAxis = d3.scalePoint().range([0, height_3]).domain(names)
-    var yDensityAxis = d3.scaleLinear().domain([0, 0.4]).range([height_3, 0])
-
+    Array.from(years_3).forEach(function (el){
+        selectionBox.appendChild(new Option(el, el))
+    })
+    
+    min = data.reduce((acc, el) => Math.min(acc, el.min), Infinity)
+    max = data.reduce((acc, el) => Math.max(acc, el.max), -Infinity)
+    
+    xAxis = d3.scaleLinear().domain([min - 0.01, max + 0.01]).range([0, width_3])
+    yBandAxis = d3.scalePoint().range([0, height_3]).domain(names)
+    yDensityAxis = d3.scaleLinear().domain([0, 0.4]).range([height_3, 0])
+    
     svg_3.append("g").attr("transform", `translate(0, ${height_3})`).call(d3.axisBottom(xAxis))
     svg_3.append("g").call(d3.axisLeft(yBandAxis))
+    
+    
+    byYear = groupBy(data, "year")
+    
+    draw()
+})
 
+function draw()
+{
+    year = selectionBox.value
     const kde = kernelDensityEstimator(kernelEpanechnikov(7), xAxis.ticks(80))
-
-    var byYear = groupBy(data, "year")
-
-    // TODO -> permettere di cambiare anno
-    var byMonth = groupBy(byYear[1993], "month")
+    
+    var byMonth = groupBy(byYear[year], "month")
     var densities = Array()
+    
     for(var i = 0; i < 12; ++i)
     {
         // Non sono convintissimo che mi piaccia, ma almeno esce giusto
@@ -68,15 +84,16 @@ d3.csv("../../data/assign4/assign4-plot3.csv").then( function (data)
         var maxs = [[min -0.01, 0]].concat(kde(byMonth[i+1].map(el => el.max)))
         mins.push([max + 0.01, 0])
         maxs.push([max + 0.01, 0])
-
+        
         // Le metto così in modo che le disegni in ordine, che è l'unico modo che ho trovato per mmetterli uno sopra l'altro
         densities.push({"month": names[i], "density" : mins, "type": "min"})
         densities.push({"month": names[i], "density" : maxs, "type": "max"})
     }
-
+    
     svg_3.selectAll(".areas")
     .data(densities)
     .join("path")
+    .attr("class", "areas")
     .attr("transform", d => `translate(0, ${(yBandAxis(d.month) - height_3)})`)
     .attr("fill", d => d.type === "min" ? "blue" : "red")
     // .attr("opacity",  0.8) // Non so, non mi piace
@@ -85,4 +102,4 @@ d3.csv("../../data/assign4/assign4-plot3.csv").then( function (data)
     .attr("stroke-width", "2")
     .attr("d", d3.line().curve(d3.curveBasis).x(d => xAxis(d[0])).y(d => yDensityAxis(d[1])))
 
-})
+}
