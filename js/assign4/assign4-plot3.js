@@ -25,6 +25,12 @@ svg_3.append("text")
 .attr("text-anchor", "left")  
 .style("text-decoration", "underline")
 
+svg_3.append("text")
+.text("Temperature, °C")
+.attr("text-anchor", "end")
+.attr("x", width_3)
+.attr("y", height_3 + margin_3.bottom- 5)
+
 var groupBy = function(xs, key) {
     return xs.reduce(function(rv, x) {
         (rv[x[key]] = rv[x[key]] || []).push(x);
@@ -52,7 +58,6 @@ var names = ["January", "February", "March", "April", "May", "June",
 var min, max, xAxis, yBandAxis, yDensityAxis, byYear
 const selectionBox = document.getElementById("ridgeSelection")
 
-console.log(selectionBox)
 
 d3.csv("../../data/assign4/assign4-plot3.csv").then( function (data)
 {

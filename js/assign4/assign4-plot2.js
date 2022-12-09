@@ -78,7 +78,7 @@ d3.csv("../../data/assign4/assign4-plot2.csv").then( function (data)
     .join("text")
     .attr("x", width_2 / 2)
     .attr("y", d => (numAxis - d -1 ) / numAxis * radius)
-    .text(d => d * 10)
+    .text(d => d * 10 + "°C")
 
     var axis = axisGrid.selectAll(".axis")
     .data(names)

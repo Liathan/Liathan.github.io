@@ -6,7 +6,7 @@
 //--------------------------------------------------------------------------
 const id_ref_1 = "#linechart";
 // set the dimensions and margin_1s of the graph
-const margin_1 = {top: 20, right: 120, bottom: 70, left: 30},
+const margin_1 = {top: 20, right: 120, bottom: 70, left: 45},
     width_1 = 1024 - margin_1.left - margin_1.right,
     height_1 = 768 - margin_1.top - margin_1.bottom;
 
@@ -43,7 +43,7 @@ d3.csv("../../data/assign4/assign4-plot2.csv").then( function(data) {
     .domain([d3.min(data, function(d) { return +d.min; }), d3.max(data, function(d) { return +d.max; })])
     .range([ height_1, 0 ]);
   svg_1.append("g")
-    .call(d3.axisLeft(y));
+    .call(d3.axisLeft(y).tickFormat(d => d +"°C"));
 
   // color avg
   const color_avg = d3.scaleOrdinal()
