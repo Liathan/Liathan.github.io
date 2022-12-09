@@ -1,7 +1,7 @@
 const id_ref_3 = "#ridgeline"
 
 // Set the dimensions and margins of the graph
-const margin_3 = { top: 150, right: 20, bottom: 70, left: 75 },
+const margin_3 = { top: 200, right: 20, bottom: 70, left: 75 },
     width_3 = 1024 - margin_3.left - margin_3.right,
     height_3 = 768 - margin_3.top - margin_3.bottom;
 
@@ -15,6 +15,15 @@ const svg_3 = d3.select(id_ref_3)
         ' ' + (height_3 + margin_3.top + margin_3.bottom))
     .append("g")
     .attr("transform", `translate(${margin_3.left}, ${margin_3.top})`);
+
+svg_3.append("text")
+.text("Min and Max temperature distribution by month of the 1993")
+.attr("y", -150)
+.attr("id", "ridgeTitle")
+.style("class", "h2")
+.style("font-size", "18px")
+.attr("text-anchor", "left")  
+.style("text-decoration", "underline")
 
 var groupBy = function(xs, key) {
     return xs.reduce(function(rv, x) {
@@ -35,6 +44,7 @@ function kernelEpanechnikov(k) {
         return Math.abs(v /= k) <= 1 ? 0.75 * (1 - v * v) / k : 0;
     };
 }
+
 var years_3 = new Set
 var names = ["January", "February", "March", "April", "May", "June",
 "July", "August", "September", "October", "November", "December"]
@@ -53,6 +63,7 @@ d3.csv("../../data/assign4/assign4-plot3.csv").then( function (data)
         selectionBox.appendChild(new Option(el, el))
     })
     
+
     min = data.reduce((acc, el) => Math.min(acc, el.min), Infinity)
     max = data.reduce((acc, el) => Math.max(acc, el.max), -Infinity)
     
@@ -60,7 +71,7 @@ d3.csv("../../data/assign4/assign4-plot3.csv").then( function (data)
     yBandAxis = d3.scalePoint().range([0, height_3]).domain(names)
     yDensityAxis = d3.scaleLinear().domain([0, 0.4]).range([height_3, 0])
     
-    svg_3.append("g").attr("transform", `translate(0, ${height_3})`).call(d3.axisBottom(xAxis))
+    svg_3.append("g").attr("transform", `translate(0, ${height_3})`).call(d3.axisBottom(xAxis).tickFormat(d => d +"°"))
     svg_3.append("g").call(d3.axisLeft(yBandAxis))
     
     
@@ -71,9 +82,11 @@ d3.csv("../../data/assign4/assign4-plot3.csv").then( function (data)
 
 function draw()
 {
-    year = selectionBox.value
+    var year = selectionBox.value
     const kde = kernelDensityEstimator(kernelEpanechnikov(7), xAxis.ticks(80))
     
+    chartTitle = document.getElementById("ridgeTitle").textContent = `Min and Max temperature distribution by month of the ${year}`
+
     var byMonth = groupBy(byYear[year], "month")
     var densities = Array()
     
