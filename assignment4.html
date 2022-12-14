@@ -70,12 +70,10 @@
                 <h3>Radarchart</h3>
 
                 <p>
-                    This plot is very similar to the one above. It takes in consideration the tree densities for each
-                    neighborhood.
-                    This type of visualization helps us to compare neighborhoods in terms of sizes thanks to "area"
-                    field in the tooltip.
-                    We can see that in small neighborhood, in the centre of Trento, there's a major concentration of
-                    trees.
+                    This a particular plot called radarchart. The months are radius of the circle and the smaller cirlces inside the principal one are representing the temperatures.
+                    As before , we have taken in consideration eight different years : 1993, 1997, 2001, 2005, 2009, 2013, 2017, 2021.
+                    For each year, we have displayed the mean temperature  in every month.
+                   
                 </p>
 
 
@@ -89,15 +87,17 @@
                 <h3>Ridgeline</h3>
 
                 <p>
-                    In this plot we want to show the trees' oxygen production for each neighborhood. But in this case we
-                    are using a different kind of color map that goes starting from 0 to max of total
-                    oxygen production values (white to dark blue). This plot is correlated to the others because
-                    neighborhoods with a high number of trees have a high value of oxygen production.
-                    But in this case the greatest producer of oxygen is "Centro storico piedicastello", even though it
-                    has a lower tree abundance than "S.Giuseeppe -S.Chiara". This happens probably becuase in the first
-                    neighborhood there are more tree suitable for the oxygen production..
-                </p>
+                
+                The third plot of the assignement is the ridgeline. It is displayed the ridgeline for min and max daily temperature for each month in a certain year.
+                You can select the year you would like to analyze through the dropdown selection box below. Blu line is for minimum temperature and red is for maxiumum temperature. 
+                It is easy to understand with this plot that the minimum daily temperature are higher during summer months 
+                and lower during winter months.
 
+                </p>
+                
+                <p>
+                    <select id="ridgeSelection" class="selectionBox" name="Year" onchange="draw()"></select>
+                </p>
                 <div id="ridgeline" class="chart"></div>
 
             </div>
@@ -114,7 +114,7 @@
     <!-- Put here the js for the chart -->
     <script src="js/assign4/assign4-plot1.js"></script>
     <script src="js/assign4/assign4-plot2.js"></script>
-    <!-- <script src="js/assign4/assign4-plot3.js"></script> -->
+    <script src="js/assign4/assign4-plot3.js"></script>
 
 
 </body>
