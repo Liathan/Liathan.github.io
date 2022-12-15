@@ -1,5 +1,5 @@
 // -------------------------------------------------------------------------
-// Assignment 3: Choropleth map dot density - top 6 tree year + "Others" (fifth plot)
+// Assignment 4: Choropleth map dot density - top 6 tree year + "Others" (fifth plot)
 // We want to show the density of trees in each neighborhood 
 // ("Circoscrizione") of Trento's territory visualizing a point for each tree
 // highlighting the top 6 tree year + "Others" 
