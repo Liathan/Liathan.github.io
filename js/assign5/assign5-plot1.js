@@ -1,7 +1,7 @@
 
-var margin = {top: 10, right: 10, bottom: 100, left: 250},
+var margin = {top: 10, right: 10, bottom: 100, left: 10},
      width = 1600 - margin.left - margin.right,
-     height = 700 - margin.top - margin.bottom;  
+     height = 600 - margin.top - margin.bottom;  
 
 // format variables
 var formatNumber = d3.format(",.0f"), // zero decimal places
@@ -9,12 +9,14 @@ var formatNumber = d3.format(",.0f"), // zero decimal places
     color_5 = d3.scaleOrdinal(d3.schemeCategory10);
   
 // append the svg object to the body of the page
-var svg = d3.select("body").append("svg")
-    .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
-  .append("g")
-    .attr("transform", 
-          "translate(" + margin.left + "," + margin.top + ")");
+var svg = d3.select("body")
+.append("center")
+.append("svg")
+.attr("width", width + margin.left + margin.right )
+.attr("height", height + margin.top + margin.bottom)
+.append("g")
+.attr("transform", 
+          "translate(" + margin.left + "," + margin.top +   ")");
 
 // Set the sankey diagram properties
 var sankey = d3.sankey()
