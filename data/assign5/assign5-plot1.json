@@ -1,0 +1,39 @@
+{
+    "nodes":[
+    {"node":0,"name":"Carbon Storage kg [10^2]"},
+    {"node":1,"name":"Platanus x hispanica"},
+    {"node":2,"name":"Aesculus hippocastanum"},
+    {"node":3,"name":"Celtis australis"},
+    {"node":4,"name":"Tilia x europaea"},
+    {"node":5,"name":"Cedrus deodara"},
+    {"node":6,"name":"Cupressus"},
+    {"node":7,"name":"Platanus x acerifolia 'Bloodgood'"},
+    {"node":8,"name":"Robinia pseudoacacia"},
+    {"node":9,"name":"Tilia cordata"},
+    {"node":10,"name":"Sophora japonica"},
+    {"node":11,"name":"Euro Saved"}
+
+    ],
+    "links":[
+    {"source":0,"target":1,"value":10833},
+    {"source":0,"target":2,"value":4386},
+    {"source":0,"target":3,"value":707},
+    {"source":0,"target":4,"value":4063},
+    {"source":0,"target":5,"value":3659},
+    {"source":0,"target":6,"value":10982},
+    {"source":0,"target":7,"value":2011},
+    {"source":0,"target":8,"value":1040},
+    {"source":0,"target":9,"value":659},
+    {"source":0,"target":10,"value":805},
+    {"source":1,"target":11,"value":2845},
+    {"source":2,"target":11,"value":2113},
+    {"source":3,"target":11,"value":1706},
+    {"source":4,"target":11,"value":1697},
+    {"source":5,"target":11,"value":1344},
+    {"source":6,"target":11,"value":800},
+    {"source":7,"target":11,"value":760},
+    {"source":8,"target":11,"value":610},
+    {"source":9,"target":11,"value":602},
+    {"source":10,"target":11,"value":565}
+
+    ]}
