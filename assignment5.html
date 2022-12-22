@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <!-- To manage incompatibility with older version of Internet Explorer / Edge -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- To manage the text respect to the device of the user (mobile, tablet, pc, and so on) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ecobenefit of Trento's trees</title>
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Fira+Sans">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.13.0/d3-legend.js"></script>
+    <script src="js/init.js"></script>
+    <script src="https://unpkg.com/d3-sankey@0.12.3/dist/d3-sankey.min.js"></script>
+
+<style>
+
+    .node rect {
+      fill-opacity: .9;
+      shape-rendering: crispEdges;
+    }
+    
+    .node text {
+      pointer-events: none;
+      text-shadow: 0 1px 0 #fff;
+    }
+    
+    .link {
+      fill: none;
+      stroke: #000;
+      stroke-opacity: .2;
+    }
+    
+    .link:hover {
+      stroke-opacity: .5;
+    }
+    
+    </style>
+</head>
+
+
+
+<body>
+
+    <!-- HEADER -->
+    <header class="padding-header">
+        <h1>Ecobenefit of Trento's trees</h1>
+        <h3>Ornitorinco Group - Data Visualization: <br> Caprile, Marchi, Marinelli, Medone, Piazza</h3>
+    </header>
+
+    <!-- NAVIGATION MENU -->
+    <div id="myTopnav" class="topnav stickyNav">
+        <div class="content">
+            <a href="index.html">Home</a>
+            <a href="assignment1.html">Assignment 1</a>
+            <a href="assignment2.html">Assignment 2</a>
+            <a href="assignment3.html" >Assignment 3</a>
+            <a href="assignment4.html">Assignment 4</a>
+            <a href="#" class ="active">Assignment 5</a>
+            <a href="javascript:void(0);" class="icon" onclick="toggle_icon_menu_topnav()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main-content" class="content">
+
+        <!-- ASSIGNMENT 5 -->
+        <div id="assignment-5" class="section">
+
+            <h2>Assignment 5: <span>Sankey</span></h2>
+
+            <!-- FIRST PLOT: CHOROPLETH MAP - TREE ABUNDANCE -->
+            <div class="subsection">
+                <h3>Sankey Diagram</h3>
+              
+                    <p>
+                        It is possible to visualize the entire maps of Trento city divided per neighborhoods. The total number of neighborhoods is 11. In this first choropleth map we want to display
+                        the tree abundance of each neighborhood . Thanks to a green color map (light green to dark green) we can understand in which neighborhood we have the majority of trees. 
+                        In the tooltip , there's also the area of each neighborhood. For example , the greatest amount of trees is in the neighborhood called "S.Giuseppe-S.Chiara"
+                    </p>
+                   
+                    
+                    
+            
+              <div id="sankey" class="chart"></div>
+             
+               
+            
+            </div>
+
+        </div>
+
+    </div> <!-- END OF MAIN CONTENT -->
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="text-center font-italic">&copy; Copyright Ornitorinco 2022</div>
+    </footer>
+
+    <!-- Put here the js for the chart -->
+    <script src="js/assign5/assign5-plot1.js"></script>
+
+
+  </body>
+</html>
